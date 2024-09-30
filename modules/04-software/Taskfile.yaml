@@ -25,6 +25,7 @@ tasks:
       - |
         sudo {{.CP}} etc/ /
       - task: power-profiles-daemon_config
+      - task: snapper_config
       - task: grub_config
       # - task: system:compat_jsoncpp
 
@@ -43,6 +44,28 @@ tasks:
         sudo systemctl is-active {{.SERVICE}} &>/dev/null || \
           sudo systemctl start {{.SERVICE}}
 
+  snapper_config:
+    desc: Configure Snapper
+    status:
+      - type snapper &>/dev/null && exit 1 || exit 0
+    cmds:
+      - |
+        sudo {{.CP}} etc/snapper/ /etc/
+        sudo systemctl restart snapperd
+      - |
+        for SVC in snapper-timeline snapper-cleanup snapper-boot; do
+          set -x
+          sudo systemctl is-enabled ${SVC}.timer &>/dev/null || \
+            sudo systemctl enable ${SVC}.timer
+          sudo systemctl is-active ${SVC}.timer &>/dev/null || \
+            sudo systemctl start ${SVC}.timer
+          { set +x; } 2>/dev/null
+        done
+      - |
+        FILE=/etc/default/grub-btrfs/config
+        grep -q '^GRUB_BTRFS_LIMIT="10"' $FILE || \
+          sudo sed -i -E 's,^#?\s*(GRUB_BTRFS_LIMIT=).*,\1"10",' $FILE
+
   grub_config:
     desc: Configure GRUB
     deps:
@@ -53,7 +76,9 @@ tasks:
       - |
         type lscpu &>/dev/null || {{.PARU}} util-linux
       - sudo ../../scripts/backup.sh {{.GRUB_CONF}}
-      - defer: sudo grub-mkconfig -o /boot/grub/grub.cfg
+      - defer: |
+          set -x
+          sudo grub-mkconfig -o /boot/grub/grub.cfg
       - |
         INI_GET="sudo initool --pass-through get {{.GRUB_CONF}}"
         ## Enable OS prober
