@@ -1,0 +1,20 @@
+synology-syn01:
+  source: "synology:/volume1/syn01"
+  destination: "/mnt/synology/syn01"
+  type: "nfs"
+
+synology-syn02:
+  source: "synology:/volume2/syn02"
+  destination: "/mnt/synology/syn02"
+  type: "nfs"
+
+synology-homes:
+  source: "synology:/volume1/homes"
+  destination: "/mnt/synology/homes"
+  type: "nfs"
+
+synology-yottamaster:
+  source: "synology:/volumeUSB1/usbshare"
+  destination: "/mnt/synology/yottamaster"
+  type: "nfs"
+#  options: "rw,nosuid,soft,nfsvers=4,noacl,async,nocto,nconnect=16,_netdev,timeo=10,retrans=2,bg"

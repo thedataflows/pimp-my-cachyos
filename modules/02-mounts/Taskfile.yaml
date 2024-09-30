@@ -1,0 +1,83 @@
+## https://taskfile.dev/usage/
+version: 3
+
+silent: true
+
+# output: prefixed
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+includes:
+  inst:
+    internal: true
+    taskfile: ../../lib/installers.yaml
+
+tasks:
+  default:
+    desc: Mount filesystems
+    cmds:
+      - |
+        type nfsidmap &>/dev/null || {{.PARU}} nfs-utils nfsidmap
+        type ntfs-3g &>/dev/null || {{.PARU}} ntfs-3g
+      - |
+        SERVICE_DIR=/usr/local/lib/systemd/system
+        sudo test -d "$SERVICE_DIR" || sudo mkdir -p "$SERVICE_DIR"
+        MOUNTS=$(cat mounts.yaml mounts.$(hostname).yaml 2>/dev/null || true)
+        for NAME in $(yq -r 'keys[]' <<< "$MOUNTS"); do
+          MOUNT=$(yq -r ".$NAME" <<< "$MOUNTS")
+          TYPE=$(yq -r ".type" - <<< "$MOUNT")
+          AFTER=
+          case $TYPE in
+            nfs)
+              AFTER="After=network.target local-fs.target"
+              ;;
+          esac
+          WHAT=$(yq -r ".source" - <<< "$MOUNT")
+          WHERE=$(yq -r ".destination" - <<< "$MOUNT")
+          OPTIONS=$(yq -r ".options" - <<< "$MOUNT")
+          if [[ -z "$OPTIONS" || "$OPTIONS" == "null" ]]; then
+            case $TYPE in
+              ntfs3)
+                ## https://docs.kernel.org/filesystems/ntfs3.html
+                OPTIONS="auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,dev,exec,noatime,iocharset=utf8,windows_names,suid,discard"
+                ;;
+              ntfs-3g)
+                OPTIONS="auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,dev,exec,noatime,iocharset=utf8,windows_names,big_writes,suid"
+                ;;
+              nfs)
+                OPTIONS="rw,nosuid,soft,nfsvers=4,noacl,async,nocto,nconnect=16,_netdev,timeo=10,retrans=2,bg"
+                ;;
+              *)
+                OPTIONS=
+                ;;
+            esac
+          fi
+          W=${WHERE#*/}
+          FILE="$SERVICE_DIR/${W//\//-}.mount"
+          ## Backup existing
+          sudo ../../scripts/backup.sh "$FILE"
+          ## Write new
+          cat <<! | sudo tee "$FILE" >/dev/null
+        [Unit]
+        Description=Local mount unit for $NAME
+        $AFTER
+
+        [Mount]
+        What=$WHAT
+        Where=$WHERE
+        Type=$TYPE
+        Options=$OPTIONS
+
+        [Install]
+        WantedBy=multi-user.target
+        !
+          ## Enable and start the service
+          sudo systemctl daemon-reload
+          set -x
+          sudo systemctl enable "${FILE##*/}"
+          sudo systemctl start "${FILE##*/}" || true
+          { set +x; } 2>/dev/null
+        done

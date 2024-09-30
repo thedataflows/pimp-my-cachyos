@@ -1,0 +1,39 @@
+## https://taskfile.dev/usage/
+version: 3
+
+silent: true
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+includes:
+  inst:
+    internal: true
+    taskfile: lib/installers.yaml
+
+tasks:
+  default:
+    desc: List all tasks
+    cmds:
+      - |
+        for T in $(fd --type file Taskfile.yaml); do
+          echo "+ $T"
+          go-task --taskfile "$T" --list-all | grep -v '^task:' | sed 's/^/  /'
+        done
+
+  all:
+    desc: Run all tasks
+    aliases:
+      - a
+    interactive: true
+    cmds:
+      - type fd &>/dev/null || {{.PARU}} fd
+      - |
+        for T in $(fd --type file Taskfile.yaml modules/); do
+          echo {{.LINE}}
+          set -x
+          go-task --taskfile "$T"
+          { set +x; } 2>/dev/null
+        done

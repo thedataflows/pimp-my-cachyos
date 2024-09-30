@@ -1,0 +1,20 @@
+# shellcheck disable=SC2148
+
+alias b="bat --chop-long-lines --color=always --style='header,numbers,rule,snip'"
+alias delta="delta --side-by-side"
+alias f="__fzf_select --query"
+alias grep="rg"
+alias k="kubectl"
+alias ll="eza --long --all --git --no-time --no-permissions --icons=always --sort=type"
+alias mc="mc --nosubshell"
+alias mcedit="mc -e --nosubshell"
+alias n=nerdctl
+alias p="pacseek -ui"
+alias paruf="paru -Slq | fzf --multi --preview 'sh -c \"pacpreview {1} 2>/dev/null || paru -Si {1}\"' | xargs -ro paru -Sy"
+## https://wiki.archlinux.org/title/Kitty#Terminal_issues_with_SSH
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+alias skgrep="sk --ansi -i -c 'rg --color=always --line-number \"{}\"'"
+alias t="go-task"
+alias yay="paru"
+alias z="zellij"
+alias lsblk="lsblk -o +MODEL,SERIAL,WWN"

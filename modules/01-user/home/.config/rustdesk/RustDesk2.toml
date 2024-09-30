@@ -1,0 +1,8 @@
+rendezvous_server = 'rs-ny.rustdesk.com:21116'
+nat_type = 1
+serial = 0
+
+[options]
+direct-server = 'Y'
+allow-remote-config-modification = 'Y'
+local-ip-addr = ''

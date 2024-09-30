@@ -1,0 +1,23 @@
+## https://taskfile.dev/usage/
+version: 3
+
+silent: true
+
+# output: prefixed
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+includes:
+  inst:
+    internal: true
+    taskfile: ../../lib/installers.yaml
+
+tasks:
+  default:
+    desc: Install KDE Plasma
+    cmds:
+      - task: inst:packages
+      - task: inst:symlink_files

@@ -1,0 +1,47 @@
+## https://taskfile.dev/usage/
+version: 3
+
+silent: true
+
+# output: prefixed
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+includes:
+  inst:
+    internal: true
+    taskfile: ../../lib/installers.yaml
+
+tasks:
+  default:
+    desc: Install video drivers and utilities
+    cmds:
+      - |
+        type lspci || {{.PARU}} pciutils
+      - |
+        ## Crude detection
+        PREV=
+        for VGA in $(lspci | grep VGA | awk '{print $5}'); do
+          [[ "$VGA" == "$PREV" ]] && continue
+          PREV=$VGA
+          echo "$VGA VGA detected"
+          case $VGA in
+            NVIDIA)
+              set -x
+              {{.PARU}} nvtop nvidia nvidia-patch opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia libva-nvidia-driver
+              ;;
+            ## TODO Test
+            Advanced)
+              set -x
+              {{.PARU}} mesa lib32-mesa vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver
+              ;;
+            ## TODO Test
+            Intel)
+              set -x
+              {{.PARU}} mesa lib32-mesa vulkan-intel libva-intel-driver lib32-libva-intel-driver
+              ;;
+          esac
+        done

@@ -1,0 +1,1 @@
+SUBSYSTEM=="kvmfr", OWNER="libvirt-qemu", GROUP="libvirt-qemu", MODE="0660"

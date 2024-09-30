@@ -1,0 +1,85 @@
+## https://taskfile.dev/usage/
+version: 3
+
+silent: true
+
+# output: prefixed
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+includes:
+  inst:
+    internal: true
+    taskfile: ../../lib/installers.yaml
+
+tasks:
+  default:
+    desc: Install software packages (non-desktop)
+    set:
+      - x
+    cmds:
+      - task: inst:packages
+      - |
+        sudo {{.CP}} etc/ /
+      - task: power-profiles-daemon_config
+      - task: grub_config
+      # - task: system:compat_jsoncpp
+
+  power-profiles-daemon_config:
+    desc: Configure power-profiles-daemon
+    vars:
+      SERVICE: power-profiles-daemon
+    set:
+      - x
+    status:
+      - type powerprofilesctl &>/dev/null && exit 1 || exit 0
+    cmds:
+      - |
+        sudo systemctl is-enabled {{.SERVICE}} &>/dev/null || \
+          sudo systemctl enable {{.SERVICE}}
+        sudo systemctl is-active {{.SERVICE}} &>/dev/null || \
+          sudo systemctl start {{.SERVICE}}
+
+  grub_config:
+    desc: Configure GRUB
+    deps:
+      - task: inst:initool
+    vars:
+      GRUB_CONF: /etc/default/grub
+    cmds:
+      - |
+        type lscpu &>/dev/null || {{.PARU}} util-linux
+      - sudo ../../scripts/backup.sh {{.GRUB_CONF}}
+      - defer: sudo grub-mkconfig -o /boot/grub/grub.cfg
+      - |
+        INI_GET="sudo initool --pass-through get {{.GRUB_CONF}}"
+        ## Enable OS prober
+        if [[ "$($INI_GET "" GRUB_DISABLE_OS_PROBER -v)" != "\"false\"" ]]; then
+          set -x
+          sudo sed -i -E 's,#*(GRUB_DISABLE_OS_PROBER=).*,\1"false",' {{.GRUB_CONF}}
+          { set +x; } 2>/dev/null
+        fi
+        ## Set resolution
+        RESOLUTION='"1920x1080x32,auto"'
+        if [[ "$($INI_GET "" GRUB_GFXMODE -v)" != "$RESOLUTION" ]]; then
+          set -x
+          sudo sed -i -E 's|#*(GRUB_GFXMODE=).*|\1'$RESOLUTION'|' {{.GRUB_CONF}}
+          { set +x; } 2>/dev/null
+        fi
+        ## Grub theme
+        grep -q '^GRUB_THEME=' {{.GRUB_CONF}} && exit 0
+        sudo ../../scripts/backup.sh {{.GRUB_CONF}}
+        sudo sed -i -E 's,^#*(GRUB_THEME=).+,\1"/usr/share/grub/themes/catppuccin-mocha/theme.txt",' {{.GRUB_CONF}}
+
+  compat_jsoncpp:
+    desc: Manually install libjsoncpp.so.25
+    vars:
+      WHAT: usr/lib/libjsoncpp.so.25
+    cmds:
+      - |
+        sudo test -f /{{.WHAT}} || \
+          curl -sL https://archive.archlinux.org/packages/j/jsoncpp/jsoncpp-1.9.5-3-x86_64.pkg.tar.zst | \
+            sudo tar --zstd -xvf - -C / {{.WHAT}}

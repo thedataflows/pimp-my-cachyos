@@ -1,0 +1,124 @@
+#:schema https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json
+
+version = 3
+final_space = true
+console_title = true
+console_title_template = "{{ .Shell }} in {{ .Folder }}"
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
+
+[[blocks.segments]]
+type = "os"
+style = "diamond"
+foreground = "#000000"
+background = "#d3d7cf"
+leading_diamond = "╭─"
+template = "{{.Icon}}"
+
+[[blocks.segments]]
+type = "session"
+style = "powerline"
+powerline_symbol = ""
+foreground = "#100e23"
+background = "#ffffff"
+template = " {{ .UserName }}@{{ .HostName }} "
+
+[[blocks.segments]]
+type = "path"
+style = "powerline"
+powerline_symbol = ""
+foreground = "#e3e5e5"
+background = "#769ff0"
+[blocks.segments.properties]
+folder_separator_icon = " ... "
+folder_icon = ""
+home_icon = ""
+folder_separators = "false"
+
+[[blocks.segments]]
+type = "git"
+style = "powerline"
+powerline_symbol = ""
+foreground = "#769ff0"
+background = "#394260"
+[blocks.segments.properties]
+branch_icon = " "
+display_status = true
+display_stash_count = true
+display_upstream_icon = true
+
+[[blocks.segments]]
+type = "node"
+style = "powerline"
+powerline_symbol = ""
+foreground = "#769ff0"
+background = "#212736"
+template = "  {{.Full}}"
+
+[[blocks.segments]]
+type = "rust"
+style = "powerline"
+powerline_symbol = ""
+foreground = "#769ff0"
+background = "#212736"
+template = "  {{.Full}}"
+
+[[blocks.segments]]
+type = "go"
+style = "powerline"
+powerline_symbol = ""
+foreground = "#769ff0"
+background = "#212736"
+template = "  {{.Full}}"
+
+[[blocks.segments]]
+type = "php"
+style = "powerline"
+powerline_symbol = ""
+foreground = "#769ff0"
+background = "#212736"
+template = "  {{.Full}}"
+
+[[blocks.segments]]
+type = "time"
+style = "powerline"
+powerline_symbol = ""
+foreground = "#a0a9cb"
+background = "#1d2230"
+alignment = "right"
+template = "  {{ .CurrentDate | date .Format }} "
+[blocks.segments.properties]
+time_format = "15:04"
+
+[[blocks.segments]]
+type = "text"
+style = "plain"
+foreground = "#1d2230"
+[blocks.segments.properties]
+text = " "
+
+[[blocks]]
+alignment = "left"
+newline = true
+type = "prompt"
+
+[[blocks.segments]]
+foreground = "#d3d7cf"
+style = "plain"
+template = "╰─"
+type = "text"
+
+[[blocks.segments]]
+type = "status"
+style = "plain"
+foreground = "#33DD2D"
+template = ""
+foreground_templates = [
+  "{{if gt .Code 0}}red{{end}}",
+  "{{if eq .Code 0}}#33DD2D{{end}}",
+]
+[blocks.segments.properties]
+always_enabled = true

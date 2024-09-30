@@ -1,0 +1,61 @@
+## https://taskfile.dev/usage/
+version: 3
+
+silent: true
+
+# output: prefixed
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+includes:
+  inst:
+    internal: true
+    taskfile: ../../lib/installers.yaml
+
+tasks:
+  default:
+    desc: Network configuration tasks
+    cmds:
+      - |
+        type sshd &>/dev/null || {{.PARU}} openssh
+        sudo systemctl enable sshd
+        sudo systemctl restart sshd
+      - task: dns
+      - task: firewall
+
+  dns:
+    desc: Temporary fix for DNS
+    deps:
+      - inst:initool
+    cmds:
+      - |
+        if sudo systemctl is-enabled systemd-resolved &>/dev/null; then
+          sudo systemctl disable
+        fi
+        if sudo systemctl is-active systemd-resolved &>/dev/null; then
+          sudo systemctl stop systemd-resolved
+        fi
+      - |
+        FILE=/etc/NetworkManager/NetworkManager.conf
+        INI_SET="sudo initool --pass-through set $FILE"
+        INI_GET="sudo initool --pass-through get $FILE"
+        if [[ $($INI_GET main dns -v) == 'none' ]]; then
+          exit 0
+        fi
+        set -x
+        $INI_SET main dns none | sudo tee $FILE >/dev/null
+        sudo systemctl restart NetworkManager
+      - |
+        ## TODO Investigate why systemd-resolved cannot properly resolve names without FQDN
+        DNS=$(nmcli dev show | grep 'DNS\[1\]' | awk '{print $2}')
+        set -x
+        sudo sed -i -E '0,/nameserver/s/^(nameserver)\s*.+/\1 '$DNS'/' /etc/resolv.conf
+
+  firewall:
+    desc: Configure system firewall
+    cmds:
+      - type ufw &>/dev/null || {{.PARU}} ufw
+      - sudo ufw disable

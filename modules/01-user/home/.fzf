@@ -1,0 +1,67 @@
+# shellcheck disable=SC2148
+
+fzf_eza_opts=(
+    --all
+    --git
+    --tree
+    --level 1
+    --icons=always
+    --sort=type
+)
+fzf_bat_opts=(
+  --chop-long-lines
+  --color=always
+  --line-range=:20
+  --style='header,numbers,rule,snip'
+)
+export FZF_DEFAULT_COMMAND="fd --hidden --exclude .git"
+export FZF_CTRL_T_OPTS="
+  --tail=1000000
+  --layout=reverse
+  --ansi
+  --height=${FZF_TMUX_HEIGHT:-40%}
+  --tiebreak=chunk
+  +m
+  --preview-window=right:70%::wrap
+  --bind='enter:become:zeditor {1}:{2}:{3}'
+  --bind='ctrl-/:change-preview-window(down|hidden|)'
+  --preview '[ -f {} ] && bat ${fzf_bat_opts[*]} {} || eza ${fzf_eza_opts[*]} {}'
+  --color header:italic,fg:242,hl:#d75f5f,fg+:#d75f5f,hl+:#d75f5f
+"
+export FZF_ALT_C_OPTS="
+  --preview-window=right:70%::wrap
+  --bind='ctrl-/:change-preview-window(down|hidden|)'
+  --preview 'eza --tree --level 1 --icons=always --color=always {}'
+"
+export FZF_COMPLETION_OPTS="--tiebreak=chunk"
+
+# shellcheck disable=SC1090
+source <(fzf --zsh)
+bindkey '^F' fzf-file-widget
+
+# https://junegunn.github.io/fzf/tips/browsing-log-streams/
+stern-fzf() {
+  EDITOR='zeditor'
+  stern --color always -n "$1" "$@" 2>&1 |
+    fzf --ansi --tail 100000 --wrap --tac --no-sort --exact \
+        --bind "ctrl-o:execute:$EDITOR <(kubectl logs -n $1 {1})" \
+        --bind "enter:execute:kubectl exec -it -n $1 {1} -- bash" \
+        --header "╱ Enter (kubectl exec) ╱ CTRL-O (open log in $EDITOR) ╱"
+}
+
+# ripgrep->fzf->zeditor [QUERY]
+rfz() (
+  RELOAD='reload:rg --hidden --column --color=always --smart-case {q} || :'
+  OPENER='zeditor {1}:{2}:{3}'
+  fzf < /dev/null \
+      --tail=1000000 \
+      --disabled --ansi --multi \
+      --bind "start:$RELOAD" --bind "change:$RELOAD" \
+      --bind "enter:become:$OPENER" \
+      --bind "ctrl-o:execute:$OPENER" \
+      --bind 'alt-a:select-all,alt-d:deselect-all,ctrl-/:toggle-preview' \
+      --delimiter : \
+      --preview 'bat --color=always --style='header,numbers,rule,snip' --wrap=auto --highlight-line {2} {1}' \
+      --preview-window '~4,+{2}+4/3,<80(up)' \
+      --query "$*"
+)

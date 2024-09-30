@@ -1,0 +1,54 @@
+kde-desktop:
+- name: sddm-kcm
+  desc: KDE Config Module for SDDM
+- name: plasma-desktop
+  desc: KDE Plasma Desktop
+- name: kwayland-integration
+  desc: Provides integration plugins for various KDE frameworks for the wayland windowing system
+- name: kde-gtk-config
+  desc: Syncs KDE settings to GTK applications
+
+files:
+- name: dolphin-plugins
+  desc: Extra Dolphin plugins
+- name: bcompare
+  desc: "Beyond Compare 5: Compare, sync, and merge files and folders"
+- name: bcompare-kde6
+  desc: KDE Plasma 6 service menus for Beyond Compare 5
+
+graphics:
+- name: gwenview
+  desc: A fast and easy to use image viewer
+
+productivity:
+- name: okular
+  desc: Document Viewer
+## To be removed
+- name: kate
+  desc: Advanced Text Editor
+  state: absent
+
+system:
+- name: ksystemlog
+  desc: System log viewer tool
+- name: plasma-pa
+  desc: Plasma applet for audio volume management using PulseAudio
+- name: plasma-systemmonitor
+  desc: An interface for monitoring system sensors, process information and other system resources
+- name: plasma-nm
+  desc: Plasma applet written in QML for managing network connections
+- name: plasma-disks
+  desc: Monitors S.M.A.R.T. capable devices for imminent failure
+
+security:
+- name: gcr
+  desc: A library for bits of crypto UI and parsing
+- name: pinentry
+  desc: Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol
+- name: kleopatra
+  desc: Certificate Manager and Unified Crypto GUI
+- name: kwalletmanager
+  desc: Wallet management tool
+- name: ksshaskpass
+  desc: ssh-add helper that uses kwallet and kpassworddialog
+  

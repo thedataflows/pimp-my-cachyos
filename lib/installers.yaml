@@ -1,0 +1,101 @@
+## https://taskfile.dev/usage/
+version: 3
+
+# silent: true
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+vars:
+  PARU: paru -S --noconfirm --needed
+  PARU_REMOVE: paru -R --noconfirm --nosave --cascade
+  CP: cp --update=none --verbose --recursive --no-dereference
+  LINE:
+    sh: bash -c "printf '%*s' $(tput cols) '' | tr ' ' '-'"
+
+tasks:
+  iamnotroot:
+    desc: Check if the user is not root
+    cmds:
+      - |
+        if [[ $EUID -eq 0 ]] then
+          echo "This must run as a regular user!" 1>&2
+          exit 1
+        fi
+
+  latest_github_release:
+    internal: true
+    vars:
+      LATEST:
+        sh: curl --silent --location "https://api.github.com/repos/{{.REPO}}/releases/latest" | jq -r .tag_name
+    cmds:
+      - |
+        [[ "{{.LATEST}}" == "{{.VERSION}}" || "{{.LATEST}}" == "v{{.VERSION}}" ]] || echo "[WARN] {{.REPO}} has a newer release: {{.LATEST}}"
+
+  initool:
+    vars: &vars
+      NAME: initool
+      REPO: dbohdan/{{.NAME}}
+      VERSION: 0.18.0
+      URL_TPL: https://github.com/{{.REPO}}/releases/download/v{{.VERSION}}/{{.NAME}}-v{{.VERSION}}-fc0c3b1-{{OS}}-x86_64.zip
+      DEST_DIR: /usr/local/bin
+    desc: Install {{.REPO}} {{.VERSION}}
+    set:
+      - x
+    # deps:
+    #   - vars: *vars
+    #     task: latest_github_release
+    status:
+      - |
+        [[ $({{.NAME}} version) != "{{.VERSION}}" ]]
+    cmds:
+      - |
+        echo "Installing {{.REPO}} {{.VERSION}}"
+        sudo mkdir -p {{.DEST_DIR}}
+      - cmd: |
+          DOWNLOADED=/tmp/{{.NAME}}.zip
+          curl -sL "{{.URL_TPL}}" > "$DOWNLOADED"
+          sudo unzip -o "$DOWNLOADED" -d "{{.DEST_DIR}}"
+          sudo chmod +x "{{.DEST_DIR}}/{{.NAME}}"
+          rm -f "$DOWNLOADED"
+
+  packages:
+    vars:
+      PACKAGES: '{{.PACKAGES | default "packages.yaml packages.$(hostname).yaml"}}'
+    desc: Manipulate packages defined in {{.PACKAGES}}
+    deps:
+      - task: iamnotroot
+    cmds:
+      - type yq &> /dev/null || {{.PARU}} go-yq
+      - |
+        PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state!="absent").name' {{.PACKAGES}} || true)
+        if [[ -n "$PACKAGES" ]]; then
+          set -x
+          {{.PARU}} $PACKAGES
+          { set +x; } 2>/dev/null
+        fi
+        PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state=="absent").name' {{.PACKAGES}} || true)
+        if [[ -n "$PACKAGES" ]]; then
+          set -x
+          {{.PARU_REMOVE}} $PACKAGES || { { set +x; } 2>/dev/null; echo "Ignoring errors"; }
+          { set +x; } 2>/dev/null
+        fi
+
+  symlink_files:
+    desc: Symlink files from the home directory
+    cmds:
+      - type fd &> /dev/null || {{.PARU}} fd
+      - |
+        SRC=$(readlink -f home)
+        for F in $(fd --type file --hidden --absolute-path . $SRC); do
+          DEST="$HOME/${F#$SRC/}"
+          [[ -d $(dirname $DEST) ]] || \
+            mkdir -pv $(dirname $DEST)
+          [[ -L "$DEST" ]] || \
+            ln -vs "$F" "$DEST" || continue
+          ## Fix symlink
+          readlink -e "$DEST" >/dev/null || \
+            ln -vfs "$F" "$DEST"
+        done

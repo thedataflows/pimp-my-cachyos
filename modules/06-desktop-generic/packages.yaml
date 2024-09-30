@@ -1,0 +1,141 @@
+backup:
+- name: aur/kopia-ui-bin
+  desc: A cross-platform backup-tool with encryption, deduplication, compression and cloud support.
+- name: aur/syncthing-gtk
+  desc: GTK3 based GUI and notification area icon for Syncthing.
+
+cloud:
+- name: aur/openlens-bin
+  desc: The Kubernetes IDE (fork lens-bin without lenscloud-lens-extension). Read more - https://github.com/lensapp/lens/issues/5444
+
+desktop:
+- name: bibata-cursor-theme-bin
+  desc: Material Based Cursor Theme
+# - name: kvantum
+#   desc: SVG-based theme engine for Qt6 (including config tool and extra themes)
+#   state: absent
+# - name: kvantum-theme-catppuccin-git
+#   desc: Soothing pastel theme for Kvantum
+#   state: absent
+# - name: menulibre
+#   desc: An advanced menu editor that provides modern features in a clean, easy-to-use interface
+#   state: absent
+
+development:
+- name: aur/surrealist-bin
+  desc: Surrealist is the ultimate way to visually manage your SurrealDB database
+- name: aur/visual-studio-code-bin
+  desc: Visual Studio Code (vscode)
+- name: zed
+  desc: A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
+
+files:
+- name: libunrar
+  desc: Library and header file for applications that use libunrar
+- name: xarchiver
+  desc: GTK+ frontend to various command line archivers
+- name: qdirstat-bin
+  desc: Qt-based directory statistics (KDirStat/K4DirStat without any KDE - from the original KDirStat author)
+
+fonts:
+- name: ttf-quicksand-variable
+  desc: A sans serif typeface designed by Andrew Paglinawan using geometric shapes (variable)
+
+graphics:
+- name: libheif
+  desc: An HEIF and AVIF file format decoder and encoder
+- name: rnote
+  desc: A simple drawing application to create handwritten notes
+
+internet:
+- name: aur/brave-bin
+  desc: Web browser that blocks ads and trackers by default (binary release)
+- name: signal-desktop
+  desc: Signal Private Messenger for Linux
+- name: aur/teams
+  desc: Microsoft Teams for Linux is your chat-centered workspace in Office 365
+- name: aur/transgui-qt
+  desc: A feature rich cross platform Transmission BitTorrent client. Faster and has more functionality than the built-in web GUI.
+
+multimedia:
+- name: strawberry
+  desc: A music player aimed at audio enthusiasts and music collectors
+- name: vlc
+  desc: Multi-platform MPEG, VCD/DVD, and DivX player
+- name: obs-studio
+  desc: Free, open source software for live streaming and recording
+- name: ocenaudio-bin
+  desc: Cross-platform, easy to use, fast and functional audio editor
+
+network:
+- name: nm-connection-editor
+  desc: NetworkManager GUI connection editor and widgets
+- name: grsync
+  desc: GTK+ GUI for rsync to synchronize folders, files and make backups
+# - name: gvfs-smb
+#   desc: Virtual filesystem implementation for GIO - SMB/CIFS backend (Windows file sharing)
+#   state: absent
+
+productivity:
+- name: anytype-bin
+  desc: Operating environment for the new internet. Anytype is a next generation software that breaks down barriers between applications, gives back privacy and data ownership to users.
+- name: thunderbird
+  desc: Standalone mail and news reader from mozilla.org
+- name: calibre
+  desc: Ebook management application
+- name: aur/onlyoffice-bin
+  desc: An office suite that combines text, spreadsheet and presentation editors
+- name: aur/superproductivity-bin
+  desc: ToDo List / Time Tracker / Personal Jira Task Manager
+# - name: albert
+#   desc: A sophisticated standalone keyboard launcher
+#   state: absent
+
+remote:
+- name: remmina
+  desc: remote desktop client written in GTK+
+- name: freerdp
+  desc: Free implementation of the Remote Desktop Protocol (RDP)
+# - name: aur/moonlight-qt-bin
+#   desc: moonlight-qt bin from appimage
+- name: aur/rustdesk-bin
+  desc: Yet another remote desktop software, written in Rust. Works out of the box, no configuration required.
+
+security:
+- name: keepassxc
+  desc: Cross-platform community-driven port of Keepass password manager
+# - name: aur/git-credential-keepassxc
+#   desc: git-credential-keepassxc is a Git credential helper that allows Git (and shell scripts) to get/store logins from/to KeePassXC
+- name: x11-ssh-askpass
+  desc: Lightweight passphrase dialog for SSH
+
+system:
+- name: gparted
+  desc: A Partition Magic clone, frontend to GNU Parted
+- name: gsmartcontrol
+  desc: A graphical user interface for the smartctl hard disk drive health inspection tool.
+- name: papirus-icon-theme
+  desc: Papirus icon theme
+- name: wl-clipboard
+  desc: Command-line copy/paste utilities for Wayland
+- name: openrgb
+  desc: Open source RGB lighting control that doesn't depend on manufacturer software
+- name: wmctrl
+  desc: Control your EWMH compliant window manager from command line
+- name: systemd-ui
+  desc: Graphical front-end for systemd
+# - name: xclip
+#   desc: Command line interface to the X11 clipboard
+#   state: absent
+# - name: appmenu-gtk-module
+#   desc: Application Menu GTK+ Module
+#   state: absent
+# - name: font-manager
+#   desc: A simple font management application for GTK+ Desktop Environments
+#   state: absent
+# - name: xorg-xhost
+#   desc: Server access control program for X
+#   state: absent
+# - name: journal-viewer-bin
+#   desc: A modern linux desktop application to visualize systemd logs.
+#   state: absent

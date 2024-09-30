@@ -1,0 +1,40 @@
+## https://taskfile.dev/usage/
+version: 3
+
+silent: true
+
+# output: prefixed
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+includes:
+  inst:
+    internal: true
+    taskfile: ../../lib/installers.yaml
+
+tasks:
+  default:
+    desc: Cleanup the system
+    cmds:
+      - |
+        PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state=="absent").name' $(fd packages.yaml ../ | tr '\n' ' ') || true)
+        if [[ -n "$PACKAGES" ]]; then
+          set -x
+          {{.PARU_REMOVE}} $PACKAGES || { { set +x; } 2>/dev/null; echo "Ignoring errors"; }
+          { set +x; } 2>/dev/null
+        fi
+      - |
+        for F in fish kate; do
+          ## Silly failsafe
+          [[ -n "$F" ]] || continue
+          for P in ~/.config/$F ~/.local/share/$F; do
+            if [[ -e "$P" ]]; then
+              set -x
+              rm --verbose --force --recursive $P
+              { set +x; } 2>/dev/null
+            fi
+          done
+        done

@@ -1,0 +1,76 @@
+## https://taskfile.dev/usage/
+version: 3
+
+silent: true
+
+# output: prefixed
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+includes:
+  inst:
+    internal: true
+    taskfile: ../../lib/installers.yaml
+
+tasks:
+  default:
+    desc: Symlink config files in user home directory and install base shell packages
+    cmds:
+      - task: inst:packages
+      - task: inst:symlink_files
+      - sudo usermod --shell /bin/zsh $(id -un)
+      - task: atuin_config
+      - task: faillock_config
+      - task: yazi_config
+      - |
+        sudo {{.CP}} home/.gtkrc-2.0 /root/
+
+  atuin_config:
+    desc: Configure atuin for bash
+    cmds:
+      - type atuin &>/dev/null || {{.PARU}} atuin
+      - |
+        ATUIN_SCRIPT_PATH=/usr/local/libexec/atuin
+        sudo test -d "$ATUIN_SCRIPT_PATH" || sudo mkdir -p "$ATUIN_SCRIPT_PATH"
+        sudo ../../scripts/backup.sh "$ATUIN_SCRIPT_PATH/bash-preexec.sh"
+        sudo curl -sSL https://raw.githubusercontent.com/rcaloras/bash-preexec/master/bash-preexec.sh -o "$ATUIN_SCRIPT_PATH/bash-preexec.sh"
+        if ! grep -q 'bash-preexec\.sh' /etc/bash.bashrc; then
+          sudo ../../scripts/backup.sh /etc/bash.bashrc
+          echo "[[ -f $ATUIN_SCRIPT_PATH/bash-preexec.sh ]] && source $ATUIN_SCRIPT_PATH/bash-preexec.sh" | sudo tee -a /etc/bash.bashrc
+        fi
+        if ! grep -q 'atuin init' /etc/bash.bashrc; then
+          sudo ../../scripts/backup.sh /etc/bash.bashrc
+          printf "%s\n\n" 'eval "$(atuin init bash)"' | sudo tee -a /etc/bash.bashrc
+        fi
+
+  faillock_config:
+    desc: Configure faillock
+    vars:
+      FILE: /etc/security/faillock.conf
+      MAX_TRIES: 5
+      LOCK_TIME: 300
+    cmds:
+      - |
+        if ! grep -q '^deny' {{.FILE}}; then
+          sudo ../../scripts/backup.sh {{.FILE}}
+          set -x
+          sudo sed -i -E 's,^#?\s*(deny\s*=\s*).*,\1{{.MAX_TRIES}},' {{.FILE}}
+          { set +x; } 2>/dev/null
+        fi
+        if ! grep -q '^unlock_time' {{.FILE}}; then
+          sudo ../../scripts/backup.sh {{.FILE}}
+          set -x
+          sudo sed -i -E 's,^#?\s*(unlock_time\s*=\s*).*,\1{{.LOCK_TIME}},' {{.FILE}}
+          { set +x; } 2>/dev/null
+        fi
+
+  yazi_config:
+    desc: Configure yazi
+    set:
+      - x
+    cmds:
+      - type yazi &>/dev/null || {{.PARU}} yazi
+      - ya pack --upgrade

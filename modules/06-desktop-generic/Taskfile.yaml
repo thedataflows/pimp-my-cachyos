@@ -1,0 +1,45 @@
+## https://taskfile.dev/usage/
+version: 3
+
+silent: true
+
+# output: prefixed
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+includes:
+  inst:
+    internal: true
+    taskfile: ../../lib/installers.yaml
+
+tasks:
+  default:
+    desc: Install generic desktop packages
+    cmds:
+      - task: inst:packages
+      - task: sunshine_config
+      - task: rustdesk_configure
+
+  sunshine_config:
+    desc: Configure Sunshine
+    status:
+      - type sunshine &>/dev/null && exit 1 || exit 0
+    cmds:
+      - sudo setcap cap_sys_admin+p $(readlink -e $(which sunshine))
+
+  rustdesk_configure:
+    desc: Configure RustDesk
+    vars:
+      SERVICE: rustdesk
+    status:
+      - type rustdesk &>/dev/null && exit 1 || exit 0
+    cmds:
+      - |
+        ## Disable system service
+        ! sudo systemctl is-enabled {{.SERVICE}} &>/dev/null || \
+          sudo systemctl disable {{.SERVICE}}
+        ! sudo systemctl is-active {{.SERVICE}} &>/dev/null || \
+          sudo systemctl stop {{.SERVICE}}

@@ -1,0 +1,17 @@
+[manager]
+show_hidden = true
+ratio = [1, 2, 4]
+
+[preview]
+max_width = 3000
+max_height = 4000
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+name = "*/"
+run = "git"

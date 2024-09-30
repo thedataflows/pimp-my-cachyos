@@ -1,0 +1,7 @@
+[options]
+image_quality = 'custom'
+codec-preference = 'av1'
+show_remote_cursor = 'Y'
+custom_image_quality = '10.0'
+show_monitors_toolbar = 'Y'
+custom-fps = '60.0'

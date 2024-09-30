@@ -1,0 +1,215 @@
+ai:
+- name:   ollama-cuda
+  desc: Create, run and share large language models (LLMs) with CUDA
+
+android:
+- name: scrcpy
+  desc: Display and control your Android device
+- name: android-tools
+  desc: Android platform tools
+- name: aur/go-mtpfs-git
+  desc: Simple tool for viewing MTP devices as FUSE filesystems
+
+backup:
+- name: rsync
+  desc: A fast and versatile file copying tool for remote and local files
+- name: rclone
+  desc: Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage
+- name: snap-pac
+  desc: Pacman hooks that use snapper to create pre/post btrfs snapshots like openSUSE's YaST
+- name: grub-btrfs
+  desc: Include btrfs snapshots in GRUB boot options
+- name: aur/kopia-bin
+  desc: A cross-platform backup-tool with encryption, deduplication, compression and cloud support.
+
+cloud:
+- name: krew
+  desc: Find and install kubectl plugins
+- name: stern
+  desc: Multi pod and container log tailing for Kubernetes
+- name: fluxcd
+  desc: Open and extensible continuous delivery solution for Kubernetes
+- name: k9s
+  desc: TUI for managing Kubernetes clusters and pods
+- name: aur/lazydocker-bin
+  desc: A simple terminal UI for docker and docker-compose, written in Go with the gocui library.
+- name: pack-cli
+  desc: CLI for building apps using Cloud Native Buildpacks
+
+crypto:
+- name: age
+  desc: A simple, modern and secure file encryption tool
+- name: openssl-1.1
+  desc: The Open Source toolkit for Secure Sockets Layer and Transport Layer Security
+- name: sops
+  desc: Editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats
+- name: aur/sac-core
+  desc: Thales/Gemalto SafeNet Authentication Client for eToken 5110/5300 & IDPrime (core PKCS#11 modules)
+
+development:
+- name: git
+  desc: the fast distributed version control system
+- name: git-delta
+  desc: Syntax-highlighting pager for git and diff output
+- name: go
+  desc: Core compiler tools for the Go programming language
+- name: python-pip
+  desc: The PyPA recommended tool for installing Python packages
+- name: kondo
+  desc: Save disk space by cleaning non-essential files from software projects
+- name: aur/d2
+  desc: A modern diagram scripting language that turns text to diagrams
+- name: aur/devbox-bin
+  desc: A cli tool to easily create isolated shells and containers with nix.
+- name: aur/glow
+  desc: Command-line markdown renderer
+- name: lazygit
+  desc: Simple terminal UI for git commands
+- name: aur/surrealdb-bin
+  desc: A scalable, distributed, collaborative, document-graph database, for the realtime web
+
+files:
+- name: mc
+  desc: A file manager that emulates Norton Commander
+- name: gdu
+  desc: Fast disk usage analyzer
+- name: duf
+  desc: Disk Usage/Free Utility
+- name: dust
+  desc: A more intuitive version of du in rust
+- name: lsof
+  desc: Lists open files for running Unix processes
+- name: tree
+  desc: A directory listing program displaying a depth indented list of files
+- name: lnav
+  desc: A curses-based tool for viewing and analyzing log files
+- name: xorriso
+  desc: frontend for libraries libburn and libisofs
+- name: zip
+  desc: Compressor/archiver for creating and modifying zipfiles
+- name: aur/fswatch
+  desc: A cross-platform file change monitor with multiple backends
+- name: aur/superfile-bin
+  desc: Pretty fancy and modern file manager in terminal file manager
+- name: p7zip
+  desc: Command-line file archiver with high compression ratio
+
+network:
+- name: xh
+  desc: Friendly and fast tool for sending HTTP requests
+- name: pv
+  desc: A terminal-based tool for monitoring the progress of data through a pipeline
+- name: unarchiver
+  desc: unar and lsar
+- name: openssh
+  desc: SSH protocol implementation for remote login, command execution and file transfer
+- name: wget
+  desc: Network utility to retrieve files from the Web
+- name: curl
+  desc: command line tool and library for transferring data with URLs
+- name: inetutils
+  desc: A collection of common network programs
+- name: net-tools
+  desc: Configuration tools for Linux networking
+- name: bridge-utils
+  desc: Utilities for configuring the Linux ethernet bridge
+- name: dnsutils
+  desc: A complete, highly portable implementation of the DNS protocol
+- name: mtr
+  desc: Combines the functionality of traceroute and ping into one tool (CLI version)
+- name: trippy
+  desc: A network diagnostic tool
+- name: gping
+  desc: Ping, but with a graph
+- name: ssh-tools
+  desc: A collection of tools making SSH more convenient
+- name: nmap
+  desc: Utility for network discovery and security auditing
+- name: tcpdump
+  desc: Powerful command-line packet analyzer
+- name: termshark
+  desc: Terminal UI for tshark, inspired by Wireshark
+- name: gnu-netcat
+  desc: GNU rewrite of netcat, the network piping application
+- name: wireguard-tools
+  desc: next generation secure network tunnel - tools for configuration
+- name: networkmanager-openvpn
+  desc: NetworkManager VPN plugin for OpenVPN
+- name: iptraf-ng
+  desc: Console-based network monitoring utility
+- name: socat
+  desc: Multipurpose relay
+- name: aur/naabu-bin
+  desc: Fast port scanner with a focus on reliability and simplicity
+- name: aur/doggo-bin
+  desc: Command-line DNS client for humans
+- name: aur/neoss
+  desc: Unix tool with terminal UI for visualizing socket statistics
+- name: aur/wuzz-bin
+  desc: Interactive CLI tool for HTTP inspection
+
+system:
+- name: htop
+  desc: Interactive process viewer
+- name: btop
+  desc: A monitor of system resources, bpytop ported to C++
+- name: atop
+  desc: A system and process level monitor
+- name: iotop
+  desc: View I/O usage of processes
+- name: sysstat
+  desc: a collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)
+- name: ctop
+  desc: Top-like interface for container metrics
+- name: strace
+  desc: A diagnostic, debugging and instructional userspace tracer
+- name: watchexec
+  desc: Executes commands in response to file modifications
+- name: systemctl-tui
+  desc: A fast, simple TUI for interacting with systemd services and their logs
+- name: dmidecode
+  desc: Desktop Management Interface table related utilities
+- name: i2c-tools
+  desc: Heterogeneous set of I2C tools for Linux that used to be part of lm-sensors
+- name: lm_sensors
+  desc: Collection of user space tools for general SMBus access and hardware monitoring
+- name: hwinfo
+  desc: Hardware detection tool from openSUSE
+- name: hddtemp
+  desc: Gives you the temperature of your hard drive by reading S.M.A.R.T. information
+- name: expac
+  desc: alpm data (pacman database) extraction utility
+- name: power-profiles-daemon
+  desc: Makes power profiles handling available over D-Bus
+- name: cachyos/btrfs-assistant
+  desc: An application for managing BTRFS subvolumes and Snapper snapshots
+- name: aur/eget-bin
+  desc: Easily install prebuilt binaries from GitHub
+- name: aur/catppuccin-mocha-grub-theme-git
+  desc: Soothing pastel theme for GRUB2 -- Mocha colorscheme
+# - name: aur/pacpreview
+#   desc: Pacman package info viewer, intended for use with fzf --preview
+- name: aur/pacseek-bin
+  desc: A terminal user interface for searching and installing Arch Linux packages (binary version)
+- name: aur/parui
+  desc: Simple TUI frontend for paru or yay
+- name: cachyos/ventoy-bin
+  desc: A new bootable USB solution
+- name: aur/viddy-bin
+  desc: A modern watch command, binary version
+- name: aur/fan2go-git
+  desc: A simple daemon providing dynamic fan speed control based on temperature sensors
+- name: aur/fan2go-tui-git
+  desc: Terminal UI for fan2go.
+- name: aur/sysz
+  desc: fzf terminal UI for systemctl
+
+text:
+- name: jq
+  desc: Command-line JSON processor
+- name: ripgrep
+  desc: A search tool that combines the usability of ag with the raw speed of grep
+- name: htmlq
+  desc: Like jq, but for HTML
+- name: jless
+  desc: A command-line pager for JSON data

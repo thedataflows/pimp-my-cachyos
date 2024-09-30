@@ -1,0 +1,70 @@
+## https://taskfile.dev/usage/
+version: 3
+
+silent: true
+
+# output: prefixed
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+includes:
+  inst:
+    internal: true
+    taskfile: ../../lib/installers.yaml
+
+tasks:
+  default:
+    desc: Install virtualization
+    vars:
+      GRUB_CONF: /etc/default/grub
+    cmds:
+      - |
+        paru -Q virt-manager &>/dev/null || {{.PARU}} virt-manager
+        paru -Q qemu-desktop &>/dev/null || {{.PARU}} qemu-desktop
+      - |
+        echo ">> Enabling and starting services"
+        for SVC in virtqemud virtnetworkd virtstoraged virtnodedevd; do
+          set -x
+          sudo systemctl is-enabled $SVC &>/dev/null || \
+            sudo systemctl enable $SVC
+          sudo systemctl is-active $SVC &>/dev/null || \
+            sudo systemctl start $SVC
+          { set +x; } 2>/dev/null
+        done
+        USER=$(id -un)
+        for GRP in libvirt libvirt-qemu; do
+          if [[ ! " $(id -Gn) " =~ $GRP ]]; then
+            echo ">> Adding user $USER to $GRP group"
+            set -x
+            sudo usermod -aG $GRP $USER
+            { set +x; } 2>/dev/null
+          fi
+        done
+      - |
+        set -x
+        sudo virsh net-autostart default
+        sudo virsh net-start default
+      - |
+        set -x
+        sudo {{.CP}} etc/ /
+      - |
+        ## Enable iommu
+        INI_GET="sudo initool --pass-through get {{.GRUB_CONF}}"
+        VENDOR=intel
+        [[ $(lscpu | grep '^Vendor ID:' | awk '{print $3}') == "AuthenticAMD" ]] && VENDOR=amd
+        # INI_SET="sudo initool --pass-through set {{.GRUB_CONF}}"
+        if [[ ! " $($INI_GET "" GRUB_CMDLINE_LINUX_DEFAULT -v) " =~ "${VENDOR}_iommu=on" ]]; then
+          set -x
+          sudo sed -i -E "s,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^\"]+),\1 ${VENDOR}_iommu=on," {{.GRUB_CONF}}
+          { set +x; } 2>/dev/null
+        fi
+        # if [[ ! " $($INI_GET "" GRUB_CMDLINE_LINUX_DEFAULT -v) " =~ "iommu=pt" ]]; then
+        #   set -x
+        #   sed -i -E 's,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^\"]+),\1 iommu=pt,' {{.GRUB_CONF}}
+        #   { set +x; } 2>/dev/null
+        # fi
+        ## Regenerate GRUB config
+        sudo grub-mkconfig -o /boot/grub/grub.cfg

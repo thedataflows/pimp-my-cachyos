@@ -1,0 +1,65 @@
+
+
+files:
+- name: eza
+  desc: A modern replacement for ls (community fork of exa)
+- name: fd
+  desc: Simple, fast and user-friendly alternative to find
+- name: fzf
+  desc: Command-line fuzzy finder
+- name: aur/fzf-tab-completion-git
+  desc: Tab completion using fzf in zsh, bash, GNU readline apps (e.g. python, php -a etc.)
+- name: skim
+  desc: Fuzzy Finder in Rust!
+- name: aur/rnr-bin
+  desc: A CLI tool to rename files and directories that supports regex. Compiled binary
+- name: yazi
+  desc: Blazing fast terminal file manager written in Rust, based on async I/O
+
+fonts:
+- name: ttf-jetbrains-mono-nerd
+  desc: Patched font JetBrains Mono from nerd fonts library
+- name: ttf-nerd-fonts-symbols
+  desc: High number of extra glyphs from popular 'iconic fonts'
+- name: noto-fonts-emoji
+  desc: Google Noto emoji fonts
+
+shell:
+- name: zsh
+  desc: A very advanced and programmable command interpreter (shell) for UNIX
+- name: zsh-syntax-highlighting
+  desc: Fish shell like syntax highlighting for Zsh
+- name: aur/zsh-autocomplete
+  desc: IDE-style type-ahead completion for Zsh
+- name: aur/oh-my-posh-bin
+  desc: A prompt theme engine for any shell.
+- name: direnv
+  desc: A shell extension that manages your environment
+- name: kitty
+  desc: A modern, hackable, featureful, OpenGL-based terminal emulator
+- name: tmux
+  desc: Terminal multiplexer
+- name: less
+  desc: A terminal based program for viewing text files
+- name: bat
+  desc: Cat clone with syntax highlighting and git integration
+- name: zoxide
+  desc: A smarter cd command for your terminal
+- name: macchina
+  desc: A system information fetcher, with an (unhealthy) emphasis on performance.
+- name: difftastic
+  desc: An experimental diff tool that compares files based on their syntax
+- name: atuin
+  desc: Magical shell history
+- name: aur/mise-bin
+  desc: The front-end to your dev env
+- name: aur/dasel-bin
+  desc: Query and update data structures from the command line
+## To be removed
+- name: fish
+  desc: A very advanced and programmable command interpreter (shell) for UNIX
+  state: absent
+
+system:
+- name: aur/mprocs-bin
+  desc: Run multiple commands in parallel

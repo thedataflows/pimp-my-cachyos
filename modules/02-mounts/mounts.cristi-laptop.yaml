@@ -1,0 +1,9 @@
+win_c:
+  source: "UUID=01DABE5ADF2BBA90"
+  destination: "/mnt/win/c"
+  type: ntfs-3g
+
+win_d:
+  source: "UUID=01D81FF655CE7800"
+  destination: "/mnt/win/d"
+  type: ntfs-3g
