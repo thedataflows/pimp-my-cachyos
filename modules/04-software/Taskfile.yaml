@@ -25,8 +25,8 @@ tasks:
       - |
         sudo {{.CP}} etc/ /
       - |
-        sudo echo "LANG=en_US.UTF-8" > /etc/default/locale
-        sudo echo "LANG=en_US.UTF-8" > /etc/locale.conf
+        echo "LANG=en_US.UTF-8" | sudo tee /etc/default/locale > /dev/null
+        echo "LANG=en_US.UTF-8" | sudo tee /etc/locale.conf > /dev/null
         sudo locale-gen en_US.UTF-8
       - task: power-profiles-daemon_config
       - task: snapper_config
