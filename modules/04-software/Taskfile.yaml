@@ -24,6 +24,10 @@ tasks:
       - task: inst:packages
       - |
         sudo {{.CP}} etc/ /
+      - |
+        sudo echo "LANG=en_US.UTF-8" > /etc/default/locale
+        sudo echo "LANG=en_US.UTF-8" > /etc/locale.conf
+        sudo locale-gen en_US.UTF-8
       - task: power-profiles-daemon_config
       - task: snapper_config
       - task: grub_config
@@ -75,29 +79,33 @@ tasks:
     cmds:
       - |
         type lscpu &>/dev/null || {{.PARU}} util-linux
-      - sudo ../../scripts/backup.sh {{.GRUB_CONF}}
       - defer: |
           set -x
           sudo grub-mkconfig -o /boot/grub/grub.cfg
-      - |
-        INI_GET="sudo initool --pass-through get {{.GRUB_CONF}}"
-        ## Enable OS prober
-        if [[ "$($INI_GET "" GRUB_DISABLE_OS_PROBER -v)" != "\"false\"" ]]; then
-          set -x
-          sudo sed -i -E 's,#*(GRUB_DISABLE_OS_PROBER=).*,\1"false",' {{.GRUB_CONF}}
-          { set +x; } 2>/dev/null
-        fi
-        ## Set resolution
-        RESOLUTION='"1920x1080x32,auto"'
-        if [[ "$($INI_GET "" GRUB_GFXMODE -v)" != "$RESOLUTION" ]]; then
-          set -x
-          sudo sed -i -E 's|#*(GRUB_GFXMODE=).*|\1'$RESOLUTION'|' {{.GRUB_CONF}}
-          { set +x; } 2>/dev/null
-        fi
-        ## Grub theme
-        grep -q '^GRUB_THEME=' {{.GRUB_CONF}} && exit 0
-        sudo ../../scripts/backup.sh {{.GRUB_CONF}}
-        sudo sed -i -E 's,^#*(GRUB_THEME=).+,\1"/usr/share/grub/themes/catppuccin-mocha/theme.txt",' {{.GRUB_CONF}}
+      - vars:
+          SUDO: sudo
+          FILE: "{{.GRUB_CONF}}"
+          KEY: GRUB_DISABLE_OS_PROBER
+          VALUE: '"false"'
+        task: inst:iniset
+      - vars:
+          SUDO: sudo
+          FILE: "{{.GRUB_CONF}}"
+          KEY: GRUB_GFXMODE
+          VALUE: '"1920x1080x32,auto"'
+        task: inst:iniset
+      - vars:
+          SUDO: sudo
+          FILE: "{{.GRUB_CONF}}"
+          KEY: GRUB_THEME
+          VALUE: '"/usr/share/grub/themes/catppuccin-mocha/theme.txt"'
+        task: inst:iniset
+      - vars:
+          SUDO: sudo
+          FILE: "{{.GRUB_CONF}}"
+          KEY: GRUB_TIMEOUT
+          VALUE: '"2"'
+        task: inst:iniset
 
   compat_jsoncpp:
     desc: Manually install libjsoncpp.so.25
