@@ -7,6 +7,7 @@ export WEBKIT_DISABLE_DMABUF_RENDERER=1
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/ssh-agent.socket"
 export SSH_ASKPASS="/usr/bin/ksshaskpass"
 export EDITOR="micro"
+export GTK_USE_PORTAL=1
 
 virblk() {
   lsblk |awk 'NR==1{print $0" DEVICE-ID(S)"}NR>1{dev=$1;printf $0" ";system("find /dev/disk/by-id -lname \"*"dev"\" -printf \" %p\"");print "";}'|grep -vP 'part|lvm'
