@@ -11,6 +11,8 @@ cloud:
 desktop:
 - name: bibata-cursor-theme-bin
   desc: Material Based Cursor Theme
+- name: dconf-editor
+  desc: GSettings editor for GNOME
 # - name: kvantum
 #   desc: SVG-based theme engine for Qt6 (including config tool and extra themes)
 #   state: absent
