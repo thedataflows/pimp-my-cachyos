@@ -46,9 +46,17 @@ tasks:
           fi
         done
       - |
-        set -x
-        sudo virsh net-autostart default
-        sudo virsh net-start default
+        NET_INFO=$(sudo virsh net-info default)
+        if ! grep -qP '^Autostart:\s+yes' <<< "$NET_INFO"; then
+          set -x
+          sudo virsh net-autostart default
+          { set +x; } 2>/dev/null
+        fi
+        if ! grep -qP '^Active:\s+yes' <<< "$NET_INFO"; then
+          set -x
+          sudo virsh net-start default
+          { set +x; } 2>/dev/null
+        fi
       - |
         set -x
         sudo {{.CP}} etc/ /
