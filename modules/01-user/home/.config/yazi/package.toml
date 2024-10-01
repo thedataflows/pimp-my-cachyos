@@ -1,11 +1,11 @@
 [plugin]
 deps = [
-  { use = "yazi-rs/plugins:smart-filter", rev = "6c11a97" },
-  { use = "yazi-rs/plugins:full-border", rev = "6c11a97" },
-  { use = "yazi-rs/plugins:git", rev = "6c11a97" },
-  { use = "yazi-rs/plugins:chmod", rev = "6c11a97" },
-  { use = "yazi-rs/plugins:jump-to-char", rev = "6c11a97" },
-  { use = "yazi-rs/plugins:max-preview", rev = "6c11a97" },
+  { use = "yazi-rs/plugins:smart-filter", rev = "74a837c" },
+  { use = "yazi-rs/plugins:full-border", rev = "74a837c" },
+  { use = "yazi-rs/plugins:git", rev = "74a837c" },
+  { use = "yazi-rs/plugins:chmod", rev = "74a837c" },
+  { use = "yazi-rs/plugins:jump-to-char", rev = "74a837c" },
+  { use = "yazi-rs/plugins:max-preview", rev = "74a837c" },
   { use = "Ape/open-with-cmd", rev = "8d7abc8" },
   { use = "orhnk/system-clipboard", rev = "7775a80" },
 ]
