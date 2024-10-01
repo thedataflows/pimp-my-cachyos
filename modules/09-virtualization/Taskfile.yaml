@@ -61,6 +61,7 @@ tasks:
         set -x
         sudo {{.CP}} etc/ /
       - |
+        sudo ../../scripts/backup.sh "{{.GRUB_CONF}}"
         ## Enable iommu
         INI_GET="sudo initool --pass-through get {{.GRUB_CONF}}"
         VENDOR=intel
@@ -68,12 +69,12 @@ tasks:
         # INI_SET="sudo initool --pass-through set {{.GRUB_CONF}}"
         if [[ ! " $($INI_GET "" GRUB_CMDLINE_LINUX_DEFAULT -v) " =~ "${VENDOR}_iommu=on" ]]; then
           set -x
-          sudo sed -i -E "s,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^\"]+),\1 ${VENDOR}_iommu=on," {{.GRUB_CONF}}
+          sudo sed -i -E "s,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^\"']+),\1 ${VENDOR}_iommu=on," {{.GRUB_CONF}}
           { set +x; } 2>/dev/null
         fi
         if [[ "$VENDOR" = 'amd' && ! " $($INI_GET "" GRUB_CMDLINE_LINUX_DEFAULT -v) " =~ "iommu=pt" ]]; then
           set -x
-          sed -i -E 's,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^\"]+),\1 iommu=pt,' {{.GRUB_CONF}}
+          sed -i -E "s,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^\"']+),\1 iommu=pt," {{.GRUB_CONF}}
           { set +x; } 2>/dev/null
         fi
         ## Regenerate GRUB config
