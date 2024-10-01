@@ -28,8 +28,6 @@ tasks:
 
   dns:
     desc: Temporary fix for DNS
-    deps:
-      - inst:initool
     cmds:
       - |
         if sudo systemctl is-enabled systemd-resolved &>/dev/null; then
@@ -38,16 +36,13 @@ tasks:
         if sudo systemctl is-active systemd-resolved &>/dev/null; then
           sudo systemctl stop systemd-resolved
         fi
-      - |
-        FILE=/etc/NetworkManager/NetworkManager.conf
-        INI_SET="sudo initool --pass-through set $FILE"
-        INI_GET="sudo initool --pass-through get $FILE"
-        if [[ $($INI_GET main dns -v) == 'none' ]]; then
-          exit 0
-        fi
-        set -x
-        $INI_SET main dns none | sudo tee $FILE >/dev/null
-        sudo systemctl restart NetworkManager
+      - vars:
+          SUDO: sudo
+          FILE: /etc/NetworkManager/NetworkManager.conf
+          SECTION: main
+          KEY: dns
+          VALUE: none
+        task: inst:iniset
       - |
         ## TODO Investigate why systemd-resolved cannot properly resolve names without FQDN
         DNS=$(nmcli dev show | grep 'DNS\[1\]' | awk '{print $2}')

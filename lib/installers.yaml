@@ -61,6 +61,39 @@ tasks:
           sudo chmod +x "{{.DEST_DIR}}/{{.NAME}}"
           rm -f "$DOWNLOADED"
 
+  iniget:
+    desc: Get INI values from a file
+    deps:
+      - task: initool
+    set:
+      - nounset
+    vars:
+      SUDO: '{{default "" .SUDO}}'
+      SECTION: '{{default "" .SECTION}}'
+    cmds:
+      - |
+        {{.SUDO}} initool --pass-through get "{{.FILE}}" '{{.SECTION}}' '{{.KEY}}' -v
+
+  iniset:
+    desc: Set INI values in a file
+    deps:
+      - task: initool
+    set:
+      - nounset
+    vars:
+      SUDO: '{{default "" .SUDO}}'
+      SECTION: '{{default "" .SECTION}}'
+    cmds:
+      - |
+        GET_CMD="{{.SUDO}} initool --pass-through get {{.FILE}}"
+        SET_CMD="{{.SUDO}} initool --pass-through set {{.FILE}}"
+        if [[ $($GET_CMD "{{.SECTION}}" "{{.KEY}}" -v) != '{{.VALUE}}' ]]; then
+          {{.SUDO}} {{.TASKFILE_DIR}}/../scripts/backup.sh {{.FILE}}
+          ## Buffer the output first
+          OUT=$($SET_CMD '{{.SECTION}}' '{{.KEY}}' '{{.VALUE}}')
+          echo "$OUT" | {{.SUDO}} tee "{{.FILE}}" >/dev/null
+        fi
+
   packages:
     vars:
       PACKAGE_FILES: '{{.PACKAGE_FILES | default "packages.yaml packages.$(hostname).yaml"}}'

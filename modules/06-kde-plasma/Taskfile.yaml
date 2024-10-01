@@ -17,7 +17,15 @@ includes:
 
 tasks:
   default:
-    desc: Install KDE Plasma
+    desc: Install KDE Plasma packages
+    deps:
+      - inst:initool
     cmds:
       - task: inst:packages
       - task: inst:symlink_files
+      - vars:
+          SUDO: sudo
+          FILE: /etc/environment
+          KEY: GTK_USE_PORTAL
+          VALUE: 1
+        task: inst:iniset
