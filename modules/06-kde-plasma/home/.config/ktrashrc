@@ -1,0 +1,6 @@
+[/home/cri/.local/share/Trash]
+Days=30
+LimitReachedAction=0
+Percent=5
+UseSizeLimit=true
+UseTimeLimit=true

@@ -1,0 +1,28 @@
+MenuBar=Disabled
+
+[DetailsMode]
+ExpandableFolders=false
+PreviewSize=32
+
+[ExtractDialog]
+2194x1234 screen: Height=617
+2194x1234 screen: Width=1392
+DirHistory[$e]=/tmp/
+
+[General]
+AutoExpandFolders=true
+BrowseThroughArchives=true
+ShowFullPath=true
+Version=202
+ViewPropsTimestamp=2024,9,23,21,15,56.785
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[PreviewSettings]
+Plugins=appimagethumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,heif,imagethumbnail,jpegthumbnail,jxl,windowsexethumbnail,windowsimagethumbnail,gdk-pixbuf-thumbnailer,svgthumbnail
