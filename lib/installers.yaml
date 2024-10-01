@@ -63,25 +63,26 @@ tasks:
 
   packages:
     vars:
-      PACKAGES: '{{.PACKAGES | default "packages.yaml packages.$(hostname).yaml"}}'
-    desc: Manipulate packages defined in {{.PACKAGES}}
+      PACKAGE_FILES: '{{.PACKAGE_FILES | default "packages.yaml packages.$(hostname).yaml"}}'
+    desc: Manipulate packages defined in {{.PACKAGE_FILES}}
     deps:
       - task: iamnotroot
     cmds:
       - type yq &> /dev/null || {{.PARU}} go-yq
       - |
-        PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state!="absent").name' {{.PACKAGES}} || true)
+        PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state!="absent").name' {{.PACKAGE_FILES}} || true)
         if [[ -n "$PACKAGES" ]]; then
           set -x
           {{.PARU}} $PACKAGES
           { set +x; } 2>/dev/null
         fi
-        PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state=="absent").name' {{.PACKAGES}} || true)
-        if [[ -n "$PACKAGES" ]]; then
+        PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state=="absent").name' {{.PACKAGE_FILES}} || true)
+        for PKG in $PACKAGES; do
+          {{.PARU}} -Q $PKG &>/dev/null || continue
           set -x
-          {{.PARU_REMOVE}} $PACKAGES || { { set +x; } 2>/dev/null; echo "Ignoring errors"; }
+          {{.PARU_REMOVE}} $PKG || { set +x; } 2>/dev/null
           { set +x; } 2>/dev/null
-        fi
+        done
 
   symlink_files:
     desc: Symlink files from the home directory
