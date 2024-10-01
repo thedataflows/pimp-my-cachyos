@@ -18,6 +18,8 @@ includes:
 tasks:
   default:
     desc: Install virtualization
+    deps:
+      - inst:initool
     vars:
       GRUB_CONF: /etc/default/grub
     cmds:
@@ -61,10 +63,10 @@ tasks:
           sudo sed -i -E "s,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^\"]+),\1 ${VENDOR}_iommu=on," {{.GRUB_CONF}}
           { set +x; } 2>/dev/null
         fi
-        # if [[ ! " $($INI_GET "" GRUB_CMDLINE_LINUX_DEFAULT -v) " =~ "iommu=pt" ]]; then
-        #   set -x
-        #   sed -i -E 's,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^\"]+),\1 iommu=pt,' {{.GRUB_CONF}}
-        #   { set +x; } 2>/dev/null
-        # fi
+        if [[ "$VENDOR" = 'amd' && ! " $($INI_GET "" GRUB_CMDLINE_LINUX_DEFAULT -v) " =~ "iommu=pt" ]]; then
+          set -x
+          sed -i -E 's,^#*(GRUB_CMDLINE_LINUX_DEFAULT.+[^\"]+),\1 iommu=pt,' {{.GRUB_CONF}}
+          { set +x; } 2>/dev/null
+        fi
         ## Regenerate GRUB config
         sudo grub-mkconfig -o /boot/grub/grub.cfg
