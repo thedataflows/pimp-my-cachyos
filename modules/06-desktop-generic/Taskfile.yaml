@@ -20,7 +20,7 @@ tasks:
     desc: Install generic desktop packages
     cmds:
       - task: inst:packages
-      - task: sunshine_config
+      - task: gaming_config
       - task: rustdesk_configure
       - vars:
           SUDO: sudo
@@ -29,12 +29,19 @@ tasks:
           VALUE: Bibata-Modern-Amber
         task: inst:iniset
 
-  sunshine_config:
+  gaming_config:
     desc: Configure Sunshine
-    status:
-      - type sunshine &>/dev/null && exit 1 || exit 0
     cmds:
-      - sudo setcap cap_sys_admin+p $(readlink -e $(which sunshine))
+      - |
+        type gamescope &>/dev/null || exit 0
+        BIN=$(readlink -e $(which gamescope))
+        set -x
+        sudo setcap 'cap_sys_nice=eip' "$BIN"
+      - |
+        type sunshine &>/dev/null || exit 0
+        BIN=$(readlink -e $(which sunshine))
+        set -x
+        sudo setcap cap_sys_admin+p "$BIN"
 
   rustdesk_configure:
     desc: Configure RustDesk
