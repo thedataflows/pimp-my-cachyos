@@ -22,6 +22,12 @@ tasks:
       - task: inst:packages
       - task: sunshine_config
       - task: rustdesk_configure
+      - vars:
+          SUDO: sudo
+          FILE: /etc/environment
+          KEY: XCURSOR_THEME
+          VALUE: Bibata-Modern-Amber
+        task: inst:iniset
 
   sunshine_config:
     desc: Configure Sunshine
