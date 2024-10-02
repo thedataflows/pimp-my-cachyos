@@ -165,6 +165,10 @@ system:
   desc: A diagnostic, debugging and instructional userspace tracer
 - name: watchexec
   desc: Executes commands in response to file modifications
+- name: procs
+  desc: A modern replacement for ps written in Rust
+- name: aur/mprocs-bin
+  desc: Run multiple commands in parallel
 - name: systemctl-tui
   desc: A fast, simple TUI for interacting with systemd services and their logs
 - name: dmidecode

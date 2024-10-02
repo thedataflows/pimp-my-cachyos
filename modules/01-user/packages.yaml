@@ -59,7 +59,3 @@ shell:
 - name: fish
   desc: A very advanced and programmable command interpreter (shell) for UNIX
   state: absent
-
-system:
-- name: aur/mprocs-bin
-  desc: Run multiple commands in parallel
