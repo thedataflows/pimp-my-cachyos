@@ -47,7 +47,7 @@ editor_option_save_position=true
 editor_option_auto_para_formatting=false
 editor_option_typewriter_wrap=false
 editor_edit_confirm_save=true
-editor_syntax_highlighting=true
+editor_syntax_highlighting=false
 editor_persistent_selections=true
 editor_drop_selection_on_copy=true
 editor_cursor_beyond_eol=false
@@ -171,6 +171,6 @@ ignore_dirs=
 
 [Panelize]
 Find SUID and SGID programs=find . \\( \\( -perm -04000 -a -perm /011 \\) -o \\( -perm -02000 -a -perm /01 \\) \\) -print
-Find *.orig after patching=find . -name \\*.orig -print
 Find rejects after patching=find . -name \\*.rej -print
 Modified git files=git ls-files --modified
+Find *.orig after patching=find . -name \\*.orig -print
