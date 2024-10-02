@@ -95,6 +95,10 @@ I believe that using taskfile (a better Makefile alternative) helps with the str
 
 Yaml is easier to parse and filter with tools like [yq](https://mikefarah.gitbook.io/yq), and human readable when compared to json. Thought about TOML, but I am not yet satisfied with existing editing tools for scripting.
 
+### Why not nix?
+
+I don't yet like it and do not have the time to learn it.
+
 ## Design
 
 - `pmc.sh` is a wrapper around `go-task` that allows to run all tasks with a single command.
