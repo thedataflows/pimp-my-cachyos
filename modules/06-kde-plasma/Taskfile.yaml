@@ -36,3 +36,5 @@ tasks:
           sudo systemctl enable --now $SERVICE
         sudo systemctl is-active $SERVICE &>/dev/null || \
           sudo systemctl start $SERVICE
+      - |
+        sudo {{.CP}} etc/ /
