@@ -78,6 +78,6 @@ tasks:
           sudo systemctl daemon-reload
           set -x
           sudo systemctl enable "${FILE##*/}"
-          sudo systemctl start "${FILE##*/}" || true
+          sudo systemctl start "${FILE##*/}" || { set +x; } 2>/dev/null
           { set +x; } 2>/dev/null
         done
