@@ -1,0 +1,7 @@
+[Keyboard]
+RepeatDelay=300
+RepeatRate=30
+
+[Mouse]
+X11LibInputXAccelProfileFlat=true
+cursorTheme=Bibata-Modern-Amber
