@@ -30,11 +30,12 @@ tasks:
     desc: Temporary fix for DNS
     cmds:
       - |
-        if sudo systemctl is-enabled systemd-resolved &>/dev/null; then
-          sudo systemctl disable
+        SVC=systemd-resolved
+        if sudo systemctl is-enabled $SVC &>/dev/null; then
+          sudo systemctl disable $SVC
         fi
-        if sudo systemctl is-active systemd-resolved &>/dev/null; then
-          sudo systemctl stop systemd-resolved
+        if sudo systemctl is-active $SVC &>/dev/null; then
+          sudo systemctl stop $SVC
         fi
       - vars:
           SUDO: sudo
