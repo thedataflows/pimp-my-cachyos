@@ -8,23 +8,18 @@ win_d:
   destination: "/mnt/win/d"
   type: ntfs-3g
 
-win_e:
-  source: "UUID=592353E7252EE0E0"
-  destination: "/mnt/win/e"
-  type: ntfs-3g
-
-win_f:
-  source: "UUID=01D8D8F54ECDFFE0"
-  destination: "/mnt/win/f"
-  type: ntfs-3g
-
-# win_h:
-#   source: "UUID=01DAB89FEB0E6170"
-#   destination: "/mnt/win/h"
-#   type: ntfs-3g
-
 linux1:
   source: "UUID=20c06375-5517-4877-a9bf-506e60b2167a"
   destination: "/mnt/linux1"
   type: btrfs
   options: rw,relatime
+
+linux2:
+  source: "UUID=b79b7dd2-8a81-ddf5-88dc-3f5041f22979"
+  destination: "/mnt/linux2"
+  type: btrfs
+
+linux3:
+  source: "UUID=2c615f49-c166-1344-4a08-634e4b5f1de4"
+  destination: "/mnt/linux3"
+  type: btrfs
