@@ -87,12 +87,12 @@ tasks:
       - |
         GET_CMD="{{.SUDO}} initool --pass-through get {{.FILE}}"
         SET_CMD="{{.SUDO}} initool --pass-through set {{.FILE}}"
-        if [[ $($GET_CMD "{{.SECTION}}" "{{.KEY}}" -v) != '{{.VALUE}}' ]]; then
-          {{.SUDO}} {{.TASKFILE_DIR}}/../scripts/backup.sh {{.FILE}}
-          ## Buffer the output first
-          OUT=$($SET_CMD '{{.SECTION}}' '{{.KEY}}' '{{.VALUE}}')
-          echo "$OUT" | {{.SUDO}} tee "{{.FILE}}" >/dev/null
-        fi
+        sudo test -f "{{.FILE}}" || {{.SUDO}} touch "{{.FILE}}"
+        [[ $($GET_CMD "{{.SECTION}}" "{{.KEY}}" -v) != '{{.VALUE}}' ]] || exit 0
+        {{.SUDO}} {{.TASKFILE_DIR}}/../scripts/backup.sh {{.FILE}}
+        ## Buffer the output first
+        OUT=$($SET_CMD '{{.SECTION}}' '{{.KEY}}' '{{.VALUE}}')
+        echo "$OUT" | {{.SUDO}} tee "{{.FILE}}" >/dev/null
 
   packages:
     vars:
