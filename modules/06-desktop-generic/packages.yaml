@@ -50,7 +50,7 @@ graphics:
   desc: A simple drawing application to create handwritten notes
 
 internet:
-- name: aur/brave-bin
+- name: brave-bin
   desc: Web browser that blocks ads and trackers by default (binary release)
 - name: signal-desktop
   desc: Signal Private Messenger for Linux
