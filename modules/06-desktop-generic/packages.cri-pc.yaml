@@ -19,6 +19,8 @@ gaming:
   desc: Direct3D 12 to Vulkan translation library By WineHQ
 - name: proton-cachyos
   desc: Compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour
+- name: protonup-qt
+  desc: Install and manage Proton-GE and Luxtorpeda for Steam and Wine-GE for Lutris
 
 remote:
 - name: sunshine
