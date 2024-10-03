@@ -42,24 +42,21 @@ tasks:
       URL_TPL: https://github.com/{{.REPO}}/releases/download/v{{.VERSION}}/{{.NAME}}-v{{.VERSION}}-fc0c3b1-{{OS}}-x86_64.zip
       DEST_DIR: /usr/local/bin
     desc: Install {{.REPO}} {{.VERSION}}
-    set:
-      - x
     # deps:
     #   - vars: *vars
     #     task: latest_github_release
-    status:
-      - |
-        [[ $({{.NAME}} version) == "{{.VERSION}}" ]]
+    interactive: true
     cmds:
       - |
+        [[ $({{.NAME}} version) != '{{.VERSION}}' ]] || exit 0
         echo "Installing {{.REPO}} {{.VERSION}}"
-        sudo mkdir -p {{.DEST_DIR}}
-      - cmd: |
-          DOWNLOADED=/tmp/{{.NAME}}.zip
-          curl -sL "{{.URL_TPL}}" > "$DOWNLOADED"
-          sudo unzip -o "$DOWNLOADED" -d "{{.DEST_DIR}}"
-          sudo chmod +x "{{.DEST_DIR}}/{{.NAME}}"
-          rm -f "$DOWNLOADED"
+        [[ -d "{{.DEST_DIR}}" ]] || \
+          sudo mkdir -p {{.DEST_DIR}}
+        DOWNLOADED=/tmp/{{.NAME}}.zip
+        curl -sL "{{.URL_TPL}}" > "$DOWNLOADED"
+        sudo unzip -o "$DOWNLOADED" -d "{{.DEST_DIR}}"
+        sudo chmod +x "{{.DEST_DIR}}/{{.NAME}}"
+        rm -f "$DOWNLOADED"
 
   iniget:
     desc: Get INI values from a file
