@@ -360,6 +360,9 @@ PreloadWeight=55
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
+[Containments][49][Applets][52][Configuration]
+PreloadWeight=55
+
 [Containments][49][Applets][53]
 immutability=1
 plugin=org.kde.plasma.manage-inputmethod
@@ -457,6 +460,7 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][57][Applets][58][Configuration][General]
+indicateAudioStreams=false
 launchers=applications:org.keepassxc.KeePassXC.desktop,applications:brave-browser.desktop,applications:code.desktop,applications:org.kde.dolphin.desktop,applications:kitty.desktop,applications:org.mozilla.Thunderbird.desktop,applications:anytype.desktop,applications:signal-desktop.desktop
 showOnlyCurrentActivity=false
 showOnlyCurrentDesktop=false
@@ -479,4 +483,4 @@ wallpaperplugin=org.kde.image
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/steam.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/brave-ponnimpneaklfhmikmlojhgdfaghipim-Default.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/com.blackmagicdesign.resolve.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/DaVinci Resolve.lnk,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3
+screenMapping=desktop:/com.blackmagicdesign.resolve.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/DaVinci Resolve.lnk,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/brave-ponnimpneaklfhmikmlojhgdfaghipim-Default.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/steam.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3

@@ -1,3 +1,6 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry
+
 [ColorEffects:Disabled]
 ChangeSelectionColor=
 Color=56,56,56
