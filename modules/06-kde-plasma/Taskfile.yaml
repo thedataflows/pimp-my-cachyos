@@ -29,3 +29,10 @@ tasks:
           KEY: GTK_USE_PORTAL
           VALUE: 1
         task: inst:iniset
+      - |
+        ## https://wiki.cachyos.org/configuration/dual_gpu/#kde-plasma
+        SERVICE=switcheroo-control
+        sudo systemctl is-enabled $SERVICE &>/dev/null || \
+          sudo systemctl enable --now $SERVICE
+        sudo systemctl is-active $SERVICE &>/dev/null || \
+          sudo systemctl start $SERVICE

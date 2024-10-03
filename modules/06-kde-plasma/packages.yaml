@@ -39,6 +39,8 @@ system:
   desc: Plasma applet written in QML for managing network connections
 - name: plasma-disks
   desc: Monitors S.M.A.R.T. capable devices for imminent failure
+- name: switcheroo-control
+  desc: D-Bus service to check the availability of dual-GPU
 
 security:
 - name: gcr
@@ -51,4 +53,3 @@ security:
   desc: Wallet management tool
 - name: ksshaskpass
   desc: ssh-add helper that uses kwallet and kpassworddialog
-  
