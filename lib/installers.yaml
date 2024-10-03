@@ -49,7 +49,7 @@ tasks:
     #     task: latest_github_release
     status:
       - |
-        [[ $({{.NAME}} version) != "{{.VERSION}}" ]]
+        [[ $({{.NAME}} version) == "{{.VERSION}}" ]]
     cmds:
       - |
         echo "Installing {{.REPO}} {{.VERSION}}"
