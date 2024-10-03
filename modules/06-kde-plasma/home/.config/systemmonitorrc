@@ -1,6 +1,7 @@
 [General]
 height=1148
-lastVisitedPage=processes.page
+lastVisitedPage=history.page
+maximized=true
 pageOrder=history.page,overview.page,applications.page,processes.page
 startPage=history.page
 width=1700
