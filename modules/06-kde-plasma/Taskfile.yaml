@@ -38,7 +38,7 @@ tasks:
           sudo systemctl start $SERVICE
       - |
         sudo {{.CP}} etc/ /
-        for L in .config/gtk-3.0 .config/gtk-4.0 .config/Trolltech.conf .gtkrc-2.0; do
+        for L in .config/gtk-3.0 .config/gtk-4.0 .config/Trolltech.conf; do
           sudo test -L /root/$L || \
             sudo ln -s $HOME/$L /root/$L
         done
