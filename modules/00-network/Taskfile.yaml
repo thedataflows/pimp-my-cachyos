@@ -23,32 +23,7 @@ tasks:
         type sshd &>/dev/null || {{.PARU}} openssh
         sudo systemctl enable sshd
         sudo systemctl restart sshd
-      - task: dns
       - task: firewall
-
-  dns:
-    desc: Temporary fix for DNS
-    cmds:
-      - |
-        SVC=systemd-resolved
-        if sudo systemctl is-enabled $SVC &>/dev/null; then
-          sudo systemctl disable $SVC
-        fi
-        if sudo systemctl is-active $SVC &>/dev/null; then
-          sudo systemctl stop $SVC
-        fi
-      - vars:
-          SUDO: sudo
-          FILE: /etc/NetworkManager/NetworkManager.conf
-          SECTION: main
-          KEY: dns
-          VALUE: none
-        task: inst:iniset
-      - |
-        ## TODO Investigate why systemd-resolved cannot properly resolve names without FQDN
-        DNS=$(nmcli dev show | grep 'DNS\[1\]' | awk '{print $2}')
-        set -x
-        sudo sed -i -E '0,/nameserver/s/^(nameserver)\s*.+/\1 '$DNS'/' /etc/resolv.conf
 
   firewall:
     desc: Configure system firewall
