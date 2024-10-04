@@ -183,7 +183,7 @@ View Style=Detail
 
 [KScreen]
 ScaleFactor=1.75
-ScreenScaleFactors=HDMI-0=1.75;DP-0=1.75;DP-1=1.75;DP-2=1.75;DP-3=1.75;DP-4=1.75;DP-5=1.75;DP-1-0=1.75;DP-1-1=1.75;DP-1-2=1.75;DP-1-3=1.75;HDMI-1-0=1.75;DP-1-4=1.75;DP-1-5=1.75;
+ScreenScaleFactors=HDMI-A-1=1.75;DP-3=1.75;
 
 [Locale]
 BinaryUnitDialect[$d]
