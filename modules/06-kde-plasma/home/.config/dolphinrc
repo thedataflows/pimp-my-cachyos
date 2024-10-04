@@ -5,7 +5,7 @@ update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detai
 
 [DetailsMode]
 ExpandableFolders=false
-PreviewSize=32
+PreviewSize=22
 
 [ExtractDialog]
 2194x1234 screen: Height=617
