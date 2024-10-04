@@ -4,5 +4,8 @@ Seen=true
 [Applications][org.gnome.baobab]
 Seen=true
 
+[Applications][teams]
+Seen=true
+
 [Notifications]
 LowPriorityHistory=true
