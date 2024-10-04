@@ -140,6 +140,7 @@ DirSelectDialog Size=1169,717
 History Items[$e]=file:///mnt/win/d/Games/Steam,file:///mnt/win/f/Games/Steam
 
 [General]
+ColorScheme=Scratchy
 ColorSchemeHash=34bd8bad1192a8d612892100d65539ea91e87b50
 TerminalApplication=kitty
 TerminalService=kitty.desktop
