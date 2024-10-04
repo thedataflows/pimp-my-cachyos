@@ -39,5 +39,6 @@ tasks:
       - |
         sudo {{.CP}} etc/ /
         for L in .config/gtk-3.0 .config/gtk-4.0 .gtkrc-2.0; do
-          sudo ln -s $HOME/$L /root/$L
+          sudo test -L /root/$L || \
+            sudo ln -s $HOME/$L /root/$L
         done
