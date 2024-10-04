@@ -1,0 +1,9 @@
+[Common]
+OutlineCloseButton=true
+
+[Style]
+DockWidgetDrawFrame=true
+
+[Windeco]
+ButtonSize=ButtonSmall
+DrawBackgroundGradient=true

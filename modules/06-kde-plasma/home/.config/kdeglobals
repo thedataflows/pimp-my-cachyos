@@ -201,3 +201,5 @@ activeForeground=202,211,245
 inactiveBackground=24,25,38
 inactiveBlend=161,169,177
 inactiveForeground=184,192,224
+frame=255,255,255  # RGB color for active window border
+inactiveFrame=239,240,241  # RGB color for inactive window border

@@ -483,4 +483,4 @@ wallpaperplugin=org.kde.image
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/brave-ponnimpneaklfhmikmlojhgdfaghipim-Default.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/steam.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/com.blackmagicdesign.resolve.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3,desktop:/DaVinci Resolve.lnk,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3
+screenMapping=
