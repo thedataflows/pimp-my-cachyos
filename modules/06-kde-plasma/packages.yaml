@@ -7,6 +7,8 @@ kde-desktop:
   desc: Provides integration plugins for various KDE frameworks for the wayland windowing system
 - name: kde-gtk-config
   desc: Syncs KDE settings to GTK applications
+- name: xdg-desktop-portal-gtk
+  desc: A backend implementation for xdg-desktop-portal using GTK
 
 files:
 - name: dolphin-plugins
