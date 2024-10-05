@@ -23,6 +23,8 @@ files:
 graphics:
 - name: gwenview
   desc: A fast and easy to use image viewer
+- name: kimageformats
+  desc: Image format plugins for Qt 6
 
 productivity:
 - name: okular
