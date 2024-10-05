@@ -207,6 +207,8 @@ system:
   desc: Terminal UI for fan2go.
 - name: aur/sysz
   desc: fzf terminal UI for systemctl
+- name: grub-customizer
+  desc: A graphical grub2 settings manager
 
 text:
 - name: jq
