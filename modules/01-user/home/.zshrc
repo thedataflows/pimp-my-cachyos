@@ -19,7 +19,8 @@ source /usr/share/fzf-tab-completion/zsh/fzf-zsh-completion.sh
 bindkey '^I' fzf_completion
 
 ## Oh-my-posh
-eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyo.toml)"
+[[ ! -t 0 || $SHLVL -gt 1 ]] || \
+  eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyo.toml)" &>/dev/null
 
 ## Fzf
 source ~/.fzf
@@ -46,7 +47,7 @@ function y() {
   rm -f -- "$tmp"
 }
 
-[[ -t 0 ]] && macchina
+[[ ! -t 0 || $SHLVL -gt 1 ]] || macchina
 
 ## Key bindings
 ## Home/End keys not working in tmux: https://stackoverflow.com/a/27467524/3735961
