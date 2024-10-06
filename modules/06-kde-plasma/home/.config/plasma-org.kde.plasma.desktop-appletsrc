@@ -425,7 +425,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][49][Applets][74][Configuration]
-PreloadWeight=78
+PreloadWeight=100
 
 [Containments][49][Applets][74][Configuration][General]
 currentDetailsTab=details
@@ -461,7 +461,7 @@ DialogWidth=720
 
 [Containments][57][Applets][58][Configuration][General]
 indicateAudioStreams=false
-launchers=applications:org.keepassxc.KeePassXC.desktop,applications:brave-browser.desktop,applications:code.desktop,applications:org.kde.dolphin.desktop,applications:kitty.desktop,applications:org.mozilla.Thunderbird.desktop,applications:anytype.desktop,applications:signal-desktop.desktop
+launchers=applications:org.keepassxc.KeePassXC.desktop,applications:brave-browser.desktop,applications:code.desktop,applications:org.kde.dolphin.desktop,applications:kitty.desktop,applications:org.mozilla.Thunderbird.desktop,applications:anytype.desktop,applications:signal-desktop.desktop,applications:OpenLens.desktop
 showOnlyCurrentActivity=false
 showOnlyCurrentDesktop=false
 
