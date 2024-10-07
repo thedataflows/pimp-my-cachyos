@@ -3,6 +3,9 @@ MenuBar=Disabled
 [$Version]
 update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detailsmodesettings.upd:move-content-display,dolphin_directorysizemode.upd:convert-directorysizecount-to-directorysizemode
 
+[ContentDisplay]
+RecursiveDirectorySizeLimit=1
+
 [DetailsMode]
 ExpandableFolders=false
 PreviewSize=22
@@ -28,7 +31,7 @@ MenuBar=Disabled
 ToolBarsMovable=Disabled
 
 [PreviewSettings]
-Plugins=appimagethumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,heif,imagethumbnail,jpegthumbnail,jxl,windowsexethumbnail,windowsimagethumbnail,gdk-pixbuf-thumbnailer,svgthumbnail
+Plugins=appimagethumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,fontthumbnail,heif,imagethumbnail,jpegthumbnail,jxl,windowsexethumbnail,windowsimagethumbnail,gdk-pixbuf-thumbnailer,svgthumbnail
 
 [Search]
 Location=Everywhere
