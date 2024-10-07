@@ -186,6 +186,9 @@ View Style=Detail
 ScaleFactor=1.75
 ScreenScaleFactors=HDMI-A-1=1.75;DP-3=1.75;
 
+[KShortcutsDialog Settings]
+Dialog Size=600,480
+
 [Locale]
 BinaryUnitDialect[$d]
 
