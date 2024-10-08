@@ -45,8 +45,6 @@ shell:
   desc: Cat clone with syntax highlighting and git integration
 - name: zoxide
   desc: A smarter cd command for your terminal
-- name: macchina
-  desc: A system information fetcher, with an (unhealthy) emphasis on performance.
 - name: difftastic
   desc: An experimental diff tool that compares files based on their syntax
 - name: atuin
