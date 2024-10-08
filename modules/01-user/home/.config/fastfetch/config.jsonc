@@ -22,10 +22,7 @@
     "cpu",
     "gpu",
     "memory",
-    "localip",
     "battery",
-    "poweradapter",
-    "break",
-    "colors"
+    "poweradapter"
   ]
 }
