@@ -209,6 +209,8 @@ system:
   desc: fzf terminal UI for systemctl
 - name: grub-customizer
   desc: A graphical grub2 settings manager
+- name: gptfdisk
+  desc: A text-mode partitioning tool that works on GUID Partition Table (GPT) disks
 
 text:
 - name: jq
