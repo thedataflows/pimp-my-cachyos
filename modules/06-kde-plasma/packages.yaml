@@ -11,6 +11,8 @@ kde-desktop:
   desc: A backend implementation for xdg-desktop-portal using GTK
 - name: xdg-desktop-portal-gnome
   desc: A backend implementation for xdg-desktop-portal for the GNOME desktop environment
+- name: kdeplasma-addons
+  desc: All kind of addons to improve your Plasma
 
 files:
 - name: dolphin-plugins
