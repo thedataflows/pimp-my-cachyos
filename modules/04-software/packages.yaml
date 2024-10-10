@@ -224,3 +224,5 @@ text:
   desc: Like jq, but for HTML
 - name: jless
   desc: A command-line pager for JSON data
+- name: aur/pandoc-bin
+  desc: Conversion between documentation formats
