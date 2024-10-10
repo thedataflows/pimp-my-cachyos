@@ -8,7 +8,6 @@ DockWidgetDrawFrame=true
 [Windeco]
 ButtonSize=ButtonSmall
 DrawBackgroundGradient=true
-DrawBorderOnMaximizedWindows=true
 
 [Windeco Exception 0]
 BorderSize=0

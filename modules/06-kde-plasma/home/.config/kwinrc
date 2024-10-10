@@ -52,5 +52,7 @@ XwaylandEisNoPrompt=true
 XwaylandEisNoPromptApps=xembedsniproxy
 
 [org.kde.kdecoration2]
+BorderSize=Tiny
+BorderSizeAuto=false
 library=org.kde.breeze
 theme=Breeze
