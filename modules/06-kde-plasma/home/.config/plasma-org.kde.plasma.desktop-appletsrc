@@ -262,7 +262,7 @@ plugin=org.kde.plasma.systemmonitor
 [Containments][41][Applets][79][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
 PreloadWeight=100
-popupHeight=322
+popupHeight=332
 popupWidth=261
 
 [Containments][41][Applets][79][Configuration][Appearance]
@@ -310,8 +310,8 @@ immutability=1
 plugin=org.kde.plasma.weather
 
 [Containments][41][Applets][82][Configuration]
-PreloadWeight=58
-popupHeight=295
+PreloadWeight=47
+popupHeight=298
 popupWidth=432
 
 [Containments][41][Applets][82][Configuration][Appearance]
@@ -330,12 +330,39 @@ visibilityUnit=2007
 [Containments][41][Applets][82][Configuration][WeatherStation]
 source=bbcukmet|weather|Bucharest, Romania, RO|683506
 
+[Containments][41][Applets][84]
+immutability=1
+plugin=luisbocanegra.panel.colorizer
+
+[Containments][41][Applets][84][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
+[Containments][41][Applets][84][Configuration][General]
+floatingPreset=Default
+hideWidget=true
+lastPreset=Default
+maximizedPreset=Default
+normalPreset=Default
+panelBgColorMode=1
+panelBgColorModeTheme=9
+panelBgColorModeThemeVariant=4
+panelBgEnabled=true
+panelOutlineColorMode=1
+panelOutlineColorModeTheme=0
+panelOutlineColorModeThemeVariant=1
+panelOutlineOpacity=0.2
+panelOutlineWidth=1
+panelWidgets=org.kde.plasma.kickoff,Application Launcher,app-launcher|org.kde.plasma.panelspacer,Panel Spacer,distribute-horizontal-x|org.kde.plasma.systemmonitor.cpu,Total CPU Use,cpu|org.kde.plasma.systemmonitor,CPU Temp,ksysguardd|org.kde.plasma.systemmonitor.memory,Memory Usage,ksysguardd|org.kde.plasma.systemmonitor,GPUs Temp,ksysguardd|org.kde.plasma.marginsseparator,Margins Separator,filename-divider|org.kde.plasma.digitalclock,Digital Clock,preferences-system-time|org.kde.plasma.weather,Weather Report,weather-none-available-symbolic|org.kde.plasma.systemtray,System Tray,preferences-desktop-notification|org.kde.plasma.systemmonitor.net,Network speed,network-workgroup|luisbocanegra.panel.colorizer,Panel colorizer,desktop|org.kde.plasma.lock_logout,Lock/Logout,system-shutdown
+panelWidgetsWithTray=org.kde.plasma.kickoff,Application Launcher,app-launcher|org.kde.plasma.panelspacer,Panel Spacer,distribute-horizontal-x|org.kde.plasma.systemmonitor.cpu,Total CPU Use,cpu|org.kde.plasma.systemmonitor,CPU Temp,ksysguardd|org.kde.plasma.systemmonitor.memory,Memory Usage,ksysguardd|org.kde.plasma.systemmonitor,GPUs Temp,ksysguardd|org.kde.plasma.marginsseparator,Margins Separator,filename-divider|org.kde.plasma.digitalclock,Digital Clock,preferences-system-time|org.kde.plasma.weather,Weather Report,weather-none-available-symbolic|org.kde.plasma.clipboard,Clipboard,klipper-symbolic|org.kde.plasma.weather,Weather Report,configure-symbolic|org.kde.plasma.volume,Audio Volume,audio-volume-muted-symbolic|org.kde.plasma.networkmanagement,Networks,network-wireless-80-symbolic|org.kde.plasma.systemmonitor.net,Network speed,network-workgroup|luisbocanegra.panel.colorizer,Panel colorizer,desktop|org.kde.plasma.lock_logout,Lock/Logout,system-shutdown
+touchingWindowPreset=Default
+
 [Containments][41][ConfigDialog]
 DialogHeight=78
 DialogWidth=1920
 
 [Containments][41][General]
-AppletOrder=42;46;76;78;77;79;75;45;82;44;48;47;72;62;61
+AppletOrder=42;46;76;78;77;79;75;45;82;44;48;47;72;84;62;61
 
 [Containments][49]
 activityId=
@@ -411,7 +438,7 @@ immutability=1
 plugin=org.kde.plasma.mediacontroller
 
 [Containments][49][Applets][64][Configuration]
-PreloadWeight=0
+PreloadWeight=7
 
 [Containments][49][Applets][73]
 immutability=1
@@ -441,12 +468,25 @@ plugin=org.kde.kdeconnect
 immutability=1
 plugin=org.kde.plasma.keyboardindicator
 
+[Containments][49][Applets][85]
+immutability=1
+plugin=org.kde.plasma.weather
+
+[Containments][49][Applets][85][Configuration]
+PreloadWeight=34
+
+[Containments][49][Applets][85][Configuration][Units]
+pressureUnit=5028
+speedUnit=9002
+temperatureUnit=6002
+visibilityUnit=2024
+
 [Containments][49][ConfigDialog]
 DialogHeight=540
 DialogWidth=720
 
 [Containments][49][General]
-extraItems=org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kscreen,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.keyboardindicator
+extraItems=org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kscreen,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.keyboardindicator,org.kde.plasma.weather
 knownItems=org.kde.plasma.battery,org.kde.plasma.brightness,org.kde.plasma.cameraindicator,org.kde.plasma.clipboard,org.kde.plasma.devicenotifier,org.kde.plasma.manage-inputmethod,org.kde.plasma.mediacontroller,org.kde.plasma.notifications,org.kde.plasma.keyboardlayout,org.kde.kscreen,org.kde.plasma.volume,org.kde.plasma.networkmanagement,org.kde.plasma.bluetooth,org.kde.kdeconnect,org.kde.plasma.keyboardindicator
 
 [Containments][57]
@@ -487,6 +527,20 @@ lastScreen=1
 location=0
 plugin=org.kde.plasma.folder
 wallpaperplugin=org.kde.image
+
+[Containments41Appletsts][84][Configuration][General]
+enableCustomPadding=true
+hideWidget=true
+panelBgColorMode=1
+panelBgColorModeTheme=11
+panelBgEnabled=true
+panelOutlineColorMode=1
+panelOutlineColorModeTheme=10
+panelOutlineOpacity=0.55
+panelOutlineWidth=1
+panelPadding=16
+panelWidgets=org.kde.plasma.kickoff,Application Launcher,app-launcher|org.kde.plasma.panelspacer,Panel Spacer,distribute-horizontal-x|org.kde.plasma.systemmonitor.cpu,Total CPU Use,cpu|org.kde.plasma.systemmonitor,CPU Temp,ksysguardd|org.kde.plasma.systemmonitor.memory,Memory Usage,ksysguardd|org.kde.plasma.systemmonitor,GPUs Temp,ksysguardd|org.kde.plasma.marginsseparator,Margins Separator,filename-divider|org.kde.plasma.digitalclock,Digital Clock,preferences-system-time|org.kde.plasma.weather,Weather Report,weather-clear-night-symbolic|luisbocanegra.panel.colorizer,Panel colorizer,desktop|org.kde.plasma.systemtray,System Tray,preferences-desktop-notification|org.kde.plasma.systemmonitor.net,Network speed,network-workgroup|org.kde.plasma.lock_logout,Lock/Logout,system-shutdown
+panelWidgetsWithTray=org.kde.plasma.kickoff,Application Launcher,app-launcher|org.kde.plasma.panelspacer,Panel Spacer,distribute-horizontal-x|org.kde.plasma.systemmonitor.cpu,Total CPU Use,cpu|org.kde.plasma.systemmonitor,CPU Temp,ksysguardd|org.kde.plasma.systemmonitor.memory,Memory Usage,ksysguardd|org.kde.plasma.systemmonitor,GPUs Temp,ksysguardd|org.kde.plasma.marginsseparator,Margins Separator,filename-divider|org.kde.plasma.digitalclock,Digital Clock,preferences-system-time|org.kde.plasma.weather,Weather Report,weather-clear-night-symbolic|luisbocanegra.panel.colorizer,Panel colorizer,desktop|org.kde.plasma.clipboard,Clipboard,klipper-symbolic|org.kde.plasma.mediacontroller,Media Player,media-playback-paused-symbolic|org.kde.plasma.weather,Weather Report,configure-symbolic|org.kde.plasma.volume,Audio Volume,audio-volume-medium-symbolic|org.kde.plasma.brightness,Brightness and Color,brightness-high-symbolic|org.kde.plasma.networkmanagement,Networks,network-wireless-80-symbolic|org.kde.plasma.battery,Power Management,speedometer-symbolic|org.kde.plasma.notifications,Notifications,notification-active-symbolic|org.kde.plasma.systemmonitor.net,Network speed,network-workgroup|org.kde.plasma.lock_logout,Lock/Logout,system-shutdown
 
 [ScreenMapping]
 itemsOnDisabledScreens=
