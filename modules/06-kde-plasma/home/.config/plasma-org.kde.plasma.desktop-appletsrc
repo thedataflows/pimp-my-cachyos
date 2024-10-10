@@ -117,38 +117,12 @@ DialogWidth=720
 
 [Containments][41][Applets][61][Configuration][General]
 show_lockScreen=false
-show_requestLogout=true
 show_requestReboot=true
+show_requestShutDown=true
 
 [Containments][41][Applets][62]
 immutability=1
 plugin=org.kde.plasma.marginsseparator
-
-[Containments][41][Applets][63]
-immutability=1
-plugin=org.kde.plasma.systemmonitor
-
-[Containments][41][Applets][63][Configuration]
-CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=60
-popupHeight=252
-popupWidth=152
-
-[Containments][41][Applets][63][Configuration][Appearance]
-chartFace=org.kde.ksysguard.colorgrid
-title=Total CPU Use
-
-[Containments][41][Applets][63][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
-
-[Containments][41][Applets][63][Configuration][SensorColors]
-cpu/all/usage=73,77,100
-
-[Containments][41][Applets][63][Configuration][Sensors]
-highPrioritySensorIds=["cpu/all/usage"]
-lowPrioritySensorIds=["cpu/all/cpuCount","cpu/all/coreCount"]
-totalSensors=["cpu/all/usage"]
 
 [Containments][41][Applets][72]
 immutability=1
@@ -331,40 +305,37 @@ lowPrioritySensorIds=["gpu/gpu0/name","gpu/gpu0/usage","gpu/gpu0/power","gpu/gpu
 [Containments][41][Applets][79][Configuration][org.kde.ksysguard.linechart][General]
 rangeAutoY=false
 
-[Containments][41][Applets][81]
-immutability=1
-plugin=org.kde.plasma.weather
-
-[Containments][41][Applets][81][Configuration]
-PreloadWeight=42
-
-[Containments][41][Applets][81][Configuration][Units]
-pressureUnit=5028
-speedUnit=9002
-temperatureUnit=6002
-visibilityUnit=2024
-
 [Containments][41][Applets][82]
 immutability=1
 plugin=org.kde.plasma.weather
 
 [Containments][41][Applets][82][Configuration]
-PreloadWeight=52
-popupHeight=432
+PreloadWeight=58
+popupHeight=295
 popupWidth=432
 
+[Containments][41][Applets][82][Configuration][Appearance]
+showTemperatureInCompactMode=true
+
+[Containments][41][Applets][82][Configuration][ConfigDialog]
+DialogHeight=540
+DialogWidth=720
+
 [Containments][41][Applets][82][Configuration][Units]
-pressureUnit=5028
-speedUnit=9002
-temperatureUnit=6002
-visibilityUnit=2024
+pressureUnit=5022
+speedUnit=9001
+temperatureUnit=6001
+visibilityUnit=2007
+
+[Containments][41][Applets][82][Configuration][WeatherStation]
+source=bbcukmet|weather|Bucharest, Romania, RO|683506
 
 [Containments][41][ConfigDialog]
 DialogHeight=78
 DialogWidth=1920
 
 [Containments][41][General]
-AppletOrder=42;63;46;76;78;77;79;75;45;82;44;48;47;72;62;61;81
+AppletOrder=42;46;76;78;77;79;75;45;82;44;48;47;72;62;61
 
 [Containments][49]
 activityId=
@@ -386,14 +357,14 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][49][Applets][51][Configuration]
-PreloadWeight=55
+PreloadWeight=60
 
 [Containments][49][Applets][52]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][49][Applets][52][Configuration]
-PreloadWeight=60
+PreloadWeight=100
 
 [Containments][49][Applets][53]
 immutability=1

@@ -136,8 +136,8 @@ ForegroundPositive=166,218,149
 ForegroundVisited=198,160,246
 
 [DirSelect Dialog]
-DirSelectDialog Size=1169,717
-History Items[$e]=file:///mnt/win/d/Games/Steam,file:///mnt/win/f/Games/Steam
+DirSelectDialog Size=829,571
+History Items[$e]=
 
 [General]
 ColorScheme=Scratchy

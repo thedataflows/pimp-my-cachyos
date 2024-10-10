@@ -3,3 +3,7 @@ FreeFloating=true
 
 [Plugins]
 baloosearchEnabled=true
+krunner_katesessionsEnabled=false
+
+[Plugins][Favorites]
+plugins=krunner_services,krunner_systemsettings

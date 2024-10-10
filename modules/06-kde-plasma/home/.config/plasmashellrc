@@ -1,22 +1,9 @@
-[Applets][81]
-immutability=1
-plugin=org.kde.plasma.weather
-
-[Applets][81][Configuration]
-PreloadWeight=42
-
-[Applets][81][Configuration][Units]
-pressureUnit=5028
-speedUnit=9002
-temperatureUnit=6002
-visibilityUnit=2024
-
 [Applets][82]
 immutability=1
 plugin=org.kde.plasma.weather
 
 [Applets][82][Configuration]
-PreloadWeight=67
+PreloadWeight=58
 popupHeight=295
 popupWidth=432
 
@@ -35,6 +22,9 @@ visibilityUnit=2007
 
 [Applets][82][Configuration][WeatherStation]
 source=bbcukmet|weather|Bucharest, Romania, RO|683506
+
+[PlasmaTransientsConfig]
+PreloadWeight=42
 
 [PlasmaViews][Panel 22]
 floating=1

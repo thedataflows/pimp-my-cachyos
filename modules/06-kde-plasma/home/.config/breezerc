@@ -1,5 +1,6 @@
 [Common]
 OutlineCloseButton=true
+OutlineIntensity=OutlineHigh
 
 [Style]
 DockWidgetDrawFrame=true
@@ -7,3 +8,12 @@ DockWidgetDrawFrame=true
 [Windeco]
 ButtonSize=ButtonSmall
 DrawBackgroundGradient=true
+DrawBorderOnMaximizedWindows=true
+
+[Windeco Exception 0]
+BorderSize=0
+Enabled=true
+ExceptionPattern=Brave-browser
+ExceptionType=0
+HideTitleBar=true
+Mask=0
