@@ -13,6 +13,8 @@ kde-desktop:
   desc: A backend implementation for xdg-desktop-portal for the GNOME desktop environment
 - name: kdeplasma-addons
   desc: All kind of addons to improve your Plasma
+- name: aur/plasma6-applets-panel-colorizer
+  desc: Latte-Dock and WM status bar customization features for the default Plasma panels
 
 files:
 - name: dolphin-plugins
