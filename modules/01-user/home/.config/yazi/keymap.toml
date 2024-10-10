@@ -1,7 +1,4 @@
-[[manager.prepend_keymap]]
-on = "f"
-run = "plugin smart-filter"
-desc = "Smart filter"
+
 
 [[manager.prepend_keymap]]
 on = ["c", "m"]
@@ -22,3 +19,13 @@ desc = "Open with command in the terminal"
 on = "O"
 run = "plugin open-with-cmd"
 desc = "Open with command"
+
+[[manager.prepend_keymap]]
+on   = [ "f","a" ]
+run  = "plugin fg --args='rga'"
+desc = "find file by content (ripgrep-all)"
+
+[[manager.prepend_keymap]]
+on = [ "f","f" ]
+run = "plugin smart-filter"
+desc = "Smart filter"

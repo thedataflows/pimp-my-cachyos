@@ -8,7 +8,5 @@ deps = [
   { use = "yazi-rs/plugins:max-preview", rev = "35100e7" },
   { use = "Ape/open-with-cmd", rev = "8d7abc8" },
   { use = "orhnk/system-clipboard", rev = "7775a80" },
+  { use = "lpnh/fg", rev = "43fb735" },
 ]
-
-[flavor]
-deps = []
