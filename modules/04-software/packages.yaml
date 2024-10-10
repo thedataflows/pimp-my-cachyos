@@ -215,8 +215,10 @@ system:
 text:
 - name: jq
   desc: Command-line JSON processor
-- name: ripgrep
-  desc: A search tool that combines the usability of ag with the raw speed of grep
+- name: ripgrep-all
+  desc: "rga: ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc."
+- name: graphicsmagick
+  desc: Image processing system
 - name: htmlq
   desc: Like jq, but for HTML
 - name: jless
