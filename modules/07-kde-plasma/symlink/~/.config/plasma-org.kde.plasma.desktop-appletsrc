@@ -40,11 +40,6 @@ temperatureUnitId=6001
 visibilityUnitId=2007
 windSpeedUnitId=9001
 
-[Containments][40][Applets][93]
-immutability=1
-plugin=org.kde.plasma.calendar
-transient=true
-
 [Containments][40][ConfigDialog]
 DialogHeight=813
 DialogWidth=1146
