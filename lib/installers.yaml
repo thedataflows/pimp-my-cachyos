@@ -62,8 +62,6 @@ tasks:
     desc: Get INI values from a file
     deps:
       - task: initool
-    set:
-      - nounset
     vars:
       SUDO: '{{default "" .SUDO}}'
       SECTION: '{{default "" .SECTION}}'
@@ -75,8 +73,6 @@ tasks:
     desc: Set INI values in a file
     deps:
       - task: initool
-    set:
-      - nounset
     vars:
       SUDO: '{{default "" .SUDO}}'
       SECTION: '{{default "" .SECTION}}'
@@ -114,19 +110,65 @@ tasks:
           { set +x; } 2>/dev/null
         done
 
-  symlink_files:
-    desc: Symlink files from the home directory
+  files_operation:
+    desc: Copy or symlink files from the specified directory. Children are used as base directories.
+    summary: |
+      Conventions:
+        - '~' is a special directory used to denote the home directory, files will be linked or copied relative to $HOME
+        - All children directories and files are copied or symlinked to the system relative to /
     cmds:
-      - type fd &> /dev/null || {{.PARU}} fd
       - |
-        SRC=$(readlink -f home)
-        for F in $(fd --type file --hidden --absolute-path . $SRC); do
-          DEST="$HOME/${F#$SRC/}"
-          [[ -d $(dirname $DEST) ]] || \
-            mkdir -pv $(dirname $DEST)
-          [[ -L "$DEST" ]] || \
-            ln -vs "$F" "$DEST" || continue
-          ## Fix symlink
-          readlink -e "$DEST" >/dev/null || \
-            ln -vfs "$F" "$DEST"
+        type fd &>/dev/null || {{.PARU}} fd
+        type delta &>/dev/null || {{.PARU}} git-delta
+      - |
+        OP={{.OP}}
+        DIR={{.DIR}}
+        [[ -d "$DIR" ]] || return
+        for D in $(fd --type dir --max-depth 1 --hidden --format '{/}' . "$DIR"); do
+          for F in $(fd --type file --hidden . "$DIR/$D"); do
+            DEST="/${F#$DIR/}"
+            SUDO=sudo
+            if [[ "$D" == "~" ]]; then
+              DEST="$HOME/${F#$DIR/$D/}"
+              SUDO=
+            fi
+            [[ -d $(dirname $DEST) ]] || \
+              mkdir -pv $(dirname $DEST)
+            SRC=$(readlink -f $F)
+            case $OP in
+              cp)
+                $SUDO cp --verbose --no-dereference "$SRC" "$DEST" || \
+                  { RET=$?; delta "$SRC" "$DEST"; exit $RET; }
+                ;;
+              ln)
+                $SUDO test -L "$DEST" || \
+                  $SUDO ln --verbose --symbolic "$SRC" "$DEST" || \
+                    { RET=$?; delta "$SRC" "$DEST"; exit $RET; }
+                ## Fix symlink
+                $SUDO readlink -e "$DEST" >/dev/null || \
+                  $SUDO ln --verbose --symbolic --force "$SRC" "$DEST"
+                ;;
+              *)
+                echo "[ERROR] invalid operation: $OP. Valid: cp, ln" 1>&2
+                ;;
+            esac
+            $SUDO test -L "$DEST" || \
+              $SUDO ln -vs "$SRC" "$DEST" || delta "$SRC" "$DEST"
+          done
         done
+
+  symlink:
+    desc: Symlink files from the specified directory. Children are used as base.
+    deps:
+      - task: files_operation
+        vars:
+          OP: ln
+          DIR: '{{.DIR}}'
+
+  copy:
+    desc: Copy files from the specified directory. Children are used as base.
+    deps:
+      - task: files_operation
+        vars:
+          OP: cp
+          DIR: '{{.DIR}}'

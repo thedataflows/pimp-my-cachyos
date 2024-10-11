@@ -22,8 +22,9 @@ tasks:
       - x
     cmds:
       - task: inst:packages
-      - |
-        sudo {{.CP}} etc/ /
+      - task: inst:copy
+        vars:
+          DIR: copy
       - |
         echo "LANG=en_US.UTF-8" | sudo tee /etc/default/locale > /dev/null
         echo "LANG=en_US.UTF-8" | sudo tee /etc/locale.conf > /dev/null
@@ -54,7 +55,7 @@ tasks:
       - type snapper &>/dev/null && exit 1 || exit 0
     cmds:
       - |
-        sudo {{.CP}} etc/snapper/ /etc/
+        sudo {{.CP}} copy/etc/snapper /etc/
         sudo systemctl restart snapperd
       - |
         for SVC in snapper-timeline snapper-cleanup snapper-boot; do

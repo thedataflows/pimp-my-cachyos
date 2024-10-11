@@ -20,6 +20,9 @@ tasks:
     desc: Install generic desktop packages
     cmds:
       - task: inst:packages
+      - task: inst:symlink
+        vars:
+          DIR: symlink
       - task: gaming_config
       - task: rustdesk_configure
       - vars:

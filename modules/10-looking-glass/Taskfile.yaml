@@ -22,9 +22,9 @@ tasks:
       - |
         type looking-glass-client &>/dev/null || {{.PARU}} looking-glass-rc
         paru -Q looking-glass-rc-module-dkms &>/dev/null || {{.PARU}} looking-glass-rc-module-dkms
-      - |
-        set -x
-        sudo {{.CP}} etc/ /
+      - task: inst:copy
+        vars:
+          DIR: copy
       - |
         echo ">> Downgrade EFI OVMF firmware that works with Looking Glass kvmfr module"
         VERSION=202208-3

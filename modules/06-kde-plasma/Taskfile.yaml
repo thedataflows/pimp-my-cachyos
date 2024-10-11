@@ -22,7 +22,12 @@ tasks:
       - inst:initool
     cmds:
       - task: inst:packages
-      - task: inst:symlink_files
+      - task: inst:copy
+        vars:
+          DIR: copy
+      - task: inst:symlink
+        vars:
+          DIR: symlink
       - vars:
           SUDO: sudo
           FILE: /etc/environment
@@ -37,7 +42,6 @@ tasks:
         sudo systemctl is-active $SERVICE &>/dev/null || \
           sudo systemctl start $SERVICE
       - |
-        sudo {{.CP}} etc/ /
         for L in .config/gtk-3.0 .config/gtk-4.0 .config/Trolltech.conf; do
           sudo test -L /root/$L || \
             sudo ln -s $HOME/$L /root/$L

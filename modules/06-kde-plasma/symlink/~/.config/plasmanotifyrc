@@ -7,8 +7,5 @@ Seen=true
 [Applications][teams]
 Seen=true
 
-[DoNotDisturb]
-NotificationSoundsMuted=true
-
 [Notifications]
 LowPriorityHistory=true

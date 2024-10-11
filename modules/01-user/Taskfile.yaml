@@ -20,13 +20,15 @@ tasks:
     desc: Symlink config files in user home directory and install base shell packages
     cmds:
       - task: inst:packages
-      - task: inst:symlink_files
+      - task: inst:symlink
+        vars:
+          DIR: symlink
+      - |
+        sudo {{.CP}} 'symlink/~/.gtkrc-2.0' /root/
       - sudo usermod --shell /bin/zsh $(id -un)
       - task: atuin_config
       - task: faillock_config
       - task: yazi_config
-      - |
-        sudo {{.CP}} home/.gtkrc-2.0 /root/
 
   atuin_config:
     desc: Configure atuin for bash

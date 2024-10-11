@@ -57,9 +57,9 @@ tasks:
           sudo virsh net-start default
           { set +x; } 2>/dev/null
         fi
-      - |
-        set -x
-        sudo {{.CP}} etc/ /
+      - task: inst:copy
+        vars:
+          DIR: copy
       - |
         sudo ../../scripts/backup.sh "{{.GRUB_CONF}}"
         ## Enable iommu
