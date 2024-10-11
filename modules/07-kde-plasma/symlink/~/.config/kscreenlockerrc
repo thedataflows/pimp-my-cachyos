@@ -2,4 +2,6 @@
 WallpaperPlugin=org.kde.image
 
 [Greeter][Wallpaper][org.kde.image][General]
-Image=/home/cri/Pictures/Snapshot_2024-08-29_20-30-27.png
+Color=0,0,0
+FillMode=1
+Image=/home/cri/Pictures/oled-wallpaper.jpg
