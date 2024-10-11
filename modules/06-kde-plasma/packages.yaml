@@ -9,8 +9,6 @@ kde-desktop:
   desc: Syncs KDE settings to GTK applications
 - name: xdg-desktop-portal-gtk
   desc: A backend implementation for xdg-desktop-portal using GTK
-- name: xdg-desktop-portal-gnome
-  desc: A backend implementation for xdg-desktop-portal for the GNOME desktop environment
 - name: kdeplasma-addons
   desc: All kind of addons to improve your Plasma
 - name: aur/plasma6-applets-panel-colorizer
