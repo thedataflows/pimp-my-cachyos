@@ -96,13 +96,13 @@ tasks:
     cmds:
       - type yq &> /dev/null || {{.PARU}} go-yq
       - |
-        PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state!="absent").name' {{.PACKAGE_FILES}} || true)
+        PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state!="absent").name' {{.PACKAGE_FILES}} 2>/dev/null || true)
         if [[ -n "$PACKAGES" ]]; then
           set -x
           {{.PARU}} $PACKAGES
           { set +x; } 2>/dev/null
         fi
-        PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state=="absent").name' {{.PACKAGE_FILES}} || true)
+        PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state=="absent").name' {{.PACKAGE_FILES}} 2>/dev/null || true)
         for PKG in $PACKAGES; do
           {{.PARU}} -Q $PKG &>/dev/null || continue
           set -x
@@ -132,13 +132,19 @@ tasks:
               DEST="$HOME/${F#$DIR/$D/}"
               SUDO=
             fi
-            [[ -d $(dirname $DEST) ]] || \
-              mkdir -pv $(dirname $DEST)
+            $SUDO test -d $(dirname $DEST) || \
+              $SUDO mkdir -pv $(dirname $DEST)
             SRC=$(readlink -f $F)
             case $OP in
               cp)
-                $SUDO cp --verbose --no-dereference "$SRC" "$DEST" || \
-                  { RET=$?; delta "$SRC" "$DEST"; exit $RET; }
+                if $SUDO test -f "$DEST"; then
+                  echo "[WARN] '$DEST' already exists. Skipping..." 1>&2
+                  $SUDO delta "$SRC" "$DEST"
+                else
+                  set -x
+                  $SUDO cp --verbose --no-dereference "$SRC" "$DEST"
+                  { set +x; } 2>/dev/null
+                fi
                 ;;
               ln)
                 $SUDO test -L "$DEST" || \
@@ -152,8 +158,6 @@ tasks:
                 echo "[ERROR] invalid operation: $OP. Valid: cp, ln" 1>&2
                 ;;
             esac
-            $SUDO test -L "$DEST" || \
-              $SUDO ln -vs "$SRC" "$DEST" || delta "$SRC" "$DEST"
           done
         done
 
