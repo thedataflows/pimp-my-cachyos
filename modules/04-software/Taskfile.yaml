@@ -21,10 +21,10 @@ tasks:
     set:
       - x
     cmds:
-      - task: inst:packages
       - task: inst:copy
         vars:
           DIR: copy
+      - task: inst:packages
       - |
         echo "LANG=en_US.UTF-8" | sudo tee /etc/default/locale > /dev/null
         echo "LANG=en_US.UTF-8" | sudo tee /etc/locale.conf > /dev/null
