@@ -3,7 +3,8 @@ win_c:
   destination: "/mnt/win/c"
   type: ntfs-3g
 
-win_d:
-  source: "UUID=01D81FF655CE7800"
-  destination: "/mnt/win/d"
-  type: ntfs-3g
+linux2:
+  source: "UUID=49791cb3-d882-8a3d-8aa8-88ca977282e0"
+  destination: "/mnt/linux2"
+  type: btrfs
+  options: rw,relatime
