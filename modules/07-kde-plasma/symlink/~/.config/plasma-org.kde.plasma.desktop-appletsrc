@@ -7,8 +7,8 @@ RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][40]
 ItemGeometries-1920x1080=
-ItemGeometries-2194x1234=Applet-88:1360,672,432,144,0;Applet-87:1648,864,208,176,0;
-ItemGeometriesHorizontal=Applet-88:1360,672,432,144,0;Applet-87:1648,864,208,176,0;
+ItemGeometries-2194x1234=Applet-88:1360,672,432,144,0;Applet-87:1648,864,272,192,0;
+ItemGeometriesHorizontal=Applet-88:1360,672,432,144,0;Applet-87:1648,864,272,192,0;
 activityId=33f140c6-61cd-4f86-a07f-0ad73cbb5cc3
 formfactor=0
 immutability=1
@@ -26,7 +26,7 @@ UserBackgroundHints=
 
 [Containments][40][Applets][87][Configuration][ConfigDialog]
 DialogHeight=540
-DialogWidth=1030
+DialogWidth=712
 
 [Containments][40][Applets][87][Configuration][General]
 bold=false
