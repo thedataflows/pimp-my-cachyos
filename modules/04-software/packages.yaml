@@ -47,10 +47,6 @@ crypto:
   desc: Thales/Gemalto SafeNet Authentication Client for eToken 5110/5300 & IDPrime (core PKCS#11 modules)
 
 development:
-- name: git
-  desc: the fast distributed version control system
-- name: git-delta
-  desc: Syntax-highlighting pager for git and diff output
 - name: go
   desc: Core compiler tools for the Go programming language
 - name: python-pip
