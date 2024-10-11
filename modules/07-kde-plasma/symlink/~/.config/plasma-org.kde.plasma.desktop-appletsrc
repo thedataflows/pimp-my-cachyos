@@ -24,7 +24,7 @@ DialogWidth=1146
 [Containments][40][Wallpaper][org.kde.image][General]
 Color=0,0,0
 FillMode=1
-Image=/home/cri/Pictures/oled-wallpaper.jpg
+Image=/home/cri/Pictures/oled-wallpaper.png
 SlidePaths=/home/cri/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][41]
@@ -357,7 +357,7 @@ panelShadowSize=10
 panelShadowX=2
 panelShadowY=2
 panelWidgets=org.kde.plasma.kickoff,Application Launcher,app-launcher|org.kde.plasma.panelspacer,Panel Spacer,distribute-horizontal-x|org.kde.plasma.systemmonitor.cpu,Total CPU Use,cpu|org.kde.plasma.systemmonitor,CPU Temp,ksysguardd|org.kde.plasma.systemmonitor.memory,Memory Usage,ksysguardd|org.kde.plasma.systemmonitor,GPUs Temp,ksysguardd|org.kde.plasma.marginsseparator,Margins Separator,filename-divider|org.kde.plasma.digitalclock,Digital Clock,preferences-system-time|org.kde.plasma.weather,Weather Report,weather-none-available-symbolic|org.kde.plasma.systemtray,System Tray,preferences-desktop-notification|org.kde.plasma.systemmonitor.net,Network speed,network-workgroup|luisbocanegra.panel.colorizer,Panel colorizer,desktop|org.kde.plasma.lock_logout,Lock/Logout,system-shutdown
-panelWidgetsWithTray=org.kde.plasma.kickoff,Application Launcher,app-launcher|org.kde.plasma.panelspacer,Panel Spacer,distribute-horizontal-x|org.kde.plasma.systemmonitor.cpu,Total CPU Use,cpu|org.kde.plasma.systemmonitor,CPU Temp,ksysguardd|org.kde.plasma.systemmonitor.memory,Memory Usage,ksysguardd|org.kde.plasma.systemmonitor,GPUs Temp,ksysguardd|org.kde.plasma.marginsseparator,Margins Separator,filename-divider|org.kde.plasma.digitalclock,Digital Clock,preferences-system-time|org.kde.plasma.weather,Weather Report,weather-none-available-symbolic|org.kde.plasma.clipboard,Clipboard,klipper-symbolic|org.kde.plasma.mediacontroller,Media Player,media-playback-paused-symbolic|org.kde.plasma.volume,Audio Volume,audio-volume-muted-symbolic|org.kde.plasma.brightness,Brightness and Color,brightness-high-symbolic|org.kde.plasma.networkmanagement,Networks,network-wireless-80-symbolic|org.kde.plasma.battery,Power Management,speedometer-symbolic|org.kde.plasma.systemmonitor.net,Network speed,network-workgroup|luisbocanegra.panel.colorizer,Panel colorizer,desktop|org.kde.plasma.lock_logout,Lock/Logout,system-shutdown
+panelWidgetsWithTray=org.kde.plasma.kickoff,Application Launcher,app-launcher|org.kde.plasma.panelspacer,Panel Spacer,distribute-horizontal-x|org.kde.plasma.systemmonitor.cpu,Total CPU Use,cpu|org.kde.plasma.systemmonitor,CPU Temp,ksysguardd|org.kde.plasma.systemmonitor.memory,Memory Usage,ksysguardd|org.kde.plasma.systemmonitor,GPUs Temp,ksysguardd|org.kde.plasma.marginsseparator,Margins Separator,filename-divider|org.kde.plasma.digitalclock,Digital Clock,preferences-system-time|org.kde.plasma.weather,Weather Report,weather-none-available-symbolic|org.kde.plasma.clipboard,Clipboard,klipper-symbolic|org.kde.plasma.volume,Audio Volume,audio-volume-muted-symbolic|org.kde.plasma.networkmanagement,Networks,network-wireless-80-symbolic|org.kde.plasma.systemmonitor.net,Network speed,network-workgroup|luisbocanegra.panel.colorizer,Panel colorizer,desktop|org.kde.plasma.lock_logout,Lock/Logout,system-shutdown
 touchingWindowPreset=Default
 
 [Containments][41][ConfigDialog]

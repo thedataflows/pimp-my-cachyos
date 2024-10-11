@@ -4,4 +4,4 @@ WallpaperPlugin=org.kde.image
 [Greeter][Wallpaper][org.kde.image][General]
 Color=0,0,0
 FillMode=1
-Image=/home/cri/Pictures/oled-wallpaper.jpg
+Image=/home/cri/Pictures/oled-wallpaper.png
