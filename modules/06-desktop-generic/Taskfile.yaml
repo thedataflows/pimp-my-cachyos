@@ -3,7 +3,7 @@ version: 3
 
 silent: true
 
-# output: prefixed
+output: prefixed
 
 set:
   - nounset
@@ -31,6 +31,7 @@ tasks:
           KEY: XCURSOR_THEME
           VALUE: Bibata-Modern-Amber
         task: inst:iniset
+      - task: catppuccin_gtk_theme
 
   gaming_config:
     desc: Configure Sunshine
@@ -59,3 +60,21 @@ tasks:
           sudo systemctl disable {{.SERVICE}}
         ! sudo systemctl is-active {{.SERVICE}} &>/dev/null || \
           sudo systemctl stop {{.SERVICE}}
+
+  catppuccin_gtk_theme:
+    desc: Install Catppuccino GTK theme
+    cmds:
+      - |
+        WORKDIR=$HOME/dev
+        [[ -d "$WORKDIR" ]] || mkdir -p $WORKDIR
+        cd $WORKDIR
+        [[ -d "$WORKDIR/Catppuccin-GTK-Theme" ]] || \
+          { set -x; git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git; { set +x; } 2>/dev/null; }
+        cd Catppuccin-GTK-Theme
+        set -x
+        git pull
+        { set +x; } 2>/dev/null
+        cd themes
+        set -x
+        ./install.sh --theme purple --color dark --tweaks black --libadwaita
+        { set +x; } 2>/dev/null
