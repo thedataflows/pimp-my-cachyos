@@ -17,6 +17,10 @@ kde-desktop:
   state: absent
 - name: xdg-desktop-portal-gnome
   state: absent
+- name: gnome-settings-daemon
+  desc: GNOME Settings Daemon
+- name: gsettings-qt
+  desc: Qml bindings for GSettings
 
 files:
 - name: dolphin-plugins
