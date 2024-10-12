@@ -1,8 +1,8 @@
 backup:
 - name: aur/kopia-ui-bin
   desc: A cross-platform backup-tool with encryption, deduplication, compression and cloud support.
-- name: aur/syncthing-gtk
-  desc: GTK3 based GUI and notification area icon for Syncthing.
+- name: aur/syncthingtray-qt6
+  desc: Tray application for Syncthing (using Qt 6)
 
 cloud:
 - name: aur/openlens-bin
