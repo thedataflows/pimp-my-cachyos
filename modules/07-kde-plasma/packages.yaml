@@ -21,6 +21,10 @@ kde-desktop:
   desc: GNOME Settings Daemon
 - name: gsettings-qt
   desc: Qml bindings for GSettings
+- name: gnome-themes-extra
+  desc: Extra Themes for GNOME Applications
+- name: gtk-engine-murrine
+  desc: GTK2 engine to make your desktop look like a 'murrina', an italian word meaning the art glass works done by Venicians glass blowers.
 
 files:
 - name: dolphin-plugins
