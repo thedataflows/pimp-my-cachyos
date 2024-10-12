@@ -7,12 +7,16 @@ kde-desktop:
   desc: Provides integration plugins for various KDE frameworks for the wayland windowing system
 - name: kde-gtk-config
   desc: Syncs KDE settings to GTK applications
-- name: xdg-desktop-portal-gtk
-  desc: A backend implementation for xdg-desktop-portal using GTK
 - name: kdeplasma-addons
   desc: All kind of addons to improve your Plasma
 - name: aur/plasma6-applets-panel-colorizer
   desc: Latte-Dock and WM status bar customization features for the default Plasma panels
+- name: xdg-desktop-portal-kde
+  desc: A backend implementation for xdg-desktop-portal using Qt/KF5
+- name: xdg-desktop-portal-gtk
+  state: absent
+- name: xdg-desktop-portal-gnome
+  state: absent
 
 files:
 - name: dolphin-plugins
