@@ -53,7 +53,7 @@ development:
   desc: The PyPA recommended tool for installing Python packages
 - name: kondo
   desc: Save disk space by cleaning non-essential files from software projects
-- name: aur/d2
+- name: d2
   desc: A modern diagram scripting language that turns text to diagrams
 - name: aur/devbox-bin
   desc: A cli tool to easily create isolated shells and containers with nix.
