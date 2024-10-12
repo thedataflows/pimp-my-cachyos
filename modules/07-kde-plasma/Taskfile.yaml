@@ -28,6 +28,12 @@ tasks:
       - task: inst:symlink
         vars:
           DIR: symlink
+      - vars:
+          SUDO: sudo
+          FILE: /etc/environment
+          KEY: GTK_USE_PORTAL
+          VALUE: 1
+        task: inst:iniset
       - |
         ## https://wiki.cachyos.org/configuration/dual_gpu/#kde-plasma
         SERVICE=switcheroo-control
