@@ -3,7 +3,7 @@ immutability=1
 plugin=org.kde.plasma.weather
 
 [Applets][82][Configuration]
-PreloadWeight=12
+PreloadWeight=0
 popupHeight=298
 popupWidth=432
 
