@@ -25,12 +25,6 @@ tasks:
           DIR: symlink
       - task: gaming_config
       - task: rustdesk_configure
-      - vars:
-          SUDO: sudo
-          FILE: /etc/environment
-          KEY: XCURSOR_THEME
-          VALUE: Bibata-Modern-Amber
-        task: inst:iniset
       - task: catppuccin_gtk_theme
 
   gaming_config:
@@ -78,3 +72,13 @@ tasks:
         set -x
         ./install.sh --theme purple --color dark --tweaks black --libadwaita
         { set +x; } 2>/dev/null
+        GTK_DIR="$HOME/.config/gtk-3.0"
+        [[ -d "$GTK_DIR" ]] || \
+          mkdir -p "$GTK_DIR"
+        for F in gtk.css gtk-dark.css assets; do
+          SRC="$HOME/.themes/Catppuccin-Purple-Dark/gtk-3.0/$F"
+          DST="$GTK_DIR/$F"
+          test -L "$DST" -a -e "$DST"  || \
+            ln --verbose --symbolic --force "$SRC" "$GTK_DIR/" || \
+              { RET=$?; delta "$SRC" "$DST"; exit $RET; }
+        done
