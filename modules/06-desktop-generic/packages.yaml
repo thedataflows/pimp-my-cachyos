@@ -13,15 +13,8 @@ desktop:
   desc: Material Based Cursor Theme
 - name: dconf-editor
   desc: GSettings editor for GNOME
-# - name: kvantum
-#   desc: SVG-based theme engine for Qt6 (including config tool and extra themes)
-#   state: absent
-# - name: kvantum-theme-catppuccin-git
-#   desc: Soothing pastel theme for Kvantum
-#   state: absent
-# - name: menulibre
-#   desc: An advanced menu editor that provides modern features in a clean, easy-to-use interface
-#   state: absent
+- name: aur/menulibre
+  desc: An advanced menu editor that provides modern features in a clean, easy-to-use interface
 
 development:
 - name: aur/surrealist-bin
@@ -30,6 +23,8 @@ development:
   desc: Visual Studio Code (vscode)
 - name: zed
   desc: A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
+- name: dbeaver
+  desc: Free universal SQL Client for developers and database administrators (community edition)
 
 files:
 - name: libunrar
