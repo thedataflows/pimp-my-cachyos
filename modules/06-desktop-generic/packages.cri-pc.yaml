@@ -21,6 +21,8 @@ gaming:
   desc: Compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour
 - name: protonup-qt
   desc: Install and manage Proton-GE and Luxtorpeda for Steam and Wine-GE for Lutris
+- name: aur/joystickwake
+  desc: A joystick-aware screen waker
 
 remote:
 - name: sunshine
