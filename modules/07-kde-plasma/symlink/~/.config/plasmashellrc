@@ -3,7 +3,7 @@ immutability=1
 plugin=org.kde.plasma.weather
 
 [Applets][82][Configuration]
-PreloadWeight=15
+PreloadWeight=12
 popupHeight=298
 popupWidth=432
 
@@ -25,9 +25,6 @@ source=bbcukmet|weather|Bucharest, Romania, RO|683506
 
 [Applets][85][Configuration]
 PreloadWeight=42
-
-[PlasmaTransientsConfig]
-PreloadWeight=0
 
 [PlasmaViews][Panel 22]
 floating=1
