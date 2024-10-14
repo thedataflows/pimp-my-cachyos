@@ -50,7 +50,7 @@ tasks:
         SMB_CONF_DIR="/etc/samba/smb.conf.d"
         sudo test -d "$SMB_CONF_DIR" || \
           { set -x; sudo mkdir -p "$SMB_CONF_DIR"; { set +x; } 2>/dev/null; }
-        MOUNTS=$(cat ../03-mounts/mounts.$(hostname).yaml) || exit 0
+        MOUNTS=$(cat ../02-mounts/mounts.$(hostname).yaml) || exit 0
         for NAME in $(yq 'keys[]' <<< "$MOUNTS"); do
           DEST=$(yq -r ".${NAME}.destination" - <<< "$MOUNTS")
           FILE="$SMB_CONF_DIR/${NAME}.conf"
