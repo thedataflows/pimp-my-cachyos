@@ -1,5 +1,5 @@
 ai:
-- name:   ollama-cuda
+- name: ollama-cuda
   desc: Create, run and share large language models (LLMs) with CUDA
 
 android:
