@@ -70,5 +70,6 @@ security:
   desc: Certificate Manager and Unified Crypto GUI
 - name: kwalletmanager
   desc: Wallet management tool
+  state: absent
 - name: ksshaskpass
   desc: ssh-add helper that uses kwallet and kpassworddialog

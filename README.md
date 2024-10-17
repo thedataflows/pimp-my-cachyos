@@ -51,6 +51,16 @@ The following is not an exaustive list, but a highlight of what will be installe
 
 3. Reboot the system at least after the first run.
 
+## Secrets management
+
+I decided to use KeePassXC as a password manager, because it is portable, has a good browser integration, and can act as a system wallet replacing KDE Wallet and GNOME Keyring.
+
+> [!WARNING]
+> This repo will disable Kwallet
+
+- <https://wiki.archlinux.org/title/KeePass#Autostart>
+- <https://code.visualstudio.com/docs/editor/settings-sync#_other-linux-desktop-environments>
+
 ## Desktop Experience
 
 ### KDE Plasma (default)
