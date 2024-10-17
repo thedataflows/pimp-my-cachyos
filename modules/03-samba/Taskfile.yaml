@@ -46,12 +46,12 @@ tasks:
         ## Add current user to samba
         sudo pdbedit -L | grep -qP "^$USER:" || \
           { set -x; sudo smbpasswd -a "$USER"; { set +x; } 2>/dev/null; }
-        ## Create samba configs for existing mounts
+        ## Share via samba the local mounts
         SMB_CONF_DIR="/etc/samba/smb.conf.d"
         sudo test -d "$SMB_CONF_DIR" || \
           { set -x; sudo mkdir -p "$SMB_CONF_DIR"; { set +x; } 2>/dev/null; }
         MOUNTS=$(cat ../02-mounts/mounts.$(hostname).yaml) || exit 0
-        for NAME in $(yq 'keys[]' <<< "$MOUNTS"); do
+        for NAME in $(yq 'with_entries(select(.value.share != false)) | keys[]' <<< "$MOUNTS"); do
           DEST=$(yq -r ".${NAME}.destination" - <<< "$MOUNTS")
           FILE="$SMB_CONF_DIR/${NAME}.conf"
           ## Backup existing

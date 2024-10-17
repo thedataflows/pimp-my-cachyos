@@ -2,6 +2,7 @@ win_c:
   source: "UUID=01D97D07D7C008F0"
   destination: "/mnt/win/c"
   type: ntfs-3g
+  share: false
 
 linux1:
   source: "UUID=20c06375-5517-4877-a9bf-506e60b2167a"
