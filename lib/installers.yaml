@@ -102,9 +102,10 @@ tasks:
           {{.PARU}} $PACKAGES
           { set +x; } 2>/dev/null
         fi
+      - |
         PACKAGES=$(yq --no-colors --no-doc '.*[] | select(.state=="absent").name' {{.PACKAGE_FILES}} 2>/dev/null || true)
         for PKG in $PACKAGES; do
-          {{.PARU}} -Q $PKG &>/dev/null || continue
+          paru -Q $PKG &>/dev/null || continue
           set -x
           {{.PARU_REMOVE}} $PKG || { set +x; } 2>/dev/null
           { set +x; } 2>/dev/null
