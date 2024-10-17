@@ -20,6 +20,9 @@ tasks:
     desc: Install generic desktop packages
     cmds:
       - task: inst:packages
+      - task: inst:copy
+        vars:
+          DIR: copy
       - task: inst:symlink
         vars:
           DIR: symlink
