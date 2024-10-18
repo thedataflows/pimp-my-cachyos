@@ -76,6 +76,14 @@ tasks:
         !
           ## Enable and start the service
           sudo systemctl daemon-reload
+          STATE=$(yq -r ".state" - <<< "$MOUNT")
+          if [[ "$STATE" == "disabled" ]]; then
+            set -x
+            sudo systemctl disable "${FILE##*/}"
+            sudo systemctl stop "${FILE##*/}" || { set +x; } 2>/dev/null
+            { set +x; } 2>/dev/null
+            continue
+          fi
           set -x
           sudo systemctl enable "${FILE##*/}"
           sudo systemctl start "${FILE##*/}" || { set +x; } 2>/dev/null

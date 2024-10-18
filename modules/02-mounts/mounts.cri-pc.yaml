@@ -3,6 +3,7 @@ win_c:
   destination: "/mnt/win/c"
   type: ntfs-3g
   share: false
+  state: disabled
 
 linux1:
   source: "UUID=20c06375-5517-4877-a9bf-506e60b2167a"
@@ -26,4 +27,11 @@ linux4:
   source: "UUID=2c615f49-c166-1344-4a08-634e4b5f1de4"
   destination: "/mnt/linux4"
   type: btrfs
+  options: rw,relatime
+  state: disabled
+
+ventoy:
+  source: "UUID=7FFD-B6CF"
+  destination: "/mnt/ventoy"
+  type: exfat
   options: rw,relatime
