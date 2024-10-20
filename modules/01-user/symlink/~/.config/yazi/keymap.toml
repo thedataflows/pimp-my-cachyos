@@ -21,11 +21,11 @@ run = "plugin open-with-cmd"
 desc = "Open with command"
 
 [[manager.prepend_keymap]]
-on   = [ "f","a" ]
+on   = [ "F","a" ]
 run  = "plugin fg --args='rga'"
 desc = "find file by content (ripgrep-all)"
 
 [[manager.prepend_keymap]]
-on = [ "f","f" ]
+on = [ "F","f" ]
 run = "plugin smart-filter"
 desc = "Smart filter"
