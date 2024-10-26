@@ -63,5 +63,3 @@ development:
   desc: Syntax-highlighting pager for git and diff output
 - name: difftastic
   desc: An experimental diff tool that compares files based on their syntax
-- name: sq-bin
-  desc: sq data wrangler

@@ -63,6 +63,8 @@ development:
   desc: Simple terminal UI for git commands
 - name: aur/surrealdb-bin
   desc: A scalable, distributed, collaborative, document-graph database, for the realtime web
+- name: sq-bin
+  desc: sq data wrangler
 
 files:
 - name: mc
