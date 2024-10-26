@@ -9,29 +9,24 @@ linux1:
   source: "UUID=20c06375-5517-4877-a9bf-506e60b2167a"
   destination: "/mnt/linux1"
   type: btrfs
-  options: rw,relatime
 
 linux2:
   source: "UUID=486939e7-ffce-b9bf-bd36-e0caeb62d497"
   destination: "/mnt/linux2"
   type: btrfs
-  options: rw,relatime
 
 linux3:
   source: "UUID=b79b7dd2-8a81-ddf5-88dc-3f5041f22979"
   destination: "/mnt/linux3"
   type: btrfs
-  options: rw,relatime
 
 linux4:
   source: "UUID=2c615f49-c166-1344-4a08-634e4b5f1de4"
   destination: "/mnt/linux4"
   type: btrfs
-  options: rw,relatime
   state: disabled
 
 ventoy:
   source: "UUID=7FFD-B6CF"
   destination: "/mnt/ventoy"
   type: exfat
-  options: rw,relatime

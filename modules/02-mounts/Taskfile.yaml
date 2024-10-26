@@ -50,9 +50,11 @@ tasks:
               nfs)
                 OPTIONS="rw,nosuid,soft,nfsvers=4,noacl,async,nocto,nconnect=16,_netdev,timeo=10,retrans=2,bg"
                 ;;
-              *)
-                OPTIONS=
+              exfat|vfat|fat)
+                OPTIONS="auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,noatime"
                 ;;
+              *)
+                OPTIONS="auto,rw,relatime"
             esac
           fi
           W=${WHERE#*/}
