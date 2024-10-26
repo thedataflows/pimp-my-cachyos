@@ -121,6 +121,8 @@ system:
   desc: Control your EWMH compliant window manager from command line
 - name: systemd-ui
   desc: Graphical front-end for systemd
+- name: mission-center
+  desc: Monitor your CPU, Memory, Disk, Network and GPU usage
 # - name: xclip
 #   desc: Command line interface to the X11 clipboard
 #   state: absent
