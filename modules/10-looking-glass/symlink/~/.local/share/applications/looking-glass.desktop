@@ -1,13 +1,11 @@
 [Desktop Entry]
-Comment=
-Exec=env __NV_DISABLE_EXPLICIT_SYNC=1 looking-glass-client -f /dev/kvmfr0 input:rawMouse=yes input:mouseSmoothing=no audio:micDefault=allow win:maximize=yes
+Comment=A client application for accessing the LookingGlass IVSHMEM device of a VM
+Exec=env __NV_DISABLE_EXPLICIT_SYNC=1 looking-glass-client -f /dev/kvmfr0 input:rawMouse=yes input:mouseSmoothing=no audio:micDefault=allow win:maximize=no
 Icon=/home/cri/.local/share/icons/looking-glass-128x128.png
 Name=Looking Glass
 NoDisplay=false
-Path=
+Path=/
 StartupNotify=true
 Terminal=false
-TerminalOptions=
 Type=Application
 X-KDE-SubstituteUID=false
-X-KDE-Username=
