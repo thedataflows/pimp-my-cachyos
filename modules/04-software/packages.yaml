@@ -145,6 +145,8 @@ network:
   desc: Unix tool with terminal UI for visualizing socket statistics
 - name: aur/wuzz-bin
   desc: Interactive CLI tool for HTTP inspection
+- name: axel
+  desc: Light command line download accelerator
 
 system:
 - name: htop
