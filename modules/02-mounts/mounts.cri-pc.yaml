@@ -30,3 +30,4 @@ ventoy:
   source: "UUID=7FFD-B6CF"
   destination: "/mnt/ventoy"
   type: exfat
+  options: auto,rw,uid=cri,gid=cri,noatime
