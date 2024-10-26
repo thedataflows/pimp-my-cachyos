@@ -25,6 +25,9 @@ tasks:
       - task: inst:copy
         vars:
           DIR: copy
+      - task: inst:symlink
+        vars:
+          DIR: symlink
       - |
         echo ">> Downgrade EFI OVMF firmware that works with Looking Glass kvmfr module"
         VERSION=202208-3
