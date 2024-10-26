@@ -28,13 +28,13 @@ tasks:
       - task: inst:symlink
         vars:
           DIR: symlink
-      ## https://github.com/flatpak/flatpak/issues/2861
+      ## https://discuss.kde.org/t/hdr-toggle-vanished-from-system-settings/23735/5
       # - vars:
       #     SUDO: sudo
       #     FILE: /etc/environment
-      #     KEY: GTK_USE_PORTAL
+      #     KEY: KWIN_DRM_ALLOW_NVIDIA_COLORSPACE
       #     VALUE: 1
-      #  task: inst:iniset
+      #   task: inst:iniset
       - |
         ## https://wiki.cachyos.org/configuration/dual_gpu/#kde-plasma
         SERVICE=switcheroo-control
