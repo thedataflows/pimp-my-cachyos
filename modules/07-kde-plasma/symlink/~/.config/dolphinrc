@@ -5,6 +5,7 @@ update_info=dolphin_detailsmodesettings.upd:rename-leading-padding,dolphin_detai
 
 [ContentDisplay]
 RecursiveDirectorySizeLimit=1
+UsePermissionsFormat=CombinedFormat
 
 [DetailsMode]
 ExpandableFolders=false
