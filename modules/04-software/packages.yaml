@@ -91,6 +91,8 @@ files:
   desc: Pretty fancy and modern file manager in terminal file manager
 - name: p7zip
   desc: Command-line file archiver with high compression ratio
+- name: sshfs
+  desc: FUSE client based on the SSH File Transfer Protocol
 
 network:
 - name: xh
