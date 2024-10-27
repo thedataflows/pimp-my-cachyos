@@ -24,6 +24,8 @@ kde-desktop:
   desc: Extra Themes for GNOME Applications
 - name: gtk-engine-murrine
   desc: GTK2 engine to make your desktop look like a 'murrina', an italian word meaning the art glass works done by Venicians glass blowers.
+- name: krfb
+  desc: Desktop Sharing
 
 files:
 - name: dolphin-plugins
