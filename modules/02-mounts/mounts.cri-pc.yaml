@@ -3,7 +3,7 @@ win_c:
   destination: "/mnt/win/c"
   type: ntfs-3g
   share: false
-  state: disabled
+  # state: disabled
 
 linux1:
   source: "UUID=20c06375-5517-4877-a9bf-506e60b2167a"
