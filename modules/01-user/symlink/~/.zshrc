@@ -19,7 +19,10 @@ source /usr/share/fzf-tab-completion/zsh/fzf-zsh-completion.sh
 bindkey '^I' fzf_completion
 
 ## Oh-my-posh
-[[ ! -t 0 || $SHLVL -gt 1 ]] || \
+PARENT_PROCESS=$(ps -p $PPID -o comm=)
+## Space separated list of program names that should not load oh-my-posh
+PROCLIST=""
+[[ ! " $PROCLIST " =~ " $PARENT_PROCESS " ]] && \
   eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/tokyo.toml)" &>/dev/null
 
 ## Fzf
