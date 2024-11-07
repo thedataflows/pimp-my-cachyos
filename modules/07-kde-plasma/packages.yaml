@@ -30,6 +30,8 @@ kde-desktop:
 files:
 - name: dolphin-plugins
   desc: Extra Dolphin plugins
+- name: filelight
+  desc: View disk usage information
 - name: bcompare
   desc: "Beyond Compare 5: Compare, sync, and merge files and folders"
 - name: bcompare-kde6
