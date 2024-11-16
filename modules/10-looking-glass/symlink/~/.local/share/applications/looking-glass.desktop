@@ -4,7 +4,7 @@ Type=Application
 Name=Looking Glass
 Comment=A client application for accessing the LookingGlass IVSHMEM device of a VM
 Icon=/home/cri/.local/share/icons/looking-glass-128x128.png
-Exec=looking-glass-client -f /dev/kvmfr0 egl:vsync=yes spice:audio=yes input:rawMouse=yes input:mouseSmoothing=no audio:micDefault=allow win:fullScreen=no
+Exec=env __NV_DISABLE_EXPLICIT_SYNC=1 looking-glass-client -f /dev/kvmfr0 egl:vsync=yes spice:audio=yes input:rawMouse=yes input:mouseSmoothing=no audio:micDefault=allow win:fullScreen=no
 Path=/
 Actions=
 Categories=kf5-unknown;
