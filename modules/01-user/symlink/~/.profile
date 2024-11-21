@@ -19,6 +19,9 @@ virblk() {
 # grep -qP '^SSH_AUTH_SOCK=.+' "$_ED_PATH/profile.conf" || \
 #   echo "SSH_AUTH_SOCK=$SSH_AUTH_SOCK" >> "$_ED_PATH/profile.conf"
 
+## https://mise.jdx.dev/ide-integration.html#ide-integration
+eval "$(mise activate ${SHELL##*/} --shims)"
+
 ## Set up other profiles
 for p in x z; do
   [[ -L ~/.${p}profile || -e ~/.${p}profile ]] || ln -vs ~/.profile ~/.${p}profile
