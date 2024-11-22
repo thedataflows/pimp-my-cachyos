@@ -7,8 +7,8 @@ RightButton;NoModifier=org.kde.contextmenu
 
 [Containments][40]
 ItemGeometries-1920x1080=
-ItemGeometries-2194x1234=Applet-87:1648,864,400,304,0;Applet-89:1904,224,272,96,0;
-ItemGeometriesHorizontal=Applet-87:1648,864,400,304,0;Applet-89:1904,224,272,96,0;
+ItemGeometries-2194x1234=Applet-87:1648,864,400,304,0;Applet-89:1760,240,160,96,0;
+ItemGeometriesHorizontal=Applet-87:1648,864,400,304,0;Applet-89:1760,240,160,96,0;
 activityId=33f140c6-61cd-4f86-a07f-0ad73cbb5cc3
 formfactor=0
 immutability=1
@@ -113,7 +113,7 @@ immutability=1
 plugin=org.kde.plasma.digitalclock
 
 [Containments][41][Applets][45][Configuration]
-PreloadWeight=92
+PreloadWeight=100
 popupHeight=450
 popupWidth=810
 
@@ -188,7 +188,7 @@ plugin=org.kde.plasma.systemmonitor.net
 
 [Containments][41][Applets][72][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=92
+PreloadWeight=100
 popupHeight=186
 popupWidth=207
 
@@ -423,7 +423,7 @@ panelOutlineWidth=1
 panelShadowSize=10
 panelShadowX=2
 panelShadowY=2
-panelWidgets=[{"name":"org.kde.plasma.kickoff","title":"Application Launcher","icon":"app-launcher","inTray":false},{"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"name":"org.kde.plasma.systemmonitor.cpu","title":"Total CPU Use","icon":"cpu","inTray":false},{"name":"org.kde.plasma.systemmonitor","title":"CPU Temp","icon":"ksysguardd","inTray":false},{"name":"org.kde.plasma.systemmonitor.memory","title":"Memory Usage","icon":"ksysguardd","inTray":false},{"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"name":"org.kde.plasma.digitalclock","title":"Digital Clock","icon":"preferences-system-time","inTray":false},{"name":"org.kde.plasma.weather","title":"Weather Report","icon":"weather-clouds-symbolic","inTray":false},{"name":"org.kde.plasma.pager","title":"Pager","icon":"user-desktop","inTray":false},{"name":"org.kde.plasma.systemtray","title":"System Tray","icon":"preferences-desktop-notification","inTray":false},{"name":"org.kde.plasma.systemmonitor.net","title":"Network speed","icon":"network-workgroup","inTray":false},{"name":"luisbocanegra.panel.colorizer","title":"Panel colorizer","icon":"desktop","inTray":false},{"name":"org.kde.plasma.lock_logout","title":"Lock/Logout","icon":"system-shutdown","inTray":false},{"name":"org.kde.plasma.notifications","title":"Notifications","icon":"notification-active-symbolic","inTray":true},{"name":"chrome_status_icon_1","title":"Kopia","icon":"","inTray":true},{"name":"KeePassXC","title":"Untitled.kdbx [Locked] - KeePassXC","icon":"keepassxc-monochrome-dark-locked","inTray":true},{"name":"openrgb","title":"OpenRGB","icon":"","inTray":true},{"name":"Syncthing Tray","title":"Syncthing is idling","icon":"","inTray":true},{"name":"teams","title":"teams","icon":"","inTray":true},{"name":"Transmission Remote GUI v5.18.0","title":"Disconnected","icon":"","inTray":true},{"name":"org.kde.plasma.clipboard","title":"Clipboard","icon":"klipper-symbolic","inTray":true},{"name":"org.kde.plasma.mediacontroller","title":"Media Player","icon":"media-playback-paused-symbolic","inTray":true},{"name":"org.kde.plasma.volume","title":"Audio Volume","icon":"audio-volume-medium-symbolic","inTray":true},{"name":"org.kde.plasma.brightness","title":"Brightness and Color","icon":"brightness-high-symbolic","inTray":true},{"name":"org.kde.kdeconnect","title":"KDE Connect","icon":"kdeconnect-tray-symbolic","inTray":true},{"name":"org.kde.plasma.keyboardlayout","title":"Keyboard Layout","icon":"input-keyboard","inTray":true},{"name":"org.kde.plasma.networkmanagement","title":"Networks","icon":"network-wireless-80-symbolic","inTray":true},{"name":"org.kde.plasma.battery","title":"Power Management","icon":"speedometer-symbolic","inTray":true},{"name":"org.kde.plasma.systemtray.expand","title":"Show hidden icons","icon":"arrow-down","inTray":true}]
+panelWidgets=[{"name":"org.kde.plasma.kickoff","title":"Application Launcher","icon":"app-launcher","inTray":false},{"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"name":"org.kde.plasma.systemmonitor.cpu","title":"Total CPU Use","icon":"cpu","inTray":false},{"name":"org.kde.plasma.systemmonitor","title":"CPU Temp","icon":"ksysguardd","inTray":false},{"name":"org.kde.plasma.systemmonitor.memory","title":"Memory Usage","icon":"ksysguardd","inTray":false},{"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"name":"org.kde.plasma.digitalclock","title":"Digital Clock","icon":"preferences-system-time","inTray":false},{"name":"org.kde.plasma.weather","title":"Weather Report","icon":"weather-clouds-symbolic","inTray":false},{"name":"org.kde.plasma.pager","title":"Pager","icon":"user-desktop","inTray":false},{"name":"org.kde.plasma.systemtray","title":"System Tray","icon":"preferences-desktop-notification","inTray":false},{"name":"org.kde.plasma.systemmonitor.net","title":"Network speed","icon":"network-workgroup","inTray":false},{"name":"luisbocanegra.panel.colorizer","title":"Panel colorizer","icon":"desktop","inTray":false},{"name":"org.kde.plasma.lock_logout","title":"Lock/Logout","icon":"system-shutdown","inTray":false},{"name":"org.kde.plasma.notifications","title":"Notifications","icon":"notification-active-symbolic","inTray":true},{"name":"chrome_status_icon_1","title":"Kopia","icon":"","inTray":true},{"name":"KeePassXC","title":"Untitled.kdbx - KeePassXC","icon":"keepassxc-monochrome-dark","inTray":true},{"name":"openrgb","title":"OpenRGB","icon":"","inTray":true},{"name":"tray-icon tray app","title":"rustdesk","icon":"/run/user/1000/tray-icon/tray-icon-2-0.png","inTray":true},{"name":"Syncthing Tray","title":"Syncthing is idling\\nConnected to syncthing-dataflows and synology","icon":"","inTray":true},{"name":"tremotesf","title":"▾ 0 B/s\\n▴ 281.0 KiB/s","icon":"org.equeim.Tremotesf","inTray":true},{"name":"tao application","title":"trgui-ng","icon":"/run/user/1000/tao/tray-icon-80325252-9818-432d-8e3a-d5203b84257d.png","inTray":true},{"name":"org.kde.plasma.clipboard","title":"Clipboard","icon":"klipper-symbolic","inTray":true},{"name":"org.kde.plasma.volume","title":"Audio Volume","icon":"audio-volume-medium-symbolic","inTray":true},{"name":"org.kde.plasma.brightness","title":"Brightness and Color","icon":"brightness-high-symbolic","inTray":true},{"name":"org.kde.plasma.keyboardlayout","title":"Keyboard Layout","icon":"input-keyboard","inTray":true},{"name":"org.kde.plasma.networkmanagement","title":"Networks","icon":"network-wireless-80-symbolic","inTray":true},{"name":"org.kde.plasma.battery","title":"Power Management","icon":"speedometer-symbolic","inTray":true},{"name":"org.kde.plasma.systemtray.expand","title":"Show hidden icons","icon":"arrow-down","inTray":true}]
 panelWidgetsWithTray=org.kde.plasma.kickoff,Application Launcher,app-launcher|org.kde.plasma.panelspacer,Panel Spacer,distribute-horizontal-x|org.kde.plasma.systemmonitor.cpu,Total CPU Use,cpu|org.kde.plasma.systemmonitor,CPU Temp,ksysguardd|org.kde.plasma.systemmonitor.memory,Memory Usage,ksysguardd|org.kde.plasma.systemmonitor,GPUs Temp,ksysguardd|org.kde.plasma.marginsseparator,Margins Separator,filename-divider|org.kde.plasma.digitalclock,Digital Clock,preferences-system-time|org.kde.plasma.weather,Weather Report,weather-clear-symbolic|org.kde.plasma.clipboard,Clipboard,klipper-symbolic|org.kde.plasma.mediacontroller,Media Player,media-playback-playing-symbolic|org.kde.plasma.volume,Audio Volume,audio-volume-medium-symbolic|org.kde.plasma.brightness,Brightness and Color,brightness-high-symbolic|org.kde.plasma.networkmanagement,Networks,network-wireless-80-symbolic|org.kde.plasma.battery,Power Management,speedometer-symbolic|org.kde.plasma.systemmonitor.net,Network speed,network-workgroup|luisbocanegra.panel.colorizer,Panel colorizer,desktop|org.kde.plasma.lock_logout,Lock/Logout,system-shutdown
 presetAutoloading={"maximized":"/home/cri/.config/panel-colorizer/presets/Default","touchingWindow":"/home/cri/.config/panel-colorizer/presets/Default","floating":"/home/cri/.config/panel-colorizer/presets/Default","normal":"/home/cri/.config/panel-colorizer/presets/Default"}
 touchingWindowPreset=Default
@@ -497,7 +497,7 @@ immutability=1
 plugin=org.kde.plasma.notifications
 
 [Containments][49][Applets][54][Configuration]
-PreloadWeight=92
+PreloadWeight=97
 
 [Containments][49][Applets][55]
 immutability=1
@@ -560,7 +560,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][49][Applets][74][Configuration]
-PreloadWeight=92
+PreloadWeight=97
 
 [Containments][49][Applets][74][Configuration][General]
 currentDetailsTab=details

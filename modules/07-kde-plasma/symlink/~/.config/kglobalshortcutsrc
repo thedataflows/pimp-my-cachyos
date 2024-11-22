@@ -269,3 +269,10 @@ RecordWindow=none
 
 [services][org.mozilla.Thunderbird.desktop]
 _launch=Meta+M
+
+[strawberry]
+_k_friendly_name=strawberry
+next_track=none,none,Next track
+play_pause=none,none,Play/Pause
+prev_track=none,none,Previous track
+stop=none,none,Stop
