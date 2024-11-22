@@ -53,8 +53,8 @@ internet:
   desc: Signal Private Messenger for Linux
 - name: aur/teams
   desc: Microsoft Teams for Linux is your chat-centered workspace in Office 365
-- name: aur/transgui-qt
-  desc: A feature rich cross platform Transmission BitTorrent client. Faster and has more functionality than the built-in web GUI.
+- name: aur/trgui-ng-bin
+  desc: Remote GUI for Transmission torrent daemon
 
 multimedia:
 - name: strawberry
