@@ -1,4 +1,7 @@
 [AC][Display]
+DimDisplayIdleTimeoutSec=-1
+DimDisplayWhenIdle=false
+DisplayBrightness=40
 TurnOffDisplayIdleTimeoutSec=300
 TurnOffDisplayIdleTimeoutWhenLockedSec=20
 
