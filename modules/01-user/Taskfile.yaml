@@ -23,8 +23,9 @@ tasks:
       - task: inst:symlink
         vars:
           DIR: symlink
-      - |
-        sudo {{.CP}} 'symlink/~/.gtkrc-2.0' /root/
+        ## https://wiki.cachyos.org/configuration/sched-ext/#disable-ananicy-cpp
+      - sudo systemctl disable --now ananicy-cpp
+      - sudo {{.CP}} 'symlink/~/.gtkrc-2.0' /root/
       - sudo usermod --shell /bin/zsh $(id -un)
       - task: atuin_config
       - task: faillock_config
