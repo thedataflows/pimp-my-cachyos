@@ -30,6 +30,8 @@ kde-desktop:
 files:
 - name: dolphin-plugins
   desc: Extra Dolphin plugins
+- name: kio-admin
+  desc: Manage files as administrator using the admin:// KIO protocol
 - name: filelight
   desc: View disk usage information
 - name: bcompare
