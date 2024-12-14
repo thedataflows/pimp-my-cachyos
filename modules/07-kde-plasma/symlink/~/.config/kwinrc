@@ -43,10 +43,16 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5950520833333328},{"wi
 [Tiling][52af38d8-9c1f-5a61-8de0-32bff3517551]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.544140625},{"width":0.45585937499999996}]}
 
+[Tiling][54ea84ee-cd48-53d6-9401-9c6890028ecd]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][5fe5e87d-4b73-5316-86a8-c0c0ced53e0c]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][6753cb33-619f-5353-bab0-e1abbbe5cbef]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
+[Tiling][92e842d7-5928-5c43-884a-4912e7cc82ed]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][9ba5a1d5-cedd-500d-ab74-0077b9da365a]
