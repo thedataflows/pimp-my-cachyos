@@ -32,5 +32,5 @@ fi
 SUM=$(md5sum "$1" | cut -d' ' -f1)
 test -f "${1}.$SUM" && exit 0
 set -x
-cp --verbose "$1" "${1}.$SUM"
+cp --verbose --recursive "$1" "${1}.$SUM"
 { set +x; } 2>/dev/null
