@@ -14,6 +14,9 @@ kde-desktop:
 - name: xdg-desktop-portal-kde
   desc: A backend implementation for xdg-desktop-portal using Qt/KF5
 - name: xdg-desktop-portal-gtk
+  desc: A backend implementation for xdg-desktop-portal using GTK
+- name: xdg-desktop-portal-wlr
+  desc: xdg-desktop-portal backend for wlroots
 - name: xdg-desktop-portal-gnome
   state: absent
 - name: gnome-settings-daemon
