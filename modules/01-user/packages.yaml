@@ -51,6 +51,8 @@ shell:
   desc: The front-end to your dev env
 - name: aur/dasel-bin
   desc: Query and update data structures from the command line
+- name: fastfetch
+  desc: A feature-rich and performance oriented neofetch like system information tool
 ## To be removed
 - name: fish
   desc: A very advanced and programmable command interpreter (shell) for UNIX
