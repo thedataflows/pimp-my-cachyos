@@ -1,6 +1,8 @@
 backup:
 - name: aur/kopia-ui-bin
   desc: A cross-platform backup-tool with encryption, deduplication, compression and cloud support.
+- name: syncthing
+  desc: Open Source Continuous Replication / Cluster Synchronization Thing
 - name: aur/syncthingtray-qt6
   desc: Tray application for Syncthing (using Qt 6)
 
