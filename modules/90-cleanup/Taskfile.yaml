@@ -29,13 +29,10 @@ tasks:
         done
       - |
         for F in fish kate; do
-          ## Silly failsafe
-          [[ -n "$F" ]] || continue
           for P in ~/.config/$F ~/.local/share/$F; do
-            if [[ -e "$P" ]]; then
-              set -x
-              rm --verbose --force --recursive $P
-              { set +x; } 2>/dev/null
-            fi
+            [[ -e "$P" ]] || continue
+            set -x
+            rm --verbose --force --recursive $P
+            { set +x; } 2>/dev/null
           done
         done
