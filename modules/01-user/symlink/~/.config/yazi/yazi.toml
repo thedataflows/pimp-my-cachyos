@@ -1,6 +1,7 @@
 [manager]
 show_hidden = true
 ratio = [1, 2, 4]
+linemode = "size"
 
 [preview]
 max_width = 3000
