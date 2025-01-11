@@ -28,7 +28,7 @@ tasks:
         paru -Q qemu-desktop &>/dev/null || {{.PARU}} qemu-desktop
       - |
         echo ">> Enabling and starting services"
-        for SVC in virtqemud virtnetworkd virtstoraged virtnodedevd; do
+        for SVC in libvirtd virtqemud virtnetworkd virtstoraged virtnodedevd; do
           set -x
           sudo systemctl is-enabled $SVC &>/dev/null || \
             sudo systemctl enable $SVC
