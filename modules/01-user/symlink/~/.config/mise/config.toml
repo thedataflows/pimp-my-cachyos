@@ -2,6 +2,5 @@
 experimental = true # enable experimental features
 
 [tools]
-"cargo:ubi" = "latest"
 "ubi:a-h/templ" = "latest"
 "go:github.com/1pkg/gopium" = "latest"
