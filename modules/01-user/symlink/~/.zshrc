@@ -38,8 +38,6 @@ eval "$(zoxide init --cmd cd zsh)"
 eval "$(mise activate zsh)"
 eval "$(mise env)"
 
-eval "$(direnv hook zsh)"
-
 ## Yazi
 function y() {
   local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"

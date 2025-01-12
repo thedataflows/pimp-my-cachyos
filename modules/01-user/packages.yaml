@@ -33,8 +33,6 @@ shell:
   desc: IDE-style type-ahead completion for Zsh
 - name: aur/oh-my-posh-bin
   desc: A prompt theme engine for any shell.
-- name: direnv
-  desc: A shell extension that manages your environment
 - name: kitty
   desc: A modern, hackable, featureful, OpenGL-based terminal emulator
 - name: tmux

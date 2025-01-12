@@ -1,5 +1,6 @@
 [settings]
 experimental = true # enable experimental features
+env_file = '.env'
 
 [tools]
 "ubi:a-h/templ" = "latest"
