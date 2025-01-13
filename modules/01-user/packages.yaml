@@ -35,6 +35,8 @@ shell:
   desc: A prompt theme engine for any shell.
 - name: kitty
   desc: A modern, hackable, featureful, OpenGL-based terminal emulator
+- name: ghostty
+  desc: Fast, native, feature-rich terminal emulator pushing modern features
 - name: tmux
   desc: Terminal multiplexer
 - name: less
