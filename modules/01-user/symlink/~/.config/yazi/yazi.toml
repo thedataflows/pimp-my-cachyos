@@ -6,6 +6,7 @@ linemode = "size"
 [preview]
 max_width = 3000
 max_height = 4000
+image_delay = 0
 
 [[plugin.prepend_fetchers]]
 id = "git"
