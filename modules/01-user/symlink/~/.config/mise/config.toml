@@ -5,3 +5,4 @@ env_file = '.env'
 [tools]
 "ubi:a-h/templ" = "latest"
 "go:github.com/1pkg/gopium" = "latest"
+"pulumi" = "3"
