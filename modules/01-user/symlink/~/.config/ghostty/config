@@ -4,3 +4,5 @@ font-size = 9
 theme = "catppuccin-mocha"
 copy-on-select = true
 window-save-state = "always"
+window-height = 70
+window-width = 220
