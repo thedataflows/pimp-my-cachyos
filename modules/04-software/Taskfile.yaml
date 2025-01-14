@@ -32,6 +32,7 @@ tasks:
       - task: power-profiles-daemon_config
       - task: snapper_config
       - task: grub_config
+      - sudo mkinitcpio -P
       # - task: system:compat_jsoncpp
 
   power-profiles-daemon_config:
