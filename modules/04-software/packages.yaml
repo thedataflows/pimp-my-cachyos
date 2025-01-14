@@ -149,7 +149,7 @@ network:
   desc: Light command line download accelerator
 - name: aur/wush
   desc: lets you easily transfer files and open shells over a peer-to-peer WireGuard connection
-- name: aur/sshs-bin
+- name: sshs
   desc: Terminal user interface for SSH (Binary)
 
 system:
