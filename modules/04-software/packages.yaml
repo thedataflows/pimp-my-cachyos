@@ -151,6 +151,8 @@ network:
   desc: lets you easily transfer files and open shells over a peer-to-peer WireGuard connection
 - name: sshs
   desc: Terminal user interface for SSH (Binary)
+- name: dog
+  desc: Command-line DNS client like dig
 
 system:
 - name: htop
