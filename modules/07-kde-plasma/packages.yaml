@@ -69,6 +69,8 @@ system:
   desc: Monitors S.M.A.R.T. capable devices for imminent failure
 - name: switcheroo-control
   desc: D-Bus service to check the availability of dual-GPU
+- name: partitionmanager
+  desc: A KDE utility that allows you to manage disks, partitions, and file systems
 
 security:
 - name: gcr
