@@ -12,9 +12,3 @@ synology-homes:
   source: "synology.local:/volume1/homes"
   destination: "/mnt/synology/homes"
   type: "nfs"
-
-synology-yottamaster:
-  source: "synology.local:/volumeUSB1/usbshare"
-  destination: "/mnt/synology/yottamaster"
-  type: "nfs"
-#  options: "rw,nosuid,soft,nfsvers=4,noacl,async,nocto,nconnect=16,_netdev,timeo=10,retrans=2,bg"
