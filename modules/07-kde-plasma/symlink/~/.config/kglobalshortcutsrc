@@ -3,9 +3,18 @@ _k_friendly_name=Activity Manager
 switch-to-activity-33f140c6-61cd-4f86-a07f-0ad73cbb5cc3=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
+Switch keyboard layout to English (US)=none,none,Switch keyboard layout to English (US)
+Switch keyboard layout to Romanian=none,none,Switch keyboard layout to Romanian
 Switch to Last-Used Keyboard Layout=Meta+Alt+L,Meta+Alt+L,Switch to Last-Used Keyboard Layout
 Switch to Next Keyboard Layout=Meta+Alt+K,Meta+Alt+K,Switch to Next Keyboard Layout
 _k_friendly_name=Keyboard Layout Switcher
+
+[Strawberry]
+_k_friendly_name=Strawberry
+next_track=none,none,Next track
+play_pause=none,none,Play/Pause
+prev_track=none,none,Previous track
+stop=none,none,Stop
 
 [kaccess]
 Toggle Screen Reader On and Off=Meta+Alt+S,Meta+Alt+S,Toggle Screen Reader On and Off
