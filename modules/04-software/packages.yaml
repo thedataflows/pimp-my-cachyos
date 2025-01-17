@@ -153,6 +153,8 @@ network:
   desc: Terminal user interface for SSH (Binary)
 - name: dog
   desc: Command-line DNS client like dig
+- name: aur/ssh-ggh-bin
+  desc: Recall your SSH sessions (also search your SSH config file)
 
 system:
 - name: htop
