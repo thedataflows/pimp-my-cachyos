@@ -68,3 +68,6 @@ bindkey "^[[1;3D" backward-word
 bindkey "\e[3~" delete-char
 # Alt+Del
 bindkey "\e[3;3~" kill-word
+
+setopt no_flowcontrol
+bindkey -s '^S' 'ggh^M'
