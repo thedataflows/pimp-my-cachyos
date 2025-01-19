@@ -1,8 +1,13 @@
 font-family = "JetBrainsMono Nerd Font Mono"
 font-style = "Light"
 font-size = 9
-theme = "catppuccin-mocha"
+theme = "catppuccin-mocha-darker"
 copy-on-select = true
 window-save-state = "always"
 window-height = 70
-window-width = 220
+window-width = 280
+gtk-titlebar = false
+window-padding-x = 4
+window-padding-y = 4
+adw-toolbar-style = "raised-border"
+keybind = "ctrl+shift+enter=new_split:right"
