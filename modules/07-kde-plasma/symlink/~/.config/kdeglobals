@@ -141,8 +141,8 @@ DirSelectDialog Size=829,584
 [General]
 ColorScheme=Scratchy
 ColorSchemeHash=34bd8bad1192a8d612892100d65539ea91e87b50
-TerminalApplication=kitty
-TerminalService=kitty.desktop
+TerminalApplication=ghostty
+TerminalService=com.mitchellh.ghostty.desktop
 XftAntialias=true
 XftHintStyle=hintslight
 XftSubPixel=none
