@@ -9,7 +9,7 @@ window-height = 70
 window-width = 280
 gtk-titlebar = false
 gtk-wide-tabs = false
-window-padding-x = 4
-window-padding-y = 4
+window-padding-x = 8
+window-padding-y = 8
 adw-toolbar-style = "raised-border"
 keybind = "ctrl+shift+enter=new_split:right"
