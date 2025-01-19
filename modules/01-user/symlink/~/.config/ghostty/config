@@ -1,5 +1,4 @@
-font-family = "JetBrainsMono Nerd Font Mono"
-font-style = "Extra Light"
+font-family = "JetBrainsMono NFM ExtraLight"
 font-size = 9
 bold-is-bright = true
 theme = "catppuccin-mocha-darker"
