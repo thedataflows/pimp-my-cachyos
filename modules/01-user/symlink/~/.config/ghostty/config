@@ -12,3 +12,4 @@ window-padding-x = 8
 window-padding-y = 8
 adw-toolbar-style = "raised-border"
 keybind = "ctrl+shift+enter=new_split:right"
+background-opacity = 0.98
