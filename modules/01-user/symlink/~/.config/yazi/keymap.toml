@@ -21,7 +21,7 @@ run = "plugin open-with-cmd"
 desc = "Open with command"
 
 [[manager.prepend_keymap]]
-on   = [ "F","a" ]
+on   = "A"
 run  = "plugin fg --args='rga'"
 desc = "find file by content (ripgrep-all)"
 
