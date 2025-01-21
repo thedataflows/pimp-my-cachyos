@@ -47,6 +47,7 @@ function y() {
   fi
   rm -f -- "$tmp"
 }
+bindkey -s '^Y' 'y^M'
 
 [[ ! -t 0 || $SHLVL -gt 1 ]] || fastfetch
 
