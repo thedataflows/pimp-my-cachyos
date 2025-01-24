@@ -21,7 +21,7 @@ fzf_bat_opts=(
   --line-range=:20
   --style='header,numbers,rule,snip'
 )
-export FZF_DEFAULT_COMMAND="fd --hidden --exclude .git"
+export FZF_DEFAULT_COMMAND="fd --hidden --exclude .git --one-file-system"
 export FZF_CTRL_T_OPTS="
   --tail=1000000
   --layout=reverse
@@ -36,6 +36,7 @@ export FZF_CTRL_T_OPTS="
   --color header:italic,fg:242,hl:#d75f5f,fg+:#d75f5f,hl+:#d75f5f
 "
 export FZF_ALT_C_OPTS="
+  --tail=1000000
   --preview-window=right:70%::wrap
   --bind='ctrl-/:change-preview-window(down|hidden|)'
   --preview 'eza --tree --level 1 --icons=always --color=always {}'
