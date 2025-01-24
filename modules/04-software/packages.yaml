@@ -91,6 +91,8 @@ files:
   desc: Command-line file archiver with high compression ratio
 - name: sshfs
   desc: FUSE client based on the SSH File Transfer Protocol
+- name: television
+  desc: A general purpose fuzzy finder for your terminal
 
 network:
 - name: xh
