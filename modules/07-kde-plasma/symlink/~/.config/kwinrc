@@ -47,7 +47,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5950520833333328},{"width":0.4049479166666672}]}
 
 [Tiling][52af38d8-9c1f-5a61-8de0-32bff3517551]
-tiles={"layoutDirection":"horizontal","tiles":[{"width":0.544140625},{"width":0.45585937499999996}]}
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.6726562500000001},{"width":0.32734374999999993}]}
 
 [Tiling][54ea84ee-cd48-53d6-9401-9c6890028ecd]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -65,7 +65,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Xwayland]
-Scale=1.75
+Scale=1.5
 XwaylandEisNoPrompt=true
 XwaylandEisNoPromptApps=xembedsniproxy
 
