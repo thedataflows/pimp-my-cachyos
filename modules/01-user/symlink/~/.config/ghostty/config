@@ -13,5 +13,5 @@ gtk-wide-tabs = false
 gtk-adwaita = false
 adw-toolbar-style = "raised-border"
 keybind = "ctrl+shift+enter=new_split:right"
-background-opacity = 0.9
+background-opacity = 0.97
 scrollback-limit = 104857600
