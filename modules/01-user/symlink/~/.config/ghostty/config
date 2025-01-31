@@ -10,7 +10,7 @@ window-padding-x = 8
 window-padding-y = 8
 gtk-titlebar = false
 gtk-wide-tabs = false
-gtk-adwaita = false
+gtk-adwaita = true
 adw-toolbar-style = "raised-border"
 keybind = "ctrl+shift+enter=new_split:right"
 background-opacity = 0.97
