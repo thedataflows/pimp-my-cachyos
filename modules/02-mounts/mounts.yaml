@@ -2,13 +2,16 @@ synology-syn01:
   source: "synology.local:/volume1/syn01"
   destination: "/mnt/synology/syn01"
   type: "nfs"
+  startat: &startat "*-*-* 18:05:00"
 
 synology-syn02:
   source: "synology.local:/volume2/syn02"
   destination: "/mnt/synology/syn02"
   type: "nfs"
+  startat: *startat
 
 synology-homes:
   source: "synology.local:/volume1/homes"
   destination: "/mnt/synology/homes"
   type: "nfs"
+  startat: *startat

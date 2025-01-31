@@ -23,9 +23,10 @@ tasks:
         type nfsidmap &>/dev/null || {{.PARU}} nfs-utils nfsidmap
         type ntfs-3g &>/dev/null || {{.PARU}} ntfs-3g
       - |
+        set -a
         SERVICE_DIR=/usr/local/lib/systemd/system
         sudo test -d "$SERVICE_DIR" || sudo mkdir -p "$SERVICE_DIR"
-        MOUNTS=$(cat mounts.yaml mounts.$(hostname).yaml 2>/dev/null || true)
+        MOUNTS=$(cat mounts.yaml mounts.$(hostname).yaml 2>/dev/null | yq -r 'explode(.)' || true)
         for NAME in $(yq -r 'keys[]' <<< "$MOUNTS"); do
           MOUNT=$(yq -r ".$NAME" <<< "$MOUNTS")
           TYPE=$(yq -r ".type" - <<< "$MOUNT")
@@ -37,8 +38,11 @@ tasks:
           esac
           WHAT=$(yq -r ".source" - <<< "$MOUNT")
           WHERE=$(yq -r ".destination" - <<< "$MOUNT")
-          OPTIONS=$(yq -r ".options" - <<< "$MOUNT")
-          if [[ -z "$OPTIONS" || "$OPTIONS" == "null" ]]; then
+          W=${WHERE#*/}
+          FILE="$SERVICE_DIR/${W//\//-}"
+          STARTAT=$(yq -r '.startat // ""' - <<< "$MOUNT")
+          OPTIONS=$(yq -r '.options // ""' - <<< "$MOUNT")
+          if [[ -z "$OPTIONS" ]]; then
             case $TYPE in
               ntfs3)
                 ## https://docs.kernel.org/filesystems/ntfs3.html
@@ -47,47 +51,32 @@ tasks:
               ntfs-3g)
                 OPTIONS="auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,dev,exec,noatime,iocharset=utf8,windows_names,big_writes,suid"
                 ;;
-              nfs)
-                OPTIONS="rw,nosuid,soft,nfsvers=4,noacl,async,nocto,nconnect=16,_netdev,timeo=10,retrans=2,bg"
-                ;;
               exfat|vfat|fat)
                 OPTIONS="auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,noatime"
+                ;;
+              nfs)
+                OPTIONS="rw,nosuid,soft,nfsvers=4,noacl,async,nocto,nconnect=16,_netdev,timeo=10,retrans=2,bg"
                 ;;
               *)
                 OPTIONS="auto,rw,relatime"
             esac
           fi
-          W=${WHERE#*/}
-          FILE="$SERVICE_DIR/${W//\//-}.mount"
-          ## Backup existing
-          sudo ../../scripts/backup.sh "$FILE"
-          ## Write new
-          cat <<! | sudo tee "$FILE" >/dev/null
-        [Unit]
-        Description=Local mount unit for $NAME
-        $AFTER
-
-        [Mount]
-        What=$WHAT
-        Where=$WHERE
-        Type=$TYPE
-        Options=$OPTIONS
-
-        [Install]
-        WantedBy=multi-user.target
-        !
-          ## Enable and start the service
+          ## Write new unit files
+          TPLS="mount service timer"
+          [[ -n "$STARTAT" ]] || TPLS=mount
+          for T in $TPLS; do
+            sudo ../../scripts/backup.sh "${FILE}.$T"
+            envsubst < .${T}.tpl | sudo tee "${FILE}.$T" >/dev/null
+          done
+          ## Enable and start the units
           sudo systemctl daemon-reload
+          VERB=enable
           STATE=$(yq -r ".state" - <<< "$MOUNT")
-          if [[ "$STATE" == "disabled" ]]; then
+          [[ "$STATE" != "disabled" ]] || VERB=disable
+          for T in mount timer; do
+            [[ -f "${FILE##*/}.$T" ]] || continue
             set -x
-            sudo systemctl disable "${FILE##*/}"
-            sudo systemctl stop "${FILE##*/}" || { set +x; } 2>/dev/null
+            sudo systemctl $VERB --now "${FILE##*/}.$T" || { set +x; } 2>/dev/null
             { set +x; } 2>/dev/null
-            continue
-          fi
-          set -x
-          sudo systemctl enable "${FILE##*/}"
-          sudo systemctl start "${FILE##*/}" || { set +x; } 2>/dev/null
-          { set +x; } 2>/dev/null
+          done
         done
