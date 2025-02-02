@@ -38,8 +38,9 @@ tasks:
           esac
           WHAT=$(yq -r ".source" - <<< "$MOUNT")
           WHERE=$(yq -r ".destination" - <<< "$MOUNT")
-          W=${WHERE#*/}
-          FILE="$SERVICE_DIR/${W//\//-}"
+          WHERE_NAME=${WHERE#*/}
+          WHERE_NAME=${WHERE_NAME//\//-}
+          FILE="$SERVICE_DIR/$WHERE_NAME"
           STARTAT=$(yq -r '.startat // ""' - <<< "$MOUNT")
           OPTIONS=$(yq -r '.options // ""' - <<< "$MOUNT")
           if [[ -z "$OPTIONS" ]]; then
