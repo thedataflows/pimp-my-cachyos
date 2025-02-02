@@ -126,16 +126,16 @@ tasks:
         DIR={{.DIR}}
         [[ -d "$DIR" ]] || return
         for D in $(fd --type dir --max-depth 1 --hidden --format '{/}' . "$DIR"); do
-          for F in $(fd --type file --hidden . "$DIR/$D"); do
+          fd --type file --hidden . "$DIR/$D" | while IFS= read -r F; do
             DEST="/${F#$DIR/}"
             SUDO=sudo
             if [[ "$D" == "~" ]]; then
               DEST="$HOME/${F#$DIR/$D/}"
               SUDO=
             fi
-            $SUDO test -d $(dirname $DEST) || \
-              $SUDO mkdir -pv $(dirname $DEST)
-            SRC=$(readlink -f $F)
+            $SUDO test -d $(dirname "$DEST") || \
+              $SUDO mkdir -pv $(dirname "$DEST")
+            SRC=$(readlink -f "$F")
             case $OP in
               cp)
                 if $SUDO test -f "$DEST"; then
