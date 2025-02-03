@@ -27,7 +27,7 @@ tasks:
         SERVICE_DIR=/usr/local/lib/systemd/system
         sudo test -d "$SERVICE_DIR" || sudo mkdir -p "$SERVICE_DIR"
         MOUNTS=$(cat mounts.yaml mounts.$(hostname).yaml 2>/dev/null | yq -r 'explode(.)' || true)
-        for NAME in $(yq -r 'keys[]' <<< "$MOUNTS"); do
+        yq -r 'keys[]' <<< "$MOUNTS" | while IFS= read -r NAME; do
           MOUNT=$(yq -r ".$NAME" <<< "$MOUNTS")
           TYPE=$(yq -r ".type" - <<< "$MOUNT")
           AFTER=
