@@ -23,6 +23,8 @@ gaming:
   desc: Install and manage Proton-GE and Luxtorpeda for Steam and Wine-GE for Lutris
 - name: aur/joystickwake
   desc: A joystick-aware screen waker
+- name: xone-dongle-firmware
+  desc: Xbox Wireless Controller Adapter firmware
 
 remote:
 - name: sunshine
