@@ -1,3 +1,6 @@
+[Compositing]
+AllowTearing=false
+
 [Desktops]
 Id_1=7ba8a4ce-5a8e-44d7-b052-d8582d19c808
 Id_2=76a39681-cde5-43db-bcce-b5ef935433df
