@@ -2,7 +2,7 @@
 FreeFloating=true
 
 [Plugins]
-baloosearchEnabled=true
+baloosearchEnabled=false
 helprunnerEnabled=true
 krunner_katesessionsEnabled=false
 

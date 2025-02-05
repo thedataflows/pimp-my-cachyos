@@ -47,3 +47,7 @@ tasks:
           sudo test -L /root/$L || \
             sudo ln -s $HOME/$L /root/$L
         done
+      - |
+        ## Stop file indexer
+        balooctl6 disable || true
+        balooctl6 purge || true
