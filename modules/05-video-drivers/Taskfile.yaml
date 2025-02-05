@@ -31,7 +31,7 @@ tasks:
           case $VGA in
             NVIDIA)
               set -x
-              {{.PARU}} nvtop nvidia-patch opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia libva-nvidia-driver cuda
+              {{.PARU}} nvtop nvidia-patch opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia libva-nvidia-driver cuda nvidia-container-toolkit
               ;;
             ## TODO Test
             Advanced)
