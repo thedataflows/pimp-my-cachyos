@@ -61,14 +61,16 @@ bindkey "\E[H" beginning-of-line
 bindkey "^[[F" end-of-line
 bindkey "\E[4~" end-of-line
 bindkey "\E[F" end-of-line
-# Alt+Right
-bindkey "^[[1;3C" forward-word
-# Alt+Left
-bindkey "^[[1;3D" backward-word
+# Ctrl+Right
+bindkey "^[[1;5C" forward-word
+# Ctrl+Left
+bindkey "^[[1;5D" backward-word
 # Del
 bindkey "\e[3~" delete-char
-# Alt+Del
-bindkey "\e[3;3~" kill-word
+# Ctrl+Del
+bindkey "\e[3;5~" kill-word
+# Ctrl+Backspace
+bindkey "^H" backward-kill-word
 
 setopt no_flowcontrol
 bindkey -s '^S' 'ggh^M'
