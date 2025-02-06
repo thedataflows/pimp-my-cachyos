@@ -33,7 +33,7 @@ tasks:
       - task: snapper_config
       - task: grub_config
       - sudo mkinitcpio -P
-      - sudo systemctl restart keyd
+      - sudo systemctl enable --now keyd
       # - task: system:compat_jsoncpp
 
   power-profiles-daemon_config:
