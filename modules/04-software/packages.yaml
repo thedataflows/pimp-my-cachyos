@@ -221,6 +221,8 @@ system:
   desc: A graphical grub2 settings manager
 - name: gptfdisk
   desc: A text-mode partitioning tool that works on GUID Partition Table (GPT) disks
+- name: keyd
+  desc: A key remapping daemon for linux
 
 text:
 - name: jq
