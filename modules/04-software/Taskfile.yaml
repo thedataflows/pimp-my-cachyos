@@ -34,7 +34,7 @@ tasks:
       - task: grub_config
       - sudo mkinitcpio -P
       - sudo systemctl enable --now keyd
-      # - task: system:compat_jsoncpp
+      - task: compat_libboost
 
   power-profiles-daemon_config:
     desc: Configure power-profiles-daemon
@@ -110,12 +110,7 @@ tasks:
           VALUE: '"2"'
         task: inst:iniset
 
-  compat_jsoncpp:
-    desc: Manually install libjsoncpp.so.25
-    vars:
-      WHAT: usr/lib/libjsoncpp.so.25
+  compat_libboost:
+    desc: Manually symlink libboost
     cmds:
-      - |
-        sudo test -f /{{.WHAT}} || \
-          curl -sL https://archive.archlinux.org/packages/j/jsoncpp/jsoncpp-1.9.5-3-x86_64.pkg.tar.zst | \
-            sudo tar --zstd -xvf - -C / {{.WHAT}}
+      - sudo ln -sv /usr/lib/libboost_filesystem.so.1.{87,86}.0
