@@ -129,6 +129,8 @@ system:
   desc: Graphical front-end for systemd
 - name: mission-center
   desc: Monitor your CPU, Memory, Disk, Network and GPU usage
+- name: solaar
+  desc: Linux device manager for a wide range of Logitech devices
 # - name: xclip
 #   desc: Command line interface to the X11 clipboard
 #   state: absent
