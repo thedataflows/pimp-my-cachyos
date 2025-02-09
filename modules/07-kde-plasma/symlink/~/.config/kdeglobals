@@ -136,7 +136,7 @@ ForegroundPositive=166,218,149
 ForegroundVisited=198,160,246
 
 [DirSelect Dialog]
-DirSelectDialog Size=1312,904
+DirSelectDialog Size=825,584
 
 [General]
 ColorScheme=Scratchy
