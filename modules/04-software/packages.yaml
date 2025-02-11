@@ -55,7 +55,7 @@ development:
   desc: Save disk space by cleaning non-essential files from software projects
 - name: d2
   desc: A modern diagram scripting language that turns text to diagrams
-- name: aur/glow
+- name: glow
   desc: Command-line markdown renderer
 - name: lazygit
   desc: Simple terminal UI for git commands
