@@ -196,6 +196,7 @@ x-scheme-handler/signalcaptcha=signal-desktop.desktop;signal.desktop;
 x-scheme-handler/snews=org.mozilla.Thunderbird.desktop;
 x-scheme-handler/webcal=org.mozilla.Thunderbird.desktop;
 x-scheme-handler/webcals=org.mozilla.Thunderbird.desktop;
+x-scheme-handler/lmstudio=lm-studio.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-ebook-viewer.desktop;
@@ -397,6 +398,7 @@ x-scheme-handler/signalcaptcha=signal-desktop.desktop
 x-scheme-handler/snews=org.mozilla.Thunderbird.desktop
 x-scheme-handler/webcal=org.mozilla.Thunderbird.desktop
 x-scheme-handler/webcals=org.mozilla.Thunderbird.desktop
+x-scheme-handler/lmstudio=lm-studio.desktop
 
 [Removed Associations]
 inode/directory=nemo.desktop;
