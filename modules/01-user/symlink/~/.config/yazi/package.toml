@@ -1,15 +1,47 @@
-[plugin]
-deps = [
-  { use = "yazi-rs/plugins:smart-filter", rev = "8ed2537" },
-  { use = "yazi-rs/plugins:full-border", rev = "8ed2537" },
-  { use = "yazi-rs/plugins:git", rev = "8ed2537" },
-  { use = "yazi-rs/plugins:chmod", rev = "8ed2537" },
-  { use = "yazi-rs/plugins:jump-to-char", rev = "8ed2537" },
-  { use = "yazi-rs/plugins:max-preview", rev = "8ed2537" },
-  { use = "Ape/open-with-cmd", rev = "a80d1cf" },
-  { use = "orhnk/system-clipboard", rev = "7775a80" },
-  { use = "lpnh/fg", rev = "9bba743" },
-]
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-filter"
+rev = "8945e54"
+hash = "b482f4f2d3c4e0aa3f8db89a95699439"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:full-border"
+rev = "8945e54"
+hash = "ae9e1d0c6bfd68cdebc98cc684c22b45"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "8945e54"
+hash = "771f18427fb75fb19990ce602bb322f4"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "8945e54"
+hash = "f28138c2e11e87962b66d583fef724c3"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:jump-to-char"
+rev = "8945e54"
+hash = "af11685de39c366ec1137fcbccacdbff"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:max-preview"
+rev = "8945e54"
+hash = "15b2ff7f6563c14d5b2e93b3e9da35de"
+
+[[plugin.deps]]
+use = "Ape/open-with-cmd"
+rev = "433cf30"
+hash = "86e0312b01bc5762813c6c1d0517f073"
+
+[[plugin.deps]]
+use = "orhnk/system-clipboard"
+rev = "7775a80"
+hash = "9b8f2573da54334b04747e51556040cc"
+
+[[plugin.deps]]
+use = "lpnh/fg"
+rev = "f6b3264"
+hash = "cf0eacdc13d9151f37e0276f080e5470"
 
 [flavor]
 deps = []
