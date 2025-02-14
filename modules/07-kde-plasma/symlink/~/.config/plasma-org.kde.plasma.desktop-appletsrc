@@ -265,7 +265,7 @@ plugin=org.kde.plasma.systemmonitor.memory
 
 [Containments][41][Applets][77][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
-PreloadWeight=99
+PreloadWeight=100
 popupHeight=185
 popupWidth=156
 
@@ -637,7 +637,7 @@ DialogWidth=720
 groupedTaskVisualization=2
 indicateAudioStreams=false
 interactiveMute=false
-launchers=applications:org.keepassxc.KeePassXC.desktop,applications:brave-browser.desktop,applications:code.desktop,applications:kitty.desktop,applications:org.kde.dolphin.desktop,applications:org.mozilla.Thunderbird.desktop,applications:anytype.desktop,applications:signal-desktop.desktop,applications:OpenLens.desktop,applications:teams.desktop
+launchers=applications:org.keepassxc.KeePassXC.desktop,applications:brave-browser.desktop,applications:code.desktop,applications:kitty.desktop,applications:org.kde.dolphin.desktop,applications:org.mozilla.Thunderbird.desktop,applications:anytype.desktop,applications:signal-desktop.desktop,applications:OpenLens.desktop,applications:microsoft-teams-nativefier.desktop
 showOnlyCurrentActivity=false
 showOnlyCurrentDesktop=false
 
