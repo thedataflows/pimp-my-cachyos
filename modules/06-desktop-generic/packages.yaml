@@ -41,6 +41,8 @@ files:
 fonts:
 - name: ttf-quicksand-variable
   desc: A sans serif typeface designed by Andrew Paglinawan using geometric shapes (variable)
+- name: inter-font
+  desc: A typeface specially designed for user interfaces
 
 graphics:
 - name: libheif

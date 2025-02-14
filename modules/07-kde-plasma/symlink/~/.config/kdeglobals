@@ -147,10 +147,10 @@ XftAntialias=true
 XftHintStyle=hintslight
 XftSubPixel=none
 fixed=JetBrainsMono Nerd Font,10,-1,5,300,0,0,0,0,0,0,0,0,0,0,1,Light
-font=Quicksand,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-menuFont=Quicksand,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-smallestReadableFont=Quicksand,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
-toolBarFont=Quicksand,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+font=Inter Display,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+menuFont=Inter Display,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+smallestReadableFont=Inter Display,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+toolBarFont=Inter Display,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 
 [Icons]
 Theme=Papirus-Dark
@@ -198,7 +198,7 @@ MaximumRemoteSize=0
 [WM]
 activeBackground=24,25,38
 activeBlend=24,25,38
-activeFont=Quicksand,11,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+activeFont=Inter Display,11,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 activeForeground=202,211,245
 frame=255,255,255  # RGB color for active window border
 inactiveBackground=24,25,38
