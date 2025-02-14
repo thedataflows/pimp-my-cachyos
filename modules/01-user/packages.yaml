@@ -29,8 +29,8 @@ shell:
   desc: A very advanced and programmable command interpreter (shell) for UNIX
 - name: zsh-syntax-highlighting
   desc: Fish shell like syntax highlighting for Zsh
-- name: aur/zsh-autocomplete
-  desc: IDE-style type-ahead completion for Zsh
+- name: zsh-autocomplete
+  desc: Real-time type-ahead completion for Zsh
 - name: aur/oh-my-posh-bin
   desc: A prompt theme engine for any shell.
 - name: kitty
