@@ -43,6 +43,8 @@ fonts:
   desc: A sans serif typeface designed by Andrew Paglinawan using geometric shapes (variable)
 - name: inter-font
   desc: A typeface specially designed for user interfaces
+- name: ttf-roboto
+  desc: Google's signature family of fonts
 
 graphics:
 - name: libheif
