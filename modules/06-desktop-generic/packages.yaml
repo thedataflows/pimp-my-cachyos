@@ -86,8 +86,6 @@ productivity:
   desc: Ebook management application
 - name: aur/onlyoffice-bin
   desc: An office suite that combines text, spreadsheet and presentation editors
-- name: aur/superproductivity-bin
-  desc: ToDo List / Time Tracker / Personal Jira Task Manager
 - name: evince
   desc: Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)
 # - name: albert
