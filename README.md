@@ -14,23 +14,23 @@ It also takes care of many quirks and gotchas that I have found along the way.
 
 The following is not an exaustive list, but a highlight of what will be installed and partially configured. These may change over time.
 
-- Shell: `zsh`, `kitty`, `oh-my-posh`, `atuin`, `zoxide`, `direnv`, `fzf`, `bat`, `exa`, `fd`, `ripgrep`, `yazi`, `btop`, `htop`, `procs`
+- Shell: `zsh`, `kitty` (default), `ghostty`, `oh-my-posh`, `atuin`, `zoxide`, `direnv`, `television`, `fzf`, `bat`, `exa`, `fd`, `ripgrep`, `yazi`, `mc`, `btop`, `htop`, `procs`
 - Unified desktop environment, with consistend look and feel across GTK/QT applications
   - Themes: `Scratchy` and `Catppuccino` variants
   - Icons: `Papirus Dark`
   - Cursors: `Bibata Modern Amber`
-  - Fonts: `Quicksand`, `JetBrainsMono Nerd Font`
+  - Fonts: `Roboto`, `JetBrainsMono Nerd Font`
 - Secret management: `KeePassXC` (integrates with the browser, with ssh-agent and acts as a system wallet)
 - Web browser: `Brave`
 - Mail client: `Thunderbird`
 - Office suite: `ONLYOFFICE`
-- Productivity: `AnyType`, `superProductity`
+- Productivity: `AnyType`
 - Editors: `VS Code`, `Zed`
 - Gaming: `Steam`
 - Windows OS compatibility: `Bottles` (most Windows games work with Proton layer, most Windows native apps work with Caffe layer)
 - Virtualization: `QEMU`, `Virt-Manager`, `Looking Glass`
 - Containers: `containerd`, `nerdctl`, `kubectl`
-- Backup and recovery: `kopia`, `syncthing`, `rsync`, `snapper` (btrfs snapshots)
+- Backup and recovery: `kopia` & `kopia-ui`, `syncthing` & `syncthing tray`, `rsync` & `grsync`, `snapper` & `btrfs assistant` (btrfs snapshots)
 
 ## Usage
 
@@ -72,7 +72,7 @@ So I decided to give KDE Plasma a go. I was surprised by how smooth it runs and 
 - Hidden top panels and bottom bar because I use an OLED screen.
 - `Scratchy` global theme with Bibata Modern Amber cursor.
 - Tray icons out of the box
-- Better HiDPI support with fractional scaling (much needed when using a 4K screen)
+- Better HiDPI support with fractional scaling (much needed when using a 4K screen), especially with Plasma 6.3.
 - Better and richer apps compared to Gnome (System Settings, System Monitor, KRunner, Dolphin, Gwenview, Okular, etc.)
 
 ![KDE Plasma](screenshot1.png)
@@ -95,7 +95,7 @@ Discouraged by some crashes and freezes.
 
 ### Tiling Window Managers
 
-Gave Hyprland a go, but having a HiDPI display and wanting scaling, proved to be an ugly experience (pixelated fonts or very tiny output). Liked the simplicity and speed though, but it not yet for me.
+Gave Hyprland a go, but having a HiDPI display and wanting scaling, proved to be an ugly experience (pixelated fonts or very tiny output). Liked the simplicity and speed though, but it not yet for me. Still, from time to time I revisit and play around with it. I will include a module to install and configure a ready-to-use Hyprland desktop.
 
 ## Why yaml and taskfile.dev?
 
