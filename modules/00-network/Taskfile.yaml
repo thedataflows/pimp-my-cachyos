@@ -20,6 +20,8 @@ tasks:
     desc: Network configuration tasks
     cmds:
       - |
+        {{.PARU}} aur/networkmanager-iwd-overlay
+      - |
         type sshd &>/dev/null || {{.PARU}} openssh
         sudo systemctl enable sshd
         sudo systemctl restart sshd
