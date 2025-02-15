@@ -26,6 +26,7 @@ tasks:
       - task: inst:symlink
         vars:
           DIR: symlink
+      - sudo {{.CP}} 'symlink/~/.gtkrc-2.0' /root/
       - task: gaming_config
       - task: rustdesk_configure
       - task: catppuccin_gtk_theme
