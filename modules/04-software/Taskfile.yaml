@@ -113,4 +113,6 @@ tasks:
   compat_libboost:
     desc: Manually symlink libboost
     cmds:
-      - sudo ln -sv /usr/lib/libboost_filesystem.so.1.{87,86}.0
+      - |
+        [[ -L /usr/lib/libboost_filesystem.so.1.86.0 ]] || \
+          sudo ln -sv /usr/lib/libboost_filesystem.so.1.{87,86}.0
