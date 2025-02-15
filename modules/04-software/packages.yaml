@@ -149,6 +149,8 @@ network:
   desc: Interactive CLI tool for HTTP inspection
 - name: axel
   desc: Light command line download accelerator
+- name: aria2
+  desc: Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 - name: aur/wush
   desc: lets you easily transfer files and open shells over a peer-to-peer WireGuard connection
 - name: sshs
