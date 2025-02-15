@@ -5,7 +5,7 @@ gtk-sound-theme-name="ocean"
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
 gtk-theme-name="Catppuccin-Purple-Dark"
-gtk-icon-theme-name="Papirus-Dark"
+gtk-icon-theme-name="kora"
 gtk-font-name="Roboto,  10"
 gtk-cursor-theme-name="Bibata-Modern-Amber"
 gtk-cursor-theme-size=24
