@@ -30,8 +30,12 @@ tasks:
           echo "$VGA VGA detected"
           case $VGA in
             NVIDIA)
+              ADDITIONAL=aur/nvidia-patch
+              V1=$(paru -Si $ADDITIONAL | grep ^Version | cut -d: -f2 | head -1)
+              V2=$(paru -Si nvidia-utils | grep ^Version | cut -d: -f2 | head -1)
+              [[ "$V1" == "$V2" ]] || ADDITIONAL=
               set -x
-              {{.PARU}} nvtop nvidia-patch opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia libva-nvidia-driver cuda nvidia-container-toolkit
+              {{.PARU}} nvtop $ADDITIONAL opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia libva-nvidia-driver cuda nvidia-container-toolkit
               ;;
             ## TODO Test
             Advanced)
