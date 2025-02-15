@@ -3,7 +3,7 @@ immutability=1
 plugin=org.kde.plasma.weather
 
 [Applets][82][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 popupHeight=298
 popupWidth=432
 
@@ -35,6 +35,9 @@ pressureUnit=5008
 speedUnit=9000
 temperatureUnit=6001
 visibilityUnit=2007
+
+[PlasmaTransientsConfig]
+PreloadWeight=76
 
 [PlasmaViews][Panel 22]
 floating=1
