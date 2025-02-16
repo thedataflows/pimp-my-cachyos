@@ -24,18 +24,20 @@ desktopchangeosdEnabled=true
 diminactiveEnabled=true
 dimscreenEnabled=true
 eyeonscreenEnabled=true
+fadedesktopEnabled=true
 fadingpopupsEnabled=false
 glideEnabled=true
 highlightwindowEnabled=false
 morphingpopupsEnabled=false
 scaleEnabled=false
 screenedgeEnabled=false
+slideEnabled=false
 translucencyEnabled=true
 windowapertureEnabled=false
 wobblywindowsEnabled=true
 
 [Script-desktopchangeosd]
-PopupHideDelay=500
+PopupHideDelay=300
 
 [TabBox]
 HighlightWindows=false
