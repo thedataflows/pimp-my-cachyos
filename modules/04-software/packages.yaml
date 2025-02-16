@@ -147,8 +147,6 @@ network:
   desc: Unix tool with terminal UI for visualizing socket statistics
 - name: aur/wuzz-bin
   desc: Interactive CLI tool for HTTP inspection
-- name: axel
-  desc: Light command line download accelerator
 - name: aria2
   desc: Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink
 - name: aur/wush
