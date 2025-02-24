@@ -47,7 +47,7 @@ shell:
   desc: A smarter cd command for your terminal
 - name: atuin
   desc: Magical shell history
-- name: aur/mise-bin
+- name: mise
   desc: The front-end to your dev env
 - name: aur/dasel-bin
   desc: Query and update data structures from the command line
