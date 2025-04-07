@@ -31,6 +31,8 @@ kde-desktop:
   desc: Desktop Sharing
 - name: aur/kora-icon-theme
   desc: SVG icon theme suitable for every desktop environment (dark and light versions, HiDPI support)
+- name: kaccounts-providers
+  desc: Online account providers for the KAccounts system
 
 files:
 - name: dolphin-plugins
