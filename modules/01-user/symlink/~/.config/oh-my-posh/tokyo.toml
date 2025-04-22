@@ -115,10 +115,10 @@ type = "text"
 type = "status"
 style = "plain"
 foreground = "#33DD2D"
-template = ""
+template = "{{.Code}}"
 foreground_templates = [
-  "{{if gt .Code 0}}red{{end}}",
-  "{{if eq .Code 0}}#33DD2D{{end}}",
+    "{{if gt .Code 0}}red{{end}}",
+    "{{if eq .Code 0}}#33DD2D{{end}}",
 ]
 [blocks.segments.properties]
 always_enabled = true

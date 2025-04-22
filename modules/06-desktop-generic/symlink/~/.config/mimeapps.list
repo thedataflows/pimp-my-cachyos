@@ -197,6 +197,7 @@ x-scheme-handler/snews=org.mozilla.Thunderbird.desktop;
 x-scheme-handler/webcal=org.mozilla.Thunderbird.desktop;
 x-scheme-handler/webcals=org.mozilla.Thunderbird.desktop;
 x-scheme-handler/lmstudio=lm-studio.desktop;
+x-scheme-handler/discord-1352351827206733974=discord-1352351827206733974.desktop
 
 [Default Applications]
 application/epub+zip=calibre-ebook-viewer.desktop;
@@ -399,6 +400,7 @@ x-scheme-handler/snews=org.mozilla.Thunderbird.desktop
 x-scheme-handler/webcal=org.mozilla.Thunderbird.desktop
 x-scheme-handler/webcals=org.mozilla.Thunderbird.desktop
 x-scheme-handler/lmstudio=lm-studio.desktop
+x-scheme-handler/discord-1352351827206733974=discord-1352351827206733974.desktop
 
 [Removed Associations]
 inode/directory=nemo.desktop;

@@ -6,7 +6,6 @@ clipboardGroup=PostScreenshotCopyImage
 launchAction=DoNotTakeScreenshot
 
 [GuiConfig]
-includePointer=true
 includeShadow=false
 quitAfterSaveCopyExport=true
 
