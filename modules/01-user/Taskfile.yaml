@@ -24,7 +24,7 @@ tasks:
         vars:
           DIR: symlink
         ## https://wiki.cachyos.org/configuration/sched-ext/#disable-ananicy-cpp
-      - sudo systemctl disable --now ananicy-cpp
+      - sudo systemctl disable --now ananicy-cpp plocate-updatedb.timer plocate-updatedb.service
       - sudo usermod --shell /bin/zsh $(id -un)
       - task: atuin_config
       - task: faillock_config
