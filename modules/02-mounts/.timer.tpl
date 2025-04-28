@@ -3,7 +3,7 @@ Description=Time-based mount attempt for ${NAME}.service
 
 [Timer]
 OnCalendar=$STARTAT
-RandomizedDelaySec=10
+RandomizedDelaySec=5
 Persistent=true
 
 [Install]
