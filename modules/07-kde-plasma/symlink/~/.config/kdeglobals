@@ -136,7 +136,7 @@ ForegroundPositive=166,218,149
 ForegroundVisited=198,160,246
 
 [DirSelect Dialog]
-DirSelectDialog Size=1520,879
+Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8a\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
 ColorScheme=Scratchy

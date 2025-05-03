@@ -36,8 +36,5 @@ warnAboutRisksBeforeActingAsAdmin=false
 [PreviewSettings]
 Plugins=appimagethumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,fontthumbnail,heif,imagethumbnail,jpegthumbnail,jxl,windowsexethumbnail,windowsimagethumbnail,gdk-pixbuf-thumbnailer,svgthumbnail
 
-[Search]
-Location=Everywhere
-
 [VersionControl]
 enabledPlugins=Git

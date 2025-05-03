@@ -1,5 +1,6 @@
 [Annotations]
-annotationToolType=2
+annotationToolType=4
+highlighterStrokeColor=170,0,0
 
 [General]
 clipboardGroup=PostScreenshotCopyImage
