@@ -26,6 +26,12 @@ tasks:
         type newuidmap &>/dev/null || {{.PARU}} shadow
         type /opt/cni/bin/bridge &>/dev/null || {{.PARU}} cni-plugins
         type slirp4netns &>/dev/null || {{.PARU}} slirp4netns
+      # - |
+      #   set -x
+      #   nerdctl completion bash > symlink/~/.zsh/completions/_nerdctl
+      # - task: inst:symlink
+      #   vars:
+      #     DIR: symlink
       - |
         set -x
         sudo test -r "/usr/local/bin/docker" || \
