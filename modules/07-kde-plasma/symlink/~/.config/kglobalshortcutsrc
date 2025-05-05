@@ -281,11 +281,20 @@ switch to next activity=none,,Switch to Next Activity
 switch to previous activity=none,,Switch to Previous Activity
 toggle do not disturb=none,,Toggle do not disturb
 
+[services][io.missioncenter.MissionCenter.desktop]
+_launch=Meta+Esc
+
+[services][kitty.desktop]
+_launch=Meta+T
+
 [services][org.kde.krunner.desktop]
 _launch=Alt+F2\tSearch\tAlt+Space
 
 [services][org.kde.plasma-systemmonitor.desktop]
 _launch=none
+
+[services][org.mozilla.Thunderbird.desktop]
+_launch=Meta+M
 
 [strawberry]
 _k_friendly_name=strawberry
