@@ -8,7 +8,7 @@ Type=oneshot
 ExecStart=/usr/bin/systemctl start ${WHERE_NAME}.mount
 ExecStop=/usr/bin/systemctl stop ${WHERE_NAME}.mount
 RemainAfterExit=yes
-TimeoutStartSec=5
+TimeoutStartSec=3
 
 [Install]
 WantedBy=multi-user.target

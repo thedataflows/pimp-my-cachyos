@@ -56,7 +56,7 @@ tasks:
                 OPTIONS="auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,noatime"
                 ;;
               nfs)
-                OPTIONS="rw,nosuid,soft,nfsvers=4,noacl,async,nocto,nconnect=16,_netdev,timeo=10,retrans=2,bg"
+                OPTIONS="rw,nosuid,soft,nfsvers=4,noacl,async,nocto,nconnect=16,_netdev,timeo=3,retrans=2,bg"
                 ;;
               *)
                 OPTIONS="auto,rw,relatime"
