@@ -19,6 +19,10 @@ desktop:
   desc: An advanced menu editor that provides modern features in a clean, easy-to-use interface
 - name: webkit2gtk-4.1
   desc: Web content engine for GTK
+- name: wl-clipboard
+  desc: Command-line copy/paste utilities for Wayland
+# - name: papirus-icon-theme
+#   desc: Papirus icon theme
 
 development:
 - name: aur/surrealist-bin
@@ -92,9 +96,6 @@ productivity:
   desc: An office suite that combines text, spreadsheet and presentation editors
 - name: evince
   desc: Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)
-# - name: albert
-#   desc: A sophisticated standalone keyboard launcher
-#   state: absent
 
 remote:
 - name: remmina
@@ -119,10 +120,6 @@ system:
   desc: A Partition Magic clone, frontend to GNU Parted
 - name: gsmartcontrol
   desc: A graphical user interface for the smartctl hard disk drive health inspection tool.
-- name: papirus-icon-theme
-  desc: Papirus icon theme
-- name: wl-clipboard
-  desc: Command-line copy/paste utilities for Wayland
 - name: openrgb
   desc: Open source RGB lighting control that doesn't depend on manufacturer software
 - name: wmctrl
@@ -133,18 +130,9 @@ system:
   desc: Monitor your CPU, Memory, Disk, Network and GPU usage
 - name: solaar
   desc: Linux device manager for a wide range of Logitech devices
-# - name: xclip
-#   desc: Command line interface to the X11 clipboard
-#   state: absent
 # - name: appmenu-gtk-module
 #   desc: Application Menu GTK+ Module
 #   state: absent
 # - name: font-manager
 #   desc: A simple font management application for GTK+ Desktop Environments
-#   state: absent
-# - name: xorg-xhost
-#   desc: Server access control program for X
-#   state: absent
-# - name: journal-viewer-bin
-#   desc: A modern linux desktop application to visualize systemd logs.
 #   state: absent
