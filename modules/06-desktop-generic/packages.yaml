@@ -21,8 +21,8 @@ desktop:
   desc: Web content engine for GTK
 - name: wl-clipboard
   desc: Command-line copy/paste utilities for Wayland
-# - name: papirus-icon-theme
-#   desc: Papirus icon theme
+- name: papirus-icon-theme
+  desc: Papirus icon theme
 
 development:
 - name: aur/surrealist-bin
