@@ -140,8 +140,7 @@ DirSelectDialog Size=1520,879
 Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8a\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
-ColorScheme=Scratchy
-ColorSchemeHash=34bd8bad1192a8d612892100d65539ea91e87b50
+ColorSchemeHash=ec93b5a5c640c37b13a31a6cf1c98e7ff8618455
 TerminalApplication=kitty
 TerminalService=kitty.desktop
 XftAntialias=true
