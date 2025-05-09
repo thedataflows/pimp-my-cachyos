@@ -7,4 +7,5 @@ PointerAccelerationProfile=1
 
 [Mouse]
 X11LibInputXAccelProfileFlat=true
+cursorSize=20
 cursorTheme=Bibata-Modern-Amber
