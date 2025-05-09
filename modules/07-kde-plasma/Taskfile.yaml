@@ -52,7 +52,7 @@ tasks:
         balooctl6 disable || true
         balooctl6 purge || true
       - |
-        CMD="kwriteconfig6 --file kdeglobals --group Icons --key Theme kora"
+        CMD="kwriteconfig6 --file kdeglobals --group Icons --key Theme Qogir-dark"
         for U in $USER sddm root; do
           set -x
           sudo -u $U $CMD

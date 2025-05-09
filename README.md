@@ -17,7 +17,7 @@ The following is not an exaustive list, but a highlight of what will be installe
 - Shell: `zsh`, `kitty` (default), `ghostty`, `oh-my-posh`, `atuin`, `zoxide`, `direnv`, `television`, `fzf`, `bat`, `exa`, `fd`, `ripgrep`, `yazi`, `mc`, `btop`, `htop`, `procs`
 - Unified desktop environment, with consistend look and feel across GTK/QT applications
   - Themes: `Scratchy` and `Catppuccin` variants
-  - Icons: `Kora`
+  - Icons: `Qogir`, `Kora`
   - Cursors: `Bibata Modern Amber`
   - Fonts: `Roboto`, `JetBrainsMono Nerd Font`
 - Secret management: `KeePassXC` (integrates with the browser, with ssh-agent and acts as a system wallet)
