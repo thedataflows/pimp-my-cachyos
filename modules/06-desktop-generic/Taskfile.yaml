@@ -60,29 +60,22 @@ tasks:
           sudo systemctl stop {{.SERVICE}}
 
   catppuccin_gtk_theme:
-    desc: Install Catppuccino GTK theme
+    desc: Setup Catppuccino GTK theme
     cmds:
       - |
-        WORKDIR=$HOME/dev
-        [[ -d "$WORKDIR" ]] || mkdir -p $WORKDIR
-        cd $WORKDIR
-        [[ -d "$WORKDIR/Catppuccin-GTK-Theme" ]] || \
-          { set -x; git clone https://github.com/Fausto-Korpsvart/Catppuccin-GTK-Theme.git; { set +x; } 2>/dev/null; }
-        cd Catppuccin-GTK-Theme
-        set -x
-        git pull
-        { set +x; } 2>/dev/null
-        cd themes
-        set -x
-        ./install.sh --theme purple --color dark --tweaks black --libadwaita
-        { set +x; } 2>/dev/null
-        GTK_DIR="$HOME/.config/gtk-3.0"
-        [[ -d "$GTK_DIR" ]] || \
-          mkdir -p "$GTK_DIR"
-        for F in gtk.css gtk-dark.css assets; do
-          SRC="$HOME/.themes/Catppuccin-Purple-Dark/gtk-3.0/$F"
-          DST="$GTK_DIR/$F"
-          test -L "$DST" -a -e "$DST"  || \
-            ln --verbose --symbolic --force "$SRC" "$GTK_DIR/" || \
-              { RET=$?; delta "$SRC" "$DST"; exit $RET; }
+        paru -Q catppuccin-gtk-theme-mocha-revamped &>/dev/null || \
+          paru -Sy --noconfirm aur/catppuccin-gtk-theme-mocha-revamped
+      - |
+        THEME=lavender
+        for D in gtk-3.0 gtk-4.0; do
+          GTK_DIR="$HOME/.config/$D"
+          [[ -d "$GTK_DIR" ]] || \
+            mkdir -p "$GTK_DIR"
+          for F in thumbnail.png gtk.css gtk-dark.css assets; do
+            SRC="/usr/share/themes/catppuccin-mocha-$THEME-standard+default/$D/$F"
+            DST="$GTK_DIR/$F"
+            test -L "$DST" -a -e "$DST"  || \
+              ln --verbose --symbolic --force "$SRC" "$GTK_DIR/" || \
+                { RET=$?; delta "$SRC" "$DST"; exit $RET; }
+          done
         done
