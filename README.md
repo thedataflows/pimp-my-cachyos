@@ -22,7 +22,7 @@ The following is not an exaustive list, but a highlight of what will be installe
   - Fonts: `Roboto`, `JetBrainsMono Nerd Font`
 - Secret management: `KeePassXC` (integrates with the browser, with ssh-agent and acts as a system wallet)
 - Web browser: `Brave`
-- Mail client: `Thunderbird`
+- Mail client: `Betterbird`
 - Office suite: `ONLYOFFICE`
 - Productivity: `AnyType`
 - Editors: `VS Code`, `Zed`
