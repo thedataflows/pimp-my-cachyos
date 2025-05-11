@@ -223,6 +223,8 @@ system:
   desc: A text-mode partitioning tool that works on GUID Partition Table (GPT) disks
 - name: keyd
   desc: A key remapping daemon for linux
+- name: dysk
+  desc: Get information on your mounted filesystems
 
 text:
 - name: jq
