@@ -23,6 +23,9 @@ desktop:
   desc: Command-line copy/paste utilities for Wayland
 - name: aur/catppuccin-gtk-theme-mocha-revamped
   desc: Soothing pastel theme for GTK - Mocha
+- name: cachyos-wallpapers
+  desc: Wallpapers for CachyOS
+  state: absent
 
 development:
 - name: aur/surrealist-bin
