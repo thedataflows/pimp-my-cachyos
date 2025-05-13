@@ -159,6 +159,7 @@ Theme=Qogir-dark
 AnimationDurationFactor=0.5
 LookAndFeelPackage=Scratchy
 ShowDeleteCommand=false
+SmoothScroll=false
 
 [KFileDialog Settings]
 Allow Expansion=false
