@@ -8,7 +8,7 @@ PointerAccelerationProfile=1
 [Libinput][76][804][Apple Inc. Magic Trackpad USB-C]
 PointerAcceleration=0.200
 PointerAccelerationProfile=2
-ScrollFactor=0.3
+ScrollFactor=0.5
 TapToClick=false
 
 [Mouse]
