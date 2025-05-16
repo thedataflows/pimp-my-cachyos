@@ -1,21 +1,21 @@
 [status]
 separator_open  = ""
 separator_close = ""
-separator_style = { fg = "#45475a", bg = "#45475a" }
+separator_style = { fg = "#1e1e2e", bg = "#1e1e2e" }
 
 # Mode
-mode_normal = { fg = "#1e1e2e", bg = "#89b4fa", bold = true }
-mode_select = { fg = "#1e1e2e", bg = "#a6e3a1", bold = true }
-mode_unset  = { fg = "#1e1e2e", bg = "#f2cdcd", bold = true }
+mode_normal = { fg = "#f5e0dc", bg = "#b4befe", bold = true }
+mode_select = { fg = "#1e1e2e", bg = "#b4befe", bold = true }
+mode_unset  = { fg = "#f5e0dc", bg = "#f38ba8", bold = true }
 
 # Progress
-progress_label  = { fg = "#ffffff", bold = true }
-progress_normal = { fg = "#89b4fa", bg = "#45475a" }
-progress_error  = { fg = "#f38ba8", bg = "#45475a" }
+progress_label  = { fg = "#f5e0dc", bold = true }
+progress_normal = { fg = "#b4befe", bg = "#1e1e2e" }
+progress_error  = { fg = "#f38ba8", bg = "#1e1e2e" }
 
 # Permissions
-permissions_t = { fg = "#89b4fa" }
+permissions_t = { fg = "#b4befe" }
 permissions_r = { fg = "#f9e2af" }
 permissions_w = { fg = "#f38ba8" }
 permissions_x = { fg = "#a6e3a1" }
-permissions_s = { fg = "#7f849c" }
+permissions_s = { fg = "#cba6f7" }

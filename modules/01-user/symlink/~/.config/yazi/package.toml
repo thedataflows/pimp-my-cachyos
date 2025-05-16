@@ -39,6 +39,9 @@ rev = "55bf699"
 hash = "e0ada736ea676c2bbb3ec705a49526ef"
 
 [[plugin.deps]]
-use = "yazi-rs/plugins:mime-ext"
+use = "yazi-rs/plugins:toggle-pane"
 rev = "55bf699"
-hash = "5e24c167e9ae9a203a48f2a438b8c705"
+hash = "f3853bbdd1da2fad09d059ab5464abfd"
+
+[flavor]
+deps = []
