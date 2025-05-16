@@ -1,4 +1,4 @@
-font-family = "JetBrainsMono NFM ExtraLight"
+font-family = "JetBrainsMono NF ExtraLight"
 font-size = 9
 bold-is-bright = true
 theme = "catppuccin-mocha-darker"
@@ -6,12 +6,12 @@ copy-on-select = "clipboard"
 window-save-state = "always"
 window-height = 70
 window-width = 280
-window-padding-x = 8
-window-padding-y = 8
-gtk-titlebar = false
+window-padding-x = 4
+window-padding-y = 4
+gtk-titlebar = true
 gtk-wide-tabs = false
 gtk-adwaita = true
 adw-toolbar-style = "raised-border"
 keybind = "ctrl+shift+enter=new_split:right"
-#background-opacity = 0.97
+background-opacity = 0.97
 scrollback-limit = 104857600
