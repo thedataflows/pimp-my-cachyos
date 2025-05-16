@@ -7,8 +7,8 @@ require("full-border"):setup {
 -- https://github.com/yazi-rs/plugins/tree/main/git.yazi
 require("git"):setup()
 th.git = th.git or {}
-th.git_modified = ui.Style():fg("blue")
-th.git_deleted = ui.Style():fg("red"):bold()
+th.git.modified = ui.Style():fg("blue")
+th.git.deleted = ui.Style():fg("red"):bold()
 th.git.modified_sign = "M"
 th.git.deleted_sign = "D"
 
