@@ -7,10 +7,12 @@ require("full-border"):setup {
 -- https://github.com/yazi-rs/plugins/tree/main/git.yazi
 require("git"):setup()
 th.git = th.git or {}
-th.git.modified = ui.Style():fg("blue")
-th.git.deleted = ui.Style():fg("red"):bold()
 th.git.modified_sign = "M"
+th.git.modified = ui.Style():fg("blue")
 th.git.deleted_sign = "D"
+th.git.deleted = ui.Style():fg("red"):bold()
+th.git.untracked_sign = "X"
+th.git.untracked = ui.Style():fg("yellow")
 
 -- https://yazi-rs.github.io/docs/tips#username-hostname-in-header
 Header:children_add(function()
@@ -34,3 +36,21 @@ Status:children_add(function()
 		ui.Span(" "),
 	}
 end, 500, Status.RIGHT)
+
+require("zoxide"):setup {
+	update_db = true,
+}
+
+function Linemode:size_and_mtime()
+	local time = math.floor(self._file.cha.mtime or 0)
+	if time == 0 then
+		time = ""
+	elseif os.date("%Y", time) == os.date("%Y") then
+		time = os.date("%d %b %H:%M", time)
+	else
+		time = os.date("%d %b %Y", time)
+	end
+
+	local size = self._file:size()
+	return string.format("%s %s", size and ya.readable_size(size) or "", time)
+end
