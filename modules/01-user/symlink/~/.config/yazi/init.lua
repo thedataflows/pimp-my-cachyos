@@ -1,13 +1,16 @@
+-- https://github.com/yazi-rs/plugins/tree/main/full-border.yazi
 require("full-border"):setup {
 	-- Available values: ui.Border.PLAIN, ui.Border.ROUNDED
 	type = ui.Border.ROUNDED,
 }
 
+-- https://github.com/yazi-rs/plugins/tree/main/git.yazi
 require("git"):setup()
-THEME.git_modified = ui.Style():fg("blue")
-THEME.git_deleted = ui.Style():fg("red"):bold()
-THEME.git_modified_sign = "M"
-THEME.git_deleted_sign = "D"
+th.git = th.git or {}
+th.git_modified = ui.Style():fg("blue")
+th.git_deleted = ui.Style():fg("red"):bold()
+th.git.modified_sign = "M"
+th.git.deleted_sign = "D"
 
 -- https://yazi-rs.github.io/docs/tips#username-hostname-in-header
 Header:children_add(function()

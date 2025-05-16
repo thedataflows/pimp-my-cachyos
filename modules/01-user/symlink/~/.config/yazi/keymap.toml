@@ -29,3 +29,8 @@ desc = "find file by content (ripgrep-all)"
 on = [ "F","f" ]
 run = "plugin smart-filter"
 desc = "Smart filter"
+
+[[manager.prepend_keymap]]
+on   = "s"
+run  = "search --via=fd --args='--hidden --no-ignore'"
+desc = "find file with fd"
