@@ -97,7 +97,7 @@ Discouraged by some crashes and freezes.
 
 Gave Hyprland a go, but having a HiDPI display and wanting scaling, proved to be an ugly experience (pixelated fonts or very tiny output). Liked the simplicity and speed though, but it not yet for me. Still, from time to time I revisit and play around with it. I will include a module to install and configure a ready-to-use Hyprland desktop.
 
-[HyDE project](https://github.com/HyDE-Project/HyDE) looks promising, though it is kind of heavy on the customizations.
+[HyDE project](https://github.com/HyDE-Project/HyDE) looks promising, though it is kind of heavy on the customizations. Took enough configs and scripts from this project to make it work, but I am not sure if I will keep using it.
 
 ## Why yaml and taskfile.dev?
 
