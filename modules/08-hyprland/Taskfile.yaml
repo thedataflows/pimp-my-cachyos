@@ -1,0 +1,27 @@
+## https://taskfile.dev/usage/
+version: 3
+
+silent: true
+
+output: prefixed
+
+set:
+  - nounset
+  - errexit
+  - pipefail
+
+includes:
+  inst:
+    internal: true
+    taskfile: ../../lib/installers.yaml
+
+tasks:
+  default:
+    desc: Install Hyprland and dependencies for complete desktop experience
+    deps:
+      - inst:initool
+    cmds:
+      - task: inst:packages
+      - task: inst:symlink
+        vars:
+          DIR: symlink
