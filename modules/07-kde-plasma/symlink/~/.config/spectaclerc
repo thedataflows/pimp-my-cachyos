@@ -3,6 +3,7 @@ annotationToolType=4
 highlighterStrokeColor=170,0,0
 
 [General]
+autoSaveImage=true
 clipboardGroup=PostScreenshotCopyImage
 launchAction=DoNotTakeScreenshot
 
