@@ -198,6 +198,8 @@ x-scheme-handler/webcal=eu.betterbird.Betterbird.desktop;
 x-scheme-handler/webcals=eu.betterbird.Betterbird.desktop;
 x-scheme-handler/lmstudio=lm-studio.desktop;
 x-scheme-handler/discord-1352351827206733974=discord-1352351827206733974.desktop
+x-scheme-handler/freelens=Freelens.desktop;
+x-scheme-handler/pie=httpie.desktop;
 
 [Default Applications]
 application/epub+zip=calibre-ebook-viewer.desktop;
@@ -401,6 +403,8 @@ x-scheme-handler/webcal=eu.betterbird.Betterbird.desktop
 x-scheme-handler/webcals=eu.betterbird.Betterbird.desktop
 x-scheme-handler/lmstudio=lm-studio.desktop
 x-scheme-handler/discord-1352351827206733974=discord-1352351827206733974.desktop
+x-scheme-handler/freelens=Freelens.desktop
+x-scheme-handler/pie=httpie.desktop
 
 [Removed Associations]
 inode/directory=nemo.desktop;
