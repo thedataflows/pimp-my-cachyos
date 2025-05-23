@@ -7,8 +7,8 @@ backup:
   desc: Tray application for Syncthing (using Qt 6)
 
 cloud:
-- name: aur/openlens-bin
-  desc: The Kubernetes IDE (fork lens-bin without lenscloud-lens-extension). Read more - https://github.com/lensapp/lens/issues/5444
+- name: aur/freelens-bin
+  desc: Free Open Source Kubernetes IDE
 
 desktop:
 - name: bibata-cursor-theme-bin
