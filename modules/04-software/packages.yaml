@@ -1,6 +1,6 @@
 ai:
-- name: ollama-cuda
-  desc: Create, run and share large language models (LLMs) with CUDA
+- name: ollama-rocm
+  desc: Create, run and share large language models (LLMs)
 
 android:
 - name: scrcpy
@@ -225,6 +225,11 @@ system:
   desc: A key remapping daemon for linux
 - name: dysk
   desc: Get information on your mounted filesystems
+## For btop to show amd gpu info
+- name: rocm-smi-lib
+  desc: ROCm System Management Interface Library
+- name: nvtop
+  desc: GPUs process monitoring for AMD, Intel and NVIDIA
 
 text:
 - name: jq
