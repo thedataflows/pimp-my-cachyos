@@ -4,8 +4,11 @@ compatiblity:
 
 gaming:
   ## https://wiki.archlinux.org/title/KDE#Games
+- name: gamescope
+  desc: SteamOS session compositing window manager
 - name: aur/gamescope-nvidia
   desc: SteamOS session compositing window manager (NVIDIA patch)
+  state: absent
   ## https://www.protondb.com/help/improving-performance
 - name: gamemode
   desc: A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
