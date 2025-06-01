@@ -6,7 +6,7 @@ win_c:
   # state: disabled
 
 linux1:
-  source: "UUID=20c06375-5517-4877-a9bf-506e60b2167a"
+  source: "UUID=2e768ab4-1e25-40c9-934e-b9e77af557ba"
   destination: "/mnt/linux1"
   type: btrfs
 
