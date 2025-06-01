@@ -1,36 +1,36 @@
 
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = ["c", "m"]
 run = "plugin chmod"
 desc = "Chmod on selected files"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = "T"
 run = "plugin toggle-pane max-preview"
 desc = "Maximize or restore the preview pane"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = "o"
 run = "plugin open-with-cmd --args=block"
 desc = "Open with command in the terminal"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = "O"
 run = "plugin open-with-cmd"
 desc = "Open with command"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "A"
 run  = "plugin fg --args='rga'"
 desc = "find file by content (ripgrep-all)"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on = [ "F","f" ]
 run = "plugin smart-filter"
 desc = "Smart filter"
 
-[[manager.prepend_keymap]]
+[[mgr.prepend_keymap]]
 on   = "s"
 run  = "search --via=fd --args='--hidden --no-ignore'"
 desc = "find file with fd"

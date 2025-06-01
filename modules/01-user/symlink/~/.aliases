@@ -3,7 +3,6 @@
 alias b="bat --chop-long-lines --color=always --style='header,numbers,rule,snip'"
 alias delta="delta --side-by-side"
 alias f="__fzf_select --query"
-alias grep="rg"
 alias k="kubectl"
 alias ll="eza --long --all --git --no-time --no-permissions --icons=always --sort=type"
 alias mc="mc --nosubshell"
