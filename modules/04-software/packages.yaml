@@ -22,6 +22,14 @@ backup:
 - name: aur/kopia-bin
   desc: A cross-platform backup-tool with encryption, deduplication, compression and cloud support.
 
+containers:
+- name: docker
+  desc: Pack, ship and run any application as a lightweight container
+- name: docker-buildx
+  desc: Docker CLI plugin for extended build capabilities with BuildKit
+- name: docker-compose
+  desc: Fast, isolated development environments using Docker
+
 cloud:
 - name: krew
   desc: Find and install kubectl plugins
@@ -89,6 +97,8 @@ files:
   desc: Pretty fancy and modern file manager in terminal file manager
 - name: p7zip
   desc: Command-line file archiver with high compression ratio
+- name: pigz
+  desc: Parallel implementation of the gzip file compressor
 - name: sshfs
   desc: FUSE client based on the SSH File Transfer Protocol
 - name: television
@@ -211,10 +221,10 @@ system:
   desc: A new bootable USB solution
 - name: aur/viddy-bin
   desc: A modern watch command, binary version
-- name: aur/fan2go-git
-  desc: A simple daemon providing dynamic fan speed control based on temperature sensors
-- name: aur/fan2go-tui-git
-  desc: Terminal UI for fan2go.
+# - name: aur/fan2go-git
+#   desc: A simple daemon providing dynamic fan speed control based on temperature sensors
+# - name: aur/fan2go-tui-git
+#   desc: Terminal UI for fan2go.
 - name: aur/sysz
   desc: fzf terminal UI for systemctl
 - name: grub-customizer

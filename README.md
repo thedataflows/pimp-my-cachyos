@@ -29,7 +29,7 @@ The following is not an exaustive list, but a highlight of what will be installe
 - Gaming: `Steam`
 - Windows OS compatibility: `Bottles` (most Windows games work with Proton layer, most Windows native apps work with Caffe layer)
 - Virtualization: `QEMU`, `Virt-Manager`, `Looking Glass`
-- Containers: `containerd`, `nerdctl`, `kubectl`
+- Containers: ~~`containerd`, `nerdctl`, `kubectl`~~ `docker` (because nerctl does not support the tooling around it)
 - Backup and recovery: `kopia` & `kopia-ui`, `syncthing` & `syncthing tray`, `rsync` & `grsync`, `snapper` & `btrfs assistant` (btrfs snapshots)
 
 ## Usage
