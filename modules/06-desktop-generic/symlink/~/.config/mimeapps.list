@@ -188,7 +188,7 @@ x-scheme-handler/io.element.desktop=Element.desktop;
 x-scheme-handler/lens=OpenLens.desktop;
 x-scheme-handler/mailto=eu.betterbird.Betterbird.desktop;firefox.desktop;
 x-scheme-handler/mid=eu.betterbird.Betterbird.desktop;
-x-scheme-handler/msteams=teams.desktop;
+x-scheme-handler/msteams=teams-nativefier-url.desktop;teams.desktop;
 x-scheme-handler/news=eu.betterbird.Betterbird.desktop;
 x-scheme-handler/nntp=eu.betterbird.Betterbird.desktop;
 x-scheme-handler/sgnl=signal-desktop.desktop;signal.desktop;
@@ -200,6 +200,7 @@ x-scheme-handler/lmstudio=lm-studio.desktop;
 x-scheme-handler/discord-1352351827206733974=discord-1352351827206733974.desktop
 x-scheme-handler/freelens=Freelens.desktop;
 x-scheme-handler/pie=httpie.desktop;
+x-scheme-handler/teams=teams-nativefier.desktop
 
 [Default Applications]
 application/epub+zip=calibre-ebook-viewer.desktop;
@@ -393,7 +394,7 @@ x-scheme-handler/io.element.desktop=Element.desktop
 x-scheme-handler/lens=OpenLens.desktop
 x-scheme-handler/mailto=eu.betterbird.Betterbird.desktop
 x-scheme-handler/mid=eu.betterbird.Betterbird.desktop
-x-scheme-handler/msteams=teams.desktop
+x-scheme-handler/msteams=teams-nativefier-url.desktop
 x-scheme-handler/news=eu.betterbird.Betterbird.desktop
 x-scheme-handler/nntp=eu.betterbird.Betterbird.desktop
 x-scheme-handler/sgnl=signal-desktop.desktop
@@ -405,6 +406,7 @@ x-scheme-handler/lmstudio=lm-studio.desktop
 x-scheme-handler/discord-1352351827206733974=discord-1352351827206733974.desktop
 x-scheme-handler/freelens=Freelens.desktop
 x-scheme-handler/pie=httpie.desktop
+x-scheme-handler/teams=teams-nativefier.desktop
 
 [Removed Associations]
 inode/directory=nemo.desktop;
