@@ -72,6 +72,8 @@ internet:
 multimedia:
 - name: strawberry
   desc: A music player aimed at audio enthusiasts and music collectors
+- name: gst-plugin-spotify
+  desc: Multimedia graph framework - spotify plugin
 - name: vlc
   desc: Multi-platform MPEG, VCD/DVD, and DivX player
 - name: obs-studio
