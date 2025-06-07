@@ -10,8 +10,8 @@ synology-syn02:
   type: "nfs"
   startat: *startat
 
-synology-homes:
-  source: "synology.local:/volume1/homes"
-  destination: "/mnt/synology/homes"
+synology-shared:
+  source: "synology.local:/volume2/shared"
+  destination: "/mnt/synology/shared"
   type: "nfs"
   startat: *startat
