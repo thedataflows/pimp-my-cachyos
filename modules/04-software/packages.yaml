@@ -67,8 +67,6 @@ development:
   desc: Command-line markdown renderer
 - name: lazygit
   desc: Simple terminal UI for git commands
-- name: aur/surrealdb-bin
-  desc: A scalable, distributed, collaborative, document-graph database, for the realtime web
 - name: sq-bin
   desc: sq data wrangler
 

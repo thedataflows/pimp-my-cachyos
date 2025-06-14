@@ -28,8 +28,6 @@ desktop:
   state: absent
 
 development:
-- name: aur/surrealist-bin
-  desc: Surrealist is the ultimate way to visually manage your SurrealDB database
 - name: aur/visual-studio-code-bin
   desc: Visual Studio Code (vscode)
 - name: zed
