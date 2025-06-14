@@ -117,6 +117,7 @@ else
 fi
 GTK_ICON="$(get_hyprConf "ICON_THEME")"
 CURSOR_THEME="$(get_hyprConf "CURSOR_THEME")"
+CURSOR_SIZE=${_CURSOR_SIZE:-"$(get_hyprConf "CURSOR_SIZE")"}
 font_name="$(get_hyprConf "FONT")"
 font_size="$(get_hyprConf "FONT_SIZE")"
 monospace_font_name="$(get_hyprConf "MONOSPACE_FONT")"
@@ -179,6 +180,7 @@ sed -i -e "/^gtk-theme-name=/c\gtk-theme-name=\"${GTK_THEME}\"" \
 toml_write "${confDir}/gtk-3.0/settings.ini" "Settings" "gtk-theme-name" "${GTK_THEME}"
 toml_write "${confDir}/gtk-3.0/settings.ini" "Settings" "gtk-icon-theme-name" "${GTK_ICON}"
 toml_write "${confDir}/gtk-3.0/settings.ini" "Settings" "gtk-cursor-theme-name" "${CURSOR_THEME}"
+toml_write "${confDir}/gtk-3.0/settings.ini" "Settings" "gtk-cursor-theme-size" "${CURSOR_SIZE}"
 toml_write "${confDir}/gtk-3.0/settings.ini" "Settings" "gtk-font-name" "${font_name} ${font_size}"
 
 #// gtk4
@@ -210,7 +212,8 @@ fi
 
 sed -i -e "/^Net\/ThemeName /c\Net\/ThemeName \"${GTK_THEME}\"" \
   -e "/^Net\/IconThemeName /c\Net\/IconThemeName \"${GTK_ICON}\"" \
-  -e "/^Gtk\/CURSOR_THEMEName /c\Gtk\/CURSOR_THEMEName \"${CURSOR_THEME}\"" \
+  -e "/^Gtk\/CursorThemeName /c\Gtk\/CursorThemeName \"${CURSOR_THEME}\"" \
+  -e "/^Gtk\/CursorThemeSize /c\Gtk\/CursorThemeSize ${CURSOR_SIZE}" \
   "$confDir/xsettingsd/xsettingsd.conf"
 
 # // Legacy themes using ~/.themes also fixed GTK4 not following xdg
@@ -220,6 +223,33 @@ if [ ! -L "$HOME/.themes/${GTK_THEME}" ] && [ -d "${themesDir}/${GTK_THEME}" ]; 
   mkdir -p "$HOME/.themes"
   rm -rf "$HOME/.themes/${GTK_THEME}"
   ln -snf "${themesDir}/${GTK_THEME}" "$HOME/.themes/"
+fi
+
+# // .Xresources
+if [ -f "$HOME/.Xresources" ]; then
+  sed -i -e "/^Xcursor\.theme:/c\Xcursor.theme: ${CURSOR_THEME}" \
+    -e "/^Xcursor\.size:/c\Xcursor.size: ${CURSOR_SIZE}" "$HOME/.Xresources"
+
+  # Add if they don't exist
+  grep -q "^Xcursor\.theme:" "$HOME/.Xresources" || echo "Xcursor.theme: ${CURSOR_THEME}" >>"$HOME/.Xresources"
+  grep -q "^Xcursor\.size:" "$HOME/.Xresources" || echo "Xcursor.size: 30" >>"$HOME/.Xresources"
+else
+  # Create .Xresources if it doesn't exist
+  cat >"$HOME/.Xresources" <<EOF
+Xcursor.theme: ${CURSOR_THEME}
+Xcursor.size: ${CURSOR_SIZE}
+EOF
+fi
+
+# // .Xdefaults
+
+if [ -f "$HOME/.Xdefaults" ]; then
+  sed -i -e "/^Xcursor\.theme:/c\Xcursor.theme: ${CURSOR_THEME}" \
+    -e "/^Xcursor\.size:/c\Xcursor.size: ${CURSOR_SIZE}" "$HOME/.Xdefaults"
+
+  # Add if they don't exist
+  grep -q "^Xcursor\.theme:" "$HOME/.Xdefaults" || echo "Xcursor.theme: ${CURSOR_THEME}" >>"$HOME/.Xdefaults"
+  grep -q "^Xcursor\.size:" "$HOME/.Xdefaults" || echo "Xcursor.size: 30" >>"$HOME/.Xdefaults"
 fi
 
 #// wallpaper

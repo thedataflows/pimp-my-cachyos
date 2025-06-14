@@ -1,195 +1,226 @@
-# Configuration file for HyDE
-# Environment variables should be on top
-# Add your custom configuration in '~/.config/hyde/config.toml'
+# HyDE Configuration File
+# This file contains default values for all configuration options
+# Generated from schema
 
-"$schema" = "./schema.json"
+"$schema" = "https://raw.githubusercontent.com/HyDE-Project/HyDE/refs/heads/master/Configs/.local/share/hyde/schema/config.toml.json"
 
-WARP_ENABLE_WAYLAND = 1
-
-
+# Wallpaper configuration.
 [wallpaper]
-custom_paths = [
-    "$HOME/Pictures/Wallpapers",
-] # List of paths to search for wallpapers
-backend = "swww" # Wallpaper backend, example: swww, hyprpaper, pcmanfm, feh, etc.
-
+custom_paths = []  # List of paths to search for wallpapers.
+backend = "swww"  # Wallpaper backend, requires 'wallpaper.<backend>.sh' as handler script in $PATH
+# swwwallselect.sh configuration.
 [wallpaper.swww]
-# swwwallselect.sh configuration
-framerate = 60 # transition framerate
-duration = 1   # transition duration
-# Transition type [ none | simple | fade | left | right | top | bottom | wipe | wave | grow | center | any | outer | random ]
-transition_next = "grow"    # transition type for next wallpaper
-transition_prev = "outer"   # transition type for previous wallpaper
-transition_default = "grow" # transition type for default wallpaper
+framerate = 60  # Transition framerate.
+duration = 1  # Transition duration.
+transition_next = "grow"  # Transition type for next wallpaper.
+transition_prev = "outer"  # Transition type for previous wallpaper.
+transition_default = "grow"  # Transition type for default wallpaper.
 
 
-# NOTE: 
-# for [rofi.*] 
-# style <--script's built-in styles, also accepts themes from rofi-theme-selector
-
+# Global rofi configuration.
 [rofi]
-# global rofi configuration`
-scale = 10 # rofi default scaling
-
+scale = 10  # Rofi default scaling.
+# 'hyprlock.sh select' configuration.
 [rofi.hyprlock]
-# 'hyprlock.sh select' configuration
-scale = 10
+scale = 10  # Scaling for hyprlock.
 
+# 'animation.sh select' configuration.
 [rofi.animation]
-# ' animation.sh select' configuration
-scale = 8
+scale = 10  # Scaling for animation.
 
+# glyph-picker.sh configuration.
 [rofi.glyph]
-# glyph-picker.sh configuration
-scale = 8
+scale = 10  # Scaling for glyph picker.
 
+# rofilaunch.sh configuration.
 [rofi.launch]
-# rofilaunch.sh configuration
-# style = "10"
-scale = 5
+scale = 5  # Scaling for launch.
+drun_args = []  # Additional arguments for drun mode.
+run_args = []  # Additional arguments for run mode.
+window_args = []  # Additional arguments for window mode.
+filebrowser_args = []  # Additional arguments for filebrowser mode.
 
+# cliphist.sh configuration.
 [rofi.cliphist]
-# cliphist.sh configuration
-scale = 8
+scale = 10  # Scaling for cliphist.
 
+# swwwallselect.sh configuration.
 [rofi.wallpaper]
-#swwwallselect.sh configuration
-scale = 8
+scale = 10  # Scaling for wallpaper.
 
+# emoji-picker.sh configuration.
 [rofi.emoji]
-# emoji-picker.sh configuration
-style = 2
-scale = 8
+style = 1  # Style for emoji picker.
+scale = 10  # Scaling for emoji picker.
 
+# themeselect.sh configuration.
 [rofi.theme]
-# themeselect.sh configuration
-scale = 6
+scale = 6  # Scaling for theme selector.
 
+
+# wlogout configuration.
 [wlogout]
-style = 2
+style = 2  # Style for wlogout.
 
+# batterynotify.sh configuration.
 [battery.notify]
-# batterynotify.sh configuration
-timer = 120
-notify = 1140
-interval = 5
-dock = true
-
+timer = 120  # Timer for battery notifications.
+notify = 1140  # Notification threshold.
+interval = 5  # Interval for battery notifications.
+dock = true  # Dock status for battery notifications.
+# Thresholds for battery notifications.
 [battery.notify.threshold]
-full = 90
-critical = 10
-low = 20
-unplug = 80
+full = 90  # Full battery threshold.
+critical = 10  # Critical battery threshold.
+low = 20  # Low battery threshold.
+unplug = 100  # Unplug battery threshold.
 
-
+# Commands to execute for battery notifications.
 [battery.notify.execute]
-unplug = ""
-low = ""
-critical = "systemctl suspend"
-charging = ""
-discharging = ""
-
-[keybind.hint]
-# keybind.hint.py configuration
+unplug = ""  # Command to execute when unplugged.
+low = ""  # Command to execute when battery is low.
+critical = "systemctl suspend"  # Command to execute when battery is critical.
+charging = ""  # Command to execute when charging.
+discharging = ""  # Command to execute when discharging.
 
 
+# keybind_hint.sh configuration.
 [rofi.keybind.hint]
-# keybind_hint.sh configuration
-delimiter = "\t"
-width = "40em"
-height = "40em"
-line = 16
+delimiter = "	"  # Delimiter for keybind hints.
+width = "40em"  # Width for keybind hints.
+height = "40em"  # Height for keybind hints.
+line = 16  # Number of lines for keybind hints.
 
+# screenshot.sh configuration.
 [screenshot]
-# screenshot.sh configuration
-annotation_tool = "swappy" # Annotation tool
-annotation_pre_command = [
-    # 'shader=$(hyprshade current) && hyprshade off && trap restore_shader EXIT', # Use this when you're using hyprshade
-] # Pre command for annotation tool
-annotation_post_command = [
-    # "[ -n \"\\$shader\" ] && hyprshade on \\$shader", # Use this when you're using hyprshade
-    "",
-] # Post command for annotation tool
+annotation_tool = "satty"  # Annotation tool for screenshots.
+annotation_pre_command = []  # Pre command for annotation tool.
+annotation_post_command = [""]  # Post command for annotation tool.
 
-
+# Bookmark configuration.
 [rofi.bookmark]
-file = "$HOME/.config/hyde/bookmarks.lst"
 
+# Search configuration.
 [rofi.search]
-file = "$HOME/.config/hyde/search.lst"
 
-
+# wallbash configuration.
 [wallbash]
-skip_template = [
-    "",
-]    # skips the template when using wallbash. Requires full path to the template
+skip_template = [""]  # Templates to skip when using wallbash.
 
+# waybar configuration.
 [waybar]
-font = "JetBrainsMono Nerd Font"
-scale=30                                # total scaling
-# output = ["", ""]                     # Default monitor output for waybar
+font = "JetBrainsMono Nerd Font"  # Font for waybar.
+scale = 10  # Total scaling for waybar.
+icon_size = 10  # Icon size for waybar.
 
+# Weather configuration.
 [weather]
-temperature_unit='c'	# Temperature unit to °C or °F ('c' or 'f')
-time_format='24h'		# Time format ('12h or 24h')
-windspeed_unit='km/h'	# Windspeed unit ('kh/h' or 'mph')
-show_icon= true			# Show the weather icon in waybar
-show_location= true	    # Show the location in waybar
-show_today= true		# Detailed description of today in tooltip
-forecast_days= 3 		# Number of days to show forecast (0-3)
-location = ''			# Location/coordinates string for the weather output
+temperature_unit = "c"  # Temperature unit ('c' or 'f').
+time_format = "24h"  # Time format ('12h' or '24h').
+windspeed_unit = "km/h"  # Windspeed unit ('km/h' or 'mph').
+show_icon = true  # Show the weather icon in waybar.
+show_location = true  # Show the location in waybar.
+show_today = true  # Show detailed description of today in tooltip.
+forecast_days = 3  # Number of days to show forecast (0-3).
+location = ""  # Location/coordinates string for the weather output.
 
+# 'cava.sh stdout' configuration.
 [cava.stdout]
-# 'cava.sh stdout' configuration
-max_instances = 1 # Maximum number of cava instances // fix and workaround when a process won't kill 'cava ' process
-bar = "▁▂▃▄▅▆▇█"
-width = 20
-range = 7         # Number of (bars -1)
-standby = "🎶"
+max_instances = 1  # Maximum number of cava instances.
+bar = "▁▂▃▄▅▆▇█"  # Bar characters for cava.
+width = 20  # Width of the cava output.
+range = 7  # Number of bars minus one.
+standby = "🎶"  # Standby character for cava.
 
+# 'cava.sh hyprlock' configuration.
 [cava.hyprlock]
-# 'cava.sh hyprlock' configuration
-max_instances = 1 # Maximum number of cava instances // fix and workaround when a process won't kill 'cava ' process
-bar = "🌑🌒🌓🌔🌕🌖🌗🌘"
-width = 20
-range = 7
-standby = "🎶"
+max_instances = 1  # Maximum number of cava instances.
+bar = "▁▂▃▄▅▆▇█"  # Bar characters for cava.
+width = 20  # Width of the cava output.
+range = 7  # Number of bars minus one.
+standby = "🎶"  # Standby character for cava.
 
+# 'cava.sh waybar' configuration.
 [cava.waybar]
-# 'cava.sh waybar' configuration
-max_instances = 1 # Maximum number of cava instances // fix and workaround when waybar won't kill 'cava ' process
-bar = "▁▂▃▄▅▆▇█"
-width = 20
-range = 7
-standby = "🎶"
+max_instances = 1  # Maximum number of cava instances.
+bar = "▁▂▃▄▅▆▇█"  # Bar characters for cava.
+width = 20  # Width of the cava output.
+range = 7  # Number of bars minus one.
+standby = "🎶"  # Standby character for cava.
 
-
+# Hypr configuration.
 [hypr.config]
-# List of regex to sanitize in the theme.config // Useful for deprecated options to be removed from the theme.config
-sanitize = [
-    '.*rgba\(.*,*,*,*,',
-] # Remove all rgba colors // workarounds for rgba colors crashing hyprland
+sanitize = [".*rgba\(.*,.*,.*,.*\)"]  # List of regex to sanitize in the theme.config.
 
+# volumecontrol.sh configuration.
 [volume]
-# volumecontrol.sh configuration
-notify = true # Useful for systems that have their own OSD
-steps = 5     # Number of steps to increase/decrease volume
-boost = false # Enable volume boost
-boost_limit = 150 # Volume boost limit // Don't kill your ears/speakers
+notify = true  # Enable notifications for volume control.
+steps = 5  # Number of steps to increase/decrease volume.
+boost = false  # Enable volume boost.
+boost_limit = 120  # Volume boost limit.
 
+# brightnesscontrol.sh configuration.
 [brightness]
-# brightnesscontrol.sh configuration
-notify = true # Useful for systems that have their own OSD
-steps = 5     # Number of steps to increase/decrease brightness
+notify = true  # Enable notifications for brightness control.
+steps = 5  # Number of steps to increase/decrease brightness.
 
-
+# sysmonlaunch.sh configuration.
 [sysmonitor]
-#  sysmonlaunch.sh configuration // System monitor configuration
-execute = "btop"                   # Default command to execute // accepts executable or app.desktop
-commands = ["btop", "htop", "top"] # Fallback command options
+execute = ""  # Default command to execute.
+commands = [""]  # Fallback command options.
 
-
+# Notification script configuration.
 [notification]
-# notification script can use this configuration
-font = "mononoki Nerd Font"         # Font for notifications
-font_size = 8                     # Font size for notifications
+font = "mononoki Nerd Font"  # Font for notifications.
+font_size = 10  # Font size for notifications.
+
+# Hyprland configuration.
+[hyprland]
+browser = "firefox"  # Browser.
+editor = "code"  # Editor.
+explorer = "dolphin"  # File manager.
+idle = "hypridle"  # Idle manager.
+lockscreen = "lockscreen.sh"  # Lockscreen.
+terminal = "kitty"  # Terminal.
+quickapps = "kitty"  # Quick apps.
+bar = "waybar"  # Bar.
+color_scheme = "prefer-dark"  # Color scheme.
+gtk_theme = "Wallbash-Gtk"  # GTK theme.
+icon_theme = "Tela-circle-dracula"  # Icon theme.
+cursor_size = 24  # Cursor size.
+cursor_theme = "Bibata-Modern-Ice"  # Cursor theme.
+button_layout = ""  # Button layout. (gtk only)
+document_font_size = 10  # Document font size.
+font = "Canterell"  # Font.
+font_antialiasing = "rgba"  # Font antialiasing.
+font_hinting = "full"  # Font hinting.
+font_size = 10  # Font size.
+monospace_font = "CaskaydiaCove Nerd Font Mono"  # Monospace font.
+monospace_font_size = 9  # Monospace font size.
+background_path = ""  # LockScreen's Background path.
+
+# Hyprland start configuration.
+[hyprland_start]
+apptray_bluetooth = "blueman-applet"  # Bluetooth applet.
+auth_dialogue = "polkitkdeauth.sh"  # Authentication dialogue.
+bar = "hyde-shell waybar --watch"  # Bar.
+battery_notify = "batterynotify.sh"  # Battery notification script.
+dbus_share_picker = "dbus-update-activation-environment --systemd --all"  # DBus share picker.
+idle_daemon = "hypridle"  # Idle daemon.
+image_clipboard = "wl-paste --type image --watch cliphist store"  # Image clipboard.
+network_manager = "nm-applet --indicator"  # Network manager.
+notifications = "swaync"  # Notifications.
+removable_media = "udiskie --no-automount --smart-tray"  # Removable media manager.
+systemd_share_picker = "systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"  # Systemd share picker.
+text_clipboard = "wl-paste --type text --watch cliphist store"  # Text clipboard.
+wallpaper = "$scrPath/wallpaper.sh --global"  # Wallpaper script.
+xdg_portal_reset = "resetxdgportal.sh"  # XDG portal reset script.
+
+# mediaplayer.py configuration.
+[mediaplayer]
+prefix_playing = ""  # Prefix for playing media.
+prefix_paused = "  "  # Prefix for paused media.
+max_length = 70  # Max length of song and artist string.
+standby_text = "  Music"  # To display on standby.
+artist_track_separator = "  "  # Separator symbols to display between artist and track.
+
