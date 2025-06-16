@@ -1,3 +1,7 @@
+_SITE_FUNCTIONS=~/.local/share/zsh/site-functions
+[[ -d "$_SITE_FUNCTIONS" ]] || mkdir -p "$_SITE_FUNCTIONS"
+fpath=("$_SITE_FUNCTIONS" $fpath)
+
 ## Profile
 [[ -r ~/.profile ]] && . ~/.profile
 
@@ -37,6 +41,7 @@ eval "$(zoxide init --cmd cd zsh)"
 ## Mise-en-place
 eval "$(mise activate zsh)"
 eval "$(mise env)"
+[[ -f "$_SITE_FUNCTIONS/_mise" ]] || mise completion zsh  > "$_SITE_FUNCTIONS/_mise"
 
 ## Yazi
 function y() {
@@ -74,3 +79,4 @@ bindkey "^H" backward-kill-word
 
 setopt no_flowcontrol
 bindkey -s '^S' 'ggh^M'
+bindkey -s '^B' 'btop^M'

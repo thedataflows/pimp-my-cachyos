@@ -3,6 +3,9 @@ experimental = true # enable experimental features
 env_file = '.env'
 
 [tools]
+"usage" = 'latest'
 "go:github.com/1pkg/gopium" = "latest"
 "pulumi" = "3"
 "ubi:sigstore/cosign" = { version = "2", exe = "cosign-linux-amd64", rename_exe = "cosign" }
+## https://github.com/a-h/templ/releases
+"aqua:a-h/templ" = '0'
