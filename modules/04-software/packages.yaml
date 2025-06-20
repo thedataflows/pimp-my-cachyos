@@ -1,7 +1,3 @@
-ai:
-- name: ollama-rocm
-  desc: Create, run and share large language models (LLMs)
-
 android:
 - name: scrcpy
   desc: Display and control your Android device
