@@ -4,8 +4,15 @@ env_file = '.env'
 
 [tools]
 "usage" = 'latest'
+## https://github.com/1pkg/gopium/releases
 "go:github.com/1pkg/gopium" = "latest"
+## https://github.com/pulumi/pulumi/releases
 "pulumi" = "3"
-"ubi:sigstore/cosign" = { version = "2", exe = "cosign-linux-amd64", rename_exe = "cosign" }
+## https://github.com/sigstore/cosign/releases
+"ubi:sigstore/cosign" = { version = "latest", exe = "cosign-linux-amd64", rename_exe = "cosign" }
+## https://github.com/slsa-framework/slsa-verifier
+"ubi:slsa-framework/slsa-verifier" = { version = "latest", exe = "slsa-verifier-linux-amd64", rename_exe = "slsa-verifier" }
 ## https://github.com/a-h/templ/releases
 "aqua:a-h/templ" = '0'
+## https://github.com/fluxcd/flux2/releases
+"flux2" = "2"
