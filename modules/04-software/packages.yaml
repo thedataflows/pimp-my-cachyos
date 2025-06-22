@@ -87,7 +87,7 @@ files:
   desc: Compressor/archiver for creating and modifying zipfiles
 - name: aur/fswatch
   desc: A cross-platform file change monitor with multiple backends
-- name: aur/superfile-bin
+- name: superfile
   desc: Pretty fancy and modern file manager in terminal file manager
 - name: p7zip
   desc: Command-line file archiver with high compression ratio
