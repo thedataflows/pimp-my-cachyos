@@ -161,6 +161,8 @@ network:
   desc: Command-line DNS client like dig
 - name: aur/ssh-ggh-bin
   desc: Recall your SSH sessions (also search your SSH config file)
+- name: aur/somo
+  desc: A human-friendly alternative to netstat for socket and port monitoring
 
 system:
 - name: htop
