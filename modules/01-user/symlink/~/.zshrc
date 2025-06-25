@@ -54,7 +54,7 @@ function y() {
 }
 bindkey -s '^Y' 'y^M'
 
-[[ ! -t 0 || $SHLVL -gt 1 ]] || fastfetch
+# [[ ! -t 0 || $SHLVL -gt 1 ]] || fastfetch
 
 ## Key bindings
 ## Home/End keys not working in tmux: https://stackoverflow.com/a/27467524/3735961
