@@ -74,4 +74,4 @@ rfz() (
       --query "$*"
 )
 zle -N rfz
-bindkey '^[f' rfz
+bindkey '^f' rfz
