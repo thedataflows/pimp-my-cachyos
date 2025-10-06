@@ -9,7 +9,7 @@ if ! pacman-key --list-keys &>/dev/null; then
   exit 1
 fi
 
-type go-task &>/dev/null || pacman -Sy --noconfirm --needed go-task
+type mise &>/dev/null || pacman -Sy --noconfirm --needed mise
 
 cd "${0%/*}"
-go-task "$@"
+mise "$@"
