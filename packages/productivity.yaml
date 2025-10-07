@@ -1,0 +1,16 @@
+- name: anytype-bin
+  desc: Operating environment for the new internet. Anytype is a next generation software that breaks down barriers between applications, gives back privacy and data ownership to users.
+- name: betterbird-bin
+  desc: Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will.
+- name: calibre
+  desc: Ebook management application
+- name: aur/onlyoffice-bin
+  desc: An office suite that combines text, spreadsheet and presentation editors
+- name: evince
+  desc: Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)
+- name: okular
+  desc: Document Viewer
+## To be removed
+- name: kate
+  desc: Advanced Text Editor
+  state: absent

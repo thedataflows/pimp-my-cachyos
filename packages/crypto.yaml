@@ -1,0 +1,8 @@
+- name: age
+  desc: A simple, modern and secure file encryption tool
+- name: openssl-1.1
+  desc: The Open Source toolkit for Secure Sockets Layer and Transport Layer Security
+- name: sops
+  desc: Editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats
+- name: aur/sac-core
+  desc: Thales/Gemalto SafeNet Authentication Client for eToken 5110/5300 & IDPrime (core PKCS#11 modules)

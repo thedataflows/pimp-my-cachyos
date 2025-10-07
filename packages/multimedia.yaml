@@ -1,0 +1,18 @@
+- name: strawberry
+  desc: A music player aimed at audio enthusiasts and music collectors
+- name: gst-plugin-spotify
+  desc: Multimedia graph framework - spotify plugin
+- name: vlc
+  desc: Multi-platform MPEG, VCD/DVD, and DivX player
+- name: vlc-plugin-x265
+  desc: Multi-platform MPEG, VCD/DVD, and DivX player - H265/HEVC encoding
+- name: vlc-plugin-ffmpeg
+  desc: Multi-platform MPEG, VCD/DVD, and DivX player - FFMPEG plugins
+- name: vlc-plugins-extra
+  desc: Free and open source cross-platform multimedia player and framework - extra plugins
+- name: obs-studio
+  desc: Free, open source software for live streaming and recording
+- name: ocenaudio-bin
+  desc: Cross-platform, easy to use, fast and functional audio editor
+- name: libva-utils
+  desc: Intel VA-API Media Applications and Scripts for libva

@@ -1,0 +1,12 @@
+- name: libheif
+  desc: An HEIF and AVIF file format decoder and encoder
+- name: rnote
+  desc: A simple drawing application to create handwritten notes
+- name: hugin
+  desc: Panorama photo stitcher
+- name: loupe
+  desc: A simple image viewer for GNOM
+- name: gwenview
+  desc: A fast and easy to use image viewer
+- name: kimageformats
+  desc: Image format plugins for Qt 6

@@ -1,0 +1,12 @@
+- name: krew
+  desc: Find and install kubectl plugins
+- name: stern
+  desc: Multi pod and container log tailing for Kubernetes
+- name: fluxcd
+  desc: Open and extensible continuous delivery solution for Kubernetes
+- name: k9s
+  desc: TUI for managing Kubernetes clusters and pods
+- name: pack-cli
+  desc: CLI for building apps using Cloud Native Buildpacks
+- name: aur/freelens-bin
+  desc: Free Open Source Kubernetes IDE

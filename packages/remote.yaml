@@ -1,0 +1,20 @@
+- name: remmina
+  desc: remote desktop client written in GTK+
+- name: freerdp
+  desc: Free implementation of the Remote Desktop Protocol (RDP)
+# - name: aur/moonlight-qt-bin
+#   desc: moonlight-qt bin from appimage
+- name: aur/rustdesk-bin
+  desc: Yet another remote desktop software, written in Rust. Works out of the box, no configuration required.
+- name: sunshine
+  desc: A self-hosted game stream host for Moonlight
+  hosts:
+    - cri-pc
+- name: looking-glass
+  desc: A client application for accessing the LookingGlass IVSHMEM device of a VM
+  hosts:
+    - cri-pc
+- name: looking-glass-module-dkms
+  desc: A kernel module that implements a basic interface to the IVSHMEM device for when using LookingGlass in VM->VM mode
+  hosts:
+    - cri-pc

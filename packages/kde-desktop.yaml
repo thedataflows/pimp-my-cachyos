@@ -1,0 +1,40 @@
+- name: sddm-kcm
+  desc: KDE Config Module for SDDM
+- name: plasma-desktop
+  desc: KDE Plasma Desktop
+- name: kwayland-integration
+  desc: Provides integration plugins for various KDE frameworks for the wayland windowing system
+- name: kde-gtk-config
+  desc: Syncs KDE settings to GTK applications
+- name: kdeplasma-addons
+  desc: All kind of addons to improve your Plasma
+- name: aur/plasma6-applets-panel-colorizer
+  desc: Latte-Dock and WM status bar customization features for the default Plasma panels
+- name: xdg-desktop-portal-kde
+  desc: A backend implementation for xdg-desktop-portal using Qt/KF5
+- name: xdg-desktop-portal-gtk
+  desc: A backend implementation for xdg-desktop-portal using GTK
+- name: xdg-desktop-portal-wlr
+  desc: xdg-desktop-portal backend for wlroots
+- name: xdg-desktop-portal-gnome
+  state: absent
+- name: gnome-settings-daemon
+  desc: GNOME Settings Daemon
+- name: gsettings-qt
+  desc: Qml bindings for GSettings
+- name: gnome-themes-extra
+  desc: Extra Themes for GNOME Applications
+- name: gtk-engine-murrine
+  desc: GTK2 engine to make your desktop look like a 'murrina', an italian word meaning the art glass works done by Venicians glass blowers.
+- name: krfb
+  desc: Desktop Sharing
+- name: aur/kora-icon-theme
+  desc: SVG icon theme suitable for every desktop environment (dark and light versions, HiDPI support)
+- name: qogir-icon-theme
+  desc: A colorful design icon theme for linux desktops
+- name: kaccounts-providers
+  desc: Online account providers for the KAccounts system
+- name: plasma5-integration
+  desc: Qt5 Platform Theme integration plugins for the Plasma workspaces
+- name: krdc
+  desc: Remote Desktop Client

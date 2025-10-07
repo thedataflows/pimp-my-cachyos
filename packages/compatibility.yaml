@@ -1,0 +1,4 @@
+- name: bottles
+  desc: Easily manage wine and proton prefix
+- name: proton-cachyos
+  desc: Compatibility tool for Steam Play based on Wine and additional components, experimental branch with extra CachyOS flavour

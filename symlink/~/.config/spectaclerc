@@ -1,0 +1,30 @@
+[Annotations]
+annotationToolType=5
+highlighterStrokeColor=170,0,0
+textFont=Roboto,36,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
+textFontColor=255,255,255
+
+[FileDialogSize]
+1707x960 screen: Height=641
+1707x960 screen: Width=1128
+
+[General]
+autoSaveImage=true
+clipboardGroup=PostScreenshotCopyImage
+launchAction=DoNotTakeScreenshot
+showCaptureInstructions=false
+useLightMaskColor=true
+
+[GuiConfig]
+captureMode=4
+includeShadow=false
+quitAfterSaveCopyExport=true
+
+[ImageSave]
+lastImageSaveAsLocation=file:///home/cri/Downloads/Screenshot_20251006_012500.png
+lastImageSaveLocation=file:///home/cri/Downloads/Screenshot_20251006_012500.png
+translatedScreenshotsFolder=Screenshots
+
+[VideoSave]
+preferredVideoFormat=2
+translatedScreencastsFolder=Screencasts

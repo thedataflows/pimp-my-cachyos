@@ -1,0 +1,15 @@
+- name: jq
+  desc: Command-line JSON processor
+  ## https://blogs.kde.org/2024/10/02/use-ripgrep-all-/-ripgrep-to-improve-search-in-dolphin/
+- name: ripgrep-all
+  desc: "rga: ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc."
+- name: graphicsmagick
+  desc: Image processing system
+- name: htmlq
+  desc: Like jq, but for HTML
+- name: jless
+  desc: A command-line pager for JSON data
+- name: aur/pandoc-bin
+  desc: Conversion between documentation formats
+- name: tabiew
+  desc: A lightweight TUI to view and query CSV files

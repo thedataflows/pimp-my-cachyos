@@ -1,0 +1,21 @@
+[Keyboard]
+RepeatDelay=300
+RepeatRate=30
+
+[Libinput][13652][62728][pulsar X2 V2 Mini]
+PointerAccelerationProfile=1
+
+[Libinput][2362][597][UNIW0001:00 093A:0255 Touchpad]
+Enabled=true
+NaturalScroll=true
+
+[Libinput][76][804][Apple Inc. Magic Trackpad USB-C]
+PointerAcceleration=0.200
+PointerAccelerationProfile=2
+ScrollFactor=0.5
+TapToClick=false
+
+[Mouse]
+X11LibInputXAccelProfileFlat=true
+cursorSize=20
+cursorTheme=Bibata-Modern-Amber

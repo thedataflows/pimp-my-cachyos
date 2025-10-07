@@ -1,0 +1,98 @@
+- name: htop
+  desc: Interactive process viewer
+- name: btop
+  desc: A monitor of system resources, bpytop ported to C++
+- name: zenith
+  desc: Terminal system monitor with histograms
+- name: atop
+  desc: A system and process level monitor
+- name: iotop
+  desc: View I/O usage of processes
+- name: sysstat
+  desc: a collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)
+- name: ctop
+  desc: Top-like interface for container metrics
+- name: strace
+  desc: A diagnostic, debugging and instructional userspace tracer
+- name: watchexec
+  desc: Executes commands in response to file modifications
+- name: procs
+  desc: A modern replacement for ps written in Rust
+- name: aur/mprocs-bin
+  desc: Run multiple commands in parallel
+- name: systemctl-tui
+  desc: A fast, simple TUI for interacting with systemd services and their logs
+- name: dmidecode
+  desc: Desktop Management Interface table related utilities
+- name: i2c-tools
+  desc: Heterogeneous set of I2C tools for Linux that used to be part of lm-sensors
+- name: lm_sensors
+  desc: Collection of user space tools for general SMBus access and hardware monitoring
+- name: hwinfo
+  desc: Hardware detection tool from openSUSE
+- name: hddtemp
+  desc: Gives you the temperature of your hard drive by reading S.M.A.R.T. information
+- name: expac
+  desc: alpm data (pacman database) extraction utility
+- name: power-profiles-daemon
+  desc: Makes power profiles handling available over D-Bus
+- name: btrfs-assistant
+  desc: An application for managing BTRFS subvolumes and Snapper snapshots
+- name: aur/eget-bin
+  desc: Easily install prebuilt binaries from GitHub
+- name: aur/catppuccin-mocha-grub-theme-git
+  desc: Soothing pastel theme for GRUB2 -- Mocha colorscheme
+- name: aur/pacseek-bin
+  desc: A terminal user interface for searching and installing Arch Linux packages (binary version)
+- name: aur/parui
+  desc: Simple TUI frontend for paru or yay
+- name: ventoy-bin
+  desc: A new bootable USB solution
+- name: aur/viddy-bin
+  desc: A modern watch command, binary version
+- name: aur/sysz
+  desc: fzf terminal UI for systemctl
+- name: grub-customizer
+  desc: A graphical grub2 settings manager
+- name: gptfdisk
+  desc: A text-mode partitioning tool that works on GUID Partition Table (GPT) disks
+- name: keyd
+  desc: A key remapping daemon for linux
+- name: dysk
+  desc: Get information on your mounted filesystems
+- name: nvtop
+  desc: GPUs process monitoring for AMD, Intel and NVIDIA
+- name: gparted
+  desc: A Partition Magic clone, frontend to GNU Parted
+- name: gsmartcontrol
+  desc: A graphical user interface for the smartctl hard disk drive health inspection tool.
+- name: openrgb
+  desc: Open source RGB lighting control that doesn't depend on manufacturer software
+- name: wmctrl
+  desc: Control your EWMH compliant window manager from command line
+- name: systemd-ui
+  desc: Graphical front-end for systemd
+- name: mission-center
+  desc: Monitor your CPU, Memory, Disk, Network and GPU usage
+- name: solaar
+  desc: Linux device manager for a wide range of Logitech devices
+- name: ksystemlog
+  desc: System log viewer tool
+- name: plasma-pa
+  desc: Plasma applet for audio volume management using PulseAudio
+- name: plasma-systemmonitor
+  desc: An interface for monitoring system sensors, process information and other system resources
+- name: plasma-nm
+  desc: Plasma applet written in QML for managing network connections
+- name: plasma-disks
+  desc: Monitors S.M.A.R.T. capable devices for imminent failure
+- name: switcheroo-control
+  desc: D-Bus service to check the availability of dual-GPU
+- name: partitionmanager
+  desc: A KDE utility that allows you to manage disks, partitions, and file systems
+# - name: appmenu-gtk-module
+#   desc: Application Menu GTK+ Module
+#   state: absent
+# - name: font-manager
+#   desc: A simple font management application for GTK+ Desktop Environments
+#   state: absent

@@ -1,0 +1,4 @@
+[env]
+WORKSPACE_DIR = '{{config_root}}'
+PARU='paru -S --noconfirm --needed --cleanafter'
+CP='cp --update=none --verbose --recursive --no-dereference'

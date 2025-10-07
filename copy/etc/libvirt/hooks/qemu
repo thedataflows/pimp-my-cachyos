@@ -1,0 +1,28 @@
+#!/bin/bash
+
+set -e
+
+case $2 in
+  prepare)
+    case $1 in
+      win10pro)
+        for SVC in mnt-win-c; do
+          SVC=${SVC}.mount
+          echo Stopping $SVC
+          systemctl stop $SVC
+        done
+        ;;
+    esac
+    ;;
+  release)
+    case $1 in
+      win10pro)
+        for SVC in mnt-win-c; do
+          SVC=${SVC}.mount
+          echo Starting $SVC
+          systemctl start $SVC
+        done
+        ;;
+    esac
+    ;;
+esac

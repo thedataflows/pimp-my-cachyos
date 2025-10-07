@@ -1,0 +1,77 @@
+#!/bin/env bash
+#MISE description="Mountpoints configuration"
+#MISE alias="sm"
+
+set -Eeuo pipefail
+trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"' ERR
+
+type yq &>/dev/null || $PARU go-yq
+type nfsidmap &>/dev/null || $PARU nfs-utils nfsidmap
+type ntfs-3g &>/dev/null || $PARU ntfs-3g
+
+SERVICE_DIR=/usr/local/lib/systemd/system
+sudo test -d "$SERVICE_DIR" || sudo mkdir -p "$SERVICE_DIR"
+
+cd "${MISE_PROJECT_ROOT:-.}/mountpoints"
+
+MOUNTS=$(cat "mounts.yaml" "mounts.$(hostname).yaml" 2>/dev/null | yq -r 'explode(.)' || true)
+set -a
+yq -r 'keys[]' <<< "$MOUNTS" | while IFS= read -r NAME; do
+  MOUNT=$(yq -r ".$NAME" <<< "$MOUNTS")
+  TYPE=$(yq -r ".type" - <<< "$MOUNT")
+  AFTER=
+  case $TYPE in
+    nfs)
+      # shellcheck disable=SC2034
+      AFTER="After=network.target local-fs.target"
+      ;;
+  esac
+  # shellcheck disable=SC2034
+  WHAT=$(yq -r ".source" - <<< "$MOUNT")
+  WHERE=$(yq -r ".destination" - <<< "$MOUNT")
+  sudo test -d "$WHERE" || sudo mkdir -p "$WHERE"
+  WHERE_NAME=${WHERE#*/}
+  WHERE_NAME=${WHERE_NAME//\//-}
+  FILE="$SERVICE_DIR/$WHERE_NAME"
+  STARTAT=$(yq -r '.startat // ""' - <<< "$MOUNT")
+  OPTIONS=$(yq -r '.options // ""' - <<< "$MOUNT")
+  if [[ -z "$OPTIONS" ]]; then
+    case $TYPE in
+      ntfs3)
+        ## https://docs.kernel.org/filesystems/ntfs3.html
+        OPTIONS="auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,dev,exec,noatime,iocharset=utf8,windows_names,suid,discard"
+        ;;
+      ntfs-3g)
+        OPTIONS="auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,dev,exec,noatime,iocharset=utf8,windows_names,big_writes,suid"
+        ;;
+      exfat|vfat|fat)
+        OPTIONS="auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,noatime"
+        ;;
+      nfs)
+        OPTIONS="rw,nosuid,soft,nfsvers=4,noacl,async,nocto,nconnect=16,_netdev,timeo=3,retrans=2,bg"
+        ;;
+      *)
+        OPTIONS="auto,rw,relatime"
+    esac
+  fi
+
+  ## Write new unit files
+  TPLS="mount service timer"
+  [[ -n "$STARTAT" ]] || TPLS=mount
+  for T in $TPLS; do
+    sudo "${MISE_PROJECT_ROOT:-.}/mise-tasks/backup.sh" "${FILE}.$T"
+    envsubst < ".${T}.tpl" | sudo tee "${FILE}.$T" >/dev/null
+  done
+
+  ## Enable and start the units
+  sudo systemctl daemon-reload
+  VERB=enable
+  STATE=$(yq -r ".state" - <<< "$MOUNT")
+  [[ "$STATE" != "disabled" ]] || VERB=disable
+  for T in mount timer; do
+    [[ -f "${FILE##*/}.$T" ]] || continue
+    set -x
+    sudo systemctl $VERB --now "${FILE##*/}.$T" || { set +x; } 2>/dev/null
+    { set +x; } 2>/dev/null
+  done
+done

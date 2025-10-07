@@ -1,0 +1,7 @@
+android:
+- name: scrcpy
+  desc: Display and control your Android device
+- name: android-tools
+  desc: Android platform tools
+- name: aur/go-mtpfs-git
+  desc: Simple tool for viewing MTP devices as FUSE filesystems

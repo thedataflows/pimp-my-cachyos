@@ -1,0 +1,43 @@
+  ## https://wiki.archlinux.org/title/KDE#Games
+- name: gamescope
+  desc: SteamOS session compositing window manager
+  hosts:
+    - cri-pc
+- name: aur/gamescope-nvidia
+  desc: SteamOS session compositing window manager (NVIDIA patch)
+  state: absent
+  hosts:
+    - cri-pc
+  ## https://www.protondb.com/help/improving-performance
+- name: gamemode
+  desc: A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
+  hosts:
+    - cri-pc
+- name: lib32-gamemode
+  desc: A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS
+  hosts:
+    - cri-pc
+- name: mangohud
+  desc: A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more
+  hosts:
+    - cri-pc
+- name: steam-native-runtime
+  desc: Native replacement for the Steam runtime using system libraries
+  hosts:
+    - cri-pc
+- name: vkd3d
+  desc: Direct3D 12 to Vulkan translation library By WineHQ
+  hosts:
+    - cri-pc
+- name: protonup-qt
+  desc: Install and manage Proton-GE and Luxtorpeda for Steam and Wine-GE for Lutris
+  hosts:
+    - cri-pc
+- name: aur/joystickwake
+  desc: A joystick-aware screen waker
+  hosts:
+    - cri-pc
+- name: xone-dongle-firmware
+  desc: Xbox Wireless Controller Adapter firmware
+  hosts:
+    - cri-pc

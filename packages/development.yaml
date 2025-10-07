@@ -1,0 +1,26 @@
+- name: git
+  desc: the fast distributed version control system
+- name: git-delta
+  desc: Syntax-highlighting pager for git and diff output
+- name: difftastic
+  desc: An experimental diff tool that compares files based on their syntax
+- name: go
+  desc: Core compiler tools for the Go programming language
+- name: python-pip
+  desc: The PyPA recommended tool for installing Python packages
+- name: kondo
+  desc: Save disk space by cleaning non-essential files from software projects
+- name: d2
+  desc: A modern diagram scripting language that turns text to diagrams
+- name: glow
+  desc: Command-line markdown renderer
+- name: lazygit
+  desc: Simple terminal UI for git commands
+- name: sq-bin
+  desc: sq data wrangler
+- name: aur/visual-studio-code-bin
+  desc: Visual Studio Code (vscode)
+- name: zed
+  desc: A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
+- name: dbeaver
+  desc: Free universal SQL Client for developers and database administrators (community edition)

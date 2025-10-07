@@ -1,0 +1,16 @@
+- name: rsync
+  desc: A fast and versatile file copying tool for remote and local files
+- name: rclone
+  desc: Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage
+- name: snap-pac
+  desc: Pacman hooks that use snapper to create pre/post btrfs snapshots like openSUSE's YaST
+- name: grub-btrfs
+  desc: Include btrfs snapshots in GRUB boot options
+- name: aur/kopia-bin
+  desc: A cross-platform backup-tool with encryption, deduplication, compression and cloud support.
+- name: aur/kopia-ui-bin
+  desc: A cross-platform backup-tool with encryption, deduplication, compression and cloud support.
+- name: syncthing
+  desc: Open Source Continuous Replication / Cluster Synchronization Thing
+- name: aur/syncthingtray-qt6
+  desc: Tray application for Syncthing (using Qt 6)

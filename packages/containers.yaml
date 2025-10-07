@@ -1,0 +1,10 @@
+- name: docker
+  desc: Pack, ship and run any application as a lightweight container
+- name: docker-buildx
+  desc: Docker CLI plugin for extended build capabilities with BuildKit
+- name: docker-compose
+  desc: Fast, isolated development environments using Docker
+- name: lazydocker
+  desc: A simple terminal UI for docker and docker-compose, written in Go with the gocui library
+- name: skopeo
+  desc: A command line utility for various operations on container images and image repositories.
