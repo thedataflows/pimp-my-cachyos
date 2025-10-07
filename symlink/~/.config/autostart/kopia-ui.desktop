@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=kopia-ui
+Comment=kopia-uistartup script
+Exec=/opt/KopiaUI/kopia-ui
+StartupNotify=false
+Terminal=false

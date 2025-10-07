@@ -1,0 +1,34 @@
+[Desktop Action PauseAllDevs]
+Exec=syncthingctl-qt6 pause --all-devs
+Name=Pause all devices (of local Syncthing instance)
+
+[Desktop Action RescanAll]
+Exec=syncthingctl-qt6 rescan-all
+Name=Rescan all folders (of local Syncthing instance)
+
+[Desktop Action Restart]
+Exec=syncthingctl-qt6 restart
+Name=Restart Syncthing (local instance)
+
+[Desktop Action ResumeAllDevs]
+Exec=syncthingctl-qt6 resume --all-devs
+Name=Resume all devices (of local Syncthing instance)
+
+[Desktop Action ShowSyncthing]
+Exec=syncthingtray-qt6 qt-widgets-gui --webui
+Name=Show Syncthing (currently selected instance)
+
+[Desktop Action ShowTrayMenu]
+Exec=syncthingtray-qt6 qt-widgets-gui --trigger
+Name=Show tray menu
+
+[Desktop Entry]
+Actions=ShowTrayMenu;ShowSyncthing;RescanAll;PauseAllDevs;ResumeAllDevs;Restart
+Categories=Network;FileTransfer
+Comment=Tray application for Syncthing
+Exec=syncthingtray-qt6
+GenericName=Syncthing Tray
+Icon=syncthingtray-qt6
+Name=Syncthing Tray
+Terminal=false
+Type=Application
