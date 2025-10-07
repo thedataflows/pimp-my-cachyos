@@ -10,21 +10,54 @@ type fd &>/dev/null || $PARU fd
 type delta &>/dev/null || $PARU git-delta
 
 [[ -d "$DIR" ]] || return
-for D in $(fd --type dir --max-depth 1 --hidden --format '{/}' . "$DIR"); do
-  fd --type file --hidden . "$DIR/$D" | while IFS= read -r F; do
+
+# Process specific input or all files
+declare -a FILES_TO_PROCESS
+if [[ $# -eq 1 ]]; then
+  INPUT="$1"
+
+  # Validate input exists
+  if [[ ! -e "$INPUT" ]]; then
+    echo "[ERROR] Input does not exist: $INPUT"
+    exit 1
+  fi
+
+  # Build file list from input
+  if [[ -d "$INPUT" ]]; then
+    mapfile -t FILES_TO_PROCESS < <(fd --type file --hidden . "$INPUT")
+  else
+    FILES_TO_PROCESS=("$INPUT")
+  fi
+else
+  # No input - process all files in symlink directory
+  mapfile -t FILES_TO_PROCESS < <(fd --type file --hidden . "$DIR")
+fi
+
+# Create symlinks for each file
+for F in "${FILES_TO_PROCESS[@]}"; do
+  F=$(readlink -f "$F")
+
+  # Determine base directory from file path
+  if [[ "$F" == "$DIR/~/"* ]]; then
+    D="~"
+    DEST=$HOME/${F#"$DIR"/"$D"/}
+    SUDO=
+  elif [[ "$F" == "$DIR/"* ]]; then
+    D=$(echo "$F" | sed -E "s|^$DIR/([^/]+)/.*|\1|")
     DEST=${F#"$DIR"/}
     SUDO=sudo
-    if [[ "$D" == "~" ]]; then
-      DEST=$HOME/${F#"$DIR"/"$D"/}
-      SUDO=
-    fi
-    $SUDO test -d "${DEST%/*}" || $SUDO mkdir -pv "${DEST%/*}"
-    SRC=$(readlink -f "$F")
-    $SUDO test -L "$DEST" || \
-      $SUDO ln --verbose --symbolic "$SRC" "$DEST" || \
-        { RET=$?; set -x; delta "$SRC" "$DEST" || { set +x; } 2>/dev/null; exit $RET; }
-    ## Fix symlink
-    $SUDO readlink -e "$DEST" >/dev/null || \
-      $SUDO ln --verbose --symbolic --force "$SRC" "$DEST"
-  done
+  else
+    echo "[SKIP] File not in symlink directory: $F"
+    continue
+  fi
+
+  $SUDO test -d "${DEST%/*}" || $SUDO mkdir -pv "${DEST%/*}"
+  SRC=$(readlink -f "$F")
+  if ! $SUDO test -L "$DEST"; then
+    $SUDO ln --verbose --symbolic "$SRC" "$DEST" || \
+      { RET=$?; set -x; delta "$SRC" "$DEST" || { set +x; } 2>/dev/null; exit $RET; }
+  fi
+  ## Fix symlink
+  $SUDO readlink -e "$DEST" >/dev/null || \
+    $SUDO ln --verbose --symbolic --force "$SRC" "$DEST"
 done
