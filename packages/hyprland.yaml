@@ -48,3 +48,9 @@
   desc: Logout menu for wayland
 - name: cliphist
   desc: wayland clipboard manager
+- name: blueman
+  desc: GTK+ Bluetooth Manager
+- name: udiskie
+  desc: Removable disk automounter using udisks
+- name: network-manager-applet
+  desc: Applet for managing network connections
