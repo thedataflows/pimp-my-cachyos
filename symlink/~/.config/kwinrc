@@ -20,8 +20,8 @@ MaxWidth=300
 
 [Plugins]
 blurEnabled=true
+contrastEnabled=false
 desktopchangeosdEnabled=true
-diminactiveEnabled=true
 dimscreenEnabled=true
 eyeonscreenEnabled=true
 fadingpopupsEnabled=false

@@ -38,3 +38,5 @@
   desc: Qt5 Platform Theme integration plugins for the Plasma workspaces
 - name: krdc
   desc: Remote Desktop Client
+- name: aur/catppuccin-plasma-colorscheme-macchiato
+  desc: Soothing pastel theme for KDE Plasma
