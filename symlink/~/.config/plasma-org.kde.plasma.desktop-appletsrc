@@ -683,4 +683,4 @@ panelWidgetsWithTray=org.kde.plasma.kickoff,Application Launcher,app-launcher|or
 
 [ScreenMapping]
 itemsOnDisabledScreens=
-screenMapping=desktop:/brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop,0,33f140c6-61cd-4f86-a07f-0ad73cbb5cc3
+screenMapping=

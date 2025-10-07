@@ -1,9 +1,8 @@
-#!/usr/bin/env xdg-open
 [Desktop Entry]
-Version=1.0
+Exec=/opt/brave-bin/brave --profile-directory=Default --app-id=hnpfjngllnobngcgfapefoaidbinmjnm
+Icon=brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default
+Name=WhatsApp Web
+StartupWMClass=crx_hnpfjngllnobngcgfapefoaidbinmjnm
 Terminal=false
 Type=Application
-Name=WhatsApp Web
-Exec=/opt/brave-bin/brave --profile-directory=Default --app-id=hnpfjngllnobngcgfapefoaidbinmjnm --app-run-on-os-login-mode=windowed
-Icon=brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default
-StartupWMClass=crx_hnpfjngllnobngcgfapefoaidbinmjnm
+Version=1.0
