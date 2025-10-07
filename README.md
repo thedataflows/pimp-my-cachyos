@@ -113,8 +113,19 @@ I don't yet like it and do not have the time to learn it.
 
 - `mise-tasks/` contains bash scripts organized by functionality (packages, system, apps, network, etc.)
 - `packages/*.yaml` defines packages to install, with optional host-specific filtering
+  - Format:
+
+    ```yaml
+    - name: package-name # or "aur/package-name" for AUR packages
+      desc: Description of the package
+      hosts: # optional, if not present installs everywhere
+        - hostname1
+        - hostname2
+      state: present # or absent
+    ```
+
+  - Package scripts automatically filter by hostname - packages without `hosts` field install everywhere, those with `hosts` array only install on matching machines
 - `copy/` and `symlink/` directories hold system and user configuration files to be copied or symlinked
-- Package scripts automatically filter by hostname - packages without `hosts` field install everywhere, those with `hosts` array only install on matching machines
 
 ## License
 
