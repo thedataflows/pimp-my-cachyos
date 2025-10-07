@@ -34,6 +34,7 @@ mise run user:shell
 
 ## Configure: apps
 mise run apps:atuin
+mise run apps:bat
 mise run apps:yazi
 mise run apps:gamescope
 mise run apps:sunshine
