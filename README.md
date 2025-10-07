@@ -75,7 +75,7 @@ So I decided to give KDE Plasma a go. I was surprised by how smooth it runs and 
 - Better HiDPI support with fractional scaling (much needed when using a 4K screen), especially with Plasma 6.3.
 - Better and richer apps compared to Gnome (System Settings, System Monitor, KRunner, Dolphin, Gwenview, Okular, etc.)
 
-![KDE Plasma](screenshot1.png)
+![KDE Plasma](screenshot.png)
 
 ### Budgie
 
