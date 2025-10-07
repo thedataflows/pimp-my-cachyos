@@ -12,7 +12,7 @@ type delta &>/dev/null || $PARU git-delta
 [[ -d "$DIR" ]] || return
 for D in $(fd --type dir --max-depth 1 --hidden --format '{/}' . "$DIR"); do
   fd --type file --hidden . "$DIR/$D" | while IFS= read -r F; do
-    DEST=${F#"$DIR"/}
+    DEST=/${F#"$DIR"/}
     SUDO=sudo
     if [[ "$D" == "~" ]]; then
       DEST=$HOME/${F#"$DIR"/"$D"/}
