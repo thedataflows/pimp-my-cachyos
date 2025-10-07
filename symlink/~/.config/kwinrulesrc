@@ -1,0 +1,19 @@
+[27b8e1d4-805d-466c-a367-8f8bf19a3838]
+noborderrule=4
+
+[329671ca-a918-452c-82aa-b9ace051e828]
+noborderrule=3
+
+[6cb7833a-cfc5-4255-9b73-520beaed5fc0]
+Description=Window settings for brave-browser
+noborder=true
+noborderrule=2
+title=synology - Synology DiskStation - Brave
+types=1
+wmclass=brave brave-browser
+wmclasscomplete=true
+wmclassmatch=1
+
+[General]
+count=1
+rules=6cb7833a-cfc5-4255-9b73-520beaed5fc0
