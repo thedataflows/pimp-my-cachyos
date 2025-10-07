@@ -4,19 +4,16 @@
 set -Eeuo pipefail
 trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"' ERR
 
-FILE=/etc/security/faillock.conf
-MAX_TRIES=10
-UNLOCK_TIME=300
+patchProperty() {
+  local FILE=$1
+  local PROPERTY_KEY=$2
+  local PROPERTY_VALUE=$3
+  if ! grep -q "^$PROPERTY_KEY = $PROPERTY_VALUE" "$FILE"; then
+    sudo "${MISE_PROJECT_ROOT:-.}/mise-tasks/backup.sh" "$FILE"
+    sudo sed -i -E "s,^#?\s*($PROPERTY_KEY\s*=\s*).*,\1$PROPERTY_VALUE," "$FILE"
+  fi
+}
 
-if ! grep -q '^deny = '$MAX_TRIES "$FILE"; then
-  sudo "${MISE_PROJECT_ROOT:-.}/mise-tasks/backup.sh" "$FILE"
-  set -x
-  sudo sed -i -E "s,^#?\s*(deny\s*=\s*).*,\1$MAX_TRIES," "$FILE"
-  { set +x; } 2>/dev/null
-fi
-if ! grep -q '^unlock_time = '$UNLOCK_TIME "$FILE"; then
-  sudo "${MISE_PROJECT_ROOT:-.}/mise-tasks/backup.sh" "$FILE"
-  set -x
-  sudo sed -i -E "s,^#?\s*(unlock_time\s*=\s*).*,\1$UNLOCK_TIME," "$FILE"
-  { set +x; } 2>/dev/null
-fi
+FILE=/etc/security/faillock.conf
+patchProperty "$FILE" deny 10
+patchProperty "$FILE" unlock_time 300
