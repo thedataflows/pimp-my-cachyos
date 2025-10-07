@@ -34,7 +34,7 @@ The following is not an exaustive list, but a highlight of what will be installe
 
 ## Usage
 
-1. Install CachyOS. I preffer the following:
+1. Install CachyOS. I prefer the following:
    1. Bootloader: **Grub** (allows multiboot with other OS)
    2. Filesystem: **BTRFS**
       - It supports snapshots, and as Arch is a rolling release, it is a good idea to have them. `snap-pac` will automatically create snapshots before and after a package upgrade.
@@ -44,10 +44,10 @@ The following is not an exaustive list, but a highlight of what will be installe
 
 2. Clone this repo: `git clone https://github.com/thedataflows/pimp-my-cachyos.git && cd pimp-my-cachyos`
 
-   - Show all the tasks: `./pmc.sh`
-   - Run all: `./pmc.sh all`. Run as regular user with sudo privileges (most probably user id 1000).
-
-   Individual tasks can be run as well, if needed: `go-task -t modules/00-network`
+   - Install mise: `curl https://mise.run | sh` (if not already installed)
+   - Show all available tasks: `mise tasks` or `mr` (alias)
+   - Run all setup: `mise run all` or `mr all`
+   - Individual tasks can be run as well: `mr packages:add`, `mr system:grub`, etc.
 
 3. Reboot the system at least after the first run.
 
@@ -99,13 +99,11 @@ Gave Hyprland a go, but having a HiDPI display and wanting scaling, proved to be
 
 [HyDE project](https://github.com/HyDE-Project/HyDE) looks promising, though it is kind of heavy on the customizations. Took enough configs and scripts from this project to make it work, but I am not sure if I will keep using it.
 
-## Why yaml and taskfile.dev?
+## Why YAML and mise?
 
-Just using shell scripts works, but I have always found it cumbersome to maintain.
+YAML is easier to parse with tools like [yq](https://mikefarah.gitbook.io/yq) and human-readable. Package definitions support host-specific filtering, allowing the same config to work across multiple machines.
 
-I believe that using taskfile (a better Makefile alternative) helps with the structure, readability and composability.
-
-Yaml is easier to parse and filter with tools like [yq](https://mikefarah.gitbook.io/yq), and human readable when compared to json. Thought about TOML, but I am not yet satisfied with existing editing tools for scripting.
+[mise](https://mise.jdx.dev/) provides a simple task runner with environment management. It's faster and more flexible than make or taskfile.
 
 ### Why not nix?
 
@@ -113,12 +111,10 @@ I don't yet like it and do not have the time to learn it.
 
 ## Design
 
-- `pmc.sh` is a wrapper around `go-task` that allows to run all tasks with a single command.
-- `lib/` directory contains common functions and variables used across tasks.
-- `scripts/` directory contains helper shells scripts.
-- `modules/` directory contains independent sets of tasks, groupped by what they accomplish. The idea is for them to be self contained, with little or no dependencies between eachother.
-
-`Taskfile.yaml` is the main entry point for each module, and it is responsible for defining the tasks and their dependencies. The tasks inside such a file run commands that accept other tasks or shell scripts (via [Gosh](https://github.com/mvdan/sh), a shell parser, formatter, and interpreter. Supports POSIX Shell, Bash, and mksh).
+- `mise-tasks/` contains bash scripts organized by functionality (packages, system, apps, network, etc.)
+- `packages/*.yaml` defines packages to install, with optional host-specific filtering
+- `copy/` and `symlink/` directories hold system and user configuration files to be copied or symlinked
+- Package scripts automatically filter by hostname - packages without `hosts` field install everywhere, those with `hosts` array only install on matching machines
 
 ## License
 
