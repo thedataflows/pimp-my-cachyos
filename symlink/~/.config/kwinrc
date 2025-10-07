@@ -22,6 +22,7 @@ MaxWidth=300
 blurEnabled=true
 contrastEnabled=false
 desktopchangeosdEnabled=true
+diminactiveEnabled=true
 dimscreenEnabled=true
 eyeonscreenEnabled=true
 fadingpopupsEnabled=false
