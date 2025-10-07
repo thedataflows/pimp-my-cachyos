@@ -13,3 +13,7 @@
   desc: Conversion between documentation formats
 - name: tabiew
   desc: A lightweight TUI to view and query CSV files
+- name: figlet
+  desc: A program for making large letters out of ordinary text
+- name: pugixml
+  desc: Light-weight, simple and fast XML parser for C++ with XPath support
