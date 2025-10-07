@@ -90,6 +90,8 @@
   desc: D-Bus service to check the availability of dual-GPU
 - name: partitionmanager
   desc: A KDE utility that allows you to manage disks, partitions, and file systems
+- name: easyeffects
+  desc: Audio Effects for Pipewire applications
 # - name: appmenu-gtk-module
 #   desc: Application Menu GTK+ Module
 #   state: absent
