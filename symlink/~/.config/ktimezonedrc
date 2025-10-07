@@ -1,0 +1,4 @@
+[TimeZones]
+LocalZone=Europe/Bucharest
+ZoneinfoDir=/usr/share/zoneinfo
+Zonetab=/usr/share/zoneinfo/zone.tab
