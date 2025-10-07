@@ -63,7 +63,7 @@ for FILE in "${FILES[@]}"; do
 
   # Move file to repository
   set -x
-  $SUDO mv -v "$FILE" "$REPO_FILE"
+  $SUDO mv "$FILE" "$REPO_FILE"
   { set +x; } 2>/dev/null
 
   # Create symlink at original location
