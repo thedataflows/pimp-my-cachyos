@@ -16,3 +16,5 @@
   desc: Cross-platform, easy to use, fast and functional audio editor
 - name: libva-utils
   desc: Intel VA-API Media Applications and Scripts for libva
+- name: kew
+  desc: A terminal music player
