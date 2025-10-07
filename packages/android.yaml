@@ -1,4 +1,3 @@
-android:
 - name: scrcpy
   desc: Display and control your Android device
 - name: android-tools
