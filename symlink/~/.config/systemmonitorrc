@@ -2,6 +2,6 @@
 height=1148
 lastVisitedPage=history.page
 maximized=true
-pageOrder=history.page,overview.page,applications.page,processes.page
+pageOrder=overview.page,history.page,applications.page,processes.page,old-history.page,old-overview.page
 startPage=history.page
 width=1700

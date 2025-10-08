@@ -141,8 +141,7 @@ History Items[$e]=file:$HOME/dev/youtube-webos-original,file:///mnt/linux2/Muzic
 Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8a\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
-ColorScheme=CatppuccinMacchiatoLavender
-ColorSchemeHash=ec93b5a5c640c37b13a31a6cf1c98e7ff8618455
+ColorSchemeHash=be7ce825dcfb8832c4c780870d6b08bfb4cefb62
 TerminalApplication=kitty
 TerminalService=kitty.desktop
 XftAntialias=true
