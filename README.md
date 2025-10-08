@@ -48,6 +48,7 @@ The following is not an exaustive list, but a highlight of what will be installe
    - Show all available tasks: `mise tasks` or `mr` (alias)
    - Run all setup: `mise run all` or `mr all`
    - Individual tasks can be run as well: `mr packages:add`, `mr system:grub`, etc.
+   - Add files to this repo: `mise run files:add directory-or-file-path`
 
 3. Reboot the system at least after the first run.
 
