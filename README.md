@@ -1,12 +1,12 @@
 # pimp-my-cachyos
 
-Automate [CachyOS Linux](https://cachyos.org/) setup and configuration.
+Automate [CachyOS Linux](https://cachyos.org/) setup and configuration using scripts and dotfiles.
 
-After running it, you should have a fully functional CachyOS Linux with all the tools and customization that I preffer :).
+After running it, you should have a ready-to-use CachyOS Linux with all the tools and customization that I prefer :).
 
 ## Motivation
 
-CachyOS already comes with tons of baked-in optimization. This repo aims to further set it up and provide an out of the box experience, ready to be used as daily driver.
+CachyOS already comes with tons of baked-in optimization. This repo aims to further set it up and provide an out of the box (and opinionated) experience, ready to be used as daily driver.
 
 It also takes care of many quirks and gotchas that I have found along the way.
 
@@ -14,41 +14,41 @@ It also takes care of many quirks and gotchas that I have found along the way.
 
 The following is not an exaustive list, but a highlight of what will be installed and partially configured. These may change over time.
 
-- Shell: `zsh`, `kitty` (default), `ghostty`, `oh-my-posh`, `atuin`, `zoxide`, `direnv`, `television`, `fzf`, `bat`, `exa`, `fd`, `ripgrep`, `yazi`, `mc`, `btop`, `htop`, `procs`
+- Shell: `zsh`, `kitty` (default), `ghostty`, `oh-my-posh`, `atuin`, `zoxide`, `mise`, `television`, `fzf`, `bat`, `eza`, `fd`, `ripgrep`, `yazi`, `mc`, `btop`, `htop`, `procs`
 - Unified desktop environment, with consistend look and feel across GTK/QT applications
   - Themes: `Scratchy` and `Catppuccin` variants
-  - Icons: `Qogir`, `Kora`
+  - Icons: `Qogir`
   - Cursors: `Bibata Modern Amber`
   - Fonts: `Roboto`, `JetBrainsMono Nerd Font`
 - Secret management: `KeePassXC` (integrates with the browser, with ssh-agent and acts as a system wallet)
 - Web browser: `Brave`
-- Mail client: `Betterbird`
-- Office suite: `ONLYOFFICE`
+- Mail client: `Betterbird` (enhanced Thunderbird fork)
+- Office suite: `ONLYOFFICE` (closer to MS Office than LibreOffice, and lighter)
 - Productivity: `AnyType`
 - Editors: `VS Code`, `Zed`
 - Gaming: `Steam`
-- Windows OS compatibility: `Bottles` (most Windows games work with Proton layer, most Windows native apps work with Caffe layer)
+- Windows OS compatibility: `proton-cachyos`, `Bottles` (most Windows games work with Proton layer, most Windows native apps work with Caffe layer)
 - Virtualization: `QEMU`, `Virt-Manager`, `Looking Glass`
-- Containers: `containerd`, ~~`nerdctl`, `kubectl`~~ `docker` (because nerctl does not support the tooling around it)
+- Containers: `docker`
 - Backup and recovery: `kopia` & `kopia-ui`, `syncthing` & `syncthing tray`, `rsync` & `grsync`, `snapper` & `btrfs assistant` (btrfs snapshots)
 
 ## Usage
 
 1. Install CachyOS. I prefer the following:
-   1. Bootloader: **Grub** (allows multiboot with other OS)
+   1. Bootloader: **Grub** (allows multiboot with other OS and can load previous snapshots)
    2. Filesystem: **BTRFS**
-      - It supports snapshots, and as Arch is a rolling release, it is a good idea to have them. `snap-pac` will automatically create snapshots before and after a package upgrade.
+      - It supports snapshots, and as Arch based distros are rolling release, it is a good idea to have them. `snap-pac` will automatically create snapshots before and after a package upgrade.
       - `grub-btrfs` can be used to add menu with snapshots to choose at boot, in case of system breakage.
    3. Desktop environment: **KDE Plasma**
-   4. **No swap**. I normally use plenty of RAM on my machines. I would have programs OOM Killed than have the system slow down.
+   4. **No swap**. I normally use plenty of RAM on my machines. I would have programs OOM Killed than have the system slow down and have SSD wear out faster.
 
 2. Clone this repo: `git clone https://github.com/thedataflows/pimp-my-cachyos.git && cd pimp-my-cachyos`
 
-   - Install mise: `curl https://mise.run | sh` (if not already installed)
+   - Install mise: `sudo pacman -Sy mise --noconfirm --needed`
    - Show all available tasks: `mise tasks` or `mr` (alias)
    - Run all setup: `mise run all` or `mr all`
    - Individual tasks can be run as well: `mr packages:add`, `mr system:grub`, etc.
-   - Add files to this repo: `mise run files:add directory-or-file-path`
+   - Add files to this repo: `mr files:add directory-or-file-path`
 
 3. Reboot the system at least after the first run.
 
@@ -73,7 +73,7 @@ So I decided to give KDE Plasma a go. I was surprised by how smooth it runs and 
 - Hidden top panels and bottom bar because I use an OLED screen.
 - `Scratchy` global theme with Bibata Modern Amber cursor.
 - Tray icons out of the box
-- Better HiDPI support with fractional scaling (much needed when using a 4K screen), especially with Plasma 6.3.
+- Better HiDPI support with fractional scaling (much needed when using a 4K screen), especially with the latest KDE Plasma.
 - Better and richer apps compared to Gnome (System Settings, System Monitor, KRunner, Dolphin, Gwenview, Okular, etc.)
 
 ![KDE Plasma](screenshot.png)
@@ -112,7 +112,7 @@ I don't yet like it and do not have the time to learn it.
 
 ## Design
 
-- `mise-tasks/` contains bash scripts organized by functionality (packages, system, apps, network, etc.)
+- `mise-tasks/` contains bash scripts organized by functionality (packages, system, apps, network, etc.) that are used by mise tasks
 - `packages/*.yaml` defines packages to install, with optional host-specific filtering
   - Format:
 
