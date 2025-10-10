@@ -22,7 +22,7 @@ for D in $(fd --type dir --max-depth 1 --hidden --format '{/}' . "$DIR"); do
     SRC=$(readlink -f "$F")
     if $SUDO test -f "$DEST"; then
       echo "[WARN] '$DEST' already exists. Skipping..." 1>&2
-      $SUDO delta "$SRC" "$DEST"
+      $SUDO delta "$SRC" "$DEST" || true
     else
       set -x
       $SUDO cp --verbose --no-dereference "$SRC" "$DEST"
