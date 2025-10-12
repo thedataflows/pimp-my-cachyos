@@ -65,20 +65,6 @@ ForegroundNormal=202, 211, 245
 ForegroundPositive=166, 218, 149
 ForegroundVisited=198, 160, 246
 
-[Colors:Header][Inactive]
-BackgroundAlternate[$d]
-BackgroundNormal[$d]
-DecorationFocus[$d]
-DecorationHover[$d]
-ForegroundActive[$d]
-ForegroundInactive[$d]
-ForegroundLink[$d]
-ForegroundNegative[$d]
-ForegroundNeutral[$d]
-ForegroundNormal[$d]
-ForegroundPositive[$d]
-ForegroundVisited[$d]
-
 [Colors:Selection]
 BackgroundAlternate=183,189,248
 BackgroundNormal=183,189,248
@@ -167,8 +153,6 @@ Allow Expansion=false
 Automatically select filename extension=true
 Breadcrumb Navigation=false
 Decoration position=0
-LocationCombo Completionmode=5
-PathCombo Completionmode=5
 Preview Width=253
 Show Full Path=false
 Show Inline Previews=true
@@ -188,9 +172,6 @@ ScreenScaleFactors=HDMI-A-2=1.75;DP-1=1.75;
 
 [KShortcutsDialog Settings]
 Dialog Size=600,480
-
-[Locale]
-BinaryUnitDialect[$d]
 
 [PreviewSettings]
 EnableRemoteFolderThumbnail=false
