@@ -6,8 +6,6 @@
   desc: Ebook management application
 - name: aur/onlyoffice-bin
   desc: An office suite that combines text, spreadsheet and presentation editors
-- name: evince
-  desc: Document viewer (PDF, PostScript, XPS, djvu, dvi, tiff, cbr, cbz, cb7, cbt)
 - name: okular
   desc: Document Viewer
 ## To be removed
