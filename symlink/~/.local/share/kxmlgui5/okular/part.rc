@@ -1,0 +1,164 @@
+<?xml version='1.0'?>
+<!DOCTYPE gui>
+<gui name="okular_part" version="55">
+ <MenuBar>
+  <Menu name="file" noMerge="1">
+   <text translationDomain="okular">&amp;File</text>
+   <Action group="file_open" name="get_new_stuff"/>
+   <Action group="file_open" name="import_ps"/>
+   <Action group="file_save" name="file_save"/>
+   <Action group="file_save" name="file_save_as"/>
+   <Action group="file_save" name="file_reload"/>
+   <Action group="file_print" name="file_print"/>
+   <Action group="file_print" name="file_print_preview"/>
+   <Action group="file_print" name="open_containing_folder"/>
+   <Action group="file_print" name="properties"/>
+   <Action group="file_print" name="embedded_files"/>
+   <Action group="file_print" name="file_export_as"/>
+   <Action group="file_print" name="file_share"/>
+  </Menu>
+  <Menu name="edit" noMerge="1">
+   <text translationDomain="okular">&amp;Edit</text>
+   <Action name="edit_undo"/>
+   <Action name="edit_redo"/>
+   <Separator/>
+   <Action name="edit_copy"/>
+   <Separator/>
+   <Action name="edit_select_all"/>
+   <Action name="edit_select_all_current_page"/>
+   <Separator/>
+   <Action name="edit_find"/>
+   <Action name="edit_find_next"/>
+   <Action name="edit_find_prev"/>
+  </Menu>
+  <Menu name="view" noMerge="1">
+   <text translationDomain="okular">&amp;View</text>
+   <Action name="presentation"/>
+   <Separator/>
+   <Action name="view_zoom_out"/>
+   <Action name="view_zoom_in"/>
+   <Action name="view_actual_size"/>
+   <Action name="view_fit_to_width"/>
+   <Action name="view_fit_to_page"/>
+   <Action name="view_auto_fit"/>
+   <Separator/>
+   <Action name="view_render_mode"/>
+   <Separator/>
+   <Menu name="view_orientation" noMerge="1">
+    <text translationDomain="okular">&amp;Orientation</text>
+    <Action name="view_orientation_rotate_ccw"/>
+    <Action name="view_orientation_rotate_cw"/>
+    <Action name="view_orientation_original"/>
+   </Menu>
+   <Action name="view_trim_mode"/>
+   <Separator/>
+   <Action name="view_toggle_forms"/>
+  </Menu>
+  <Menu name="go" noMerge="1">
+   <text translationDomain="okular">&amp;Go</text>
+   <Action name="go_previous"/>
+   <Action name="go_next"/>
+   <Separator/>
+   <Action name="first_page"/>
+   <Action name="last_page"/>
+   <Separator/>
+   <Action name="go_document_back"/>
+   <Action name="go_document_forward"/>
+   <Separator/>
+   <Action name="go_goto_page"/>
+  </Menu>
+  <Menu name="bookmarks" noMerge="1">
+   <text translationDomain="okular">&amp;Bookmarks</text>
+   <Action name="bookmark_add"/>
+   <Action name="rename_bookmark"/>
+   <Action name="previous_bookmark"/>
+   <Action name="next_bookmark"/>
+   <Separator/>
+   <ActionList name="bookmarks_currentdocument"/>
+  </Menu>
+  <Menu name="tools" noMerge="1">
+   <text translationDomain="okular">&amp;Tools</text>
+   <Action name="mouse_drag"/>
+   <Action name="mouse_zoom"/>
+   <Action name="mouse_select"/>
+   <Action name="mouse_textselect"/>
+   <Action name="mouse_tableselect"/>
+   <Action name="mouse_magnifier"/>
+   <Separator/>
+   <Action name="mouse_toggle_annotate"/>
+   <Separator/>
+   <Action name="add_digital_signature"/>
+   <Separator/>
+   <Action name="speak_document"/>
+   <Action name="speak_from_current_page"/>
+   <Action name="speak_current_page"/>
+   <Action name="speak_stop_all"/>
+   <Action name="speak_pause_resume"/>
+  </Menu>
+  <Menu name="settings" noMerge="1">
+   <text translationDomain="okular">&amp;Settings</text>
+   <Action group="show_merge" name="colorscheme_menu"/>
+   <Action group="show_merge" name="show_leftpanel"/>
+   <Action group="show_merge" name="show_bottombar"/>
+   <Action group="configure_merge" name="options_configure_generators"/>
+   <Action group="configure_merge" name="options_configure"/>
+  </Menu>
+  <Menu name="help" noMerge="1">
+   <text translationDomain="okular">&amp;Help</text>
+   <Action group="about_merge" name="help_about_backend"/>
+  </Menu>
+ </MenuBar>
+ <ToolBar name="mainToolBar" noMerge="1">
+  <text translationDomain="okular">Main Toolbar</text>
+  <Action name="show_leftpanel"/>
+  <Separator name="separator_0"/>
+  <Action name="view_zoom_in"/>
+  <Action name="view_zoom_out"/>
+  <Action name="zoom_to"/>
+  <Action name="view_render_mode"/>
+  <Action name="color_mode_inverted"/>
+  <Spacer name="spacer_0"/>
+  <Action name="page_number"/>
+  <Spacer name="spacer_1"/>
+  <Action name="mouse_drag"/>
+  <Action name="mouse_selecttools"/>
+  <Action name="annotation_favorites"/>
+  <Separator name="separator_1"/>
+  <Action name="hamburger_menu"/>
+ </ToolBar>
+ <ActionProperties scheme="Default">
+  <Action name="show_leftpanel" priority="0"/>
+  <Action name="view_zoom_out" priority="0"/>
+  <Action name="view_zoom_in" priority="0"/>
+ </ActionProperties>
+ <ToolBar hidden="true" iconText="icononly" name="annotationToolBar" newline="true" noMerge="1">
+  <text translationDomain="okular">Annotation Toolbar</text>
+  <Action name="annotation_highlighter"/>
+  <Action name="annotation_underline"/>
+  <Action name="annotation_squiggle"/>
+  <Action name="annotation_strike_out"/>
+  <Action name="annotation_typewriter"/>
+  <Action name="annotation_inline_note"/>
+  <Action name="annotation_popup_note"/>
+  <Action name="annotation_freehand_line"/>
+  <Action name="annotation_geometrical_shape"/>
+  <Action name="annotation_stamp"/>
+  <Separator name="separator_0"/>
+  <Action name="annotation_settings_width"/>
+  <Action name="annotation_settings_color"/>
+  <Action name="annotation_settings_inner_color"/>
+  <Action name="annotation_settings_opacity"/>
+  <Action name="annotation_settings_font"/>
+  <Action name="annotation_settings_advanced"/>
+  <Separator name="separator_1"/>
+  <Action name="annotation_bookmark"/>
+  <Action name="annotation_settings_pin"/>
+  <Spacer name="spacer_0"/>
+  <Action name="switch_blackscreen_mode"/>
+  <Action name="hide_annotation_toolbar"/>
+ </ToolBar>
+ <ToolBar hidden="true" iconSize="32" iconText="icononly" name="quickAnnotationToolBar" newline="true" position="right">
+  <text translationDomain="okular">Quick Annotation Toolbar</text>
+  <Action name="quick_annotation_action_bar"/>
+ </ToolBar>
+</gui>
