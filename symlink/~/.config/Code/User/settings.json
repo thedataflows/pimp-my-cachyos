@@ -1,0 +1,323 @@
+{
+  "files.eol": "\n",
+  "files.associations": {
+    "**/*.yml": "yaml",
+    "*.gotmpl": "go-template"
+  },
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "never"
+  },
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "all",
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "editor.showFoldingControls": "always",
+  "editor.linkedEditing": true,
+  "editor.suggestSelection": "first",
+  "editor.guides.indentation": false,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.lineHeight": 1.4,
+  "editor.fontSize": 12,
+  "editor.fontWeight": "300",
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.inlayHints.maximumLength": 0,
+  "editor.inlayHints.padding": true,
+  "debug.console.fontSize": 10,
+  "terminal.integrated.fontSize": 10,
+  "chat.editor.fontSize": 12,
+  "git.autofetch": true,
+  "xml.format.spaceBeforeEmptyCloseTag": false,
+  "[markdown]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "never"
+    },
+    "editor.defaultFormatter": null,
+  },
+  "[dockerfile]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "never",
+      "source.fixAll": "never"
+    },
+  },
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  },
+  "[templ]": {
+    "editor.defaultFormatter": "a-h.templ",
+    "editor.formatOnSave": true
+  },
+  "redhat.telemetry.enabled": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f",
+    "menu.border": "#9097B3",
+  },
+  "git.confirmSync": false,
+  "vs-kubernetes": {
+    "vs-kubernetes.crd-code-completion": "enabled"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[proto3]": {
+    "editor.defaultFormatter": "bufbuild.vscode-buf"
+  },
+  "security.workspace.trust.enabled": false,
+  "blockman.n01LineHeight": 0,
+  "workbench.editorAssociations": {
+    "*.db": "sqlite3-editor.editor",
+  },
+  "pulumi-lsp.detectExtensionConflicts": false,
+  "c4.diagram.mermaid.enabled": true,
+  "c4.diagram.plantuml.enabled": true,
+  "c4.diagram.structurizr.enabled": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js, ${capture}.typegen.ts",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts, ${capture}.typegen.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+    "*.templ": "${capture}_templ.go,${capture}_templ.txt",
+    "Cargo.toml": "Cargo.lock",
+    "*.mts": "${capture}.typegen.ts",
+    "*.cts": "${capture}.typegen.ts",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false,
+    "go": true,
+    "shellscript": true,
+    "jsonc": true,
+    "yaml": true
+  },
+  "explorer.copyRelativePathSeparator": "/",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[rust]": {
+    "editor.defaultFormatter": "jinxdash.prettier-rust"
+  },
+  "task.problemMatchers.neverPrompt": false,
+  "task.autoDetect": "on",
+  "rust-analyzer.cargo.buildScripts.enable": true,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.userWords": [
+    "Bibata",
+    "btrfs",
+    "Catppuccin",
+    "Hyprland",
+    "Infof",
+    "kubestrap",
+    "kustomization",
+    "kustomize",
+    "Kvantum",
+    "laggy",
+    "NATS",
+    "OLED",
+    "OOTB",
+    "Warnf"
+  ],
+  "notebook.lineNumbers": "on",
+  "httpyac.environmentVariables": {
+    "$shared": {}
+  },
+  "c4.editor.autoformat.indent": 2,
+  "workbench.settings.applyToAllProfiles": [
+    "todo-tree.filtering.ignoreGitSubmodules",
+    "git.followTagsWhenSync"
+  ],
+  "git.openRepositoryInParentFolders": "never",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdown.extension.print.validateUrls": false,
+  "markdown.extension.theming.decoration.renderHardLineBreak": true,
+  "markdown.extension.theming.decoration.renderLink": true,
+  "markdown.extension.theming.decoration.renderParagraph": true,
+  "markdown.extension.toc.slugifyMode": "vscode",
+  "slidev.force-enabled": true,
+  "blockman.n04ColorComboPreset": "Classic Dark 2 (Gradients)",
+  "catppuccin.accentColor": "lavender",
+  "catppuccin.bracketMode": "dimmed",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.persistentSessionScrollback": 1000,
+  "terminal.integrated.scrollback": 10000,
+  "httpyac.cookieJarEnabled": false,
+  "git.ignoreRebaseWarning": true,
+  "git.allowForcePush": true,
+  "git.timeline.showUncommitted": true,
+  "cSpell.enabled": false,
+  "git.postCommitCommand": "sync",
+  "scm.alwaysShowRepositories": true,
+  "scm.alwaysShowActions": true,
+  "scm.defaultViewMode": "tree",
+  "tooltitude.shadowInspectionEnabled": true,
+  "go.lintTool": "golangci-lint",
+  "go.lintFlags": [
+    "--fast"
+  ],
+  "go.inlayHints.assignVariableTypes": true,
+  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.compositeLiteralTypes": true,
+  "go.inlayHints.constantValues": true,
+  "go.inlayHints.functionTypeParameters": true,
+  "go.inlayHints.parameterNames": true,
+  "go.inlayHints.rangeVariableTypes": true,
+  "explorer.confirmDragAndDrop": false,
+  "todo-tree.general.showActivityBarBadge": true,
+  "todo-tree.highlights.useColourScheme": true,
+  "todo-tree.tree.showCountsInTree": true,
+  "todo-tree.filtering.ignoreGitSubmodules": true,
+  "window.titleBarStyle": "custom",
+  "go.toolsManagement.autoUpdate": true,
+  "shellcheck.enableQuickFix": false,
+  "yaml.format.enable": false,
+  "workbench.tree.indent": 16,
+  "git.followTagsWhenSync": true,
+  "semanticdiff.defaultDiffViewer": true,
+  "semanticdiff.closeOriginalTab": true,
+  "lowlightgoerrors.Color": "#EEEEEE",
+  "lowlightgoerrors.MediumOpacity": "0.7",
+  "diffEditor.experimental.useTrueInlineView": true,
+  "scm.diffDecorationsGutterPattern": {
+    "added": true
+  },
+  "mise.binPath": "/usr/bin/mise",
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ],
+  "workbench.editor.empty.hint": "hidden",
+  "terminal.integrated.copyOnSelection": true,
+  "tailwindCSS.includeLanguages": {
+    "templ": "html"
+  },
+  "catppuccin.italicKeywords": false,
+  "catppuccin.italicComments": false,
+  "github.copilot.chat.codesearch.enabled": true,
+  "websearch.preferredEngine": "bing",
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "chat.instructionsFilesLocations": {
+    "instructions": true
+  },
+  "chat.promptFilesLocations": {
+    "prompts": true
+  },
+  "graphviz-interactive-preview.view.themeColors": true,
+  "docker.extension.dockerEngineAvailabilityPrompt": false,
+  "git.decorations.enabled": true,
+  "grafana-vscode.URL": "https://grafana.thedataflows.com",
+  "mise.configureExtensionsAutomatically": false,
+  "chat.agent.maxRequests": 200,
+  "docker.extension.enableComposeLanguageServer": false,
+  "workbench.editor.highlightModifiedTabs": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.experimental.showMoves": true,
+  "D2.previewSketch": false,
+  "window.newWindowProfile": "Default",
+  "workbench.iconTheme": "catppuccin-mocha",
+  "svg.preview.mode": "svg",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "c4.diagram.renderer": "structurizr",
+  "c4.export.plantuml.dir": "${workspaceFolder}/export",
+  "mise.checkForNewMiseVersion": false,
+  "kilo-code.allowedCommands": [
+    "git log",
+    "git diff",
+    "git show",
+    "cd /mnt/linux2/dev/farm-manager",
+    "mise run templ",
+    "cd",
+    "templ",
+    "go vet",
+    "grep",
+    "go mod tidy",
+    "go mod",
+    "go test"
+  ],
+  "chat.tools.terminal.autoApprove": {
+    "grep": true,
+    "go": true,
+    "templ": true,
+    "find": true,
+    "}": true,
+    "mkdir": true,
+    "mv": true,
+    "sed": true,
+    "cp": true,
+    "join": true,
+    "./confedit": true
+  },
+  "database-client.autoSync": true,
+  "[dockercompose]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
+    },
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "editor.aiStats.enabled": true,
+  "chat.mcp.serverSampling": {
+    "Global in Code: n8n-mcp": {
+      "allowedModels": [
+        "copilot/claude-sonnet-4.5"
+      ]
+    }
+  },
+  "chat.useNestedAgentsMdFiles": true,
+  "chat.tools.terminal.autoReplyToPrompts": true,
+  "chat.mcp.gallery.enabled": true,
+  "workbench.colorTheme": "Catppuccin Mocha",
+}
