@@ -70,6 +70,8 @@
     "editor.lineHighlightBackground": "#1073cf2d",
     "editor.lineHighlightBorder": "#9fced11f",
     "menu.border": "#9097B3",
+    "widget.border": "#9097B3",
+    "sideBarSectionHeader.border": "#9097B3",
   },
   "git.confirmSync": false,
   "vs-kubernetes": {
@@ -224,14 +226,6 @@
     "added": true
   },
   "mise.binPath": "/usr/bin/mise",
-  "roo-cline.allowedCommands": [
-    "npm test",
-    "npm install",
-    "tsc",
-    "git log",
-    "git diff",
-    "git show"
-  ],
   "workbench.editor.empty.hint": "hidden",
   "terminal.integrated.copyOnSelection": true,
   "tailwindCSS.includeLanguages": {
@@ -293,7 +287,6 @@
     "join": true,
     "./confedit": true
   },
-  "database-client.autoSync": true,
   "[dockercompose]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
