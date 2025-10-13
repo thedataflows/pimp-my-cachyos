@@ -68,10 +68,10 @@
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.colorCustomizations": {
     "editor.lineHighlightBackground": "#1073cf2d",
-    "editor.lineHighlightBorder": "#9fced11f",
-    "menu.border": "#9097B3",
-    "widget.border": "#9097B3",
-    "sideBarSectionHeader.border": "#9097B3",
+    "editor.lineHighlightBorder": "#63687f50",
+    "menu.border": "#63687F",
+    "widget.border": "#63687F",
+    "sideBarSectionHeader.border": "#63687F",
   },
   "git.confirmSync": false,
   "vs-kubernetes": {
