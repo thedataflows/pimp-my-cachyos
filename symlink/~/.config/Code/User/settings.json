@@ -72,6 +72,7 @@
     "menu.border": "#63687F",
     "widget.border": "#63687F",
     "sideBarSectionHeader.border": "#63687F",
+    "notificationToast.border": "#63687F",
   },
   "git.confirmSync": false,
   "vs-kubernetes": {
