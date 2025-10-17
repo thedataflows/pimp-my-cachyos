@@ -273,7 +273,8 @@
     "grep",
     "go mod tidy",
     "go mod",
-    "go test"
+    "go test",
+    "go list"
   ],
   "chat.tools.terminal.autoApprove": {
     "grep": true,
@@ -314,4 +315,5 @@
   "chat.tools.terminal.autoReplyToPrompts": true,
   "chat.mcp.gallery.enabled": true,
   "workbench.colorTheme": "Catppuccin Mocha",
+  "kilo-code.deniedCommands": [],
 }
