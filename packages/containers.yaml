@@ -8,3 +8,7 @@
   desc: A simple terminal UI for docker and docker-compose, written in Go with the gocui library
 - name: skopeo
   desc: A command line utility for various operations on container images and image repositories.
+- name: podman
+  desc: Tool and library for running OCI-based containers in pods
+- name: aur/podman-tui-bin
+  desc: Podman Terminal UI
