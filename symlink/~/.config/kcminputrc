@@ -6,6 +6,7 @@ RepeatRate=30
 PointerAccelerationProfile=1
 
 [Libinput][2362][597][UNIW0001:00 093A:0255 Touchpad]
+DisableEventsOnExternalMouse=true
 Enabled=true
 NaturalScroll=true
 

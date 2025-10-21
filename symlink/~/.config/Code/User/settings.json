@@ -274,7 +274,15 @@
     "go mod tidy",
     "go mod",
     "go test",
-    "go list"
+    "go list",
+    "go run",
+    "head",
+    "tail",
+    "ls",
+    "go doc",
+    "find",
+    "cat",
+    "echo"
   ],
   "chat.tools.terminal.autoApprove": {
     "grep": true,
