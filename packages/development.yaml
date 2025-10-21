@@ -24,3 +24,5 @@
   desc: A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter
 - name: dbeaver
   desc: Free universal SQL Client for developers and database administrators (community edition)
+- name: uv
+  desc: An extremely fast Python package installer and resolver written in Rust
