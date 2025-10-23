@@ -66,3 +66,5 @@
   desc: NetworkManager GUI connection editor and widgets
 - name: grsync
   desc: GTK+ GUI for rsync to synchronize folders, files and make backups
+- name: ttyd
+  desc: Share your terminal over the web
