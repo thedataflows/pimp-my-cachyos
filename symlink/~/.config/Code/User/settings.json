@@ -282,7 +282,8 @@
     "go doc",
     "find",
     "cat",
-    "echo"
+    "echo",
+    "sed"
   ],
   "chat.tools.terminal.autoApprove": {
     "grep": true,
@@ -295,7 +296,9 @@
     "sed": true,
     "cp": true,
     "join": true,
-    "./confedit": true
+    "./confedit": true,
+    "gofmt": true,
+    "rg": true
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,
