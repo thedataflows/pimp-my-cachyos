@@ -8,6 +8,8 @@
   desc: An office suite that combines text, spreadsheet and presentation editors
 - name: okular
   desc: Document Viewer
+- name: jrnl
+  desc: Collect your thoughts and notes without leaving the command line
 ## To be removed
 - name: kate
   desc: Advanced Text Editor
