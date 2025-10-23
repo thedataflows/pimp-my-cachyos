@@ -1,6 +1,6 @@
 # shellcheck disable=SC2148
 ## Environment
-export PATH=~/go/bin:${KREW_ROOT:-$HOME/.krew}/bin:$PATH
+export PATH=~/go/bin:$HOME/.local/bin:${KREW_ROOT:-$HOME/.krew}/bin:$PATH
 #export GSETTINGS_SCHEMA_DIR=/usr/share/glib-2.0/schemas
 export SKIM_DEFAULT_COMMAND="fd --type f || git ls-tree -r --name-only HEAD || rg --files || find ."
 export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/ssh-agent.socket"
