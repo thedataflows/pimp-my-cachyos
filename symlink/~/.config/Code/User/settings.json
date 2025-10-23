@@ -290,15 +290,18 @@
     "go": true,
     "templ": true,
     "find": true,
-    "}": true,
     "mkdir": true,
     "mv": true,
     "sed": true,
     "cp": true,
     "join": true,
-    "./confedit": true,
     "gofmt": true,
-    "rg": true
+    "rg": true,
+    "jq *": true,
+    "keys'": true,
+    "jq": true,
+    "keys[]'": true,
+    "/usr/bin/git": true
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,
