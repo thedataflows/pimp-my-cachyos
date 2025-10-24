@@ -36,6 +36,9 @@ speedUnit=9000
 temperatureUnit=6001
 visibilityUnit=2007
 
+[PlasmaTransientsConfig]
+PreloadWeight=42
+
 [PlasmaViews][Panel 22]
 floating=1
 

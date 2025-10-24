@@ -127,6 +127,7 @@ History Items[$e]=file:$HOME/dev/youtube-webos-original,file:///mnt/linux2/Muzic
 Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8a\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
 
 [General]
+ColorScheme=CatppuccinMacchiatoLavender
 ColorSchemeHash=be7ce825dcfb8832c4c780870d6b08bfb4cefb62
 TerminalApplication=kitty
 TerminalService=kitty.desktop
@@ -143,7 +144,7 @@ toolBarFont=Roboto,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Theme=Qogir-Dark
 
 [KDE]
-AnimationDurationFactor=0.5
+AnimationDurationFactor=0.35355339059327373
 LookAndFeelPackage=Scratchy
 ShowDeleteCommand=false
 SmoothScroll=false

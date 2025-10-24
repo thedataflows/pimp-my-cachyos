@@ -297,11 +297,11 @@
     "join": true,
     "gofmt": true,
     "rg": true,
-    "jq *": true,
     "keys'": true,
     "jq": true,
     "keys[]'": true,
-    "/usr/bin/git": true
+    "git": true,
+    "set": true
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,

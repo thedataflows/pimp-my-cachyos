@@ -18,3 +18,4 @@ alias paruf="paru -Slq | fzf --multi --preview 'sh -c \"pacpreview {1} 2>/dev/nu
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 alias skgrep="sk --ansi -i -c 'rg --color=always --line-number \"{}\"'"
 alias yay="paru"
+alias wttr="curl wttr.in"

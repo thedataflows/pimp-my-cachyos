@@ -2,6 +2,7 @@
 OutlineCloseButton=true
 OutlineIntensity=OutlineHigh
 ShadowSize=ShadowMedium
+ShadowStrength=204
 
 [Style]
 DockWidgetDrawFrame=true
