@@ -65,6 +65,20 @@ ForegroundNormal=202, 211, 245
 ForegroundPositive=166, 218, 149
 ForegroundVisited=198, 160, 246
 
+[Colors:Header][Inactive]
+BackgroundAlternate[$d]
+BackgroundNormal[$d]
+DecorationFocus[$d]
+DecorationHover[$d]
+ForegroundActive[$d]
+ForegroundInactive[$d]
+ForegroundLink[$d]
+ForegroundNegative[$d]
+ForegroundNeutral[$d]
+ForegroundNormal[$d]
+ForegroundPositive[$d]
+ForegroundVisited[$d]
+
 [Colors:Selection]
 BackgroundAlternate=183,189,248
 BackgroundNormal=183,189,248
