@@ -12,11 +12,11 @@ ItemGeometries-1707x960=Applet-87:1315.69,667.059,384,304,0;Applet-89:1776,928,3
 ItemGeometries-1920x1080=
 ItemGeometries-2048x1152=Applet-87:1344,752,352,208,0;Applet-89:1696,928,352,128,0;
 ItemGeometries-2194x1234=Applet-89:1632,256,208,128,0;Applet-87:1648,864,400,304,0;
-ItemGeometries-2560x1440=Applet-89:1856,928,384,128,0;Applet-93:1856,1056,512,384,0;
+ItemGeometries-2560x1440=Applet-89:1856,928,384,128,0;Applet-94:1872,1152,400,176,0;
 ItemGeometries-3072x1728=Applet-89:2512,256,208,128,0;Applet-87:2528,1360,400,304,0;
 ItemGeometries-3840x1080=Applet-89:2000,256,384,128,0;Applet-87:2016,784,400,288,0;
 ItemGeometries-3840x2160=Applet-89:3280,256,208,128,0;Applet-87:3296,1792,400,304,0;
-ItemGeometriesHorizontal=Applet-89:1856,928,384,128,0;Applet-93:1856,1056,512,384,0;
+ItemGeometriesHorizontal=Applet-89:1856,928,384,128,0;Applet-94:1872,1152,400,176,0;
 activityId=33f140c6-61cd-4f86-a07f-0ad73cbb5cc3
 formfactor=0
 immutability=1
@@ -41,9 +41,29 @@ currentDesktopSelected=ShowDesktop
 displayedText=Number
 showWindowIcons=true
 
-[Containments][40][Applets][93]
+[Containments][40][Applets][94]
 immutability=1
-plugin=com.github.zren.simpleweather
+plugin=org.kde.weatherWidget-3
+
+[Containments][40][Applets][94][Configuration]
+PreloadWeight=70
+popupHeight=503
+popupWidth=800
+
+[Containments][40][Applets][94][Configuration][Appearance]
+widgetFontName=JetBrainsMono Nerd Font
+widgetFontSize=82
+
+[Containments][40][Applets][94][Configuration][ConfigDialog]
+DialogHeight=630
+DialogWidth=810
+
+[Containments][40][Applets][94][Configuration][General]
+firstRun=false
+places=[{"providerId":"metno","placeIdentifier":"lat=44.55&lon=26.08333&altitude=95","placeAlias":"Otopenii de Jos","timezoneID":305}]
+
+[Containments][40][Applets][94][Configuration][Units]
+windSpeedType=kmh
 
 [Containments][40][ConfigDialog]
 DialogHeight=540
@@ -146,7 +166,7 @@ immutability=1
 lastScreen=0
 location=3
 plugin=org.kde.plasma.systemtray
-popupHeight=531
+popupHeight=525
 popupWidth=432
 wallpaperplugin=org.kde.image
 
@@ -333,7 +353,7 @@ plugin=org.kde.plasma.systemmonitor.net
 [Containments][41][Applets][72][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
 PreloadWeight=100
-popupHeight=186
+popupHeight=184
 popupWidth=207
 
 [Containments][41][Applets][72][Configuration][Appearance]
@@ -366,12 +386,12 @@ plugin=org.kde.plasma.systemmonitor.cpu
 [Containments][41][Applets][76][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
 PreloadWeight=100
-popupHeight=206
-popupWidth=187
+popupHeight=204
+popupWidth=199
 
 [Containments][41][Applets][76][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
-title=Total CPU Use
+title=CPU & Mem Use
 updateRateLimit=1000
 
 [Containments][41][Applets][76][Configuration][ConfigDialog]
@@ -391,9 +411,14 @@ highPrioritySensorIds=["cpu/all/usage"]
 [Containments][41][Applets][76][Configuration][SensorColors]
 cpu/all/usage=255,85,0
 gpu/gpu0/usedVram=94,91,120
+memory/physical/usedPercent=85,170,255
+
+[Containments][41][Applets][76][Configuration][SensorLabels]
+cpu/all/usage=CPU Usage
+memory/physical/usedPercent=Used Memory
 
 [Containments][41][Applets][76][Configuration][Sensors]
-highPrioritySensorIds=["cpu/all/usage"]
+highPrioritySensorIds=["cpu/all/usage","memory/physical/usedPercent"]
 lowPrioritySensorIds=["cpu/all/coreCount","cpu/all/averageFrequency"]
 totalSensors=["cpu/all/usage"]
 
@@ -404,12 +429,12 @@ plugin=org.kde.plasma.systemmonitor.memory
 [Containments][41][Applets][77][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
 PreloadWeight=100
-popupHeight=185
-popupWidth=156
+popupHeight=183
+popupWidth=267
 
 [Containments][41][Applets][77][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
-title=Memory Usage
+title=GPU Memory Usage
 updateRateLimit=1000
 
 [Containments][41][Applets][77][Configuration][ConfigDialog]
@@ -417,11 +442,17 @@ DialogHeight=540
 DialogWidth=720
 
 [Containments][41][Applets][77][Configuration][SensorColors]
+gpu/gpu1/usedVram=170,0,0
 memory/physical/used=85,170,255
 
+[Containments][41][Applets][77][Configuration][SensorLabels]
+gpu/gpu1/name=GPU Name
+gpu/gpu1/totalVram=Total Video Memory
+gpu/gpu1/usedVram=Video Memory Used
+
 [Containments][41][Applets][77][Configuration][Sensors]
-highPrioritySensorIds=["memory/physical/used"]
-lowPrioritySensorIds=["memory/physical/total"]
+highPrioritySensorIds=["gpu/gpu1/usedVram"]
+lowPrioritySensorIds=["gpu/gpu1/name"]
 totalSensors=["memory/physical/usedPercent"]
 
 [Containments][41][Applets][78]
@@ -431,8 +462,8 @@ plugin=org.kde.plasma.systemmonitor
 [Containments][41][Applets][78][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
 PreloadWeight=100
-popupHeight=185
-popupWidth=165
+popupHeight=183
+popupWidth=200
 
 [Containments][41][Applets][78][Configuration][Appearance]
 chartFace=org.kde.ksysguard.linechart
@@ -521,7 +552,7 @@ panelOutlineWidth=1
 panelShadowSize=10
 panelShadowX=2
 panelShadowY=2
-panelWidgets=[{"id":42,"name":"org.kde.plasma.kickoff","title":"Application Launcher","icon":"app-launcher","inTray":false},{"id":46,"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"id":76,"name":"org.kde.plasma.systemmonitor.cpu","title":"Total CPU Use","icon":"cpu","inTray":false},{"id":78,"name":"org.kde.plasma.systemmonitor","title":"CPU Temp","icon":"ksysguardd","inTray":false},{"id":77,"name":"org.kde.plasma.systemmonitor.memory","title":"Memory Usage","icon":"ksysguardd","inTray":false},{"id":92,"name":"org.kde.plasma.systemmonitor","title":"GPU","icon":"ksysguardd","inTray":false},{"id":75,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":45,"name":"org.kde.plasma.digitalclock","title":"Digital Clock","icon":"preferences-system-time","inTray":false},{"id":82,"name":"org.kde.plasma.weather","title":"Weather Report","icon":"weather-clear-night-symbolic","inTray":false},{"id":88,"name":"org.kde.plasma.pager","title":"Pager","icon":"user-desktop","inTray":false},{"id":44,"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"id":48,"name":"org.kde.plasma.systemtray","title":"System Tray","icon":"preferences-desktop-notification","inTray":false},{"id":47,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":72,"name":"org.kde.plasma.systemmonitor.net","title":"Network speed","icon":"network-workgroup","inTray":false},{"id":84,"name":"luisbocanegra.panel.colorizer","title":"Panel colorizer","icon":"desktop","inTray":false},{"id":62,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":61,"name":"org.kde.plasma.lock_logout","title":"Lock/Logout","icon":"system-shutdown","inTray":false},{"id":54,"name":"org.kde.plasma.notifications","title":"Notifications","icon":"notification-active-symbolic","inTray":true},{"id":-1,"name":"KeePassXC","title":"Untitled.kdbx [Locked] - KeePassXC","icon":"keepassxc-monochrome-dark-locked-symbolic","inTray":true},{"id":-1,"name":"chrome_status_icon_1","title":"Kopia","icon":"","inTray":true},{"id":-1,"name":"openrgb","title":"OpenRGB","icon":"","inTray":true},{"id":-1,"name":"Syncthing Tray","title":"Syncthing is idling\\nConnected to syncthing-dataflows","icon":"","inTray":true},{"id":51,"name":"org.kde.plasma.clipboard","title":"Clipboard","icon":"klipper-symbolic","inTray":true},{"id":73,"name":"org.kde.plasma.volume","title":"Audio Volume","icon":"audio-volume-medium-symbolic","inTray":true},{"id":-1,"name":"blueman","title":"Bluetooth Enabled","icon":"blueman-tray-symbolic","inTray":true},{"id":90,"name":"org.kde.plasma.bluetooth","title":"Bluetooth","icon":"network-bluetooth-symbolic","inTray":true},{"id":80,"name":"org.kde.kdeconnect","title":"KDE Connect","icon":"kdeconnect-tray-symbolic","inTray":true},{"id":55,"name":"org.kde.plasma.keyboardlayout","title":"Keyboard Layout","icon":"input-keyboard","inTray":true},{"id":74,"name":"org.kde.plasma.networkmanagement","title":"Networks","icon":"network-wired-activated-symbolic","inTray":true},{"id":-1,"name":"org.kde.plasma.systemtray.expand","title":"Show hidden icons","icon":"arrow-down","inTray":true}]
+panelWidgets=[{"id":42,"name":"org.kde.plasma.kickoff","title":"Application Launcher","icon":"app-launcher","inTray":false},{"id":46,"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"id":76,"name":"org.kde.plasma.systemmonitor.cpu","title":"CPU & Mem Use","icon":"cpu","inTray":false},{"id":78,"name":"org.kde.plasma.systemmonitor","title":"CPU Temp","icon":"ksysguardd","inTray":false},{"id":92,"name":"org.kde.plasma.systemmonitor","title":"GPU","icon":"ksysguardd","inTray":false},{"id":77,"name":"org.kde.plasma.systemmonitor.memory","title":"Memory Usage","icon":"ksysguardd","inTray":false},{"id":75,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":45,"name":"org.kde.plasma.digitalclock","title":"Digital Clock","icon":"preferences-system-time","inTray":false},{"id":82,"name":"org.kde.plasma.weather","title":"Weather Report","icon":"weather-clouds-night-symbolic","inTray":false},{"id":88,"name":"org.kde.plasma.pager","title":"Pager","icon":"user-desktop","inTray":false},{"id":44,"name":"org.kde.plasma.panelspacer","title":"Panel Spacer","icon":"distribute-horizontal-x","inTray":false},{"id":48,"name":"org.kde.plasma.systemtray","title":"System Tray","icon":"preferences-desktop-notification","inTray":false},{"id":47,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":72,"name":"org.kde.plasma.systemmonitor.net","title":"Network speed","icon":"network-workgroup","inTray":false},{"id":84,"name":"luisbocanegra.panel.colorizer","title":"Panel colorizer","icon":"desktop","inTray":false},{"id":62,"name":"org.kde.plasma.marginsseparator","title":"Margins Separator","icon":"filename-divider","inTray":false},{"id":61,"name":"org.kde.plasma.lock_logout","title":"Lock/Logout","icon":"system-shutdown","inTray":false},{"id":54,"name":"org.kde.plasma.notifications","title":"Notifications","icon":"notification-active-symbolic","inTray":true},{"id":-1,"name":"KeePassXC","title":"Untitled.kdbx [Locked] - KeePassXC","icon":"keepassxc-monochrome-dark-locked-symbolic","inTray":true},{"id":-1,"name":"chrome_status_icon_1","title":"Kopia","icon":"","inTray":true},{"id":-1,"name":"openrgb","title":"OpenRGB","icon":"","inTray":true},{"id":-1,"name":"Syncthing Tray","title":"Syncthing is idling","icon":"","inTray":true},{"id":51,"name":"org.kde.plasma.clipboard","title":"Clipboard","icon":"klipper-symbolic","inTray":true},{"id":64,"name":"org.kde.plasma.mediacontroller","title":"Media Player","icon":"media-playback-paused-symbolic","inTray":true},{"id":73,"name":"org.kde.plasma.volume","title":"Audio Volume","icon":"audio-volume-medium-symbolic","inTray":true},{"id":-1,"name":"blueman","title":"Bluetooth Enabled","icon":"blueman-tray-symbolic","inTray":true},{"id":90,"name":"org.kde.plasma.bluetooth","title":"Bluetooth","icon":"network-bluetooth-symbolic","inTray":true},{"id":80,"name":"org.kde.kdeconnect","title":"KDE Connect","icon":"kdeconnect-tray-symbolic","inTray":true},{"id":55,"name":"org.kde.plasma.keyboardlayout","title":"Keyboard Layout","icon":"input-keyboard","inTray":true},{"id":74,"name":"org.kde.plasma.networkmanagement","title":"Networks","icon":"network-wired-activated-symbolic","inTray":true},{"id":-1,"name":"org.kde.plasma.systemtray.expand","title":"Show hidden icons","icon":"arrow-down","inTray":true}]
 panelWidgetsWithTray=org.kde.plasma.kickoff,Application Launcher,app-launcher|org.kde.plasma.panelspacer,Panel Spacer,distribute-horizontal-x|org.kde.plasma.systemmonitor.cpu,Total CPU Use,cpu|org.kde.plasma.systemmonitor,CPU Temp,ksysguardd|org.kde.plasma.systemmonitor.memory,Memory Usage,ksysguardd|org.kde.plasma.systemmonitor,GPUs Temp,ksysguardd|org.kde.plasma.marginsseparator,Margins Separator,filename-divider|org.kde.plasma.digitalclock,Digital Clock,preferences-system-time|org.kde.plasma.weather,Weather Report,weather-clear-symbolic|org.kde.plasma.clipboard,Clipboard,klipper-symbolic|org.kde.plasma.mediacontroller,Media Player,media-playback-playing-symbolic|org.kde.plasma.volume,Audio Volume,audio-volume-medium-symbolic|org.kde.plasma.brightness,Brightness and Color,brightness-high-symbolic|org.kde.plasma.networkmanagement,Networks,network-wireless-80-symbolic|org.kde.plasma.battery,Power Management,speedometer-symbolic|org.kde.plasma.systemmonitor.net,Network speed,network-workgroup|luisbocanegra.panel.colorizer,Panel colorizer,desktop|org.kde.plasma.lock_logout,Lock/Logout,system-shutdown
 pluginFound=true
 presetAutoloading={"maximized":"/home/cri/.config/panel-colorizer/presets/Default","touchingWindow":"/home/cri/.config/panel-colorizer/presets/Default","floating":"/home/cri/.config/panel-colorizer/presets/Default","normal":"/home/cri/.config/panel-colorizer/presets/Default"}
@@ -549,7 +580,7 @@ plugin=org.kde.plasma.systemmonitor
 [Containments][41][Applets][92][Configuration]
 CurrentPreset=org.kde.plasma.systemmonitor
 PreloadWeight=100
-popupHeight=235
+popupHeight=233
 popupWidth=281
 
 [Containments][41][Applets][92][Configuration][Appearance]
@@ -578,7 +609,7 @@ gpu/gpu1/usedVram=Memory Used
 
 [Containments][41][Applets][92][Configuration][Sensors]
 highPrioritySensorIds=["gpu/gpu1/usage"]
-lowPrioritySensorIds=["gpu/gpu1/name","gpu/gpu1/usedVram","gpu/gpu1/temperature","gpu/gpu1/power1"]
+lowPrioritySensorIds=["gpu/gpu1/name","gpu/gpu1/temperature","gpu/gpu1/power1"]
 
 [Containments][41][Applets][92][Configuration][org.kde.ksysguard.linechart][General]
 rangeAutoY=false
@@ -593,7 +624,7 @@ DialogWidth=1920
 PreloadWeight=26
 
 [Containments][41][General]
-AppletOrder=42;46;76;78;77;92;75;45;82;88;44;48;47;72;84;62;61
+AppletOrder=42;46;76;78;92;77;75;45;82;88;44;48;47;72;84;62;61
 
 [Containments][57]
 activityId=
