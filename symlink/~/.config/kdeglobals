@@ -121,11 +121,6 @@ ForegroundNormal=202, 211, 245
 ForegroundPositive=166, 218, 149
 ForegroundVisited=198, 160, 246
 
-[DirSelect Dialog]
-DirSelectDialog Size=1520,879
-History Items[$e]=file:$HOME/dev/youtube-webos-original,file:///mnt/linux2/Muzica/new,file:///mnt/linux2/dev/farm-manager,file:///mnt/linux2/dev/dataflows-gitops,file:///mnt/linux2/dev/oam12,file:///mnt/linux2/Games/God of War Ragnarok,file:///mnt/linux2/dev/headscale,file:$HOME/Downloads,file:///mnt/win/c/Program Files/Reolink,file:$HOME/work/digital-euro
-Splitter State=\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x8a\x00\x00\x02\xa8\x00\xff\xff\xff\xff\x01\x00\x00\x00\x01\x00
-
 [General]
 AccentColor=0,0,0,0
 ColorScheme=CatppuccinMacchiatoLavender
