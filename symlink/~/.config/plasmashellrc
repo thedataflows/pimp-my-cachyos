@@ -50,11 +50,18 @@ thickness=40
 
 [PlasmaViews][Panel 41]
 floating=1
+panelLengthMode=2
 panelVisibility=1
 
 [PlasmaViews][Panel 41][Defaults]
+maxLength=2560
+minLength=2560
 offset=0
 thickness=32
+
+[PlasmaViews][Panel 41][Horizontal2560]
+maxLength=2560
+minLength=2560
 
 [PlasmaViews][Panel 57]
 floating=1
