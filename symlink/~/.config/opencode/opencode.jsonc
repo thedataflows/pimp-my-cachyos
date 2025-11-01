@@ -1,0 +1,17 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "codebase-contextifier": {
+      "type": "local",
+      "command": [
+        "docker",
+        "exec",
+        "-i",
+        "codebase-mcp-server",
+        "python",
+        "-m",
+        "src.server"
+      ]
+    }
+  }
+}

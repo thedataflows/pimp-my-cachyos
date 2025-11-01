@@ -301,7 +301,8 @@
     "jq": true,
     "keys[]'": true,
     "git": true,
-    "set": true
+    "set": true,
+    "docker logs": true
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,
