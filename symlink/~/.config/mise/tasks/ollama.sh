@@ -1,6 +1,6 @@
 #!/bin/env bash
 
-CONTAINER_NAME=qdrant
+CONTAINER_NAME=ollama
 
 if [[ -n "$1" ]]; then
   set -x
@@ -22,6 +22,12 @@ if [[ -n "$CONTAINER_STATE" ]]; then
 fi
 
 set -x
-docker run -d --name "$CONTAINER_NAME" -p 6333:6333 -p 6334:6334 -v "/mnt/linux2/dev/ai-storage/qdrant_storage:/qdrant/storage:z" qdrant/qdrant:latest
+docker run -d \
+  --device /dev/kfd \
+  --device /dev/dri \
+  -v $HOME/.ollama:/root/.ollama \
+  -p 11434:11434 \
+  --name "$CONTAINER_NAME" \
+  ollama/ollama:rocm
 sleep 1
 echo $CONTAINER_NAME $(eval $CONTAINER_STATE_CMD)
