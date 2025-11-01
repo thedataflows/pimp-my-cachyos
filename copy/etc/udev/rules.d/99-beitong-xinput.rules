@@ -1,0 +1,1 @@
+SUBSYSTEM=="hid", DRIVER=="hid-generic", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="2009", RUN="/bin/sh -c 'echo $id:1.0 > /sys/bus/usb/drivers/usbhid/unbind'"
