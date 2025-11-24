@@ -150,7 +150,7 @@ widgetStyle=Breeze
 [KFileDialog Settings]
 Allow Expansion=false
 Automatically select filename extension=true
-Breadcrumb Navigation=false
+Breadcrumb Navigation=true
 Decoration position=0
 Preview Width=253
 Show Full Path=false
@@ -162,7 +162,7 @@ Sort by=Date
 Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false
-Speedbar Width=255
+Speedbar Width=203
 View Style=Detail
 
 [KScreen]

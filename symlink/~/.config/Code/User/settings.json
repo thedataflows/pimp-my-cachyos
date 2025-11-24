@@ -218,7 +218,6 @@
   "yaml.format.enable": false,
   "workbench.tree.indent": 16,
   "git.followTagsWhenSync": true,
-  "semanticdiff.defaultDiffViewer": true,
   "semanticdiff.closeOriginalTab": true,
   "lowlightgoerrors.Color": "#EEEEEE",
   "lowlightgoerrors.MediumOpacity": "0.7",
@@ -286,6 +285,7 @@
     "sed"
   ],
   "chat.tools.terminal.autoApprove": {
+    "curl": true,
     "grep": true,
     "go": true,
     "templ": true,
@@ -302,7 +302,9 @@
     "keys[]'": true,
     "git": true,
     "set": true,
-    "docker logs": true
+    "docker logs": true,
+    "./mise-tasks/templ.sh": true,
+    "mise": true
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,

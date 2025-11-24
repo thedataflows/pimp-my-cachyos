@@ -16,3 +16,5 @@ env_file = '.env'
 "aqua:a-h/templ" = '0'
 ## https://github.com/fluxcd/flux2/releases
 "flux2" = "2"
+## https://github.com/oven-sh/bun/releases
+"bun" = "1"

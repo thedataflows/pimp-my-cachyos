@@ -19,3 +19,4 @@ alias paruf="paru -Slq | fzf --multi --preview 'sh -c \"pacpreview {1} 2>/dev/nu
 alias skgrep="sk --ansi -i -c 'rg --color=always --line-number \"{}\"'"
 alias yay="paru"
 alias wttr="curl wttr.in"
+alias pi="piper-tts -m /usr/share/piper-voices/en/en_GB/cori/high/en_GB-cori-high.onnx --output_raw | aplay -r 23400 -f S16_LE -t raw"
