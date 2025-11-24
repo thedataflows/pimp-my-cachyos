@@ -2,7 +2,7 @@
   desc: Web browser that blocks ads and trackers by default (binary release)
 - name: signal-desktop
   desc: Signal Private Messenger for Linux
-# - name: aur/microsoft-teams-nativefier
-#   desc: Microsoft Teams desktop app (electron)
+# - name: teams-for-linux
+#   desc: Unofficial Microsoft Teams client for Linux using Electron.
 - name: aur/trgui-ng-bin
   desc: Remote GUI for Transmission torrent daemon
