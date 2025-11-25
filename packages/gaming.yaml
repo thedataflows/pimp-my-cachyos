@@ -41,3 +41,11 @@
   desc: Xbox Wireless Controller Adapter firmware
   hosts:
     - cri-pc
+- name: obs-vkcapture
+  desc: OBS Linux Vulkan/OpenGL game capture
+  hosts:
+    - cri-pc
+- name: lib32-obs-vkcapture
+  desc: OBS Linux Vulkan/OpenGL game capture (32-bit)
+  hosts:
+    - cri-pc
