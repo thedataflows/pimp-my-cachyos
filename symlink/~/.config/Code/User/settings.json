@@ -282,7 +282,8 @@
     "find",
     "cat",
     "echo",
-    "sed"
+    "sed",
+    "mkdir"
   ],
   "chat.tools.terminal.autoApprove": {
     "curl": true,
@@ -304,7 +305,9 @@
     "set": true,
     "docker logs": true,
     "./mise-tasks/templ.sh": true,
-    "mise": true
+    "mise": true,
+    "golangci-lint": true,
+    "printf": true
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,
@@ -333,4 +336,39 @@
   "chat.mcp.gallery.enabled": true,
   "workbench.colorTheme": "Catppuccin Mocha",
   "kilo-code.deniedCommands": [],
+  "oaicopilot.baseUrl": "https://api.z.ai/api/coding/paas/v4",
+  "oaicopilot.models": [
+    {
+      "id": "glm-4.6v",
+      "configId": "vision",
+      "owned_by": "zai",
+      "temperature": 0.7,
+      "top_p": 1,
+      "vision": true,
+      "thinking": {
+        "type": "enabled"
+      }
+    },
+    {
+      "id": "glm-4.6",
+      "configId": "thinking",
+      "owned_by": "zai",
+      "temperature": 0.7,
+      "top_p": 1,
+      "thinking": {
+        "type": "enabled"
+      }
+    },
+    {
+      "id": "glm-4.6",
+      "configId": "no-thinking",
+      "owned_by": "zai",
+      "temperature": 0,
+      "top_p": 1,
+      "thinking": {
+        "type": "disabled"
+      }
+    }
+  ],
+  "workbench.secondarySideBar.defaultVisibility": "visible"
 }

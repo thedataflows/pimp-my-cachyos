@@ -1,45 +1,45 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "palette": {
-        "os": "#ACB0BE",
-        "closer": "p:os",
-        "pink": "#F5C2E7",
-        "lavender": "#B4BEFE",
-        "blue":  "#89B4FA"
+    "blue": "#89B4FA",
+    "closer": "p:os",
+    "lavender": "#B4BEFE",
+    "os": "#ACB0BE",
+    "pink": "#F5C2E7"
   },
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "foreground": "p:os",
-          "style": "plain",
+          "options": {
+            "linux": "\ue62a"
+          },
           "template": "{{.Icon}} ",
+          "foreground": "p:os",
           "type": "os",
-          "properties": {
-            "linux": "\uE62A"
-          }
+          "style": "plain"
         },
         {
-          "foreground": "p:blue",
-          "style": "plain",
           "template": "{{ .UserName }}@{{ .HostName }} ",
-          "type": "session"
+          "foreground": "p:blue",
+          "type": "session",
+          "style": "plain"
         },
         {
-          "foreground": "p:pink",
-          "properties": {
+          "options": {
             "folder_icon": "..\ue5fe..",
             "home_icon": "~",
             "style": "agnoster_short"
           },
-          "style": "plain",
           "template": "{{ .Path }} ",
-          "type": "path"
+          "foreground": "p:pink",
+          "type": "path",
+          "style": "plain"
         },
         {
-          "foreground": "p:lavender",
-          "properties": {
+          "options": {
             "branch_icon": "\ue725 ",
             "cherry_pick_icon": "\ue29b ",
             "commit_icon": "\uf417 ",
@@ -52,19 +52,19 @@
             "tag_icon": "\uf412 "
           },
           "template": "{{ .HEAD }} ",
-          "style": "plain",
-          "type": "git"
+          "foreground": "p:lavender",
+          "type": "git",
+          "style": "plain"
         },
         {
-          "style": "plain",
-          "foreground": "p:closer",
           "template": "\uf105",
-          "type": "text"
+          "foreground": "p:closer",
+          "type": "text",
+          "style": "plain"
         }
-      ],
-      "type": "prompt"
+      ]
     }
   ],
-  "final_space": true,
-  "version": 3
+  "version": 4,
+  "final_space": true
 }
