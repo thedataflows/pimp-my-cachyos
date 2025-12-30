@@ -307,7 +307,8 @@
     "./mise-tasks/templ.sh": true,
     "mise": true,
     "golangci-lint": true,
-    "printf": true
+    "printf": true,
+    "shadow": true
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,
@@ -339,19 +340,30 @@
   "oaicopilot.baseUrl": "https://api.z.ai/api/coding/paas/v4",
   "oaicopilot.models": [
     {
-      "id": "glm-4.6v",
-      "configId": "vision",
+      "id": "glm-4.7",
+      "configId": "glm-4.7",
       "owned_by": "zai",
       "temperature": 0.7,
       "top_p": 1,
-      "vision": true,
+      "vision": false,
+      "thinking": {
+        "type": "disabled"
+      }
+    },
+    {
+      "id": "glm-4.7",
+      "configId": "glm-4.7-thinking",
+      "owned_by": "zai",
+      "temperature": 0.7,
+      "top_p": 1,
+      "vision": false,
       "thinking": {
         "type": "enabled"
       }
     },
     {
       "id": "glm-4.6",
-      "configId": "thinking",
+      "configId": "glm-4.6-thinking",
       "owned_by": "zai",
       "temperature": 0.7,
       "top_p": 1,
@@ -361,7 +373,7 @@
     },
     {
       "id": "glm-4.6",
-      "configId": "no-thinking",
+      "configId": "glm-4.6",
       "owned_by": "zai",
       "temperature": 0,
       "top_p": 1,
@@ -370,5 +382,12 @@
       }
     }
   ],
-  "workbench.secondarySideBar.defaultVisibility": "visible"
+  "workbench.secondarySideBar.defaultVisibility": "visible",
+  "github.copilot.chat.virtualTools.threshold": 128,
+  "chat.tools.urls.autoApprove": {
+    "https://github.com": {
+      "approveRequest": false,
+      "approveResponse": true
+    }
+  }
 }

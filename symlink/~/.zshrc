@@ -77,6 +77,11 @@ bindkey "\e[3;5~" kill-word
 # Ctrl+Backspace
 bindkey "^H" backward-kill-word
 
+## Open buffer line in editor
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^e' edit-command-line
+
 setopt no_flowcontrol
 bindkey -s '^S' 'ggh^M'
 bindkey -s '^B' 'btop^M'
