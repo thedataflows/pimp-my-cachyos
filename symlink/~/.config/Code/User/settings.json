@@ -235,7 +235,6 @@
   "catppuccin.italicComments": false,
   "github.copilot.chat.codesearch.enabled": true,
   "websearch.preferredEngine": "bing",
-  "diffEditor.hideUnchangedRegions.enabled": true,
   "chat.instructionsFilesLocations": {
     "instructions": true
   },
@@ -308,7 +307,9 @@
     "mise": true,
     "golangci-lint": true,
     "printf": true,
-    "shadow": true
+    "shadow": true,
+    "touch": true,
+    "docker exec": true
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,
@@ -388,6 +389,11 @@
     "https://github.com": {
       "approveRequest": false,
       "approveResponse": true
+    },
+    "https://daisyui.com": {
+      "approveRequest": false,
+      "approveResponse": true
     }
-  }
+  },
+  "diffEditor.hideUnchangedRegions.enabled": true
 }

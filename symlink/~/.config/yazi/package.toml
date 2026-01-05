@@ -1,11 +1,11 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:chmod"
-rev = "2301ff8"
-hash = "8ad3e90b079190b4905f24a44f4ca06b"
+rev = "03cdd4b"
+hash = "8da0b15a97b5dfd13941d1ecc617ac7c"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:jump-to-char"
-rev = "2301ff8"
+rev = "03cdd4b"
 hash = "ce67445ebb1bf3d97b8e44f50904b2c5"
 
 [[plugin.deps]]
@@ -20,27 +20,27 @@ hash = "9f82a544335a53d79e87ea315746caaa"
 
 [[plugin.deps]]
 use = "lpnh/fg"
-rev = "a60466e"
-hash = "ae6f2fb9ea03527e3a367a9faf2690ac"
+rev = "aa88cd4"
+hash = "8b0e87c3176e0d44f79a8656f79f0fa"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-filter"
-rev = "2301ff8"
-hash = "bcda8eeb3f4013bae156aecabfc745e8"
+rev = "03cdd4b"
+hash = "407d19bc4fb46eff5fa8ff8337644847"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "2301ff8"
+rev = "03cdd4b"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "2301ff8"
-hash = "27ca02f49fd236b5cc7bf03c243859fe"
+rev = "03cdd4b"
+hash = "36a484acf6a0a0219c543ccb4cee218f"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:toggle-pane"
-rev = "2301ff8"
+rev = "03cdd4b"
 hash = "8a7c58225816a163a6e8730c0adafbc8"
 
 [flavor]
