@@ -16,8 +16,6 @@
   desc: A collection of common network programs
 - name: net-tools
   desc: Configuration tools for Linux networking
-- name: bridge-utils
-  desc: Utilities for configuring the Linux ethernet bridge
 - name: dnsutils
   desc: A complete, highly portable implementation of the DNS protocol
 - name: mtr
