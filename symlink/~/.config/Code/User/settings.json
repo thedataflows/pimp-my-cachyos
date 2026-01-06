@@ -309,7 +309,9 @@
     "printf": true,
     "shadow": true,
     "touch": true,
-    "docker exec": true
+    "docker exec": true,
+    "buf": true,
+    "nats": true
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,
