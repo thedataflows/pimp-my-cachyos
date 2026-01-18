@@ -1,5 +1,8 @@
 - name: sddm-kcm
   desc: KDE Config Module for SDDM
+  state: absent
+- name: plasma-login-manager
+  desc: Plasma Login Manager
 - name: plasma-desktop
   desc: KDE Plasma Desktop
 - name: kwayland-integration
