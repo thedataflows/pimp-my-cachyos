@@ -12,6 +12,13 @@
         "-m",
         "src.server"
       ]
+    },
+    "perplexity": {
+  		"type": "local",
+  		"command": [
+  		  "bun",
+    		"/mnt/linux2/dev/perplexity-mcp-zerver/build/main.js"
+  		],
     }
   }
 }

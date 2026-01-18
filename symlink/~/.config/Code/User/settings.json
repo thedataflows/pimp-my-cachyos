@@ -2,7 +2,7 @@
   "files.eol": "\n",
   "files.associations": {
     "**/*.yml": "yaml",
-    "*.gotmpl": "go-template"
+    "*.gotmpl": "go-template",
   },
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
@@ -11,7 +11,7 @@
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
-    "**/.factorypath": true
+    "**/.factorypath": true,
   },
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
@@ -19,12 +19,12 @@
   "editor.formatOnType": false,
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit",
-    "source.organizeImports": "never"
+    "source.organizeImports": "never",
   },
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "all",
   "editor.quickSuggestions": {
-    "strings": "on"
+    "strings": "on",
   },
   "editor.showFoldingControls": "always",
   "editor.linkedEditing": true,
@@ -44,26 +44,26 @@
   "xml.format.spaceBeforeEmptyCloseTag": false,
   "[markdown]": {
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": "never"
+      "source.fixAll.eslint": "never",
     },
     "editor.defaultFormatter": null,
   },
   "[dockerfile]": {
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "never",
-      "source.fixAll": "never"
+      "source.fixAll": "never",
     },
   },
   "[xml]": {
-    "editor.defaultFormatter": "redhat.vscode-xml"
+    "editor.defaultFormatter": "redhat.vscode-xml",
   },
   "[templ]": {
     "editor.defaultFormatter": "a-h.templ",
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
   },
   "redhat.telemetry.enabled": false,
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "vscode.json-language-features",
   },
   "security.workspace.trust.untrustedFiles": "open",
   "workbench.colorCustomizations": {
@@ -76,16 +76,16 @@
   },
   "git.confirmSync": false,
   "vs-kubernetes": {
-    "vs-kubernetes.crd-code-completion": "enabled"
+    "vs-kubernetes.crd-code-completion": "enabled",
   },
   "[yaml]": {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
   },
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "vscode.json-language-features",
   },
   "[proto3]": {
-    "editor.defaultFormatter": "bufbuild.vscode-buf"
+    "editor.defaultFormatter": "bufbuild.vscode-buf",
   },
   "security.workspace.trust.enabled": false,
   "blockman.n01LineHeight": 0,
@@ -113,16 +113,16 @@
     "*.sqlite3": "${capture}.${extname}-*",
     "*.db3": "${capture}.${extname}-*",
     "*.sdb": "${capture}.${extname}-*",
-    "*.s3db": "${capture}.${extname}-*"
+    "*.s3db": "${capture}.${extname}-*",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[css]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "github.copilot.enable": {
     "*": false,
@@ -132,14 +132,14 @@
     "go": true,
     "shellscript": true,
     "jsonc": true,
-    "yaml": true
+    "yaml": true,
   },
   "explorer.copyRelativePathSeparator": "/",
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[rust]": {
-    "editor.defaultFormatter": "jinxdash.prettier-rust"
+    "editor.defaultFormatter": "jinxdash.prettier-rust",
   },
   "task.problemMatchers.neverPrompt": false,
   "task.autoDetect": "on",
@@ -159,20 +159,20 @@
     "NATS",
     "OLED",
     "OOTB",
-    "Warnf"
+    "Warnf",
   ],
   "notebook.lineNumbers": "on",
   "httpyac.environmentVariables": {
-    "$shared": {}
+    "$shared": {},
   },
   "c4.editor.autoformat.indent": 2,
   "workbench.settings.applyToAllProfiles": [
     "todo-tree.filtering.ignoreGitSubmodules",
-    "git.followTagsWhenSync"
+    "git.followTagsWhenSync",
   ],
   "git.openRepositoryInParentFolders": "never",
   "[javascriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "markdown.extension.print.validateUrls": false,
   "markdown.extension.theming.decoration.renderHardLineBreak": true,
@@ -197,9 +197,7 @@
   "scm.defaultViewMode": "tree",
   "tooltitude.shadowInspectionEnabled": true,
   "go.lintTool": "golangci-lint",
-  "go.lintFlags": [
-    "--fast"
-  ],
+  "go.lintFlags": ["--fast"],
   "go.inlayHints.assignVariableTypes": true,
   "go.inlayHints.compositeLiteralFields": true,
   "go.inlayHints.compositeLiteralTypes": true,
@@ -223,23 +221,23 @@
   "lowlightgoerrors.MediumOpacity": "0.7",
   "diffEditor.experimental.useTrueInlineView": true,
   "scm.diffDecorationsGutterPattern": {
-    "added": true
+    "added": true,
   },
   "mise.binPath": "/usr/bin/mise",
   "workbench.editor.empty.hint": "hidden",
   "terminal.integrated.copyOnSelection": true,
   "tailwindCSS.includeLanguages": {
-    "templ": "html"
+    "templ": "html",
   },
   "catppuccin.italicKeywords": false,
   "catppuccin.italicComments": false,
   "github.copilot.chat.codesearch.enabled": true,
   "websearch.preferredEngine": "bing",
   "chat.instructionsFilesLocations": {
-    "instructions": true
+    "instructions": true,
   },
   "chat.promptFilesLocations": {
-    "prompts": true
+    "prompts": true,
   },
   "graphviz-interactive-preview.view.themeColors": true,
   "docker.extension.dockerEngineAvailabilityPrompt": false,
@@ -282,7 +280,7 @@
     "cat",
     "echo",
     "sed",
-    "mkdir"
+    "mkdir",
   ],
   "chat.tools.terminal.autoApprove": {
     "curl": true,
@@ -311,7 +309,7 @@
     "touch": true,
     "docker exec": true,
     "buf": true,
-    "nats": true
+    "nats": true,
   },
   "[dockercompose]": {
     "editor.insertSpaces": true,
@@ -320,20 +318,18 @@
     "editor.quickSuggestions": {
       "other": true,
       "comments": false,
-      "strings": true
+      "strings": true,
     },
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "editor.aiStats.enabled": true,
   "chat.mcp.serverSampling": {
     "Global in Code: n8n-mcp": {
-      "allowedModels": [
-        "copilot/claude-sonnet-4.5"
-      ]
-    }
+      "allowedModels": ["copilot/claude-sonnet-4.5"],
+    },
   },
   "chat.useNestedAgentsMdFiles": true,
   "chat.tools.terminal.autoReplyToPrompts": true,
@@ -350,8 +346,8 @@
       "top_p": 1,
       "vision": false,
       "thinking": {
-        "type": "disabled"
-      }
+        "type": "disabled",
+      },
     },
     {
       "id": "glm-4.7",
@@ -361,8 +357,8 @@
       "top_p": 1,
       "vision": false,
       "thinking": {
-        "type": "enabled"
-      }
+        "type": "enabled",
+      },
     },
     {
       "id": "glm-4.6",
@@ -371,8 +367,8 @@
       "temperature": 0.7,
       "top_p": 1,
       "thinking": {
-        "type": "enabled"
-      }
+        "type": "enabled",
+      },
     },
     {
       "id": "glm-4.6",
@@ -381,21 +377,39 @@
       "temperature": 0,
       "top_p": 1,
       "thinking": {
-        "type": "disabled"
-      }
-    }
+        "type": "disabled",
+      },
+    },
   ],
   "workbench.secondarySideBar.defaultVisibility": "visible",
   "github.copilot.chat.virtualTools.threshold": 128,
   "chat.tools.urls.autoApprove": {
     "https://github.com": {
       "approveRequest": false,
-      "approveResponse": true
+      "approveResponse": true,
     },
     "https://daisyui.com": {
       "approveRequest": false,
-      "approveResponse": true
-    }
+      "approveResponse": true,
+    },
+    "https://raw.githubusercontent.com": {
+      "approveRequest": false,
+      "approveResponse": true,
+    },
+    "https://www.casbin.org": {
+      "approveRequest": false,
+      "approveResponse": true,
+    },
+    "https://pkg.go.dev": {
+      "approveRequest": false,
+      "approveResponse": true,
+    },
   },
-  "diffEditor.hideUnchangedRegions.enabled": true
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "chat.useAgentSkills": true,
+  "chat.agent.codeBlockProgress": false,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "http": "left",
+  },
 }
