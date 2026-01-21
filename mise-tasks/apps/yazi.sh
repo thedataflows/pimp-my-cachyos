@@ -6,4 +6,4 @@ trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"'
 
 type yazi &> /dev/null || $PARU yazi
 
-ya pack --upgrade
+ya pkg upgrade
