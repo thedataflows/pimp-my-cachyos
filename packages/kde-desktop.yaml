@@ -39,6 +39,8 @@
   desc: Online account providers for the KAccounts system
 - name: plasma5-integration
   desc: Qt5 Platform Theme integration plugins for the Plasma workspaces
+- name: plasma-wayland-protocols
+  desc: Plasma Specific Protocols for Wayland
 - name: krdc
   desc: Remote Desktop Client
 - name: aur/catppuccin-plasma-colorscheme-macchiato
