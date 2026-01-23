@@ -1,3 +1,6 @@
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+
 ## Profile
 [[ -r ~/.profile ]] && . ~/.profile
 
