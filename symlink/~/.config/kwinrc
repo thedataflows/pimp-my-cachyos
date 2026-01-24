@@ -44,7 +44,7 @@ LayoutName=thumbnail_grid
 HighlightWindows=false
 
 [Tiling]
-padding=4
+padding=2
 
 [Tiling][36d6a510-4ca1-5991-bdd5-135ab6a80fd8]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
