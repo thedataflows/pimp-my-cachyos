@@ -210,9 +210,7 @@
   "todo-tree.highlights.useColourScheme": true,
   "todo-tree.tree.showCountsInTree": true,
   "todo-tree.filtering.ignoreGitSubmodules": true,
-  "window.titleBarStyle": "custom",
   "go.toolsManagement.autoUpdate": true,
-  "shellcheck.enableQuickFix": false,
   "yaml.format.enable": false,
   "workbench.tree.indent": 16,
   "git.followTagsWhenSync": true,
@@ -338,6 +336,7 @@
   "kilo-code.deniedCommands": [],
   "oaicopilot.baseUrl": "https://api.z.ai/api/coding/paas/v4",
   "oaicopilot.models": [
+
     {
       "id": "glm-4.7",
       "configId": "glm-4.7",
@@ -360,50 +359,24 @@
         "type": "enabled",
       },
     },
-    {
-      "id": "glm-4.6",
-      "configId": "glm-4.6-thinking",
-      "owned_by": "zai",
-      "temperature": 0.7,
-      "top_p": 1,
-      "thinking": {
-        "type": "enabled",
-      },
-    },
-    {
-      "id": "glm-4.6",
-      "configId": "glm-4.6",
-      "owned_by": "zai",
-      "temperature": 0,
-      "top_p": 1,
-      "thinking": {
-        "type": "disabled",
-      },
-    },
   ],
   "workbench.secondarySideBar.defaultVisibility": "visible",
   "github.copilot.chat.virtualTools.threshold": 128,
   "chat.tools.urls.autoApprove": {
     "https://github.com": {
       "approveRequest": false,
-      "approveResponse": true,
+      "approveResponse": true
     },
-    "https://daisyui.com": {
-      "approveRequest": false,
-      "approveResponse": true,
-    },
+    "https://daisyui.com": true,
     "https://raw.githubusercontent.com": {
       "approveRequest": false,
-      "approveResponse": true,
+      "approveResponse": true
     },
     "https://www.casbin.org": {
       "approveRequest": false,
-      "approveResponse": true,
+      "approveResponse": true
     },
-    "https://pkg.go.dev": {
-      "approveRequest": false,
-      "approveResponse": true,
-    },
+    "https://pkg.go.dev": true
   },
   "diffEditor.hideUnchangedRegions.enabled": true,
   "chat.useAgentSkills": true,
@@ -411,5 +384,12 @@
   "notebook.cellToolbarLocation": {
     "default": "right",
     "http": "left",
+  },
+  "chat.customAgentInSubagent.enabled": true,
+  "inlineChat.enableV2": true,
+  "oaicopilot.retry": {
+    "enabled": true,
+    "max_attempts": 3,
+    "interval_ms": 1000
   },
 }
