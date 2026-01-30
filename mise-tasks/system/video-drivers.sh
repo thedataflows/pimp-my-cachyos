@@ -45,7 +45,7 @@ lspci | grep VGA | while IFS= read -r LINE; do
       V2=$(paru -Si nvidia-utils | grep ^Version | cut -d: -f2 | head -1)
       [[ "$V1" == "$V2" ]] || ADDITIONAL=
       set -x
-      $PARU $ADDITIONAL opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia libva-nvidia-driver cuda nvidia-container-toolkit
+      $PARU $ADDITIONAL opencl-nvidia lib32-nvidia-utils lib32-opencl-nvidia libva-nvidia-driver cuda nvidia-container-toolkit linux-cachyos-nvidia-open
       { set +x; } 2>/dev/null
       ;;
     Advanced)
