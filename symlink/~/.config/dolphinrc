@@ -17,7 +17,9 @@ RightPadding=0
 2 screens: Width=1560
 2194x1234 screen: Height=617
 2194x1234 screen: Width=1392
-DirHistory[$e]=$HOME/Downloads/,/tmp/
+3413x1440 screen: Height=720
+3413x1440 screen: Width=1987
+DirHistory[$e]=/mnt/linux1/,/mnt/linux3/,$HOME/Downloads/,/tmp/
 
 [General]
 AutoExpandFolders=true
