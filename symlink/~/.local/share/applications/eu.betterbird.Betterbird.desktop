@@ -1,0 +1,29 @@
+[Desktop Entry]
+Actions=ComposeMessage;OpenAddressBook;
+Categories=Network;Email;
+Comment=Send and receive mail with Betterbird
+Encoding=UTF-8
+Exec=betterbird %u
+GenericName=Mail Client
+Icon=wmail
+Keywords=Email;E-mail;Newsgroup;Feed;RSS
+MimeType=message/rfc822;x-scheme-handler/mailto;application/x-xpinstall;application/x-extension-ics;text/calendar;text/vcard;text/x-vcard;x-scheme-handler/webcal;x-scheme-handler/webcals;x-scheme-handler/mid;
+Name=Betterbird
+NoDisplay=false
+Path=
+StartupNotify=true
+StartupWMClass=eu.betterbird.Betterbird
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+
+[Desktop Action ComposeMessage]
+Exec=betterbird -compose
+Name=Write new message
+
+[Desktop Action OpenAddressBook]
+Exec=betterbird -addressbook
+Name=Open address book

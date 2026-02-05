@@ -76,7 +76,7 @@ vfs_timeout=60
 ftpfs_directory_timeout=900
 ftpfs_retry_seconds=30
 shell_directory_timeout=900
-editor_tab_spacing=2
+editor_tab_spacing=8
 editor_word_wrap_line_length=72
 editor_option_save_mode=0
 editor_backup_extension=~
@@ -88,7 +88,7 @@ filepos_max_saved_entries=1024
 
 [Layout]
 output_lines=0
-left_panel_size=139
+left_panel_size=140
 top_panel_size=0
 message_visible=true
 keybar_visible=true
@@ -114,13 +114,8 @@ clipboard_paste=
 
 [Colors]
 base_color=
-alacritty=
-color_terminals=
-tmux-256color=
-xterm-256color=
 xterm-kitty=
-xterm=
-linux=
+color_terminals=
 
 [Panels]
 show_mini_info=true
@@ -143,25 +138,14 @@ torben_fj_mode=false
 quick_search_mode=2
 select_flags=6
 
-[DiffView]
-show_symbols=false
-show_numbers=false
-tab_size=8
-diff_quality=0
-diff_ignore_tws=false
-diff_ignore_all_space=false
-diff_ignore_space_change=false
-diff_tab_expansion=false
-diff_ignore_case=false
-
 [FindFile]
-file_case_sens=true
+file_case_sens=false
 file_shell_pattern=true
 file_find_recurs=true
 follow_symlinks=false
 file_skip_hidden=false
 file_all_charsets=false
-content_case_sens=true
+content_case_sens=false
 content_regexp=false
 content_first_hit=false
 content_whole_words=false
@@ -171,6 +155,6 @@ ignore_dirs=
 
 [Panelize]
 Find SUID and SGID programs=find . \\( \\( -perm -04000 -a -perm /011 \\) -o \\( -perm -02000 -a -perm /01 \\) \\) -print
+Modified git files=git ls-files --modified
 Find *.orig after patching=find . -name \\*.orig -print
 Find rejects after patching=find . -name \\*.rej -print
-Modified git files=git ls-files --modified
