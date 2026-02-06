@@ -104,13 +104,15 @@ Use `Niri (qt6ct)` session at login to use it. It is not the default session, be
 
 ### Other Desktop Environments
 
+#### Omarchy... Nope
+
 #### Budgie
 
 Gnome based, really enjoyed the simple look and feel. It is quite light and fast.
 
 Unfortunately, is also lagging behind the pack, not very polished and riddled with issues (like the annoying bug in the lockscreen that is also a security risk).
 
-Trying a comeback with Cosmic. Tried the beta, is niste, but still far to simplistic for me, and not in a good way. DMS is quite basic, but somehow feels functional.
+Hoping for a comeback with Cosmic. Tried the beta, is nice, but still far to simplistic for me, and not in a good way. DMS is quite basic, but somehow feels functional.
 
 #### Gnome
 
