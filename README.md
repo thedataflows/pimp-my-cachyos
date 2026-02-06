@@ -89,7 +89,7 @@ Use `Niri (qt6ct)` session at login to use it. It is not the default session, be
 
 - Text seems sharper compared to KDE Plasma!
 - Scrollable-tiling layout as default, fast and buttery smooth.
-- DMS provides: application launcher (Super+Space), clipboard manager (Super+V), task manager/dgop (Super+Shift+Esc), notification center (Super+N), etc. Ctrl+Shift+/ show a list of the main shortcuts. For all my keybindings, see [binds.kdl](symlink/~/.config/niri/dms/binds.kdl)
+- DMS provides: top widget panel and bottom docking panel, application launcher (Super+Space), clipboard manager (Super+V), task manager/dgop (Super+Shift+Esc), notification center (Super+N), etc. Ctrl+Shift+/ show a list of the main shortcuts. For all my keybindings, see [binds.kdl](symlink/~/.config/niri/dms/binds.kdl)
 - Catppuccin Mocha theme throughout
 - Uses existing KeePassXC for secrets (no kwallet)
 - Using KDE portal for integration, using the same KDE file dialogs, etc. Also uses KDE polkit agent for step-up authentication dialogs.
