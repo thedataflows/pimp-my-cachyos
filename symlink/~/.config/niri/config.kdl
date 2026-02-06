@@ -26,6 +26,7 @@ environment {
     ELECTRON_OZONE_PLATFORM_HINT "auto"
     MOZ_ENABLE_WAYLAND "1"
     DMS_DISABLE_MATUGEN "1"
+    ENABLE_HDR_WSI "0"
 }
 
 prefer-no-csd
