@@ -77,29 +77,11 @@ So I decided to give KDE Plasma a go. I was surprised by how smooth it runs and 
 
 ![KDE Plasma](screenshot.png)
 
-### Budgie
+### Tiling WM: Niri + Dank Material Shell (DMS)
 
-Gnome based, really enjoyed the simple look and feel. It is quite light and fast.
+An alternative tiling desktop environment available at login (via Plasma Login Manager), alongside the default KDE Plasma. It is fully functional and can be used as a daily driver for me, yet. KDE Plasma is amazing, and the memory footprint is as low as Niri+DMS.
 
-Unfortunately, is also lagging behind the pack, not very polished and riddled with issues (like the annoying bug in the lockscreen that is also a security risk).
-
-Trying a comeback with Cosmic.
-
-### Gnome
-
-I used Gnome for some time, but it felt sluggish, laggy and most gnome apps are oversimplified so I ended up replacing them.
-
-Customization is limited, can be achieved with some extensions that are stable most of the time, but it feels like an afterthought. Finally, software updates are not that often, and when they happen, stuff breaks (like it happened after upgrade from Gnome 46 to 47).
-
-Discouraged by some crashes and freezes.
-
-### Tiling Window Managers
-
-#### Niri + Dank Material Shell
-
-An alternative tiling desktop environment available at login (via Plasma Login Manager), alongside the default KDE Plasma.
-
-**Niri** is a scrollable-tiling Wayland compositor that provides a unique workflow where windows are arranged in a scrollable column layout. Combined with **Dank Material Shell (DMS)**, it offers a complete desktop experience with integrated widgets, launcher, notifications, and system monitoring.
+**Niri** is a scrollable-tiling Wayland compositor that provides a unique workflow where windows are arranged in a scrollable column layout. Combined with **Dank Material Shell (DMS)**, it offers a fairly complete desktop experience with integrated widgets, launcher, notifications, and system monitoring.
 
 **Key features:**
 
@@ -109,6 +91,24 @@ An alternative tiling desktop environment available at login (via Plasma Login M
 - Uses existing KeePassXC for secrets (no kwallet)
 - Uses KDE polkit agent for authentication dialogs
 - Fully integrated with dsearch (filesystem search) and dgop (system monitoring)
+
+### Other Desktop Environments
+
+#### Budgie
+
+Gnome based, really enjoyed the simple look and feel. It is quite light and fast.
+
+Unfortunately, is also lagging behind the pack, not very polished and riddled with issues (like the annoying bug in the lockscreen that is also a security risk).
+
+Trying a comeback with Cosmic. Tried the beta, is niste, but still far to simplistic for me, and not in a good way. DMS is quite basic, but somehow feels functional.
+
+#### Gnome
+
+I used Gnome for some time, but it felt sluggish, laggy and most gnome apps are oversimplified so I ended up replacing them.
+
+Customization is limited, can be achieved with some extensions that are stable most of the time, but it feels like an afterthought. Finally, software updates are not that often, and when they happen, stuff breaks (like it happened after upgrade from Gnome 46 to 47).
+
+Discouraged by some crashes and freezes.
 
 ## Why YAML and mise?
 
@@ -138,7 +138,6 @@ I don't yet like it and do not have the time to learn it.
   - Package scripts automatically filter by hostname - packages without `hosts` field install everywhere, those with `hosts` array only install on matching machines
 
   - Package scripts automatically filter by hostname - packages without `hosts` field install everywhere, those with `hosts` array only install on matching machines
-- `copy/` and `symlink/` directories hold system and user configuration files to be copied or symlinked
 
 ## License
 
