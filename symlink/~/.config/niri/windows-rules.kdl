@@ -20,6 +20,8 @@ window-rule {
     match app-id=r#"org\.quickshell$"#
     match app-id="com.usebottles.bottles" title="Select Bottle"
     match app-id="org.kde.ark" title="File Already Exists — Ark"
+    match app-id="blueman-manager"
+    match app-id="nm-connection-editor"
     open-floating true
 }
 
