@@ -23,13 +23,13 @@ binds {
     }
 
     // Screenshot
-    Print hotkey-overlay-title="Screenshot Area" {
+    Print hotkey-overlay-title="Area Screenshot" {
         screenshot;
     }
-    Mod+Print hotkey-overlay-title="Screenshot Window" {
+    Mod+Print hotkey-overlay-title="Window Screenshot" {
         screenshot-window;
     }
-    Ctrl+Print hotkey-overlay-title="Screenshot Screen" {
+    Ctrl+Print hotkey-overlay-title="Screenshot" {
         screenshot-screen show-pointer=false;
     }
 

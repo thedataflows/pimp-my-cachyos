@@ -75,7 +75,7 @@ So I decided to give KDE Plasma a go. I was surprised by how smooth it runs and 
 - Better HiDPI support with fractional scaling (much needed when using a 4K screen), especially with the latest KDE Plasma.
 - Better and richer apps compared to Gnome (System Settings, System Monitor, KRunner, Dolphin, Gwenview, Okular, etc.)
 
-![KDE Plasma](screenshot.png)
+![KDE Plasma](screenshot01.png)
 
 ### Tiling WM: Niri + Dank Material Shell (DMS)
 
@@ -83,14 +83,24 @@ An alternative tiling desktop environment available at login (via Plasma Login M
 
 **Niri** is a scrollable-tiling Wayland compositor that provides a unique workflow where windows are arranged in a scrollable column layout. Combined with **Dank Material Shell (DMS)**, it offers a fairly complete desktop experience with integrated widgets, launcher, notifications, and system monitoring.
 
-**Key features:**
+Use `Niri (qt6ct)` session at login to use it. It is not the default session, because it has some quirks and issues, see below.
+
+#### Key features
 
 - Scrollable-tiling layout as default
-- DMS provides: application launcher (Mod+Space), clipboard manager (Mod+V), task manager/dgop (Mod+Shift+Esc), notification center (Mod+N), and more
+- DMS provides: application launcher (Super+Space), clipboard manager (Super+V), task manager/dgop (Super+Shift+Esc), notification center (Super+N), etc. Ctrl+Shift+/ show a list of the main shortcuts. For all my keybindings, see [binds.kdl](symlink/~/.config/niri/dms/binds.kdl)
 - Catppuccin Mocha theme throughout
 - Uses existing KeePassXC for secrets (no kwallet)
-- Uses KDE polkit agent for authentication dialogs
-- Fully integrated with dsearch (filesystem search) and dgop (system monitoring)
+- Using KDE portal for integration, using the same KDE file dialogs, etc. Also uses KDE polkit agent for step-up authentication dialogs.
+- Fully integratable with dsearch (filesystem search) and dgop (system monitoring) - not use by me though, prefer KRauncher and Btop still.
+
+#### Issues
+
+- Immediately after login, there is a delay because of the service `plasma-xdg-desktop-portal-kde` timing out intially. It seems to be related to setting `QT_QPA_PLATFORMTHEME=qt6ct`, but I have not found a solution yet. It appears the desktop environment does not start or is frozen, but will come back after under a minute. After that, it works fine and does not have any noticeable delay.
+- If after the Niri session you want to go back to KDE Plasma, it will be the same initial delay because of the same service timing out. Alternative (for now) is to reboot the system and select KDE Plasma at login.
+
+![Niri + DMS](screenshot02.png)
+![Niri + DMS - Overview Mode](screenshot03.png)
 
 ### Other Desktop Environments
 

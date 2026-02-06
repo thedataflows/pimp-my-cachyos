@@ -54,7 +54,7 @@ plugin=org.kde.weatherWidget-3
 
 [Containments][40][Applets][94][Configuration]
 PreloadWeight=100
-popupHeight=504
+popupHeight=517
 popupWidth=800
 
 [Containments][40][Applets][94][Configuration][Appearance]
