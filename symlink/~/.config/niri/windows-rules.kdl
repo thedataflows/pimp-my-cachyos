@@ -1,0 +1,66 @@
+// Window rules
+window-rule {
+    match app-id=r#"^org\.kde\."#
+    draw-border-with-background false
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+window-rule {
+    match app-id=r#"^org\.wezfurlong\.wezterm$"#
+    match app-id="Alacritty"
+    match app-id="zen"
+    match app-id="com.mitchellh.ghostty"
+    match app-id="kitty"
+    draw-border-with-background false
+}
+
+// Floating windows
+window-rule {
+    match app-id=r#"org\.quickshell$"#
+    match app-id="com.usebottles.bottles" title="Select Bottle"
+    match app-id="org.kde.ark" title="File Already Exists — Ark"
+    open-floating true
+}
+
+window-rule {
+    match app-id="kitty"
+    match app-id="io.missioncenter.MissionCenter"
+
+    open-floating true
+    // Anchor to the top edge of the screen.
+    default-floating-position x=50 y=50 relative-to="top"
+    // Half of the screen high.
+    default-window-height { proportion 0.7; }
+    // 80% of the screen wide.
+    default-column-width { proportion 0.5; }
+}
+
+// Window rule for zeditor to clip decorations and draw borders properly
+window-rule {
+    match app-id="dev.zed.Zed"
+    clip-to-geometry true
+    draw-border-with-background false
+    open-floating true
+}
+
+window-rule {
+    match is-active=false
+    opacity 0.9
+}
+
+window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+// Floating windows should have shadows
+window-rule {
+    match is-floating=true
+    shadow {
+        on
+        softness 30
+        spread 5
+        color "#00000070"
+    }
+}

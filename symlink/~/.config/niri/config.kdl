@@ -1,0 +1,68 @@
+// Niri configuration with DankMaterialShell (DMS) integration
+// This config uses scrollable-tiling as the default layout
+
+// Input configuration
+input {
+    keyboard {
+        xkb {
+            layout "us"
+        }
+    }
+    touchpad {
+        tap
+        natural-scroll
+    }
+    mouse {
+        accel-speed 0.0
+    }
+}
+
+// Environment variables
+environment {
+    XDG_CURRENT_DESKTOP "niri"
+    // XDG_CURRENT_DESKTOP "kde"
+    QT_QPA_PLATFORM "wayland"
+    QT_QPA_PLATFORMTHEME "qt6ct"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    MOZ_ENABLE_WAYLAND "1"
+    DMS_DISABLE_MATUGEN "1"
+}
+
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot_%Y%m%d_%H%M%S.png"
+
+// Startup applications
+spawn-at-startup "dms" "run"
+spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
+spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+
+layout {
+    always-center-single-column
+    // center-focused-column "on-overflow"
+    struts {
+        left 8
+        right 8
+    }
+}
+
+hotkey-overlay {
+    hide-not-bound
+    skip-at-startup
+}
+
+include "dms/alttab.kdl"
+
+include "dms/binds.kdl"
+
+include "dms/colors.kdl"
+
+include "dms/cursor.kdl"
+
+include "dms/layout.kdl"
+
+include "dms/outputs.kdl"
+
+include "dms/wpblur.kdl"
+
+include "windows-rules.kdl"

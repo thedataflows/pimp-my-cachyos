@@ -43,7 +43,6 @@ The following is not an exaustive list, but a highlight of what will be installe
    4. **No swap**. I normally use plenty of RAM on my machines. I would have programs OOM Killed than have the system slow down and have SSD wear out faster.
 
 2. Clone this repo: `git clone https://github.com/thedataflows/pimp-my-cachyos.git && cd pimp-my-cachyos`
-
    - Install mise: `sudo pacman -Sy mise --noconfirm --needed`
    - Show all available tasks: `mise tasks` or `mr` (alias)
    - Run all setup: `mise run all` or `mr all`
@@ -96,9 +95,20 @@ Discouraged by some crashes and freezes.
 
 ### Tiling Window Managers
 
-Gave Hyprland a go, but having a HiDPI display and wanting scaling, proved to be an ugly experience (pixelated fonts or very tiny output). Liked the simplicity and speed though, but it not yet for me. Still, from time to time I revisit and play around with it. I will include a module to install and configure a ready-to-use Hyprland desktop.
+#### Niri + Dank Material Shell
 
-[HyDE project](https://github.com/HyDE-Project/HyDE) looks promising, though it is kind of heavy on the customizations. Took enough configs and scripts from this project to make it work, but I am not sure if I will keep using it.
+An alternative tiling desktop environment available at login (via Plasma Login Manager), alongside the default KDE Plasma.
+
+**Niri** is a scrollable-tiling Wayland compositor that provides a unique workflow where windows are arranged in a scrollable column layout. Combined with **Dank Material Shell (DMS)**, it offers a complete desktop experience with integrated widgets, launcher, notifications, and system monitoring.
+
+**Key features:**
+
+- Scrollable-tiling layout as default
+- DMS provides: application launcher (Mod+Space), clipboard manager (Mod+V), task manager/dgop (Mod+Shift+Esc), notification center (Mod+N), and more
+- Catppuccin Mocha theme throughout
+- Uses existing KeePassXC for secrets (no kwallet)
+- Uses KDE polkit agent for authentication dialogs
+- Fully integrated with dsearch (filesystem search) and dgop (system monitoring)
 
 ## Why YAML and mise?
 
@@ -124,6 +134,8 @@ I don't yet like it and do not have the time to learn it.
         - hostname2
       state: present # or absent
     ```
+
+  - Package scripts automatically filter by hostname - packages without `hosts` field install everywhere, those with `hosts` array only install on matching machines
 
   - Package scripts automatically filter by hostname - packages without `hosts` field install everywhere, those with `hosts` array only install on matching machines
 - `copy/` and `symlink/` directories hold system and user configuration files to be copied or symlinked

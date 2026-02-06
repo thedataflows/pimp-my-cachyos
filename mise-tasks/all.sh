@@ -45,5 +45,8 @@ mise run desktop:kde-icon-theme
 mise run desktop:baloo
 mise run desktop:root-gtk
 
+## Configure: Alternative Desktop Environments (optional)
+mise run desktop:niri-dms
+
 ## Cleanup
 mise run user:cleanup

@@ -1,0 +1,22 @@
+- name: niri
+  desc: A scrollable-tiling Wayland compositor
+- name: aur/niri-settings-git
+  desc: GUI application for configuring niri in Qt
+- name: xdg-desktop-portal-wlr
+  desc: xdg-desktop-portal backend for wlroots-based compositors
+- name: wl-clipboard
+  desc: Command-line copy/paste utilities for Wayland
+- name: cliphist
+  desc: Wayland clipboard history manager
+- name: qt6-wayland
+  desc: Qt6 Wayland platform plugin (required by DMS)
+- name: polkit-kde-agent
+  desc: KDE polkit authentication agent for privilege escalation
+- name: xwayland-satellite
+  desc: Xwayland outside your Wayland
+- name: wayland-protocols
+  desc: Specifications of extended Wayland protocols
+- name: aur/qt6ct-kde
+  desc: Qt 6 Configuration Utility, patched to work correctly with KDE applications
+- name: aur/qt5ct-kde
+  desc: Qt 5 Configuration Utility, patched to work correctly with KDE applications

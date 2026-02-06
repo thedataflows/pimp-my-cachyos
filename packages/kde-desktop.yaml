@@ -43,5 +43,5 @@
   desc: Plasma Specific Protocols for Wayland
 - name: krdc
   desc: Remote Desktop Client
-- name: aur/catppuccin-plasma-colorscheme-macchiato
+- name: aur/catppuccin-plasma-colorscheme-mocha
   desc: Soothing pastel theme for KDE Plasma

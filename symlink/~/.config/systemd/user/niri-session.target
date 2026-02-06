@@ -1,0 +1,7 @@
+[Unit]
+Description=Niri Session Target
+Requires=graphical-session.target
+After=graphical-session.target
+
+[Install]
+WantedBy=default.target

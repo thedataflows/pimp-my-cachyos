@@ -1,0 +1,163 @@
+// DMS keybindings for Niri
+// These bindings integrate DMS IPC commands with Niri
+
+binds {
+    Mod+Shift+Slash { show-hotkey-overlay; }
+    Mod+O { open-overview; }
+    Mod+Tab { open-overview; }
+
+    // Power menu - try one of these:
+    Ctrl+Alt+Delete hotkey-overlay-title="Power Menu" {
+        spawn "dms" "ipc" "call" "powermenu" "toggle";
+    }
+
+    // Processes
+    Mod+Escape hotkey-overlay-title="Btop" {
+        spawn "kitty" "btop";
+    }
+    Mod+Ctrl+Escape hotkey-overlay-title="Mission Center" {
+        spawn "gtk-launch" "io.missioncenter.MissionCenter"
+    }
+    Mod+Shift+Escape hotkey-overlay-title="System Monitor" {
+        spawn "dms" "ipc" "call" "processlist" "toggle";
+    }
+
+    // Screenshot
+    Print hotkey-overlay-title="Screenshot Area" {
+        screenshot;
+    }
+    Mod+Print hotkey-overlay-title="Screenshot Window" {
+        screenshot-window;
+    }
+    Ctrl+Print hotkey-overlay-title="Screenshot Screen" {
+        screenshot-screen show-pointer=false;
+    }
+
+    // Application Launchers
+    Mod+Space hotkey-overlay-title="Application Launcher" {
+        spawn "dms" "ipc" "call" "spotlight" "toggle"
+    }
+
+    Mod+V hotkey-overlay-title="Clipboard Manager" {
+        spawn "dms" "ipc" "call" "clipboard" "toggle"
+    }
+
+    Mod+M hotkey-overlay-title="Mail" {
+        spawn "gtk-launch" "eu.betterbird.Betterbird"
+    }
+
+    Mod+Comma hotkey-overlay-title="Settings" {
+        spawn "dms" "ipc" "call" "settings" "focusOrToggle"
+    }
+
+    Mod+N hotkey-overlay-title="Notification Center" {
+        spawn "dms" "ipc" "call" "notifications" "toggle"
+    }
+
+    Mod+Y hotkey-overlay-title="Browse Wallpapers" {
+        spawn "dms" "ipc" "call" "dankdash" "wallpaper"
+    }
+
+    Mod+T hotkey-overlay-title="Terminal" repeat=false {
+        spawn "kitty";
+    }
+
+    Mod+E hotkey-overlay-title="File Explorer" repeat=false {
+        spawn "dolphin";
+    }
+
+    Alt+F2 hotkey-overlay-title="KDE Launcher" repeat=false {
+        spawn "krunner";
+    }
+
+
+    // Security
+    Mod+L hotkey-overlay-title="Lock Screen" {
+        spawn "dms" "ipc" "call" "lock" "lock"
+    }
+
+    // Audio Controls
+    XF86AudioRaiseVolume allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "increment" "3"
+    }
+
+    XF86AudioLowerVolume allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "decrement" "3"
+    }
+
+    XF86AudioMute allow-when-locked=true {
+        spawn "dms" "ipc" "call" "audio" "mute"
+    }
+
+    // Brightness Controls
+    XF86MonBrightnessUp allow-when-locked=true {
+        spawn "dms" "ipc" "call" "brightness" "increment" "5" ""
+    }
+
+    XF86MonBrightnessDown allow-when-locked=true {
+        spawn "dms" "ipc" "call" "brightness" "decrement" "5" ""
+    }
+
+    // Window management
+    Mod+Q { close-window; }
+    Alt+F4 { close-window; }
+
+    // Focus movement
+    Mod+Left { focus-column-left; }
+    Mod+Right { focus-column-right; }
+    Mod+Up { focus-window-up; }
+    Mod+Down { focus-window-down; }
+    Mod+WheelScrollUp   cooldown-ms=50 { focus-column-left; }
+    Mod+WheelScrollDown cooldown-ms=50 { focus-column-right; }
+
+    // Window movement
+    Mod+Shift+Left { move-column-left; }
+    Mod+Shift+Right { move-column-right; }
+    Mod+Shift+Up { move-window-up; }
+    Mod+Shift+Down { move-window-down; }
+
+    // Workspaces
+    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
+    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+Ctrl+Up { focus-workspace-up; }
+    Mod+Ctrl+Down { focus-workspace-down; }
+
+    Mod+1 { focus-workspace 1; }
+    Mod+2 { focus-workspace 2; }
+    Mod+3 { focus-workspace 3; }
+    Mod+4 { focus-workspace 4; }
+    Mod+5 { focus-workspace 5; }
+    Mod+6 { focus-workspace 6; }
+    Mod+7 { focus-workspace 7; }
+    Mod+8 { focus-workspace 8; }
+    Mod+9 { focus-workspace 9; }
+    Mod+0 { focus-workspace 10; }
+
+    // Move to workspace
+    Mod+Shift+1 { move-column-to-workspace 1; }
+    Mod+Shift+2 { move-column-to-workspace 2; }
+    Mod+Shift+3 { move-column-to-workspace 3; }
+    Mod+Shift+4 { move-column-to-workspace 4; }
+    Mod+Shift+5 { move-column-to-workspace 5; }
+    Mod+Shift+6 { move-column-to-workspace 6; }
+    Mod+Shift+7 { move-column-to-workspace 7; }
+    Mod+Shift+8 { move-column-to-workspace 8; }
+    Mod+Shift+9 { move-column-to-workspace 9; }
+    Mod+Shift+0 { move-column-to-workspace 10; }
+
+    // Window states
+    Mod+F { maximize-column; }
+    Mod+Shift+F { fullscreen-window; }
+    Mod+S { switch-preset-column-width; }
+    Mod+Shift+S { switch-preset-window-height; }
+
+    // Floating toggle
+    Mod+Shift+Space { toggle-window-floating; }
+}
+
+recent-windows {
+    binds {
+        Alt+Tab         { next-window     scope="workspace"; }
+        Alt+Shift+Tab   { previous-window scope="workspace"; }
+    }
+}
