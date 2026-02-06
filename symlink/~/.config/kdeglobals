@@ -179,7 +179,7 @@ MaximumRemoteSize=0
 [WM]
 activeBackground=30,30,46
 activeBlend=205,214,244
-activeFont=Roboto,12,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
+activeFont=Roboto,11,-1,5,500,0,0,0,0,0,0,0,0,0,0,1,Medium
 activeForeground=205,214,244
 frame=255,255,255  # RGB color for active window border
 inactiveBackground=17,17,27
