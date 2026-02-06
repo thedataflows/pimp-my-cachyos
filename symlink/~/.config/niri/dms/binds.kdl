@@ -13,7 +13,7 @@ binds {
 
     // Processes
     Mod+Escape hotkey-overlay-title="Btop" {
-        spawn "kitty" "btop";
+        spawn "kitty" "--class" "btop-floating" "btop";
     }
     Mod+Ctrl+Escape hotkey-overlay-title="Mission Center" {
         spawn "gtk-launch" "io.missioncenter.MissionCenter"
@@ -104,24 +104,33 @@ binds {
 
     // Focus movement
     Mod+Left { focus-column-left; }
+    Mod+Shift+Left { focus-column-left; }
+
     Mod+Right { focus-column-right; }
-    Mod+Up { focus-window-up; }
-    Mod+Down { focus-window-down; }
-    Mod+WheelScrollUp   cooldown-ms=50 { focus-column-left; }
-    Mod+WheelScrollDown cooldown-ms=50 { focus-column-right; }
+    Mod+Shift+Right { focus-column-right; }
+
+    Mod+Up { focus-window-or-workspace-up; }
+    Mod+Shift+Up { focus-window-or-workspace-up; }
+
+    Mod+Down { focus-window-or-workspace-down; }
+    Mod+Shift+Down { focus-window-or-workspace-down; }
+
+    Mod+WheelScrollUp   cooldown-ms=50 { focus-window-up-or-column-left; }
+    Mod+WheelScrollDown cooldown-ms=50 { focus-window-down-or-column-right; }
+    Mod+Shift+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
+    Mod+Shift+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
 
     // Window movement
-    Mod+Shift+Left { move-column-left; }
-    Mod+Shift+Right { move-column-right; }
-    Mod+Shift+Up { move-window-up; }
-    Mod+Shift+Down { move-window-down; }
+    Mod+Ctrl+Left  { move-column-left; }
+    Mod+Ctrl+WheelScrollUp { move-column-left; }
+
+    Mod+Ctrl+Right { move-column-right; }
+    Mod+Ctrl+WheelScrollDown { move-column-right; }
+
+    Mod+Ctrl+Up { move-window-up; }
+    Mod+Ctrl+Down { move-window-down; }
 
     // Workspaces
-    Mod+Ctrl+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
-    Mod+Ctrl+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
-    Mod+Ctrl+Up { focus-workspace-up; }
-    Mod+Ctrl+Down { focus-workspace-down; }
-
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
     Mod+3 { focus-workspace 3; }

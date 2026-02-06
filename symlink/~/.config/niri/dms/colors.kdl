@@ -3,7 +3,7 @@ layout {
 
     focus-ring {
         active-color   "#cba6f7"
-        inactive-color "#948f99"
+        inactive-color "#cba6f7"
         urgent-color   "#f2b8b5"
     }
 
@@ -33,4 +33,8 @@ recent-windows {
         active-color   "#1e1e2e"
         urgent-color   "#f2b8b5"
     }
+}
+
+overview {
+    backdrop-color "#00000000"
 }

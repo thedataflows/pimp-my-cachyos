@@ -24,7 +24,7 @@ window-rule {
 }
 
 window-rule {
-    match app-id="kitty"
+    match app-id="btop-floating"
     match app-id="io.missioncenter.MissionCenter"
 
     open-floating true
@@ -39,7 +39,6 @@ window-rule {
 // Window rule for zeditor to clip decorations and draw borders properly
 window-rule {
     match app-id="dev.zed.Zed"
-    clip-to-geometry true
     draw-border-with-background false
     open-floating true
 }
