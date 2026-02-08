@@ -18,5 +18,7 @@
   desc: Specifications of extended Wayland protocols
 - name: aur/qt6ct-kde
   desc: Qt 6 Configuration Utility, patched to work correctly with KDE applications
+  state: absent
 - name: aur/qt5ct-kde
   desc: Qt 5 Configuration Utility, patched to work correctly with KDE applications
+  state: absent

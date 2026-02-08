@@ -1,6 +1,0 @@
-[Desktop Entry]
-Name=Niri (qt6ct)
-Comment=A scrollable-tiling Wayland compositor (qt6ct)
-Exec=env QT_QPA_PLATFORMTHEME=qt6ct niri-session
-Type=Application
-DesktopNames=niri
