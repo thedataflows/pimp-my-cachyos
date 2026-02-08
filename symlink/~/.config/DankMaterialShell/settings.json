@@ -187,8 +187,8 @@
   "soundNewNotification": false,
   "soundVolumeChanged": true,
   "soundPluggedIn": true,
-  "acMonitorTimeout": 0,
-  "acLockTimeout": 0,
+  "acMonitorTimeout": 300,
+  "acLockTimeout": 300,
   "acSuspendTimeout": 0,
   "acSuspendBehavior": 0,
   "acProfileName": "",
@@ -291,14 +291,14 @@
   "osdPowerProfileEnabled": true,
   "osdAudioOutputEnabled": true,
   "powerActionConfirm": true,
-  "powerActionHoldDuration": 0.3,
+  "powerActionHoldDuration": 0.25,
   "powerMenuActions": [
     "reboot",
     "logout",
     "poweroff",
     "lock",
-    "suspend",
-    "restart"
+    "restart",
+    "suspend"
   ],
   "powerMenuDefaultAction": "logout",
   "powerMenuGridLayout": true,
