@@ -1784,11 +1784,11 @@
             }
         },
         "geometry": {
-            "height": 778,
+            "height": 1715,
             "load_geometry": true,
             "save_on_exit": true,
-            "width": 1385,
-            "x": 0,
+            "width": 2030,
+            "x": 1920,
             "y": 0
         },
         "greyscale_tray_icon": true,

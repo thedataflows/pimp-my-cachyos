@@ -10,6 +10,8 @@ Number=4
 Rows=2
 
 [Effect-mouseclick]
+RingLife=700
+RingSize=40
 ShowText=false
 
 [Effect-thumbnailaside]
