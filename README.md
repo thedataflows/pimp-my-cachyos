@@ -77,13 +77,13 @@ So I decided to give KDE Plasma a go. I was surprised by how smooth it runs and 
 
 ![KDE Plasma](screenshot01.png)
 
-### Tiling WM: Niri + Dank Material Shell (DMS)
+### Scrollable-tiling WM: Niri + Dank Material Shell (DMS)
 
-An alternative tiling desktop environment available at login (via Plasma Login Manager), alongside the default KDE Plasma. It is fully functional and can be used as a daily driver for me, yet. KDE Plasma is amazing, and the memory footprint is as low as Niri+DMS.
+An alternative scrollable-tiling desktop environment available at login (via Plasma Login Manager), alongside the default KDE Plasma. It is fully functional and can be used as a daily driver for me, yet. KDE Plasma is amazing, and the memory footprint is as similar as Niri+DMS.
 
 **Niri** is a scrollable-tiling Wayland compositor that provides a unique workflow where windows are arranged in a scrollable column layout. Combined with **Dank Material Shell (DMS)**, it offers a fairly complete desktop experience with integrated widgets, launcher, notifications, and system monitoring.
 
-Use `Niri (qt6ct)` session at login to use it. It is not the default session, because it has some quirks and issues, see below.
+Use `Niri` session at login to use it. I have fixed most quirks and issues, and it is now my daily driver to see how it feels.
 
 #### Key features
 
