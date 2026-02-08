@@ -95,12 +95,6 @@ Use `Niri (qt6ct)` session at login to use it. It is not the default session, be
 - Using KDE portal for integration, using the same KDE file dialogs, etc. Also uses KDE polkit agent for step-up authentication dialogs.
 - Fully integratable with dsearch (filesystem search) and dgop (system monitoring) - not use by me though, prefer KRauncher and Btop still.
 
-#### Issues
-
-1. Immediately after login, there is a delay because of the service `plasma-xdg-desktop-portal-kde` timing out intially. It seems to be related to setting `QT_QPA_PLATFORMTHEME=qt6ct`, but I have not found a solution yet. It appears the desktop environment does not start or is frozen, but will come back after under a minute. After that, it works fine and does not have any noticeable delay.
-2. If after the Niri session you want to go back to KDE Plasma, it will be the same initial delay because of the same service timing out. Alternative (for now) is to reboot the system and select KDE Plasma at login.
-3. Most tray icons are not visible (compared to KDE Plasma). Restarting `dms` loses most of them, so worse. There are stale open issues about this in the DMS repo, but no solution yet. I have not found a workaround for this, but it is not a deal breaker for me.
-
 ![Niri + DMS](screenshot02.png)
 ![Niri + DMS - Overview Mode](screenshot03.png)
 

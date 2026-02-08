@@ -41,5 +41,8 @@ warnAboutRisksBeforeActingAsAdmin=false
 [PreviewSettings]
 Plugins=appimagethumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,fontthumbnail,imagethumbnail,jpegthumbnail,windowsexethumbnail,windowsimagethumbnail,svgthumbnail,gdk-pixbuf-thumbnailer
 
+[UiSettings]
+ColorScheme=CatppuccinMochaLavender
+
 [VersionControl]
 enabledPlugins=Git

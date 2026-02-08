@@ -145,7 +145,7 @@ AnimationDurationFactor=0.35355339059327373
 LookAndFeelPackage=Scratchy
 ShowDeleteCommand=false
 SmoothScroll=false
-widgetStyle=qt6ct-style
+widgetStyle=Breeze
 
 [KFileDialog Settings]
 Allow Expansion=false

@@ -1,0 +1,29 @@
+[Unit]
+Description=Dank Material Shell
+Documentation=https://github.com/AvengeMedia/DankMaterialShell
+# Wait for Niri to provide the display/socket
+After=niri.service graphical-session-pre.target
+
+# CRITICAL: This forces the "session ready" state (and all autostart apps)
+# to wait until DMS is fully started.
+Before=graphical-session.target xdg-desktop-autostart.target
+
+# Ensure this only runs in Niri (prevents issues in KDE)
+ConditionEnvironment=XDG_CURRENT_DESKTOP=niri
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/dms run
+
+
+# MAGICAL FIX: DMS reports "started" instantly, but takes ~1s to register
+# the SNI watcher. This sleep forces systemd to pause the dependency chain,
+# guaranteeing the tray is ready before apps like Syncthing/Blueman launch.
+ExecStartPost=/usr/bin/sleep 2
+
+Restart=on-failure
+Slice=session.slice
+
+[Install]
+# Link this to Niri so it starts automatically with the compositor
+WantedBy=niri.service

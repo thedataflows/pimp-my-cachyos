@@ -272,7 +272,7 @@
   "notificationTimeoutLow": 5000,
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
-  "notificationCompactMode": true,
+  "notificationCompactMode": false,
   "notificationPopupPosition": -1,
   "notificationHistoryEnabled": true,
   "notificationHistoryMaxCount": 50,
