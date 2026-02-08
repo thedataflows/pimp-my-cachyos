@@ -317,7 +317,8 @@
   "showOnLastDisplay": {},
   "niriOutputSettings": {
     "HDMI-A-1": {
-      "disabled": true
+      "disabled": true,
+      "vrrOnDemand": true
     },
     "DP-3": {
       "vrrOnDemand": true
