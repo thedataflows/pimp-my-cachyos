@@ -18,3 +18,5 @@
   desc: Intel VA-API Media Applications and Scripts for libva
 - name: kew
   desc: A terminal music player
+- name: wiremix
+  desc: A simple TUI audio mixer for PipeWire

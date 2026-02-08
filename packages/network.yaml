@@ -66,3 +66,7 @@
   desc: GTK+ GUI for rsync to synchronize folders, files and make backups
 - name: ttyd
   desc: Share your terminal over the web
+- name: impala
+  desc: TUI for managing wifi
+- name: aur/wlctl-bin
+  desc: TUI for managing WiFi using NetworkManager (a fork of impala)
