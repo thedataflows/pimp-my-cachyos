@@ -22,12 +22,16 @@ window-rule {
     match app-id="org.kde.ark" title="File Already Exists — Ark"
     match app-id="blueman-manager"
     match app-id="nm-connection-editor"
+    match app-id="eu.betterbird.Betterbird"
+    exclude app-id="eu.betterbird.Betterbird" title="^Betterbird$"
+    match app-id="syncthingtray-qt6"
     open-floating true
 }
 
 window-rule {
     match app-id="btop-floating"
     match app-id="io.missioncenter.MissionCenter"
+    match app-id="syncthingtray-qt6" title="\\| Syncthing$"
 
     open-floating true
     // Anchor to the top edge of the screen.
