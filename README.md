@@ -98,6 +98,10 @@ Use `Niri (qt6ct)` session at login to use it. It is not the default session, be
 ![Niri + DMS](screenshot02.png)
 ![Niri + DMS - Overview Mode](screenshot03.png)
 
+#### Issues
+
+See [niri-issues.md](niri-issues.md).
+
 ### Other Desktop Environments
 
 #### Omarchy... Nope
