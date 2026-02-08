@@ -22,7 +22,7 @@ GRUB_CONF=/etc/default/grub
 patchFile $GRUB_CONF GRUB_DISABLE_OS_PROBER false
 patchFile $GRUB_CONF GRUB_GFXMODE "1920x1080x32,auto"
 patchFile $GRUB_CONF GRUB_THEME /usr/share/grub/themes/catppuccin-mocha/theme.txt
-patchFile $GRUB_CONF GRUB_TIMEOUT 2
+patchFile $GRUB_CONF GRUB_TIMEOUT 1
 
 # shellcheck disable=SC2076
 if [[ " cri-pc " =~ "$(hostname)" ]]; then
