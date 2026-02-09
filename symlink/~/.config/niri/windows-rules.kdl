@@ -26,6 +26,7 @@ window-rule {
     match app-id="eu.betterbird.Betterbird"
     exclude app-id="eu.betterbird.Betterbird" title="^Betterbird$"
     match app-id="syncthingtray-qt6"
+    match app-id="org.keepassxc.KeePassXC"
     open-floating true
 }
 

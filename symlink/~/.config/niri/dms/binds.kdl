@@ -78,6 +78,9 @@ binds {
         spawn "krunner";
     }
 
+    Mod+K hotkey-overlay-title="KeepassXC" repeat=false {
+        spawn "keepassxc";
+    }
 
     // Security
     Mod+L hotkey-overlay-title="Lock Screen" {
