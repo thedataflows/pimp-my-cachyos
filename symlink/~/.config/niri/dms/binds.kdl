@@ -58,6 +58,14 @@ binds {
         spawn "dms" "ipc" "call" "dankdash" "wallpaper"
     }
 
+    Mod+C hotkey-overlay-title="Control Center" repeat=false {
+        spawn "dms" "ipc" "call" "control-center" "toggle";
+    }
+
+    Mod+A hotkey-overlay-title="Audio Cycle Output" repeat=false {
+        spawn "dms" "ipc" "call" "audio" "cycleoutput";
+    }
+
     Mod+T hotkey-overlay-title="Terminal" repeat=false {
         spawn "kitty";
     }

@@ -75,16 +75,6 @@
       "width": 50
     },
     {
-      "id": "wifi",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "bluetooth",
-      "enabled": true,
-      "width": 50
-    },
-    {
       "id": "audioOutput",
       "enabled": true,
       "width": 50
@@ -95,12 +85,22 @@
       "width": 50
     },
     {
-      "id": "nightMode",
+      "id": "wifi",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "bluetooth",
       "enabled": true,
       "width": 50
     },
     {
       "id": "darkMode",
+      "enabled": true,
+      "width": 50
+    },
+    {
+      "id": "doNotDisturb",
       "enabled": true,
       "width": 50
     }
