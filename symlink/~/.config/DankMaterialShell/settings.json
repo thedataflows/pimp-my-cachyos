@@ -269,7 +269,7 @@
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,
   "hideBrightnessSlider": false,
-  "notificationTimeoutLow": 5000,
+  "notificationTimeoutLow": 3000,
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
   "notificationCompactMode": false,

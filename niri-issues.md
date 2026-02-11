@@ -1,8 +1,10 @@
 # Issues using Niri
 
-Lots of issues with Niri+DMS to have the same functionality as KDE Plasma. Went far to create alternative sessions, custom portal configurations, used `qt5ct` and `qt6ct`, etc. Initially there was way more configuration and hacks, but I managed to fix most of them.
+Quite the struggle with Niri+DMS to have the same functionality as KDE Plasma.
+Went as far as to create alternative sessions, custom portal configurations, used `qt5ct` and `qt6ct`, etc.
+Initially there was way more configuration and hacks, but I managed to fix most of them.
 
-1. [ ] Zeditor in Wayland: when first opened, main window is stuck unless resized. Hack: after resize, will work fine. Possible future fix <https://github.com/zed-industries/zed/pull/46758>
+1. [ ] Zeditor in Wayland: when opening a new window, it gets stuck unless resized. Hack: after resize, will work fine. Possible future fix <https://github.com/zed-industries/zed/pull/46758>
 2. [ ] Zeditor in X11 via xwayland-satellite (`WAYLAND_DISPLAY= zeditor`): opens fine, but clipboard not working outside of it, in wayland. TODO: find a workaround this or wait for the above fix?
 3. [ ] Minor: sometimes DMS menus/tooltips go all the way to the left of the screen. Noticed after a full screen app (game) but not sure.
 4. [ ] Bottles: if started from DMS Launcher does not display the main window. It works well started from terminal or KLauncher (that I preffer).
