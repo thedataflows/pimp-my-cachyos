@@ -8,8 +8,8 @@
   desc: Extremely fast indexed filesystem search service
 - name: matugen
   desc: Material Design color palette generation for dynamic theming
-- name: cava
-  desc: Console-based audio visualizer for ALSA, PulseAudio, or PipeWire
+#- name: cava
+#  desc: Console-based audio visualizer for ALSA, PulseAudio, or PipeWire
 - name: accountsservice
   desc: D-Bus interface for user account query and manipulation (for DMS user profiles)
 - name: i2c-tools

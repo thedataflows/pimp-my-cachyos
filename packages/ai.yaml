@@ -2,3 +2,5 @@
   desc: Discover, download, and run local LLMs
   hosts:
     - cri-pc
+- name: aur/opencode-bin
+  desc: The AI coding agent built for the terminal
