@@ -31,6 +31,7 @@ window-rule {
     match app-id="vlc"
     exclude app-id="vlc" title="VLC media player$"
     match app-id="org.strawberrymusicplayer.strawberry" title="^Strawberry Error"
+    match app-id="calibre-ebook-viewer"
     open-floating true
 }
 
