@@ -36,6 +36,7 @@ screenshot-path "~/Pictures/Screenshots/Screenshot_%Y%m%d_%H%M%S.png"
 // Startup applications
 spawn-at-startup "bash" "-c" "wl-paste --watch cliphist store &"
 spawn-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
+spawn-at-startup "swayidle" "-w" "timeout" "300" "dms ipc lock lock" "timeout" "305" "niri msg action power-off-monitors" "before-sleep" "dms ipc lock lock"
 
 layout {
     always-center-single-column

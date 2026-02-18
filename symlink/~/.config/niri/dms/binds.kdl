@@ -11,6 +11,11 @@ binds {
         spawn "dms" "ipc" "call" "powermenu" "toggle";
     }
 
+    // Monitor sleep
+    Mod+p hotkey-overlay-title="Power off monitors" { 
+        spawn "niri" "msg" "action" "power-off-monitors"
+    }
+
     // Processes
     Mod+Escape hotkey-overlay-title="Btop" {
         spawn "kitty" "--class" "btop-floating" "btop";
