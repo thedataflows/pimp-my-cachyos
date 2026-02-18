@@ -1,4 +1,5 @@
 {
     "colorscheme": "catppuccin-mocha",
     "mkparents": true,
+    "tabstospaces": true,
 }
