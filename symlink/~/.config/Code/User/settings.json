@@ -338,8 +338,8 @@
   "oaicopilot.models": [
 
     {
-      "id": "glm-4.7",
-      "configId": "glm-4.7",
+      "id": "glm-5",
+      "configId": "glm-5",
       "owned_by": "zai",
       "temperature": 0.7,
       "top_p": 1,
@@ -349,8 +349,8 @@
       },
     },
     {
-      "id": "glm-4.7",
-      "configId": "glm-4.7-thinking",
+      "id": "glm-5",
+      "configId": "glm-5-thinking",
       "owned_by": "zai",
       "temperature": 0.7,
       "top_p": 1,
@@ -363,7 +363,7 @@
   "workbench.secondarySideBar.defaultVisibility": "visible",
   "github.copilot.chat.virtualTools.threshold": 128,
   "chat.tools.urls.autoApprove": {
-    "https://github.com": {
+      "https://github.com": {
       "approveRequest": false,
       "approveResponse": true
     },
@@ -392,4 +392,5 @@
     "max_attempts": 3,
     "interval_ms": 1000
   },
+  "chat.viewSessions.orientation": "stacked",
 }

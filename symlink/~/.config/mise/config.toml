@@ -1,9 +1,12 @@
+[env]
+_.file = { path = "~/.env", redact = true }
+
 [settings]
 experimental = true # enable experimental features
-env_file = '.env'
+env_file = ".env"
 
 [tools]
-"usage" = 'latest'
+"usage" = "latest"
 ## https://github.com/1pkg/gopium/releases
 "go:github.com/1pkg/gopium" = "latest"
 ## https://github.com/pulumi/pulumi/releases
@@ -22,3 +25,9 @@ env_file = '.env'
 "go:github.com/rakyll/hey" = "latest"
 ## https://github.com/sharkdp/hyperfine/releases
 "hyperfine" = "latest"
+## https://pkg.go.dev/golang.org/x/tools
+"go:golang.org/x/tools/cmd/deadcode" = "latest"
+## https://github.com/goreleaser/goreleaser/releases
+"goreleaser" = "latest"
+## https://github.com/nektos/act/releases
+"act" = "latest"

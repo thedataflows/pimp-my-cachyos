@@ -27,6 +27,10 @@ window-rule {
     exclude app-id="eu.betterbird.Betterbird" title="^Betterbird$"
     match app-id="syncthingtray-qt6"
     match app-id="org.keepassxc.KeePassXC"
+    match app-id="^org.kde.kdeconnect."
+    match app-id="vlc"
+    exclude app-id="vlc" title="VLC media player$"
+    match app-id="org.strawberrymusicplayer.strawberry" title="^Strawberry Error"
     open-floating true
 }
 
@@ -34,6 +38,7 @@ window-rule {
     match app-id="btop-floating"
     match app-id="io.missioncenter.MissionCenter"
     match app-id="syncthingtray-qt6" title="\\| Syncthing$"
+    match app-id="floating-kitty"
 
     open-floating true
     // Anchor to the top edge of the screen.

@@ -1,24 +1,26 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
-    "codebase-contextifier": {
-      "type": "local",
-      "command": [
-        "docker",
-        "exec",
-        "-i",
-        "codebase-mcp-server",
-        "python",
-        "-m",
-        "src.server"
-      ]
+    "web-search-prime": {
+      "type": "remote",
+      "url": "https://api.z.ai/api/mcp/web_search_prime/mcp",
+      "headers": {
+        "Authorization": "Bearer {env:ZAI_API_KEY}",
+      },
     },
-    "perplexity": {
-  		"type": "local",
-  		"command": [
-  		  "bun",
-    		"/mnt/linux2/dev/perplexity-mcp-zerver/build/main.js"
-  		],
-    }
-  }
+    "zread": {
+      "type": "remote",
+      "url": "https://api.z.ai/api/mcp/zread/mcp",
+      "headers": {
+        "Authorization": "Bearer {env:ZAI_API_KEY}",
+      },
+    },
+    "web-reader": {
+      "type": "remote",
+      "url": "https://api.z.ai/api/mcp/web_reader/mcp",
+      "headers": {
+        "Authorization": "Bearer {env:ZAI_API_KEY}",
+      },
+    },
+  },
 }

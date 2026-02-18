@@ -7,10 +7,10 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "icon_theme": "Catppuccin Mocha",
-  "features": {
-    "edit_prediction_provider": "zed"
+  "edit_predictions": {
+    "provider": "zed"
   },
+  "icon_theme": "Catppuccin Mocha",
   "agent": {
     "default_profile": "write",
     "default_model": {

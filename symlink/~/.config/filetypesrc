@@ -1,6 +1,7 @@
 [EmbedSettings]
 embed-application/gzip=false
 embed-application/json=false
+embed-application/pdf=false
 embed-application/vnd.ms-cab-compressed=false
 embed-application/vnd.rar=false
 embed-application/x-7z-compressed=false
