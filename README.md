@@ -100,7 +100,7 @@ Use `Niri` session at login to use it. I have fixed most quirks and issues, and 
 
 #### Issues
 
-See [niri-issues.md](niri-issues.md).
+See [niri-dms-issues.md](niri-dms-issues.md).
 
 ### Other Desktop Environments
 
