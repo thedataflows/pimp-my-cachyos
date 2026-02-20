@@ -5,7 +5,7 @@ set -Eeuo pipefail
 trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"' ERR
 
 ## ## https://wiki.cachyos.org/configuration/dual_gpu/#kde-plasma
-for S in power-profiles-daemon keyd switcheroo-control; do
+for S in power-profiles-daemon keyd switcheroo-control plasmalogin; do
   set -x
   sudo systemctl enable --now $S
   { set +x; } 2>/dev/null
