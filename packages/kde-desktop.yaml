@@ -31,8 +31,8 @@
   desc: GTK2 engine to make your desktop look like a 'murrina', an italian word meaning the art glass works done by Venicians glass blowers.
 - name: krfb
   desc: Desktop Sharing
-- name: aur/kora-icon-theme
-  desc: SVG icon theme suitable for every desktop environment (dark and light versions, HiDPI support)
+#- name: aur/kora-icon-theme
+#  desc: SVG icon theme suitable for every desktop environment (dark and light versions, HiDPI support)
 - name: qogir-icon-theme
   desc: A colorful design icon theme for linux desktops
 - name: kaccounts-providers

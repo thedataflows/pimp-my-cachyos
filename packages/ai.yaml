@@ -1,4 +1,4 @@
-- name: lmstudio
+- name: aur/lmstudio-bin
   desc: Discover, download, and run local LLMs
   hosts:
     - cri-pc
