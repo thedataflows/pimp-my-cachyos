@@ -46,7 +46,7 @@ mise run desktop:baloo
 mise run desktop:root-gtk
 
 ## Configure: Alternative Desktop Environments (optional)
-mise run desktop:niri-dms
+mise run desktop:dms-niri
 
 ## Cleanup
 mise run user:cleanup

@@ -14,7 +14,7 @@ set -x
 sudo systemctl enable --now avahi-daemon
 
 # shellcheck disable=SC2086
-sudo $CP ${MISE_TASK_DIR:-.}/copy/etc/samba/smb.conf /etc/samba/
+sudo $CP ${MISE_PROJECT_ROOT:-.}/copy/etc/samba/smb.conf /etc/samba/
 { set +x; } 2>/dev/null
 
 SMB_DEFAULT_GROUP=${SMB_DEFAULT_GROUP:-smb}
