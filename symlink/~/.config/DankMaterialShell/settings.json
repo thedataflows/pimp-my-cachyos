@@ -415,10 +415,12 @@
         },
         {
           "id": "clock",
-          "enabled": true,
-          "clockCompactMode": false
+          "enabled": true
         },
-        "weather",
+        {
+          "id": "weather",
+          "enabled": true
+        },
         {
           "id": "notificationButton",
           "enabled": true
@@ -434,22 +436,9 @@
           "enabled": true
         },
         {
-          "id": "clipboard",
-          "enabled": true
-        },
-        {
-          "id": "cpuUsage",
-          "enabled": true,
-          "minimumWidth": true
-        },
-        {
           "id": "cpuTemp",
           "enabled": true,
           "minimumWidth": true
-        },
-        {
-          "id": "memUsage",
-          "enabled": true
         },
         {
           "id": "network_speed_monitor",
