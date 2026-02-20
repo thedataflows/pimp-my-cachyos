@@ -32,6 +32,8 @@ window-rule {
     exclude app-id="vlc" title="VLC media player$"
     match app-id="org.strawberrymusicplayer.strawberry" title="^Strawberry Error"
     match app-id="calibre-ebook-viewer"
+    match title="Steam Settings"
+    match title="Sign in to Security Device"
     open-floating true
 }
 

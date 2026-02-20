@@ -36,18 +36,6 @@ speedUnit=9000
 temperatureUnit=6001
 visibilityUnit=2007
 
-[PlasmaViews][Panel 22]
-floating=1
-
-[PlasmaViews][Panel 22][Defaults]
-thickness=40
-
-[PlasmaViews][Panel 3]
-floating=1
-
-[PlasmaViews][Panel 3][Defaults]
-thickness=40
-
 [PlasmaViews][Panel 41]
 floating=1
 panelLengthMode=2

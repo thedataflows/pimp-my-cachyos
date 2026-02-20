@@ -27,6 +27,7 @@ eyeonscreenEnabled=true
 fadingpopupsEnabled=false
 glideEnabled=true
 highlightwindowEnabled=false
+karouselEnabled=true
 morphingpopupsEnabled=false
 mouseclickEnabled=true
 scaleEnabled=false
@@ -38,15 +39,15 @@ wobblywindowsEnabled=true
 [Script-desktopchangeosd]
 PopupHideDelay=300
 
+[Script-karousel]
+cursorFollowsFocus=true
+
 [TabBox]
 HighlightWindows=false
 LayoutName=thumbnail_grid
 
 [TabBoxAlternative]
 HighlightWindows=false
-
-[Tiling]
-padding=2
 
 [Tiling][36d6a510-4ca1-5991-bdd5-135ab6a80fd8]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -82,6 +83,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][3e9f5a7b-e3c9-4dd5-bbc6-b9a167cfb08e][9a6e9f91-6802-4d4f-a1be-9758f1e6b70d]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][3e9f5a7b-e3c9-4dd5-bbc6-b9a167cfb08e][c4a32620-2b0f-4637-b01f-bc731299b9ae]
@@ -151,6 +153,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][76a39681-cde5-43db-bcce-b5ef935433df][9a6e9f91-6802-4d4f-a1be-9758f1e6b70d]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][76a39681-cde5-43db-bcce-b5ef935433df][c4a32620-2b0f-4637-b01f-bc731299b9ae]
@@ -196,6 +199,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][7ba8a4ce-5a8e-44d7-b052-d8582d19c808][9a6e9f91-6802-4d4f-a1be-9758f1e6b70d]
+padding=2
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.65625},{"width":0.34375}]}
 
 [Tiling][7ba8a4ce-5a8e-44d7-b052-d8582d19c808][c4a32620-2b0f-4637-b01f-bc731299b9ae]
@@ -241,6 +245,7 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][7cd409a9-274c-409b-80bf-2563bfaafb8b][9a6e9f91-6802-4d4f-a1be-9758f1e6b70d]
+padding=4
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][7cd409a9-274c-409b-80bf-2563bfaafb8b][c4a32620-2b0f-4637-b01f-bc731299b9ae]
