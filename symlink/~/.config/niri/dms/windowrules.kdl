@@ -34,6 +34,7 @@ window-rule {
     match app-id="calibre-ebook-viewer"
     match title="Steam Settings"
     match title="Sign in to Security Device"
+    exclude app-id="transgui" title="^Transmission Remote GUI"
     open-floating true
 }
 

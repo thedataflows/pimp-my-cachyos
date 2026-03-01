@@ -15,9 +15,6 @@ ChangeColors=true
 [General]
 ShowEmbeddedContentMessages=false
 
-[Main View]
-ShowLeftPanel=false
-
 [PageView]
 MouseMode=TextSelect
 
