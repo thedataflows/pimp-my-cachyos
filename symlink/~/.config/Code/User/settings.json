@@ -393,4 +393,7 @@
     "interval_ms": 1000
   },
   "chat.viewSessions.orientation": "stacked",
+  "chat.experimental.useSkillAdherencePrompt": true,
+  "chat.tools.global.autoApprove": true,
+  "github.copilot.chat.copilotMemory.enabled": true,
 }

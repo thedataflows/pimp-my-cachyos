@@ -61,6 +61,12 @@ window-rule {
 }
 
 window-rule {
+    match app-id="brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default"
+    default-column-width { proportion 0.333; }
+    open-on-workspace "2"
+}
+
+window-rule {
     match is-active=false
     opacity 0.9
 }

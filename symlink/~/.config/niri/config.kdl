@@ -47,6 +47,9 @@ layout {
     }
 }
 
+workspace "1" {}
+workspace "2" {}
+
 hotkey-overlay {
     hide-not-bound
     skip-at-startup
