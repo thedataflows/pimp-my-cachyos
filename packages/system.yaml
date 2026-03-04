@@ -92,6 +92,8 @@
   desc: A KDE utility that allows you to manage disks, partitions, and file systems
 - name: easyeffects
   desc: Audio Effects for Pipewire applications
+- name: calf
+  desc: LV2 plug-in suite
 # - name: appmenu-gtk-module
 #   desc: Application Menu GTK+ Module
 #   state: absent

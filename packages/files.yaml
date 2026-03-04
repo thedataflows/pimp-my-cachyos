@@ -60,3 +60,5 @@
   desc: "Beyond Compare 5: Compare, sync, and merge files and folders"
 - name: bcompare-kde6
   desc: KDE Plasma 6 service menus for Beyond Compare 5
+- name: binwalk
+  desc: Tool for searching a given binary image for embedded files
