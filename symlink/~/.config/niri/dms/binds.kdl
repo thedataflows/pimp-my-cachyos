@@ -124,10 +124,10 @@ binds {
     Mod+Down { focus-window-or-workspace-down; }
     Mod+Shift+Down { focus-window-or-workspace-down; }
 
-    Mod+WheelScrollUp   cooldown-ms=50 { focus-window-up-or-column-left; }
-    Mod+WheelScrollDown cooldown-ms=50 { focus-window-down-or-column-right; }
-    Mod+Shift+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
-    Mod+Shift+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+Shift+WheelScrollUp   cooldown-ms=50 { focus-window-up-or-column-left; }
+    Mod+Shift+WheelScrollDown cooldown-ms=50 { focus-window-down-or-column-right; }
+    Mod+WheelScrollUp   cooldown-ms=150 { focus-workspace-up; }
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
 
     // Window movement
     Mod+Ctrl+Up { move-window-up-or-to-workspace-up; }
