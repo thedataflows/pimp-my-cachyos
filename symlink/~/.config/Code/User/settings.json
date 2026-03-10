@@ -334,31 +334,59 @@
   "chat.mcp.gallery.enabled": true,
   "workbench.colorTheme": "Catppuccin Mocha",
   "kilo-code.deniedCommands": [],
-  "oaicopilot.baseUrl": "https://api.z.ai/api/coding/paas/v4",
+  "oaicopilot.baseUrl": "",
   "oaicopilot.models": [
-
     {
       "id": "glm-5",
+      "owned_by": "zai",
       "configId": "glm-5",
-      "owned_by": "zai",
+      "baseUrl": "https://api.z.ai/api/coding/paas/v4",
+      "vision": true,
+      "apiMode": "openai",
       "temperature": 0.7,
       "top_p": 1,
-      "vision": false,
       "thinking": {
-        "type": "disabled",
-      },
+        "type": "disabled"
+      }
     },
     {
       "id": "glm-5",
-      "configId": "glm-5-thinking",
       "owned_by": "zai",
+      "configId": "glm-5-thinking",
+      "baseUrl": "https://api.z.ai/api/coding/paas/v4",
+      "vision": true,
+      "apiMode": "openai",
       "temperature": 0.7,
       "top_p": 1,
-      "vision": false,
       "thinking": {
-        "type": "enabled",
-      },
+        "type": "enabled"
+      }
     },
+    {
+      "id": "__provider__kimi",
+      "owned_by": "kimi",
+      "baseUrl": "https://api.kimi.com/coding/v1",
+      "apiMode": "openai"
+    },
+    {
+      "id": "kimi-for-coding/k2p5",
+      "owned_by": "kimi",
+      "displayName": "kimi-k2.5",
+      "baseUrl": "https://api.kimi.com/coding/v1",
+      "context_length": 262144,
+      "max_tokens": 32768,
+      "vision": true,
+      "apiMode": "openai",
+      "reasoning_effort": "medium",
+      "enable_thinking": true,
+      "include_reasoning_in_request": true,
+      "thinking": {
+        "type": "enabled"
+      },
+      "headers": {
+        "User-Agent": "RooCode/v1"
+      }
+    }
   ],
   "workbench.secondarySideBar.defaultVisibility": "visible",
   "github.copilot.chat.virtualTools.threshold": 128,
@@ -390,10 +418,15 @@
   "oaicopilot.retry": {
     "enabled": true,
     "max_attempts": 3,
-    "interval_ms": 1000
+    "interval_ms": 1000,
+    "status_codes": []
   },
   "chat.viewSessions.orientation": "stacked",
   "chat.experimental.useSkillAdherencePrompt": true,
   "chat.tools.global.autoApprove": true,
   "github.copilot.chat.copilotMemory.enabled": true,
+  "workbench.browser.enableChatTools": true,
+  "oaicopilot.delay": 0,
+  "oaicopilot.readFileLines": 0,
+  "oaicopilot.commitLanguage": "English",
 }

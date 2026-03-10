@@ -59,6 +59,10 @@ binds {
         spawn "dms" "ipc" "call" "notifications" "toggle"
     }
 
+    Mod+Shift+N hotkey-overlay-title="DMS Notepad" {
+        spawn "dms" "ipc" "call" "notepad" "toggle"
+    }
+
     Mod+Y hotkey-overlay-title="Browse Wallpapers" {
         spawn "dms" "ipc" "call" "dankdash" "wallpaper"
     }
