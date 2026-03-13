@@ -19,7 +19,7 @@ rev = "75a5330"
 hash = "2eca70f99d25c661e0a92000843d001e"
 
 [[plugin.deps]]
-use = "lpnh/fg"
+use = "lpnh/fr"
 rev = "aa88cd4"
 hash = "8b0e87c3176e0d44f79a8656f79f0fa"
 

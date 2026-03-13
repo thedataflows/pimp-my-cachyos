@@ -22,8 +22,8 @@ desc = "Open with command"
 
 [[mgr.prepend_keymap]]
 on   = "A"
-run  = "plugin fg --args='rga'"
-desc = "find file by content (ripgrep-all)"
+run  = "plugin fr rga"
+desc = "Search file by content (rga)"
 
 [[mgr.prepend_keymap]]
 on = [ "F","f" ]
