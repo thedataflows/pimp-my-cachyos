@@ -62,3 +62,7 @@
   desc: KDE Plasma 6 service menus for Beyond Compare 5
 - name: binwalk
   desc: Tool for searching a given binary image for embedded files
+- name: hexyl
+  desc: Colored command-line hex viewe
+- name: ouch
+  desc: A command line utility for easily compressing and decompressing files and directories

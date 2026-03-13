@@ -1,5 +1,5 @@
-- name: anytype-bin
-  desc: Operating environment for the new internet. Anytype is a next generation software that breaks down barriers between applications, gives back privacy and data ownership to users.
+- name: aur/bookokrat-bin
+  desc: Terminal-based EPUB and PDF reader with rich TUI
 - name: betterbird-bin
   desc: Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will.
 - name: calibre
