@@ -9,12 +9,46 @@ max_height = 4000
 image_delay = 100
 wrap = "yes"
 
-[[plugin.prepend_fetchers]]
-id   = "git"
-name = "*"
-run  = "git"
+[opener]
+epub = [
+  { run = 'bookokrat "$1"', block = true, desc = "bookokrat" },
+]
+# extract = [
+# 	{ run = 'ouch d "$@"', desc = "Extract here with ouch" },
+# ]
 
-[[plugin.prepend_fetchers]]
-id   = "git"
-name = "*/"
-run  = "git"
+[open]
+prepend_rules = [
+  { url = "*.epub", use = "epub" },
+]
+
+[plugin]
+prepend_fetchers = [
+  { id = "git", url = "*",  run = "git" },
+  { id = "git", url = "*/", run = "git" },
+]
+
+prepend_previewers = [
+  { url = "*.csv",     run = "duckdb" },
+  { url = "*.tsv",     run = "duckdb" },
+  { url = "*.json",    run = "duckdb" },
+  { url = "*.parquet", run = "duckdb" },
+  { url = "*.txt",     run = "duckdb" },
+  { url = "*.xlsx",    run = "duckdb" },
+  { url = "*.db",      run = "duckdb" },
+  { url = "*.duckdb",  run = "duckdb" },
+  { mime = "application/{*zip,tar,bzip2,7z*,rar,xz,zstd,java-archive}", run  = "ouch" },
+]
+
+append_previewers = [
+  { url = "*", run = 'piper -- hexyl --border=none --terminal-width=$w "$1"' },
+]
+
+prepend_preloaders = [
+  { url = "*.csv",     run = "duckdb", multi = false },
+  { url = "*.tsv",     run = "duckdb", multi = false },
+  { url = "*.json",    run = "duckdb", multi = false },
+  { url = "*.parquet", run = "duckdb", multi = false },
+  { url = "*.txt",     run = "duckdb", multi = false },
+  { url = "*.xlsx",    run = "duckdb", multi = false },
+]
