@@ -6,8 +6,8 @@
   desc: Stateless system and process monitoring tool with TUI, CLI, and REST API
 - name: aur/dsearch-bin
   desc: Extremely fast indexed filesystem search service
-- name: matugen
-  desc: Material Design color palette generation for dynamic theming
+#- name: matugen
+#  desc: Material Design color palette generation for dynamic theming
 #- name: cava
 #  desc: Console-based audio visualizer for ALSA, PulseAudio, or PipeWire
 - name: accountsservice

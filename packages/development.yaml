@@ -10,8 +10,6 @@
   desc: The PyPA recommended tool for installing Python packages
 - name: kondo
   desc: Save disk space by cleaning non-essential files from software projects
-- name: d2
-  desc: A modern diagram scripting language that turns text to diagrams
 - name: glow
   desc: Command-line markdown renderer
 - name: lazygit
