@@ -20,7 +20,6 @@ ShowLeftPanel=false
 
 [PageView]
 MouseMode=TextSelect
-TrimMargins=true
 
 [Reviews]
 AnnotationContinuousMode=false
