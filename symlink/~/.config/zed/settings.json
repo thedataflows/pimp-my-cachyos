@@ -15,7 +15,7 @@
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gemini-3-pro-preview"
+      "model": "claude-sonnet-4.6"
     }
   },
   "theme": "Catppuccin Mocha",
