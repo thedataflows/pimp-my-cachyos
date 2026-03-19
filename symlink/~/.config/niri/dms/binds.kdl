@@ -29,7 +29,8 @@ binds {
 
     // Screenshot
     Print hotkey-overlay-title="Area Screenshot" {
-        screenshot;
+        //screenshot;
+        spawn "sh" "-c" "grim -g \"$(slurp)\" - | satty --filename - --copy-command wl-copy --initial-tool crop";
     }
     Mod+Print hotkey-overlay-title="Window Screenshot" {
         screenshot-window;

@@ -18,6 +18,9 @@
   desc: Specifications of extended Wayland protocols
 - name: playerctl
   desc: mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.
+- name: satty
+  desc: Modern screenshot annotation tool, inspired by Swappy and Flameshot
+
 - name: aur/qt6ct-kde
   desc: Qt 6 Configuration Utility, patched to work correctly with KDE applications
   state: absent

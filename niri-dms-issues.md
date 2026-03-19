@@ -4,8 +4,8 @@ Quite the struggle with Niri + DMS (Quickshell) to have the same functionality a
 Went as far as to create alternative sessions, custom portal configurations, used `qt5ct` and `qt6ct`, etc.
 Initially there was way more configuration and hacks, but I managed to fix most of them.
 
-1. [ ] Zeditor in Wayland: when opening a new window, it gets stuck unless resized. Hack: after resize, will work fine. Possible future fix <https://github.com/zed-industries/zed/pull/46758>
-2. [ ] Zeditor in X11 via xwayland-satellite (`WAYLAND_DISPLAY= zeditor`): opens fine, but clipboard not working outside of it, in wayland. TODO: find a workaround this or wait for the above fix?
+1. [x] Zeditor in Wayland: when opening a new window, it gets stuck unless resized. Hack: after resize, will work fine. Fixed <https://github.com/zed-industries/zed/pull/46758>
+2. [x] Zeditor in X11 via xwayland-satellite (`WAYLAND_DISPLAY= zeditor`): opens fine, but clipboard not working outside of it, in wayland. No need to run it this way, as it has been fixed for Wayland.
 3. [x] Minor: sometimes DMS menus/tooltips go all the way to the left of the screen. Noticed after a full screen app (game) but not sure. Seems to be fixed in dms 1.4.1
 4. [x] Proper monitor sleep support requires latest git QuckShell, and while it does work, sometimes it crashes waking up. There are many bug reports around this on the Quickshell repo, but no fix yet. Temporary: using `swayidle` started by niri.
 5. [x] Bottles: if started from DMS Launcher does not display the main window. It works well started from terminal or KLauncher (that I preffer). Fix: disable HDR via `ENABLE_HDR_WSI=0` env variable.

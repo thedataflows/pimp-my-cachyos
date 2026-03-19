@@ -11,7 +11,7 @@ input {
     touchpad {
         dwt
         natural-scroll
-        scroll-factor 0.5
+        scroll-factor 0.8
     }
     mouse {
         accel-speed 0.0
