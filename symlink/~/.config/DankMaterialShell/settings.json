@@ -436,6 +436,11 @@
           "enabled": true
         },
         {
+          "id": "diskUsage",
+          "enabled": true,
+          "mountPath": "/"
+        },
+        {
           "id": "cpuTemp",
           "enabled": true,
           "minimumWidth": true
