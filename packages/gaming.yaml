@@ -1,3 +1,6 @@
+- name: bottles
+  desc: Easily manage wine and proton prefix
+
   ## https://wiki.archlinux.org/title/KDE#Games
 - name: gamescope
   desc: SteamOS session compositing window manager
