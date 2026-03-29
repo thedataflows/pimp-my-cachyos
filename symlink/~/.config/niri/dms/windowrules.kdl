@@ -36,6 +36,7 @@ window-rule {
     match title="Sign in to Security Device"
     exclude app-id="transgui" title="^Transmission Remote GUI"
     match app-id="^com.gabm.satty$"
+    match app-id="^net.davidotek.pupgui2$"
     open-floating true
 }
 
