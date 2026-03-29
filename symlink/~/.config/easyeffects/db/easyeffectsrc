@@ -7,7 +7,7 @@ mostUsedPresets=Custom,Noise+Reverb,Noise Suppression
 plugins=rnnoise#0,speex#0,deesser#0,pitch#0
 usedPresets=Noise Suppression:1,Noise+Reverb:1,Custom:1
 visiblePage=pluginsPage
-visiblePlugin=speex#0
+visiblePlugin=rnnoise#0
 
 [StreamOutputs]
 outputDevice=alsa_output.usb-Fosi_Audio_Fosi_Audio_K7-00.iec958-stereo
@@ -17,4 +17,5 @@ autostartOnLogin=true
 height=1715
 lastLoadedInputPreset=Noise+Reverb
 visiblePage=inputPage
+visiblePipeWirePage=modulesPage
 width=2030

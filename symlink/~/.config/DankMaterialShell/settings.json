@@ -37,7 +37,7 @@
   "modalCustomAnimationDuration": 150,
   "enableRippleEffects": true,
   "wallpaperFillMode": "Fill",
-  "blurredWallpaperLayer": false,
+  "blurredWallpaperLayer": true,
   "blurWallpaperOnOverview": true,
   "showLauncherButton": true,
   "showWorkspaceSwitcher": true,
