@@ -1,4 +1,4 @@
-- name: aur/dms-shell-bin
+- name: dms-shell-niri
   desc: DankMaterialShell - A feature-rich desktop shell built with Quickshell and Go (stable release)
 - name: quickshell
   desc: The core framework for DMS (required)
