@@ -116,6 +116,7 @@ clipboard_paste=
 base_color=
 xterm-kitty=
 color_terminals=
+tmux-256color=
 
 [Panels]
 show_mini_info=true
