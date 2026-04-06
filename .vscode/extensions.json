@@ -1,6 +1,6 @@
 {
   "recommendations": [
-    "task.vscode-task",
+    "hverlin.mise-vscode",
     "redhat.vscode-yaml",
     "timonwong.shellcheck"
   ]

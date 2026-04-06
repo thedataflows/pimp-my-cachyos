@@ -1,7 +1,0 @@
-{
-  "yaml.schemas": {
-    "https://taskfile.dev/schema.json": [
-      "lib/*.yaml",
-    ]
-  }
-}
