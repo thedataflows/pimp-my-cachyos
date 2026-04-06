@@ -5,13 +5,15 @@ layout {
     background-color "transparent"
 
     focus-ring {
-        active-color   "#b4befe"
+        //active-color   "#b4befe"
+        active-color   "#7980a8"
         inactive-color "#6c7086"
         urgent-color   "#f38ba8"
     }
 
     border {
-        active-color   "#b4befe"
+        //active-color   "#b4befe"
+        active-color   "#7980a8"
         inactive-color "#6c7086"
         urgent-color   "#f38ba8"
     }
@@ -21,7 +23,8 @@ layout {
     }
 
     tab-indicator {
-        active-color   "#b4befe"
+        //active-color   "#b4befe"
+        active-color   "#7980a8"
         inactive-color "#6c7086"
         urgent-color   "#f38ba8"
     }

@@ -39,6 +39,7 @@ window-rule {
     exclude app-id="^transgui$" title="^Transmission Remote GUI"
     match app-id="^com.gabm.satty$"
     match app-id="^net.davidotek.pupgui2$"
+    match app-id="^ocenaudio"
     open-floating true
 }
 
