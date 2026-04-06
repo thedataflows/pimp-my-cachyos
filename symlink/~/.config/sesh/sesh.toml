@@ -1,0 +1,17 @@
+#:schema https://github.com/joshmedeski/sesh/raw/main/sesh.schema.json
+
+blacklist = ["scratch"]
+
+sort_order = ["config"]
+
+cache = false
+
+[[session]]
+name = "tmux config"
+path = "~/.config/tmux"
+startup_command = "$EDITOR tmux.conf"
+preview_command = "bat --color=always ~/.config/tmux/tmux.conf"
+
+[[session]]
+name = "opencode"
+startup_command = "opencode"

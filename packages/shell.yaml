@@ -26,3 +26,5 @@
   desc: Query and update data structures from the command line
 - name: fastfetch
   desc: A feature-rich and performance oriented neofetch like system information tool
+- name: aur/sesh-bin
+  desc: Smart session manager for the terminal
