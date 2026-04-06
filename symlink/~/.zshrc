@@ -52,6 +52,36 @@ function y() {
 }
 bindkey -s '^Y' 'y^M'
 
+## sesh
+function sesh-sessions() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(sesh list -t -c | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
+    zle reset-prompt > /dev/null 2>&1 || true
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}
+
+function sesh-new-session() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(tv sesh)
+    zle reset-prompt > /dev/null 2>&1 || true
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}
+
+zle     -N             sesh-sessions
+bindkey -M emacs '\es' sesh-sessions
+zle     -N             sesh-new-session
+bindkey -M emacs '\eS' sesh-new-session
+
 # [[ ! -t 0 || $SHLVL -gt 1 ]] || fastfetch
 
 ## Key bindings

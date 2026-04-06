@@ -2,6 +2,8 @@
   desc: the fast distributed version control system
 - name: git-delta
   desc: Syntax-highlighting pager for git and diff output
+- name: worktrunk
+  desc: CLI for Git worktree management, designed for parallel AI agent workflows
 - name: difftastic
   desc: An experimental diff tool that compares files based on their syntax
 - name: go
