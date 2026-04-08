@@ -1,7 +1,5 @@
 - name: niri
   desc: A scrollable-tiling Wayland compositor
-- name: aur/niri-settings-git
-  desc: GUI application for configuring niri in Qt
 - name: xdg-desktop-portal-wlr
   desc: xdg-desktop-portal backend for wlroots-based compositors
 - name: wl-clipboard
