@@ -4,6 +4,8 @@
 set -Eeuo pipefail
 trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"' ERR
 
+mise run packages:add packages/niri.yaml
+
 echo "Setting up Niri with DankMaterialShell..."
 
 mise run files:ln symlink/~/.config/systemd/user
