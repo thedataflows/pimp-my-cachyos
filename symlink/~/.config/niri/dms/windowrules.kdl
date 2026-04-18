@@ -37,9 +37,11 @@ window-rule {
     match title="Sign in to Security Device"
     match app-id="^transgui$"
     exclude app-id="^transgui$" title="^Transmission Remote GUI"
+    match app-id="^org.kde.dolphin$" title="^Copying"
     match app-id="^com.gabm.satty$"
     match app-id="^net.davidotek.pupgui2$"
     match app-id="^ocenaudio"
+    match app-id="^org-kse-KSE$"
     open-floating true
 }
 

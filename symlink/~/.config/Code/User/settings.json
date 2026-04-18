@@ -337,27 +337,31 @@
   "oaicopilot.baseUrl": "",
   "oaicopilot.models": [
     {
-      "id": "glm-5",
+      "id": "glm-5.1",
       "owned_by": "zai",
-      "configId": "glm-5",
+      "configId": "glm-5.1",
       "baseUrl": "https://api.z.ai/api/coding/paas/v4",
       "vision": true,
       "apiMode": "openai",
-      "temperature": 0.7,
-      "top_p": 1,
+      "max_tokens": 32768,
+      "context_length": 200000,
+      "temperature": 1,
+      "top_p": 0.95,
       "thinking": {
         "type": "disabled"
       }
     },
     {
-      "id": "glm-5",
+      "id": "glm-5.1",
       "owned_by": "zai",
-      "configId": "glm-5-thinking",
+      "configId": "glm-5.1-thinking",
       "baseUrl": "https://api.z.ai/api/coding/paas/v4",
       "vision": true,
       "apiMode": "openai",
-      "temperature": 0.7,
-      "top_p": 1,
+      "max_tokens": 32768,
+      "context_length": 200000,
+      "temperature": 1,
+      "top_p": 0.95,
       "thinking": {
         "type": "enabled"
       }
