@@ -7,11 +7,25 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "tree_view": true,
+    "dock": "left"
+  },
   "edit_predictions": {
     "provider": "zed"
   },
   "icon_theme": "Catppuccin Mocha",
   "agent": {
+    "dock": "right",
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",

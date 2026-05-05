@@ -31,3 +31,5 @@ env_file = ".env"
 "goreleaser" = "latest"
 ## https://github.com/nektos/act/releases
 "act" = "latest"
+## https://github.com/helm/helm/releases
+"helm" = '3'

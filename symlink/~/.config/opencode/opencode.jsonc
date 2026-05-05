@@ -22,5 +22,14 @@
         "Authorization": "Bearer {env:ZAI_API_KEY}",
       },
     },
+    "chrome-devtools": {
+        "type": "local",
+    	"command": [
+    	    "npx",
+    		"-y",
+    		"chrome-devtools-mcp@latest",
+    		"--executablePath=/usr/bin/brave"
+    	]
+    },
   },
 }

@@ -347,6 +347,7 @@
       "context_length": 200000,
       "temperature": 1,
       "top_p": 0.95,
+      "enable_thinking": false,
       "thinking": {
         "type": "disabled"
       }
@@ -362,6 +363,7 @@
       "context_length": 200000,
       "temperature": 1,
       "top_p": 0.95,
+      "enable_thinking": true,
       "thinking": {
         "type": "enabled"
       }
@@ -373,9 +375,9 @@
       "apiMode": "openai"
     },
     {
-      "id": "kimi-for-coding/k2p5",
+      "id": "kimi-for-coding/k2p6",
       "owned_by": "kimi",
-      "displayName": "kimi-k2.5",
+      "displayName": "kimi-k2.6",
       "baseUrl": "https://api.kimi.com/coding/v1",
       "context_length": 262144,
       "max_tokens": 32768,
@@ -425,7 +427,6 @@
     "interval_ms": 1000,
     "status_codes": []
   },
-  "chat.viewSessions.orientation": "stacked",
   "chat.experimental.useSkillAdherencePrompt": true,
   "chat.tools.global.autoApprove": true,
   "github.copilot.chat.copilotMemory.enabled": true,
@@ -433,4 +434,9 @@
   "oaicopilot.delay": 0,
   "oaicopilot.readFileLines": 0,
   "oaicopilot.commitLanguage": "English",
+  "chat.viewSessions.orientation": "stacked",
+  "github.copilot.chat.cli.remote.enabled": true,
+  "github.copilot.chat.skillTool.enabled": true,
+  "github.copilot.chat.responsesApi.toolSearchTool.enabled": true,
+  "diffEditor.maxComputationTime": 0,
 }
