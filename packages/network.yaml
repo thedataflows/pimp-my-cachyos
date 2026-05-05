@@ -42,8 +42,6 @@
   desc: Console-based network monitoring utility
 - name: socat
   desc: Multipurpose relay
-- name: aur/naabu-bin
-  desc: Fast port scanner with a focus on reliability and simplicity
 - name: doggo
   desc: Command-line DNS client for humans
 - name: aur/neoss
