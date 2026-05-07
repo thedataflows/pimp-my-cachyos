@@ -68,7 +68,9 @@ window-rule {
 }
 
 window-rule {
+    // Whatsapp Web - Brave App
     match app-id="brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default"
+    match app-id="signal"
     default-column-width { proportion 0.333; }
     open-on-workspace "2"
 }

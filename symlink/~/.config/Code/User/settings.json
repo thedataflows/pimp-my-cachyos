@@ -439,4 +439,10 @@
   "github.copilot.chat.skillTool.enabled": true,
   "github.copilot.chat.responsesApi.toolSearchTool.enabled": true,
   "diffEditor.maxComputationTime": 0,
+  "businessAutomationTools.bpmn.enableColorPicker": true,
+  "businessAutomationTools.bpmn.enablePropertiesPanel": true,
+  "businessAutomationTools.bpmn.enableTokenSimulator": true,
+  "businessAutomationTools.cmmn.enablePropertiesPanel": true,
+  "businessAutomationTools.dmn.enablePropertiesPanel": true,
+  "hediet.vscode-drawio.resizeImages": null,
 }
