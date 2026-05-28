@@ -25,11 +25,29 @@
     "chrome-devtools": {
         "type": "local",
     	"command": [
-    	    "npx",
+        "npx",
     		"-y",
     		"chrome-devtools-mcp@latest",
     		"--executablePath=/usr/bin/brave"
     	]
     },
   },
+  "provider": {
+    "dgx-local": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "DGX Local",
+      "options": {
+        "baseURL": "http://10.3.67.61:8080/v1",
+        "apiKey": "apikeydummy"
+      },
+      "models": {
+        "qwen3.6-27b": {
+          "name": "Qwen 3.6 27B",
+          "reasoning": true,
+          "tool_call": true,
+        }
+      }
+    }
+  },
+  "lsp": true,
 }

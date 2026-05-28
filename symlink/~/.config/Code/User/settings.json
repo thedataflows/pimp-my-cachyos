@@ -341,11 +341,10 @@
       "owned_by": "zai",
       "configId": "glm-5.1",
       "baseUrl": "https://api.z.ai/api/coding/paas/v4",
+      "context_length": 200000,
+      "max_tokens": 32768,
       "vision": true,
       "apiMode": "openai",
-      "max_tokens": 32768,
-      "context_length": 200000,
-      "temperature": 1,
       "top_p": 0.95,
       "enable_thinking": false,
       "thinking": {
@@ -357,11 +356,10 @@
       "owned_by": "zai",
       "configId": "glm-5.1-thinking",
       "baseUrl": "https://api.z.ai/api/coding/paas/v4",
+      "context_length": 200000,
+      "max_tokens": 32768,
       "vision": true,
       "apiMode": "openai",
-      "max_tokens": 32768,
-      "context_length": 200000,
-      "temperature": 1,
       "top_p": 0.95,
       "enable_thinking": true,
       "thinking": {
@@ -392,6 +390,64 @@
       "headers": {
         "User-Agent": "RooCode/v1"
       }
+    },
+    {
+      "id": "__provider__dgx-litellm",
+      "owned_by": "dgx-litellm",
+      "baseUrl": "http://10.3.67.61:8080",
+      "apiMode": "openai"
+    },
+    {
+      "id": "qwen3.6-27b",
+      "owned_by": "dgx-litellm",
+      "baseUrl": "http://10.3.67.61:8080",
+      "context_length": 230000,
+      "max_tokens": 32768,
+      "vision": true,
+      "apiMode": "openai",
+      "reasoning_effort": "low",
+      "enable_thinking": true,
+      "include_reasoning_in_request": true,
+      "thinking": {
+        "type": "enabled"
+      }
+    },
+    {
+      "id": "__provider__dgx",
+      "owned_by": "dgx",
+      "baseUrl": "http://10.3.67.61:8000/v1",
+      "apiMode": "openai"
+    },
+    {
+      "id": "Qwen/Qwen3.6-27B",
+      "owned_by": "dgx",
+      "displayName": "Qwen3.6-27B",
+      "baseUrl": "http://10.3.67.61:8000/v1",
+      "context_length": 262144,
+      "max_tokens": 32768,
+      "vision": true,
+      "apiMode": "openai",
+      "temperature": 0,
+      "reasoning_effort": "low",
+      "enable_thinking": true,
+      "include_reasoning_in_request": true,
+      "reasoning": {
+        "enabled": true,
+        "effort": "low"
+      },
+      "thinking": {
+        "type": "enabled"
+      }
+    },
+    {
+      "id": "glm-ocr",
+      "owned_by": "dgx-litellm",
+      "baseUrl": "http://10.3.67.61:8080",
+      "context_length": 131072,
+      "max_tokens": 32768,
+      "vision": true,
+      "apiMode": "openai",
+      "temperature": 0
     }
   ],
   "workbench.secondarySideBar.defaultVisibility": "visible",
