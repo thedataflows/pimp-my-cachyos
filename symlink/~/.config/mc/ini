@@ -88,7 +88,7 @@ filepos_max_saved_entries=1024
 
 [Layout]
 output_lines=0
-left_panel_size=69
+left_panel_size=76
 top_panel_size=0
 message_visible=true
 keybar_visible=true
@@ -166,7 +166,7 @@ diff_tab_expansion=false
 diff_ignore_case=false
 
 [Panelize]
-Find *.orig after patching=find . -name \\*.orig -print
-Find rejects after patching=find . -name \\*.rej -print
 Find SUID and SGID programs=find . \\( \\( -perm -04000 -a -perm /011 \\) -o \\( -perm -02000 -a -perm /01 \\) \\) -print
+Find rejects after patching=find . -name \\*.rej -print
+Find *.orig after patching=find . -name \\*.orig -print
 Modified git files=git ls-files --modified
