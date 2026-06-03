@@ -7,8 +7,6 @@ env_file = ".env"
 
 [tools]
 "usage" = "latest"
-## https://github.com/1pkg/gopium/releases
-"go:github.com/1pkg/gopium" = "latest"
 ## https://github.com/pulumi/pulumi/releases
 "pulumi" = "3"
 ## https://github.com/sigstore/cosign/releases
