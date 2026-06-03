@@ -20,7 +20,7 @@ for F in "${_PACKAGE_FILES[@]}"; do
   _PACKAGES=$(yq --no-colors --no-doc ".[] | select(.state==\"absent\" or .state==\"removed\") | select(.hosts == null or (.hosts | contains([\"$_HOSTNAME\"]))) | .name" "$F" 2>/dev/null || true)
   [[ -n "$_PACKAGES" ]] || continue
   #shellcheck disable=SC2086
-  _PACKAGES=$(paru -Q $_PACKAGES 2>/dev/null || true | cut -f1 -d' ')
+  _PACKAGES=$(paru -Q $_PACKAGES 2>/dev/null | cut -f1 -d' ' || true)
   [[ -n "$_PACKAGES" ]] || continue
   echo ""
   echo ">> $F"
