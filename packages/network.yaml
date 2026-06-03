@@ -32,8 +32,10 @@
   desc: Powerful command-line packet analyzer
 - name: termshark
   desc: Terminal UI for tshark, inspired by Wireshark
-- name: gnu-netcat
-  desc: GNU rewrite of netcat, the network piping application
+#- name: gnu-netcat
+#  desc: GNU rewrite of netcat, the network piping application
+- name: openbsd-netcat
+  desc: TCP/IP swiss army knife. OpenBSD variant.
 - name: wireguard-tools
   desc: next generation secure network tunnel - tools for configuration
 - name: networkmanager-openvpn
