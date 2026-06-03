@@ -17,7 +17,7 @@ mise run network:firewall
 mise run network:sshd
 
 ## Configure: system
-mise run system:grub
+mise run system:limine
 mise run system:snapper
 mise run system:services
 mise run system:video-drivers

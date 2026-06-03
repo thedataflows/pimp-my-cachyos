@@ -1,5 +1,6 @@
 #!/bin/env bash
 #MISE description="Remove packages defined in yaml lists with state 'absent' or 'removed'"
+#MISE interactive=true
 
 set -Eeuo pipefail
 trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"' ERR

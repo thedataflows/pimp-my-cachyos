@@ -40,8 +40,6 @@
   desc: An application for managing BTRFS subvolumes and Snapper snapshots
 - name: aur/eget-bin
   desc: Easily install prebuilt binaries from GitHub
-- name: aur/catppuccin-mocha-grub-theme-git
-  desc: Soothing pastel theme for GRUB2 -- Mocha colorscheme
 - name: aur/pacseek-bin
   desc: A terminal user interface for searching and installing Arch Linux packages (binary version)
 - name: aur/parui
@@ -52,8 +50,6 @@
   desc: A modern watch command, binary version
 - name: aur/sysz
   desc: fzf terminal UI for systemctl
-- name: grub-customizer
-  desc: A graphical grub2 settings manager
 - name: gptfdisk
   desc: A text-mode partitioning tool that works on GUID Partition Table (GPT) disks
 - name: keyd

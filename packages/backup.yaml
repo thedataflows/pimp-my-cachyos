@@ -4,8 +4,6 @@
   desc: Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage
 - name: snap-pac
   desc: Pacman hooks that use snapper to create pre/post btrfs snapshots like openSUSE's YaST
-- name: grub-btrfs
-  desc: Include btrfs snapshots in GRUB boot options
 - name: aur/kopia-bin
   desc: A cross-platform backup-tool with encryption, deduplication, compression and cloud support.
 - name: aur/kopia-ui-bin

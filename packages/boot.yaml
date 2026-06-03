@@ -1,0 +1,21 @@
+- name: limine
+  desc: Modern, advanced, portable, multiprotocol bootloader
+- name: limine-mkinitcpio-hook
+  desc: mkinitcpio hook for Limine bootloader
+- name: limine-snapper-sync
+  desc: Generate Limine boot entries from snapper snapshots
+- name: grub
+  desc: GNU GRand Unified Bootloader
+  state: absent
+- name: grub-btrfs
+  desc: Include btrfs snapshots in GRUB boot options
+  state: absent
+- name: grub-customizer
+  desc: A graphical grub2 settings manager
+  state: absent
+- name: grub-hook
+  desc: Pacman hooks for GRUB
+  state: absent
+- name: catppuccin-mocha-grub-theme-git
+  desc: Soothing pastel theme for GRUB2 -- Mocha colorscheme
+  state: absent
