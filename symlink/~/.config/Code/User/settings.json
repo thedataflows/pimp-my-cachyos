@@ -419,7 +419,7 @@
       "apiMode": "openai"
     },
     {
-      "id": "Qwen/Qwen3.6-27B",
+      "id": "unsloth/Qwen3.6-27B",
       "owned_by": "dgx",
       "displayName": "Qwen3.6-27B",
       "baseUrl": "http://10.3.67.61:8000/v1",

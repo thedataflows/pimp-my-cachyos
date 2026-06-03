@@ -33,3 +33,6 @@ env_file = ".env"
 "act" = "latest"
 ## https://github.com/helm/helm/releases
 "helm" = '3'
+
+## https://github.com/can1357/oh-my-pi/releases
+"github:can1357/oh-my-pi" = "latest"

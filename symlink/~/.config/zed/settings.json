@@ -21,7 +21,7 @@
     "dock": "left"
   },
   "edit_predictions": {
-    "provider": "zed"
+    "provider": "copilot"
   },
   "icon_theme": "Catppuccin Mocha",
   "agent": {
