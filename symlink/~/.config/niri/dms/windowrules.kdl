@@ -68,13 +68,19 @@ window-rule {
 }
 
 window-rule {
-    // Whatsapp Web - Brave App
-    match app-id="brave-hnpfjngllnobngcgfapefoaidbinmjnm-Default"
     match app-id="signal"
     match app-id="teams-for-linux"
     default-column-width { proportion 0.333; }
     open-on-workspace "2"
 }
+
+window-rule {
+    // Whatsapp Web - Thorium App
+    match app-id="thorium-hnpfjngllnobngcgfapefoaidbinmjnm-Default"
+    default-column-width { proportion 0.333; }
+    open-on-workspace "3"
+}
+
 
 window-rule {
     match is-active=false
