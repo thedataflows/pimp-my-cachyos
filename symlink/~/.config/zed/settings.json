@@ -7,41 +7,69 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "project_panel": {
-    "dock": "left"
-  },
-  "outline_panel": {
-    "dock": "left"
-  },
-  "collaboration_panel": {
-    "dock": "left"
-  },
-  "git_panel": {
-    "tree_view": true,
-    "dock": "left"
-  },
-  "edit_predictions": {
-    "provider": "copilot"
-  },
-  "icon_theme": "Catppuccin Mocha",
+  "proxy": "",
+  "auto_update": false,
+  "cli_default_open_behavior": "existing_window",
   "agent": {
     "dock": "right",
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "claude-sonnet-4.6"
-    }
+      "model": "claude-sonnet-4.6",
+    },
+    "tool_permissions": {
+      "default": "allow",
+      "tools": {
+        "terminal": {
+          "default": "allow",
+          "always_confirm": [
+            { "pattern": "sudo\\s+/" },
+          ]
+        },
+      },
+    },
   },
+  "agent_servers": {
+    "omp-acp": {
+      "default_config_options": {
+        "mode": "default",
+      },
+      "type": "custom",
+      "command": "omp",
+      "args": ["acp", "--auto-approve"],
+    },
+  },
+  "project_panel": {
+    "dock": "left",
+  },
+  "outline_panel": {
+    "dock": "left",
+  },
+  "collaboration_panel": {
+    "dock": "left",
+  },
+  "git_panel": {
+    "tree_view": true,
+    "dock": "left",
+  },
+  "edit_predictions": {
+    "provider": "copilot",
+  },
+  "icon_theme": "Catppuccin Latte",
+
   "theme": "Catppuccin Mocha",
 
-  "ui_font_family": "JetBrainsMono Nerd Font",
-  "ui_font_size": 13,
+  "ui_font_family": "JetBrainsMono Nerd Font Propo",
+  "ui_font_size": 14,
+  "ui_font_weight": 200,
   "buffer_font_family": "JetBrainsMono Nerd Font",
-  "buffer_font_size": 11,
+  "buffer_font_size": 12,
+  "buffer_font_weight": 200,
 
   "format_on_save": "off",
 
   "session": {
-    "restore_unsaved_buffers": true
-  }
+    "trust_all_worktrees": true,
+    "restore_unsaved_buffers": true,
+  },
 }
