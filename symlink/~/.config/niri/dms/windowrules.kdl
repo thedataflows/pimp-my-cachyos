@@ -76,6 +76,7 @@ window-rule {
 
 window-rule {
     // Whatsapp Web - Thorium App
+    match title="WhatsApp Web" app-id="Thorium-browser"
     match app-id="thorium-hnpfjngllnobngcgfapefoaidbinmjnm-Default"
     default-column-width { proportion 0.333; }
     open-on-workspace "3"
