@@ -9,7 +9,7 @@
 {
   "proxy": "",
   "auto_update": false,
-  "cli_default_open_behavior": "existing_window",
+  "cli_default_open_behavior": "new_window",
   "agent": {
     "dock": "right",
     "default_profile": "write",
@@ -32,11 +32,13 @@
   "agent_servers": {
     "omp-acp": {
       "default_config_options": {
-        "mode": "default",
+        "model": "kimi-code/kimi-for-coding",
+        "thinking": "medium",
+        "mode": "plan",
       },
       "type": "custom",
       "command": "omp",
-      "args": ["acp", "--auto-approve"],
+      "args": ["acp", "--auto-approve", "--continue"],
     },
   },
   "project_panel": {
