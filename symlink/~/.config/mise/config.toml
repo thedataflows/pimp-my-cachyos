@@ -4,6 +4,7 @@ _.file = { path = "~/.env", redact = true }
 [settings]
 experimental = true # enable experimental features
 env_file = ".env"
+prefer_offline = true
 
 [tools]
 "usage" = "latest"

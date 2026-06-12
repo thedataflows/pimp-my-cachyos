@@ -1,20 +1,18 @@
 [metadata]
 name = "channels"
-description = "A channel to select other television channels"
+description = "Select a television channel"
+requirements = ["tv", "bat"]
 
 [source]
-command = "tv list-channels"
+command = ["tv list-channels"]
 
 [preview]
-command = "bat -n --color=always '{}'"
-env = { BAT_THEME = "ansi" }
+command = "bat -pn --color always ${XDG_CONFIG_HOME:-$HOME/.config}/television/cable/**/{}.toml"
 
 [keybindings]
-shortcut = "Alt+f1"
-f12 = "actions:edit"
+enter = "actions:channel-enter"
 
-[actions.edit]
-description = "Opens the selected entries with the default editor (falls back to vim)"
-command = "${EDITOR:-vim} '{}'"
-# use `mode = "fork"` if you want to return to tv afterwards
+[actions.channel-enter]
+description = "Enter a television channel"
+command = "tv {}"
 mode = "execute"
