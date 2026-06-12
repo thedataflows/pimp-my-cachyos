@@ -76,7 +76,7 @@ DialogWidth=720
 positions={"1707x960":[],"2194x1234":[],"2560x1440":[],"3072x1728":[],"3840x1080":[]}
 
 [Containments][40][Wallpaper][org.kde.image][General]
-Image=file:///mnt/linux1/uncharted4-lot-5k.png
+Image=file:///mnt/linux1/oled-wallpaper.png
 SlidePaths=/home/cri/.local/share/wallpapers/,/usr/share/wallpapers/
 
 [Containments][41]
