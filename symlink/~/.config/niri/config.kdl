@@ -13,7 +13,7 @@ input {
         accel-speed 1
         accel-profile "flat"
         natural-scroll
-        scroll-factor 0.8
+        scroll-factor 0.3
     }
     mouse {
         accel-speed 0.0
