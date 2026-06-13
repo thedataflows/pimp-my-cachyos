@@ -10,6 +10,8 @@ input {
     }
     touchpad {
         dwt
+        accel-speed 1
+        accel-profile "flat"
         natural-scroll
         scroll-factor 0.8
     }
