@@ -1,0 +1,10 @@
+rupa/z              # some bash plugins work too
+sindresorhus/pure   # enhance your prompt
+
+marlonrichert/zsh-autocomplete
+Aloxaf/fzf-tab
+
+# external plugins — deferred for fast startup
+zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-syntax-highlighting kind:defer
+zsh-users/zsh-history-substring-search kind:defer
