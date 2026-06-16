@@ -31,7 +31,7 @@ prefer_offline = true
 ## https://github.com/nektos/act/releases
 "act" = "latest"
 ## https://github.com/helm/helm/releases
-"helm" = '3'
+helm = "4"
 
 ## https://github.com/can1357/oh-my-pi/releases
 "github:can1357/oh-my-pi" = "latest"
