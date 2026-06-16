@@ -1,6 +1,8 @@
 export HISTSIZE=1000000000
 export SAVEHIST=$HISTSIZE
 
+fpath=(${XDG_DATA_HOME:-$HOME/.local/share}/mise-completions/zsh $fpath)
+
 ## Profile
 [[ -r ~/.profile ]] && . ~/.profile
 
@@ -8,18 +10,9 @@ export SAVEHIST=$HISTSIZE
 # shellcheck disable=SC1090
 [[ -r ~/.aliases ]] && . ~/.aliases
 
+
 ## Allow root to connect to X
 xhost +si:localuser:root &>/dev/null
-
-## zsh-autocomplete
-#source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-
-## fzf-zsh-completion
-#source /usr/share/fzf-tab-completion/zsh/fzf-zsh-completion.sh
-#bindkey '^I' fzf_completion
-
-source '/usr/share/zsh-antidote/antidote.zsh'
-antidote load
 
 ## Oh-my-posh
 PARENT_PROCESS=$(ps -p $PPID -o comm=)
@@ -31,15 +24,19 @@ PROCLIST=""
 ## Fzf
 source ~/.fzf
 
+## Mise-en-place
+eval "$(mise activate zsh)"
+
+## Antidote
+source '/usr/share/zsh-antidote/antidote.zsh'
+antidote load
+
 ## Atuin
 eval "$(atuin init zsh)"
 
 ## Zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
-## Mise-en-place
-eval "$(mise activate zsh)"
-eval "$(mise env)"
 
 ## Yazi
 function y() {

@@ -6,8 +6,11 @@ experimental = true # enable experimental features
 env_file = ".env"
 prefer_offline = true
 
+[hooks]
+postinstall = "misecompsync --shell zsh"
+
 [tools]
-"usage" = "latest"
+usage = "latest"
 ## https://github.com/pulumi/pulumi/releases
 "pulumi" = "3"
 ## https://github.com/sigstore/cosign/releases
@@ -32,6 +35,9 @@ prefer_offline = true
 "act" = "latest"
 ## https://github.com/helm/helm/releases
 helm = "4"
+
+## https://github.com/alltuner/mise-completions-sync/releases
+"aqua:alltuner/mise-completions-sync" = "latest"
 
 ## https://github.com/can1357/oh-my-pi/releases
 "github:can1357/oh-my-pi" = "latest"
