@@ -34,7 +34,7 @@ usage = "latest"
 ## https://github.com/nektos/act/releases
 "act" = "latest"
 ## https://github.com/helm/helm/releases
-helm = "4"
+"helm" = "4"
 
 ## https://github.com/alltuner/mise-completions-sync/releases
 "aqua:alltuner/mise-completions-sync" = "latest"

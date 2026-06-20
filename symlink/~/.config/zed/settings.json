@@ -34,7 +34,7 @@
       "default_config_options": {
         "model": "kimi-code/kimi-for-coding",
         "thinking": "medium",
-        "mode": "plan",
+        "mode": "default",
       },
       "type": "custom",
       "command": "omp",
