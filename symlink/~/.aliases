@@ -21,4 +21,4 @@ alias pi="piper-tts -m /usr/share/piper-voices/en/en_GB/cori/high/en_GB-cori-hig
 alias skgrep="sk --ansi -i -c 'rg --color=always --line-number \"{}\"'"
 alias yay="paru"
 alias wttr="curl wttr.in"
-alias z="zeditor"
+alias zed="zeditor"
