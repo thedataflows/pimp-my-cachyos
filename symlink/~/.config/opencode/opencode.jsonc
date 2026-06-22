@@ -1,5 +1,7 @@
 {
-  "plugin": ["oh-my-openagent@latest"],
+  "plugin": [
+    "oh-my-openagent@latest"
+  ],
   "$schema": "https://opencode.ai/config.json",
   "mcp": {
     "web-search-prime": {
@@ -51,4 +53,5 @@
     }
   },
   "lsp": true,
+  "model": "kimi-for-coding/k2p7"
 }
