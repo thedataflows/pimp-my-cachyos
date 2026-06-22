@@ -200,7 +200,7 @@
   "dankLauncherV2BorderThickness": 1,
   "dankLauncherV2BorderColor": "primary",
   "dankLauncherV2ShowFooter": true,
-  "dankLauncherV2UnloadOnClose": false,
+  "dankLauncherV2UnloadOnClose": true,
   "useAutoLocation": true,
   "weatherEnabled": true,
   "networkPreference": "ethernet",
@@ -401,7 +401,7 @@
   "showOnLastDisplay": {},
   "niriOutputSettings": {
     "HDMI-A-1": {
-      "disabled": true,
+      "disabled": false,
       "vrrOnDemand": true
     },
     "DP-3": {

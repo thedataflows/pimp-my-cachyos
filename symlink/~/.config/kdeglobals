@@ -163,7 +163,7 @@ Sort directories first=true
 Sort hidden files last=false
 Sort reversed=false
 Speedbar Width=203
-View Style=Detail
+View Style=DetailTree
 
 [KScreen]
 ScaleFactor=1.75
