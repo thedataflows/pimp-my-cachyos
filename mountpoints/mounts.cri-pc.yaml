@@ -1,7 +1,7 @@
 win_c:
   source: "UUID=01D97D07D7C008F0"
   destination: "/mnt/win/c"
-  type: ntfs-3g
+  type: ntfs
   share: false
   # state: disabled
 

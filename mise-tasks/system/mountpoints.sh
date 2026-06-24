@@ -1,13 +1,31 @@
 #!/bin/env bash
 #MISE description="Mountpoints configuration"
 #MISE alias="sm"
+#MISE interactive=true
 
 set -Eeuo pipefail
 trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"' ERR
 
 type yq &>/dev/null || $PARU go-yq
 type nfsidmap &>/dev/null || $PARU nfs-utils nfsidmap
-type ntfs-3g &>/dev/null || $PARU ntfs-3g
+
+## Decide whether to use ntfs-3g based on kernel version
+KERNEL_VERSION=$(uname -r)
+KERNEL_MAJOR=${KERNEL_VERSION%%.*}
+KERNEL_REST=${KERNEL_VERSION#*.}
+KERNEL_MINOR=${KERNEL_REST%%.*}
+USE_NTFS3G=false
+if (( KERNEL_MAJOR < 7 )) || { (( KERNEL_MAJOR == 7 )) && (( KERNEL_MINOR < 1 )); }; then
+  USE_NTFS3G=true
+fi
+
+if [[ "$USE_NTFS3G" == true ]]; then
+  type ntfs-3g &>/dev/null || $PARU ntfs-3g
+else
+  ## Remove ntfs-3g and install ntfsprogs-plus for better NTFS support since kernel 7.1
+  type ntfs-3g &>/dev/null && $PARU -R ntfs-3g || true
+  type ntfsinfo &>/dev/null || $PARU ntfsprogs-plus
+fi
 
 SERVICE_DIR=/usr/local/lib/systemd/system
 sudo test -d "$SERVICE_DIR" || sudo mkdir -p "$SERVICE_DIR"
@@ -19,6 +37,9 @@ set -a
 yq -r 'keys[]' <<< "$MOUNTS" | while IFS= read -r NAME; do
   MOUNT=$(yq -r ".$NAME" <<< "$MOUNTS")
   TYPE=$(yq -r ".type" - <<< "$MOUNT")
+  if [[ "$USE_NTFS3G" == true && "$TYPE" == "ntfs" ]]; then
+    TYPE=ntfs-3g
+  fi
   AFTER=
   case $TYPE in
     nfs)
@@ -37,6 +58,10 @@ yq -r 'keys[]' <<< "$MOUNTS" | while IFS= read -r NAME; do
   OPTIONS=$(yq -r '.options // ""' - <<< "$MOUNT")
   if [[ -z "$OPTIONS" ]]; then
     case $TYPE in
+      ntfs)
+        ## https://docs.kernel.org/filesystems/ntfs.html
+        OPTIONS="auto,rw,uid=$(id -u),gid=$(id -g),umask=027,dev,exec,noatime,iocharset=utf8,windows_names,suid,nocase,preallocated_size=131072"
+        ;;
       ntfs3)
         ## https://docs.kernel.org/filesystems/ntfs3.html
         OPTIONS="auto,rw,uid=$(id -u),gid=$(id -g),dmask=027,fmask=027,dev,exec,noatime,iocharset=utf8,windows_names,suid,discard"

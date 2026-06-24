@@ -1,7 +1,7 @@
 win_c:
   source: "UUID=01DABE5ADF2BBA90"
   destination: "/mnt/win/c"
-  type: ntfs-3g
+  type: ntfs
   share: false
 
 linux2:
