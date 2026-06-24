@@ -88,7 +88,7 @@ filepos_max_saved_entries=1024
 
 [Layout]
 output_lines=0
-left_panel_size=140
+left_panel_size=90
 top_panel_size=0
 message_visible=true
 keybar_visible=true
@@ -117,6 +117,7 @@ base_color=
 xterm-kitty=
 color_terminals=
 tmux-256color=
+xterm-256color=
 
 [Panels]
 show_mini_info=true
@@ -167,6 +168,6 @@ diff_ignore_case=false
 
 [Panelize]
 Find SUID and SGID programs=find . \\( \\( -perm -04000 -a -perm /011 \\) -o \\( -perm -02000 -a -perm /01 \\) \\) -print
-Find *.orig after patching=find . -name \\*.orig -print
-Modified git files=git ls-files --modified
 Find rejects after patching=find . -name \\*.rej -print
+Modified git files=git ls-files --modified
+Find *.orig after patching=find . -name \\*.orig -print
