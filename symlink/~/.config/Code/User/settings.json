@@ -46,7 +46,7 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "never",
     },
-    "editor.defaultFormatter": null,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[dockerfile]": {
     "editor.codeActionsOnSave": {
