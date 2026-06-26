@@ -405,7 +405,8 @@
       "vrrOnDemand": true
     },
     "DP-3": {
-      "vrrOnDemand": true
+      "vrrOnDemand": true,
+      "focusAtStartup": true
     }
   },
   "hyprlandOutputSettings": {},
