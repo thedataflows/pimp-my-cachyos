@@ -40,9 +40,9 @@ binds {
     }
 
     // Application Launchers
-    Mod+Super_L hotkey-overlay-title="Application Launcher from Bar" {
-        spawn "dms" "ipc" "call" "widget" "toggle" "launcherButton"
-    }
+    // Mod+Super_L hotkey-overlay-title="Application Launcher from Bar" {
+    //     spawn "dms" "ipc" "call" "widget" "toggle" "launcherButton"
+    // }
 
     Mod+Space hotkey-overlay-title="Application Launcher" {
         spawn "dms" "ipc" "call" "spotlight" "toggle"
