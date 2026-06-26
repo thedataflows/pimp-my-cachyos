@@ -1,5 +1,6 @@
 #!/bin/env bash
 #MISE description="Run all tasks in the proper order"
+#MISE interactive=true
 
 set -Eeuo pipefail
 trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"' ERR
