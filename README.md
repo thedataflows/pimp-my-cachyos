@@ -21,7 +21,7 @@ The following is not an exaustive list, but a highlight of what will be installe
   - Cursors: `Bibata Modern Amber`
   - Fonts: `Roboto`, `JetBrainsMono Nerd Font`
 - Secret management: `KeePassXC` (integrates with the browser, with ssh-agent and acts as a system wallet)
-- Web browser: `Thorium`, `Brave` (deprecated)
+- Web browser: `Thorium`, `Zen`, `Brave` (deprecated)
 - Mail client: `Betterbird` (enhanced Thunderbird fork)
 - Office suite: `ONLYOFFICE` (closer to MS Office than LibreOffice, and lighter)
 - Productivity: `AnyType`
