@@ -39,3 +39,5 @@
   desc: Remote Desktop Client
 - name: aur/catppuccin-plasma-colorscheme-mocha
   desc: Soothing pastel theme for KDE Plasma
+- name: kdeconnect
+  desc: Adds communication between KDE and your smartphone

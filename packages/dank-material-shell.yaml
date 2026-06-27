@@ -14,3 +14,5 @@
   desc: D-Bus interface for user account query and manipulation (for DMS user profiles)
 - name: i2c-tools
   desc: Tools for accessing I2C devices (for DMS monitor backlight control)
+- name: kdeconnect
+  desc: Adds communication between KDE and your smartphone
