@@ -1,5 +1,7 @@
 #- name: brave-bin
 #  desc: Web browser that blocks ads and trackers by default (binary release)
+- name: aur/thorium-browser-updated-bin
+  desc: Chromium fork focused on high performance and security
 - name: signal-desktop
   desc: Signal Private Messenger for Linux
 # - name: teams-for-linux
