@@ -32,7 +32,7 @@
   "agent_servers": {
     "omp-acp": {
       "default_config_options": {
-        "model": "kimi-code/kimi-for-coding",
+        "model": "moonshot/kimi-k2.7-code-highspeed",
         "thinking": "medium",
         "mode": "default",
       },
