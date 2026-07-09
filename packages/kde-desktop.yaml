@@ -20,7 +20,6 @@
 - name: xdg-desktop-portal-wlr
   desc: xdg-desktop-portal backend for wlroots
 - name: xdg-desktop-portal-gnome
-  state: absent
 - name: gnome-settings-daemon
   desc: GNOME Settings Daemon
 - name: gsettings-qt
