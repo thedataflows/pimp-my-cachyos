@@ -47,7 +47,9 @@ The following is not an exaustive list, but a highlight of what will be installe
    - Show all available tasks: `mise tasks` or `mr` (alias)
    - Run all setup: `mise run all` or `mr all`
    - Individual tasks can be run as well: `mr packages:add`, `mr system:grub`, etc.
-   - Add files to this repo: `mr files:add directory-or-file-path`
+   - Apply dotfiles: `mise run all` (runs `mise -E user dotfiles apply` + system apply) or `mise -E user dotfiles apply` for user files only
+   - Validate dotfiles state: `mise -E user dotfiles status --missing`
+   - Add files to this repo: `mise -E user dotfiles add ~/.config/foo` (user) or `sudo mise -E system dotfiles add /etc/foo.conf` (system/root)
 
 3. Reboot the system at least after the first run.
 

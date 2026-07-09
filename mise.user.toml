@@ -1,0 +1,20 @@
+[settings]
+dotfiles.root = "symlink/~"
+dotfiles.default_mode = "symlink"
+
+[dotfiles]
+# Home directories: symlink each file individually so ~/.config etc. can still hold unmanaged files
+"~/.config"  = { mode = "symlink-each" }
+"~/.gnupg"   = { mode = "symlink-each" }
+"~/.local"   = { mode = "symlink-each" }
+"~/Pictures" = { mode = "symlink-each" }
+
+# Home top-level files
+"~/.aliases"         = {}
+"~/.fzf"             = {}
+"~/.gitconfig"       = {}
+"~/.gtkrc-2.0"       = {}
+"~/.profile"         = {}
+"~/.zsh_plugins.txt" = {}
+"~/.zshrc"           = {}
+"~/iommu-viewer.sh"  = {}

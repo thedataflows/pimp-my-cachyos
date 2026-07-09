@@ -9,9 +9,7 @@ mise run packages:add packages/dank-material-shell.yaml
 
 echo "Setting up Niri with DankMaterialShell..."
 
-mise run files:ln symlink/~/.config/systemd/user
-mise run files:ln symlink/~/.config/xdg-desktop-portal
-mise run files:ln symlink/~/.config/DankMaterialShell
+mise -E user dotfiles apply
 systemctl --user daemon-reload
 
 # Enable DMS service (but don't start it - it will start with Niri)

@@ -10,8 +10,8 @@ mise run packages:add
 mise run packages:remove
 
 ## Configure: files
-mise run files:cp
-mise run files:ln
+mise -E user dotfiles apply
+sudo mise -E system dotfiles apply
 
 ## Configure: network
 mise run network:firewall

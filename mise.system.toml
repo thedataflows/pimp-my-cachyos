@@ -1,0 +1,8 @@
+[settings]
+dotfiles.root = "copy"
+dotfiles.default_mode = "copy"
+
+[dotfiles]
+# System files
+"/etc"       = { source = "copy/etc", mode = "copy" }
+"/usr/local" = { source = "copy/usr/local", mode = "copy" }
