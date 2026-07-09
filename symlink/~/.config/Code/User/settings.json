@@ -483,4 +483,12 @@
   "businessAutomationTools.cmmn.enablePropertiesPanel": true,
   "businessAutomationTools.dmn.enablePropertiesPanel": true,
   "hediet.vscode-drawio.resizeImages": null,
+  "yaml.disableSchemaDetection": [
+    "**/.github/workflows/*.yml",
+    "**/.github/workflows/*.yaml",
+    "**/.gitea/workflows/*.yml",
+    "**/.gitea/workflows/*.yaml",
+    "**/.forgejo/workflows/*.yml",
+    "**/.forgejo/workflows/*.yaml"
+  ],
 }
