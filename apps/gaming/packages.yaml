@@ -1,0 +1,26 @@
+- name: bottles
+  desc: Easily manage wine and proton prefix
+- name: gamescope
+  desc: SteamOS session compositing window manager
+- name: aur/gamescope-nvidia
+  desc: SteamOS session compositing window manager (NVIDIA patch)
+- name: gamemode
+  desc: A daemon/lib combo that allows games to request a set of optimisations be
+    temporarily applied to the host OS
+- name: lib32-gamemode
+  desc: A daemon/lib combo that allows games to request a set of optimisations be
+    temporarily applied to the host OS
+- name: steam
+  desc: Valve's digital software delivery system
+- name: vkd3d
+  desc: Direct3D 12 to Vulkan translation library By WineHQ
+- name: protonup-qt
+  desc: Install and manage Proton-GE and Luxtorpeda for Steam and Wine-GE for Lutris
+- name: aur/joystickwake
+  desc: A joystick-aware screen waker
+- name: xone-dongle-firmware
+  desc: Xbox Wireless Controller Adapter firmware
+- name: obs-vkcapture
+  desc: OBS Linux Vulkan/OpenGL game capture
+- name: lib32-obs-vkcapture
+  desc: OBS Linux Vulkan/OpenGL game capture (32-bit)

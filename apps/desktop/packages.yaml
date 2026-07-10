@@ -1,0 +1,13 @@
+- name: bibata-cursor-theme-bin
+  desc: Material Based Cursor Theme
+- name: dconf-editor
+  desc: GSettings editor for GNOME
+- name: aur/menulibre
+  desc: An advanced menu editor that provides modern features in a clean, easy-to-use
+    interface
+- name: webkit2gtk-4.1
+  desc: Web content engine for GTK
+- name: wl-clipboard
+  desc: Command-line copy/paste utilities for Wayland
+- name: cachyos-wallpapers
+  desc: Wallpapers for CachyOS

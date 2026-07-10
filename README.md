@@ -21,7 +21,7 @@ The following is not an exaustive list, but a highlight of what will be installe
   - Cursors: `Bibata Modern Amber`
   - Fonts: `Roboto`, `JetBrainsMono Nerd Font`
 - Secret management: `KeePassXC` (integrates with the browser, with ssh-agent and acts as a system wallet)
-- Web browser: `Thorium`, `Zen`, `Brave` (deprecated)
+- Web browser: `Thorium`, `Zen`
 - Mail client: `Betterbird` (enhanced Thunderbird fork)
 - Office suite: `ONLYOFFICE` (closer to MS Office than LibreOffice, and lighter)
 - Productivity: `AnyType`
@@ -46,8 +46,8 @@ The following is not an exaustive list, but a highlight of what will be installe
    - Install mise: `sudo pacman -Sy mise --noconfirm --needed`
    - Show all available tasks: `mise tasks` or `mr` (alias)
    - Run all setup: `mise run all` or `mr all`
-   - Individual tasks can be run as well: `mr packages:add`, `mr system:grub`, etc.
-   - Apply dotfiles: `mise run all` (runs `mise -E user dotfiles apply` + system apply) or `mise -E user dotfiles apply` for user files only
+   - Individual apps: `mr <appname>` (e.g., `mr atuin`) or `mr system-htop` for system tasks
+   - Apps are self-contained in `apps/<appname>/` with `packages.yaml`, `config/`, and `mise-tasks/<appname>`.
    - Validate dotfiles state: `mise -E user dotfiles status --missing`
    - Add files to this repo: `mise -E user dotfiles add ~/.config/foo` (user) or `sudo mise -E system dotfiles add /etc/foo.conf` (system/root)
 
@@ -152,6 +152,30 @@ I don't yet like it and do not have the time to learn it.
   - Package scripts automatically filter by hostname - packages without `hosts` field install everywhere, those with `hosts` array only install on matching machines
 
   - Package scripts automatically filter by hostname - packages without `hosts` field install everywhere, those with `hosts` array only install on matching machines
+
+## Migration to v4.0.0
+
+Version 4.0.0 introduced self-contained `apps/<appname>/` modules.
+To migrate from an earlier version:
+
+1. Pull the v4.0.0 changes.
+2. Run the migration script from the repository root:
+   ```sh
+   ./migrate-to-apps.py
+   ```
+3. The script will:
+   - Move configs from `symlink/`, `copy/`, and packages from `packages/` into `apps/<appname>/`.
+   - Regenerate `mise.user.toml`, `mise.system.toml`, `mise.toml`, and `mise-tasks/all.sh`.
+   - Discover app tasks via `apps/*/mise-tasks/`.
+   - Re-apply user dotfiles so your home symlinks point to the new locations.
+4. For system dotfiles, run manually with sudo:
+   ```sh
+   sudo -E MISE_EXPERIMENTAL=1 mise -E system dotfiles apply
+   ```
+5. Use `mise run <appname>` to install/configure individual apps, or `mise run all` for everything.
+
+The old `packages/`, `symlink/`, and `copy/` directories are removed by the migration script.
+The script is idempotent; re-running it rebuilds the dotfiles configs and reapplies user dotfiles.
 
 ## License
 

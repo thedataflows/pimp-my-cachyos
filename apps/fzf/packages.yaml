@@ -1,0 +1,5 @@
+- name: fzf
+  desc: Command-line fuzzy finder
+- name: aur/fzf-tab-completion-git
+  desc: Tab completion using fzf in zsh, bash, GNU readline apps (e.g. python, php
+    -a etc.)

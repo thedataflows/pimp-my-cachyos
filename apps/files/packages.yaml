@@ -1,0 +1,61 @@
+- name: eza
+  desc: A modern replacement for ls (community fork of exa)
+- name: fd
+  desc: Simple, fast and user-friendly alternative to find
+- name: skim
+  desc: Fuzzy Finder in Rust!
+- name: aur/rnr-bin
+  desc: A CLI tool to rename files and directories that supports regex. Compiled binary
+- name: chafa
+  desc: Image-to-text converter supporting a wide range of symbols and palettes, transparency,
+    animations, etc.
+- name: gdu
+  desc: Fast disk usage analyzer
+- name: duf
+  desc: Disk Usage/Free Utility
+- name: dust
+  desc: A more intuitive version of du in rust
+- name: lsof
+  desc: Lists open files for running Unix processes
+- name: tree
+  desc: A directory listing program displaying a depth indented list of files
+- name: lnav
+  desc: A curses-based tool for viewing and analyzing log files
+- name: xorriso
+  desc: frontend for libraries libburn and libisofs
+- name: zip
+  desc: Compressor/archiver for creating and modifying zipfiles
+- name: aur/fswatch
+  desc: A cross-platform file change monitor with multiple backends
+- name: p7zip
+  desc: Command-line file archiver with high compression ratio
+- name: pigz
+  desc: Parallel implementation of the gzip file compressor
+- name: sshfs
+  desc: FUSE client based on the SSH File Transfer Protocol
+- name: caligula
+  desc: A user-friendly, lightweight TUI for disk imaging
+- name: libunrar
+  desc: Library and header file for applications that use libunrar
+- name: xarchiver
+  desc: GTK+ frontend to various command line archivers
+- name: qdirstat-bin
+  desc: Qt-based directory statistics (KDirStat/K4DirStat without any KDE - from the
+    original KDirStat author)
+- name: dolphin-plugins
+  desc: Extra Dolphin plugins
+- name: kio-admin
+  desc: Manage files as administrator using the admin:// KIO protocol
+- name: filelight
+  desc: View disk usage information
+- name: bcompare
+  desc: 'Beyond Compare 5: Compare, sync, and merge files and folders'
+- name: bcompare-kde6
+  desc: KDE Plasma 6 service menus for Beyond Compare 5
+- name: binwalk
+  desc: Tool for searching a given binary image for embedded files
+- name: hexyl
+  desc: Colored command-line hex viewe
+- name: ouch
+  desc: A command line utility for easily compressing and decompressing files and
+    directories

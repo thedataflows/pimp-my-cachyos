@@ -3,3 +3,4 @@
 .codegpt
 
 -comp-*
+__pycache__

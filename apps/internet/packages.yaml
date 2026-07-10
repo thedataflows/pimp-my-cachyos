@@ -1,0 +1,4 @@
+- name: zen-browser-bin
+  desc: Performance oriented Firefox-based web browser
+- name: aur/trgui-ng-bin
+  desc: Remote GUI for Transmission torrent daemon

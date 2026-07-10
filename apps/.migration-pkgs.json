@@ -1,0 +1,1303 @@
+{
+  "ai": [
+    {
+      "desc": "Discover, download, and run local LLMs",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "aur/lmstudio-bin"
+    },
+    {
+      "desc": "The AI coding agent built for the terminal",
+      "name": "opencode"
+    },
+    {
+      "desc": "One interface for all your Claude Code, Codex and OpenCode agents (Electron desktop app)",
+      "name": "aur/paseo-bin"
+    }
+  ],
+  "android": [
+    {
+      "desc": "Display and control your Android device",
+      "name": "scrcpy"
+    },
+    {
+      "desc": "Android platform tools",
+      "name": "android-tools"
+    },
+    {
+      "desc": "Simple tool for viewing MTP devices as FUSE filesystems",
+      "name": "aur/go-mtpfs-git"
+    }
+  ],
+  "backup": [
+    {
+      "desc": "A fast and versatile file copying tool for remote and local files",
+      "name": "rsync"
+    },
+    {
+      "desc": "Sync files to and from Google Drive, S3, Swift, Cloudfiles, Dropbox and Google Cloud Storage",
+      "name": "rclone"
+    },
+    {
+      "desc": "Pacman hooks that use snapper to create pre/post btrfs snapshots like openSUSE's YaST",
+      "name": "snap-pac"
+    },
+    {
+      "desc": "A cross-platform backup-tool with encryption, deduplication, compression and cloud support.",
+      "name": "aur/kopia-bin"
+    },
+    {
+      "desc": "A cross-platform backup-tool with encryption, deduplication, compression and cloud support.",
+      "name": "aur/kopia-ui-bin"
+    },
+    {
+      "desc": "Open Source Continuous Replication / Cluster Synchronization Thing",
+      "name": "syncthing"
+    },
+    {
+      "desc": "Tray application for Syncthing (using Qt 6)",
+      "name": "aur/syncthingtray-qt6"
+    }
+  ],
+  "boot": [
+    {
+      "desc": "Modern, advanced, portable, multiprotocol bootloader",
+      "name": "limine"
+    },
+    {
+      "desc": "mkinitcpio hook for Limine bootloader",
+      "name": "limine-mkinitcpio-hook"
+    },
+    {
+      "desc": "Generate Limine boot entries from snapper snapshots",
+      "name": "limine-snapper-sync"
+    },
+    {
+      "desc": "GNU GRand Unified Bootloader",
+      "name": "grub",
+      "state": "absent"
+    },
+    {
+      "desc": "Include btrfs snapshots in GRUB boot options",
+      "name": "grub-btrfs",
+      "state": "absent"
+    },
+    {
+      "desc": "A graphical grub2 settings manager",
+      "name": "grub-customizer",
+      "state": "absent"
+    },
+    {
+      "desc": "Pacman hooks for GRUB",
+      "name": "grub-hook",
+      "state": "absent"
+    },
+    {
+      "desc": "Soothing pastel theme for GRUB2 -- Mocha colorscheme",
+      "name": "catppuccin-mocha-grub-theme-git",
+      "state": "absent"
+    }
+  ],
+  "cloud": [
+    {
+      "desc": "Find and install kubectl plugins",
+      "name": "krew"
+    },
+    {
+      "desc": "Multi pod and container log tailing for Kubernetes",
+      "name": "stern"
+    },
+    {
+      "desc": "Open and extensible continuous delivery solution for Kubernetes",
+      "name": "fluxcd"
+    },
+    {
+      "desc": "TUI for managing Kubernetes clusters and pods",
+      "name": "k9s"
+    },
+    {
+      "desc": "CLI for building apps using Cloud Native Buildpacks",
+      "name": "pack-cli"
+    },
+    {
+      "desc": "Free Open Source Kubernetes IDE",
+      "name": "aur/freelens-bin"
+    }
+  ],
+  "containers": [
+    {
+      "desc": "Pack, ship and run any application as a lightweight container",
+      "name": "docker"
+    },
+    {
+      "desc": "Docker CLI plugin for extended build capabilities with BuildKit",
+      "name": "docker-buildx"
+    },
+    {
+      "desc": "Fast, isolated development environments using Docker",
+      "name": "docker-compose"
+    },
+    {
+      "desc": "A simple terminal UI for docker and docker-compose, written in Go with the gocui library",
+      "name": "lazydocker"
+    },
+    {
+      "desc": "A command line utility for various operations on container images and image repositories.",
+      "name": "skopeo"
+    },
+    {
+      "desc": "Tool and library for running OCI-based containers in pods",
+      "name": "podman"
+    },
+    {
+      "desc": "Podman Terminal UI",
+      "name": "aur/podman-tui-bin"
+    }
+  ],
+  "crypto": [
+    {
+      "desc": "A simple, modern and secure file encryption tool",
+      "name": "age"
+    },
+    {
+      "desc": "Editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats",
+      "name": "sops"
+    },
+    {
+      "desc": "Thales/Gemalto SafeNet Authentication Client for eToken 5110/5300 & IDPrime (core PKCS#11 modules)",
+      "name": "aur/sac-core"
+    }
+  ],
+  "dank-material-shell": [
+    {
+      "desc": "DankMaterialShell - A feature-rich desktop shell built with Quickshell and Go (stable release)",
+      "name": "dms-shell-niri"
+    },
+    {
+      "desc": "The core framework for DMS (required)",
+      "name": "quickshell"
+    },
+    {
+      "desc": "Stateless system and process monitoring tool with TUI, CLI, and REST API",
+      "name": "dgop"
+    },
+    {
+      "desc": "Extremely fast indexed filesystem search service",
+      "name": "aur/dsearch-bin"
+    },
+    {
+      "desc": "D-Bus interface for user account query and manipulation (for DMS user profiles)",
+      "name": "accountsservice"
+    },
+    {
+      "desc": "Tools for accessing I2C devices (for DMS monitor backlight control)",
+      "name": "i2c-tools"
+    },
+    {
+      "desc": "Adds communication between KDE and your smartphone",
+      "name": "kdeconnect"
+    }
+  ],
+  "desktop": [
+    {
+      "desc": "Material Based Cursor Theme",
+      "name": "bibata-cursor-theme-bin"
+    },
+    {
+      "desc": "GSettings editor for GNOME",
+      "name": "dconf-editor"
+    },
+    {
+      "desc": "An advanced menu editor that provides modern features in a clean, easy-to-use interface",
+      "name": "aur/menulibre"
+    },
+    {
+      "desc": "Web content engine for GTK",
+      "name": "webkit2gtk-4.1"
+    },
+    {
+      "desc": "Command-line copy/paste utilities for Wayland",
+      "name": "wl-clipboard"
+    },
+    {
+      "desc": "Wallpapers for CachyOS",
+      "name": "cachyos-wallpapers",
+      "state": "absent"
+    }
+  ],
+  "development": [
+    {
+      "desc": "the fast distributed version control system",
+      "name": "git"
+    },
+    {
+      "desc": "Syntax-highlighting pager for git and diff output",
+      "name": "git-delta"
+    },
+    {
+      "desc": "CLI for Git worktree management, designed for parallel AI agent workflows",
+      "name": "worktrunk"
+    },
+    {
+      "desc": "An experimental diff tool that compares files based on their syntax",
+      "name": "difftastic"
+    },
+    {
+      "desc": "Core compiler tools for the Go programming language",
+      "name": "go"
+    },
+    {
+      "desc": "The PyPA recommended tool for installing Python packages",
+      "name": "python-pip"
+    },
+    {
+      "desc": "Save disk space by cleaning non-essential files from software projects",
+      "name": "kondo"
+    },
+    {
+      "desc": "Command-line markdown renderer",
+      "name": "glow"
+    },
+    {
+      "desc": "Simple terminal UI for git commands",
+      "name": "lazygit"
+    },
+    {
+      "desc": "sq data wrangler",
+      "name": "sq-bin"
+    },
+    {
+      "desc": "Visual Studio Code (vscode)",
+      "name": "aur/visual-studio-code-bin"
+    },
+    {
+      "desc": "A high-performance, multiplayer code editor from the creators of Atom and Tree-sitter",
+      "name": "zed"
+    },
+    {
+      "desc": "Free universal SQL Client for developers and database administrators (community edition)",
+      "name": "dbeaver"
+    },
+    {
+      "desc": "An extremely fast Python package installer and resolver written in Rust",
+      "name": "uv"
+    },
+    {
+      "desc": "An analytical in-process SQL database management system",
+      "name": "duckdb"
+    },
+    {
+      "desc": "Convert HTML to Markdown. Even works with entire websites and can be extended through rules.",
+      "name": "html2markdown-bin"
+    }
+  ],
+  "files": [
+    {
+      "desc": "A modern replacement for ls (community fork of exa)",
+      "name": "eza"
+    },
+    {
+      "desc": "Simple, fast and user-friendly alternative to find",
+      "name": "fd"
+    },
+    {
+      "desc": "Command-line fuzzy finder",
+      "name": "fzf"
+    },
+    {
+      "desc": "Tab completion using fzf in zsh, bash, GNU readline apps (e.g. python, php -a etc.)",
+      "name": "aur/fzf-tab-completion-git"
+    },
+    {
+      "desc": "Fuzzy Finder in Rust!",
+      "name": "skim"
+    },
+    {
+      "desc": "A CLI tool to rename files and directories that supports regex. Compiled binary",
+      "name": "aur/rnr-bin"
+    },
+    {
+      "desc": "Blazing fast terminal file manager written in Rust, based on async I/O",
+      "name": "yazi"
+    },
+    {
+      "desc": "Image-to-text converter supporting a wide range of symbols and palettes, transparency, animations, etc.",
+      "name": "chafa"
+    },
+    {
+      "desc": "A file manager that emulates Norton Commander",
+      "name": "mc"
+    },
+    {
+      "desc": "Fast disk usage analyzer",
+      "name": "gdu"
+    },
+    {
+      "desc": "Disk Usage/Free Utility",
+      "name": "duf"
+    },
+    {
+      "desc": "A more intuitive version of du in rust",
+      "name": "dust"
+    },
+    {
+      "desc": "Lists open files for running Unix processes",
+      "name": "lsof"
+    },
+    {
+      "desc": "A directory listing program displaying a depth indented list of files",
+      "name": "tree"
+    },
+    {
+      "desc": "A curses-based tool for viewing and analyzing log files",
+      "name": "lnav"
+    },
+    {
+      "desc": "frontend for libraries libburn and libisofs",
+      "name": "xorriso"
+    },
+    {
+      "desc": "Compressor/archiver for creating and modifying zipfiles",
+      "name": "zip"
+    },
+    {
+      "desc": "A cross-platform file change monitor with multiple backends",
+      "name": "aur/fswatch"
+    },
+    {
+      "desc": "Command-line file archiver with high compression ratio",
+      "name": "p7zip"
+    },
+    {
+      "desc": "Parallel implementation of the gzip file compressor",
+      "name": "pigz"
+    },
+    {
+      "desc": "FUSE client based on the SSH File Transfer Protocol",
+      "name": "sshfs"
+    },
+    {
+      "desc": "A general purpose fuzzy finder for your terminal",
+      "name": "television"
+    },
+    {
+      "desc": "A user-friendly, lightweight TUI for disk imaging",
+      "name": "caligula"
+    },
+    {
+      "desc": "Library and header file for applications that use libunrar",
+      "name": "libunrar"
+    },
+    {
+      "desc": "GTK+ frontend to various command line archivers",
+      "name": "xarchiver"
+    },
+    {
+      "desc": "Qt-based directory statistics (KDirStat/K4DirStat without any KDE - from the original KDirStat author)",
+      "name": "qdirstat-bin"
+    },
+    {
+      "desc": "Extra Dolphin plugins",
+      "name": "dolphin-plugins"
+    },
+    {
+      "desc": "Manage files as administrator using the admin:// KIO protocol",
+      "name": "kio-admin"
+    },
+    {
+      "desc": "View disk usage information",
+      "name": "filelight"
+    },
+    {
+      "desc": "Beyond Compare 5: Compare, sync, and merge files and folders",
+      "name": "bcompare"
+    },
+    {
+      "desc": "KDE Plasma 6 service menus for Beyond Compare 5",
+      "name": "bcompare-kde6"
+    },
+    {
+      "desc": "Tool for searching a given binary image for embedded files",
+      "name": "binwalk"
+    },
+    {
+      "desc": "Colored command-line hex viewe",
+      "name": "hexyl"
+    },
+    {
+      "desc": "A command line utility for easily compressing and decompressing files and directories",
+      "name": "ouch"
+    }
+  ],
+  "fonts": [
+    {
+      "desc": "Patched font JetBrains Mono from nerd fonts library",
+      "name": "ttf-jetbrains-mono-nerd"
+    },
+    {
+      "desc": "High number of extra glyphs from popular 'iconic fonts'",
+      "name": "ttf-nerd-fonts-symbols"
+    },
+    {
+      "desc": "Google Noto emoji fonts",
+      "name": "noto-fonts-emoji"
+    },
+    {
+      "desc": "A sans serif typeface designed by Andrew Paglinawan using geometric shapes (variable)",
+      "name": "ttf-quicksand-variable"
+    },
+    {
+      "desc": "A typeface specially designed for user interfaces",
+      "name": "inter-font"
+    },
+    {
+      "desc": "Google's signature family of fonts",
+      "name": "ttf-roboto"
+    }
+  ],
+  "gaming": [
+    {
+      "desc": "Easily manage wine and proton prefix",
+      "name": "bottles"
+    },
+    {
+      "desc": "SteamOS session compositing window manager",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "gamescope"
+    },
+    {
+      "desc": "SteamOS session compositing window manager (NVIDIA patch)",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "aur/gamescope-nvidia",
+      "state": "absent"
+    },
+    {
+      "desc": "A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "gamemode"
+    },
+    {
+      "desc": "A daemon/lib combo that allows games to request a set of optimisations be temporarily applied to the host OS",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "lib32-gamemode"
+    },
+    {
+      "desc": "A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and more",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "mangohud"
+    },
+    {
+      "desc": "Valve's digital software delivery system",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "steam"
+    },
+    {
+      "desc": "Direct3D 12 to Vulkan translation library By WineHQ",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "vkd3d"
+    },
+    {
+      "desc": "Install and manage Proton-GE and Luxtorpeda for Steam and Wine-GE for Lutris",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "protonup-qt"
+    },
+    {
+      "desc": "A joystick-aware screen waker",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "aur/joystickwake"
+    },
+    {
+      "desc": "Xbox Wireless Controller Adapter firmware",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "xone-dongle-firmware"
+    },
+    {
+      "desc": "OBS Linux Vulkan/OpenGL game capture",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "obs-vkcapture"
+    },
+    {
+      "desc": "OBS Linux Vulkan/OpenGL game capture (32-bit)",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "lib32-obs-vkcapture"
+    }
+  ],
+  "graphics": [
+    {
+      "desc": "An HEIF and AVIF file format decoder and encoder",
+      "name": "libheif"
+    },
+    {
+      "desc": "A simple drawing application to create handwritten notes",
+      "name": "rnote"
+    },
+    {
+      "desc": "Panorama photo stitcher",
+      "name": "hugin"
+    },
+    {
+      "desc": "A simple image viewer for GNOM",
+      "name": "loupe"
+    },
+    {
+      "desc": "A fast and easy to use image viewer",
+      "name": "gwenview"
+    },
+    {
+      "desc": "Image format plugins for Qt 6",
+      "name": "kimageformats"
+    }
+  ],
+  "internet": [
+    {
+      "desc": "Chromium fork focused on high performance and security",
+      "name": "aur/thorium-browser-updated-bin"
+    },
+    {
+      "desc": "Performance oriented Firefox-based web browser",
+      "name": "zen-browser-bin"
+    },
+    {
+      "desc": "Signal Private Messenger for Linux",
+      "name": "signal-desktop"
+    },
+    {
+      "desc": "Remote GUI for Transmission torrent daemon",
+      "name": "aur/trgui-ng-bin"
+    }
+  ],
+  "kde-desktop": [
+    {
+      "desc": "KDE Config Module for SDDM",
+      "name": "sddm-kcm",
+      "state": "absent"
+    },
+    {
+      "desc": "Plasma Login Manager",
+      "name": "plasma-login-manager"
+    },
+    {
+      "desc": "KDE Plasma Desktop",
+      "name": "plasma-desktop"
+    },
+    {
+      "desc": "Provides integration plugins for various KDE frameworks for the wayland windowing system",
+      "name": "kwayland-integration"
+    },
+    {
+      "desc": "Syncs KDE settings to GTK applications",
+      "name": "kde-gtk-config"
+    },
+    {
+      "desc": "All kind of addons to improve your Plasma",
+      "name": "kdeplasma-addons"
+    },
+    {
+      "desc": "Latte-Dock and WM status bar customization features for the default Plasma panels",
+      "name": "aur/plasma6-applets-panel-colorizer"
+    },
+    {
+      "desc": "A backend implementation for xdg-desktop-portal using Qt/KF5",
+      "name": "xdg-desktop-portal-kde"
+    },
+    {
+      "desc": "A backend implementation for xdg-desktop-portal using GTK",
+      "name": "xdg-desktop-portal-gtk"
+    },
+    {
+      "desc": "xdg-desktop-portal backend for wlroots",
+      "name": "xdg-desktop-portal-wlr"
+    },
+    {
+      "name": "xdg-desktop-portal-gnome"
+    },
+    {
+      "desc": "GNOME Settings Daemon",
+      "name": "gnome-settings-daemon"
+    },
+    {
+      "desc": "Qml bindings for GSettings",
+      "name": "gsettings-qt"
+    },
+    {
+      "desc": "Desktop Sharing",
+      "name": "krfb"
+    },
+    {
+      "desc": "A colorful design icon theme for linux desktops",
+      "name": "qogir-icon-theme"
+    },
+    {
+      "desc": "Online account providers for the KAccounts system",
+      "name": "kaccounts-providers"
+    },
+    {
+      "desc": "Qt5 Platform Theme integration plugins for the Plasma workspaces",
+      "name": "plasma5-integration"
+    },
+    {
+      "desc": "Plasma Specific Protocols for Wayland",
+      "name": "plasma-wayland-protocols"
+    },
+    {
+      "desc": "Remote Desktop Client",
+      "name": "krdc"
+    },
+    {
+      "desc": "Soothing pastel theme for KDE Plasma",
+      "name": "aur/catppuccin-plasma-colorscheme-mocha"
+    },
+    {
+      "desc": "Adds communication between KDE and your smartphone",
+      "name": "kdeconnect"
+    }
+  ],
+  "multimedia": [
+    {
+      "desc": "A music player aimed at audio enthusiasts and music collectors",
+      "name": "strawberry"
+    },
+    {
+      "desc": "Multimedia graph framework - spotify plugin",
+      "name": "gst-plugin-spotify"
+    },
+    {
+      "desc": "Multi-platform MPEG, VCD/DVD, and DivX player",
+      "name": "vlc"
+    },
+    {
+      "desc": "Multi-platform MPEG, VCD/DVD, and DivX player - H265/HEVC encoding",
+      "name": "vlc-plugin-x265"
+    },
+    {
+      "desc": "Multi-platform MPEG, VCD/DVD, and DivX player - FFMPEG plugins",
+      "name": "vlc-plugin-ffmpeg"
+    },
+    {
+      "desc": "Free and open source cross-platform multimedia player and framework - extra plugins",
+      "name": "vlc-plugins-extra"
+    },
+    {
+      "desc": "Free, open source software for live streaming and recording",
+      "name": "obs-studio"
+    },
+    {
+      "desc": "Cross-platform, easy to use, fast and functional audio editor",
+      "name": "ocenaudio-bin"
+    },
+    {
+      "desc": "Intel VA-API Media Applications and Scripts for libva",
+      "name": "libva-utils"
+    },
+    {
+      "desc": "A terminal music player",
+      "name": "kew"
+    },
+    {
+      "desc": "A simple TUI audio mixer for PipeWire",
+      "name": "wiremix"
+    }
+  ],
+  "network": [
+    {
+      "desc": "Configure NetworkManager to use iwd instead of wpa_supplicant",
+      "name": "aur/networkmanager-iwd-overlay"
+    },
+    {
+      "desc": "Friendly and fast tool for sending HTTP requests",
+      "name": "xh"
+    },
+    {
+      "desc": "A terminal-based tool for monitoring the progress of data through a pipeline",
+      "name": "pv"
+    },
+    {
+      "desc": "unar and lsar",
+      "name": "unarchiver"
+    },
+    {
+      "desc": "SSH protocol implementation for remote login, command execution and file transfer",
+      "name": "openssh"
+    },
+    {
+      "desc": "Network utility to retrieve files from the Web",
+      "name": "wget"
+    },
+    {
+      "desc": "command line tool and library for transferring data with URLs",
+      "name": "curl"
+    },
+    {
+      "desc": "A collection of common network programs",
+      "name": "inetutils"
+    },
+    {
+      "desc": "Configuration tools for Linux networking",
+      "name": "net-tools"
+    },
+    {
+      "desc": "A complete, highly portable implementation of the DNS protocol",
+      "name": "dnsutils"
+    },
+    {
+      "desc": "Combines the functionality of traceroute and ping into one tool (CLI version)",
+      "name": "mtr"
+    },
+    {
+      "desc": "A network diagnostic tool",
+      "name": "trippy"
+    },
+    {
+      "desc": "Ping, but with a graph",
+      "name": "gping"
+    },
+    {
+      "desc": "A collection of tools making SSH more convenient",
+      "name": "ssh-tools"
+    },
+    {
+      "desc": "Utility for network discovery and security auditing",
+      "name": "nmap"
+    },
+    {
+      "desc": "Powerful command-line packet analyzer",
+      "name": "tcpdump"
+    },
+    {
+      "desc": "Terminal UI for tshark, inspired by Wireshark",
+      "name": "termshark"
+    },
+    {
+      "desc": "TCP/IP swiss army knife. OpenBSD variant.",
+      "name": "openbsd-netcat"
+    },
+    {
+      "desc": "next generation secure network tunnel - tools for configuration",
+      "name": "wireguard-tools"
+    },
+    {
+      "desc": "NetworkManager VPN plugin for OpenVPN",
+      "name": "networkmanager-openvpn"
+    },
+    {
+      "desc": "Console-based network monitoring utility",
+      "name": "iptraf-ng"
+    },
+    {
+      "desc": "Multipurpose relay",
+      "name": "socat"
+    },
+    {
+      "desc": "Command-line DNS client for humans",
+      "name": "doggo"
+    },
+    {
+      "desc": "Unix tool with terminal UI for visualizing socket statistics",
+      "name": "aur/neoss"
+    },
+    {
+      "desc": "Interactive CLI tool for HTTP inspection",
+      "name": "aur/wuzz-bin"
+    },
+    {
+      "desc": "Download utility that supports HTTP(S), FTP, BitTorrent, and Metalink",
+      "name": "aria2"
+    },
+    {
+      "desc": "lets you easily transfer files and open shells over a peer-to-peer WireGuard connection",
+      "name": "aur/wush"
+    },
+    {
+      "desc": "Terminal user interface for SSH (Binary)",
+      "name": "sshs"
+    },
+    {
+      "desc": "Command-line DNS client like dig",
+      "name": "dog"
+    },
+    {
+      "desc": "Recall your SSH sessions (also search your SSH config file)",
+      "name": "aur/ssh-ggh-bin"
+    },
+    {
+      "desc": "NetworkManager GUI connection editor and widgets",
+      "name": "nm-connection-editor"
+    },
+    {
+      "desc": "GTK+ GUI for rsync to synchronize folders, files and make backups",
+      "name": "grsync"
+    },
+    {
+      "desc": "Share your terminal over the web",
+      "name": "ttyd"
+    },
+    {
+      "desc": "TUI for managing wifi",
+      "name": "impala"
+    },
+    {
+      "desc": "TUI for managing WiFi using NetworkManager (a fork of impala)",
+      "name": "aur/wlctl-bin"
+    }
+  ],
+  "niri": [
+    {
+      "desc": "A scrollable-tiling Wayland compositor",
+      "name": "niri"
+    },
+    {
+      "desc": "xdg-desktop-portal backend for wlroots-based compositors",
+      "name": "xdg-desktop-portal-wlr"
+    },
+    {
+      "desc": "Command-line copy/paste utilities for Wayland",
+      "name": "wl-clipboard"
+    },
+    {
+      "desc": "Wayland clipboard history manager",
+      "name": "cliphist"
+    },
+    {
+      "desc": "Qt6 Wayland platform plugin (required by DMS)",
+      "name": "qt6-wayland"
+    },
+    {
+      "desc": "KDE polkit authentication agent for privilege escalation",
+      "name": "polkit-kde-agent"
+    },
+    {
+      "desc": "Xwayland outside your Wayland",
+      "name": "xwayland-satellite"
+    },
+    {
+      "desc": "Specifications of extended Wayland protocols",
+      "name": "wayland-protocols"
+    },
+    {
+      "desc": "mpris media player controller and lib for spotify, vlc, audacious, bmp, xmms2, and others.",
+      "name": "playerctl"
+    },
+    {
+      "desc": "Modern screenshot annotation tool, inspired by Swappy and Flameshot",
+      "name": "satty"
+    },
+    {
+      "desc": "Qt 6 Configuration Utility, patched to work correctly with KDE applications",
+      "name": "aur/qt6ct-kde",
+      "state": "absent"
+    },
+    {
+      "desc": "Qt 5 Configuration Utility, patched to work correctly with KDE applications",
+      "name": "aur/qt5ct-kde",
+      "state": "absent"
+    }
+  ],
+  "productivity": [
+    {
+      "desc": "Terminal-based EPUB and PDF reader with rich TUI",
+      "name": "aur/bookokrat-bin"
+    },
+    {
+      "desc": "Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will.",
+      "name": "betterbird-bin"
+    },
+    {
+      "desc": "Ebook management application",
+      "name": "calibre"
+    },
+    {
+      "desc": "An office suite that combines text, spreadsheet and presentation editors",
+      "name": "aur/onlyoffice-bin"
+    },
+    {
+      "desc": "Document Viewer",
+      "name": "okular"
+    },
+    {
+      "desc": "Collect your thoughts and notes without leaving the command line",
+      "name": "jrnl"
+    },
+    {
+      "desc": "Advanced Text Editor",
+      "name": "kate",
+      "state": "absent"
+    }
+  ],
+  "remote": [
+    {
+      "desc": "remote desktop client written in GTK+",
+      "name": "remmina"
+    },
+    {
+      "desc": "Free implementation of the Remote Desktop Protocol (RDP)",
+      "name": "freerdp"
+    },
+    {
+      "desc": "Yet another remote desktop software, written in Rust. Works out of the box, no configuration required.",
+      "name": "aur/rustdesk-bin"
+    },
+    {
+      "desc": "A self-hosted game stream host for Moonlight",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "sunshine"
+    },
+    {
+      "desc": "A client application for accessing the LookingGlass IVSHMEM device of a VM",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "looking-glass"
+    },
+    {
+      "desc": "A kernel module that implements a basic interface to the IVSHMEM device for when using LookingGlass in VM->VM mode",
+      "hosts": [
+        "cri-pc"
+      ],
+      "name": "looking-glass-module-dkms"
+    }
+  ],
+  "security": [
+    {
+      "desc": "Cross-platform community-driven port of Keepass password manager",
+      "name": "keepassxc"
+    },
+    {
+      "desc": "Lightweight passphrase dialog for SSH",
+      "name": "x11-ssh-askpass"
+    },
+    {
+      "desc": "A library for bits of crypto UI and parsing",
+      "name": "gcr"
+    },
+    {
+      "desc": "Collection of simple PIN or passphrase entry dialogs which utilize the Assuan protocol",
+      "name": "pinentry"
+    },
+    {
+      "desc": "Certificate Manager and Unified Crypto GUI",
+      "name": "kleopatra"
+    },
+    {
+      "desc": "ssh-add helper that uses kwallet and kpassworddialog",
+      "name": "ksshaskpass"
+    },
+    {
+      "desc": "Wallet management tool",
+      "name": "kwalletmanager",
+      "state": "absent"
+    }
+  ],
+  "shell": [
+    {
+      "desc": "A very advanced and programmable command interpreter (shell) for UNIX",
+      "name": "zsh"
+    },
+    {
+      "desc": "the cure to slow zsh plugin management",
+      "name": "aur/zsh-antidote"
+    },
+    {
+      "desc": "A prompt theme engine for any shell.",
+      "name": "aur/oh-my-posh-bin"
+    },
+    {
+      "desc": "A modern, hackable, featureful, OpenGL-based terminal emulator",
+      "name": "kitty"
+    },
+    {
+      "desc": "Fast, native, feature-rich terminal emulator pushing modern features",
+      "name": "ghostty"
+    },
+    {
+      "desc": "Terminal multiplexer",
+      "name": "tmux"
+    },
+    {
+      "desc": "A terminal based program for viewing text files",
+      "name": "less"
+    },
+    {
+      "desc": "Cat clone with syntax highlighting and git integration",
+      "name": "bat"
+    },
+    {
+      "desc": "A smarter cd command for your terminal",
+      "name": "zoxide"
+    },
+    {
+      "desc": "Magical shell history",
+      "name": "atuin"
+    },
+    {
+      "desc": "The front-end to your dev env",
+      "name": "mise"
+    },
+    {
+      "desc": "Query and update data structures from the command line",
+      "name": "aur/dasel-bin"
+    },
+    {
+      "desc": "A feature-rich and performance oriented neofetch like system information tool",
+      "name": "fastfetch"
+    },
+    {
+      "desc": "Smart session manager for the terminal",
+      "name": "aur/sesh-bin"
+    }
+  ],
+  "system": [
+    {
+      "desc": "Interactive process viewer",
+      "name": "htop"
+    },
+    {
+      "desc": "A monitor of system resources, bpytop ported to C++",
+      "name": "btop"
+    },
+    {
+      "desc": "Terminal system monitor with histograms",
+      "name": "zenith"
+    },
+    {
+      "desc": "A system and process level monitor",
+      "name": "atop"
+    },
+    {
+      "desc": "View I/O usage of processes",
+      "name": "iotop"
+    },
+    {
+      "desc": "a collection of performance monitoring tools (iostat,isag,mpstat,pidstat,sadf,sar)",
+      "name": "sysstat"
+    },
+    {
+      "desc": "Top-like interface for container metrics",
+      "name": "ctop"
+    },
+    {
+      "desc": "A diagnostic, debugging and instructional userspace tracer",
+      "name": "strace"
+    },
+    {
+      "desc": "Executes commands in response to file modifications",
+      "name": "watchexec"
+    },
+    {
+      "desc": "A modern replacement for ps written in Rust",
+      "name": "procs"
+    },
+    {
+      "desc": "Run multiple commands in parallel",
+      "name": "aur/mprocs-bin"
+    },
+    {
+      "desc": "A fast, simple TUI for interacting with systemd services and their logs",
+      "name": "systemctl-tui"
+    },
+    {
+      "desc": "Desktop Management Interface table related utilities",
+      "name": "dmidecode"
+    },
+    {
+      "desc": "Heterogeneous set of I2C tools for Linux that used to be part of lm-sensors",
+      "name": "i2c-tools"
+    },
+    {
+      "desc": "Collection of user space tools for general SMBus access and hardware monitoring",
+      "name": "lm_sensors"
+    },
+    {
+      "desc": "Hardware detection tool from openSUSE",
+      "name": "hwinfo"
+    },
+    {
+      "desc": "Gives you the temperature of your hard drive by reading S.M.A.R.T. information",
+      "name": "hddtemp"
+    },
+    {
+      "desc": "alpm data (pacman database) extraction utility",
+      "name": "expac"
+    },
+    {
+      "desc": "Makes power profiles handling available over D-Bus",
+      "name": "power-profiles-daemon"
+    },
+    {
+      "desc": "An application for managing BTRFS subvolumes and Snapper snapshots",
+      "name": "btrfs-assistant"
+    },
+    {
+      "desc": "Easily install prebuilt binaries from GitHub",
+      "name": "aur/eget-bin"
+    },
+    {
+      "desc": "A terminal user interface for searching and installing Arch Linux packages (binary version)",
+      "name": "aur/pacseek-bin"
+    },
+    {
+      "desc": "Simple TUI frontend for paru or yay",
+      "name": "aur/parui"
+    },
+    {
+      "desc": "A new bootable USB solution",
+      "name": "ventoy-bin"
+    },
+    {
+      "desc": "A modern watch command, binary version",
+      "name": "aur/viddy-bin"
+    },
+    {
+      "desc": "fzf terminal UI for systemctl",
+      "name": "aur/sysz"
+    },
+    {
+      "desc": "A text-mode partitioning tool that works on GUID Partition Table (GPT) disks",
+      "name": "gptfdisk"
+    },
+    {
+      "desc": "A key remapping daemon for linux",
+      "name": "keyd"
+    },
+    {
+      "desc": "Get information on your mounted filesystems",
+      "name": "dysk"
+    },
+    {
+      "desc": "GPUs process monitoring for AMD, Intel and NVIDIA",
+      "name": "nvtop"
+    },
+    {
+      "desc": "A Partition Magic clone, frontend to GNU Parted",
+      "name": "gparted"
+    },
+    {
+      "desc": "A graphical user interface for the smartctl hard disk drive health inspection tool.",
+      "name": "gsmartcontrol"
+    },
+    {
+      "desc": "Open source RGB lighting control that doesn't depend on manufacturer software",
+      "name": "openrgb"
+    },
+    {
+      "desc": "Control your EWMH compliant window manager from command line",
+      "name": "wmctrl"
+    },
+    {
+      "desc": "Graphical front-end for systemd",
+      "name": "systemd-ui"
+    },
+    {
+      "desc": "Monitor your CPU, Memory, Disk, Network and GPU usage",
+      "name": "mission-center"
+    },
+    {
+      "desc": "Linux device manager for a wide range of Logitech devices",
+      "name": "solaar"
+    },
+    {
+      "desc": "System log viewer tool",
+      "name": "ksystemlog"
+    },
+    {
+      "desc": "Plasma applet for audio volume management using PulseAudio",
+      "name": "plasma-pa"
+    },
+    {
+      "desc": "An interface for monitoring system sensors, process information and other system resources",
+      "name": "plasma-systemmonitor"
+    },
+    {
+      "desc": "Plasma applet written in QML for managing network connections",
+      "name": "plasma-nm"
+    },
+    {
+      "desc": "Monitors S.M.A.R.T. capable devices for imminent failure",
+      "name": "plasma-disks"
+    },
+    {
+      "desc": "D-Bus service to check the availability of dual-GPU",
+      "name": "switcheroo-control"
+    },
+    {
+      "desc": "A KDE utility that allows you to manage disks, partitions, and file systems",
+      "name": "partitionmanager"
+    },
+    {
+      "desc": "Audio Effects for Pipewire applications",
+      "name": "easyeffects"
+    },
+    {
+      "desc": "LV2 plug-in suite",
+      "name": "calf"
+    },
+    {
+      "desc": "inotify-tools is a C library and a set of command-line programs for Linux providing a simple interface to inotify.",
+      "name": "inotify-tools"
+    }
+  ],
+  "text": [
+    {
+      "desc": "Command-line JSON processor",
+      "name": "jq"
+    },
+    {
+      "desc": "rga: ripgrep, but also search in PDFs, E-Books, Office documents, zip, tar.gz, etc.",
+      "name": "ripgrep-all"
+    },
+    {
+      "desc": "Image processing system",
+      "name": "graphicsmagick"
+    },
+    {
+      "desc": "Like jq, but for HTML",
+      "name": "htmlq"
+    },
+    {
+      "desc": "A command-line pager for JSON data",
+      "name": "jless"
+    },
+    {
+      "desc": "Conversion between documentation formats",
+      "name": "aur/pandoc-bin"
+    },
+    {
+      "desc": "A lightweight TUI to view and query CSV files",
+      "name": "tabiew"
+    },
+    {
+      "desc": "A program for making large letters out of ordinary text",
+      "name": "figlet"
+    },
+    {
+      "desc": "Light-weight, simple and fast XML parser for C++ with XPath support",
+      "name": "pugixml"
+    }
+  ]
+}

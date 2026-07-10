@@ -1,5 +1,6 @@
 #!/bin/env bash
 #MISE description="Reload current user environment variables and update dbus activation environment"
+#MISE interactive=true
 
 set -a
 for f in ~/.config/environment.d/*.conf; do

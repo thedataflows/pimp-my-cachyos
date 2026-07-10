@@ -1,0 +1,2 @@
+- name: openrgb
+  desc: Open source RGB lighting control that doesn't depend on manufacturer software

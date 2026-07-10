@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=/opt/thorium-browser/thorium-browser --profile-directory=Default --app-id=hnpfjngllnobngcgfapefoaidbinmjnm
+Icon=thorium-hnpfjngllnobngcgfapefoaidbinmjnm-Default
+Name=WhatsApp Web
+StartupWMClass=crx_hnpfjngllnobngcgfapefoaidbinmjnm
+Terminal=false
+Type=Application
+Version=1.0

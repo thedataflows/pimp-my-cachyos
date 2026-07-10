@@ -1,5 +1,6 @@
 #!/bin/env bash
 #MISE description="Enable/disable various system services"
+#MISE interactive=true
 
 set -Eeuo pipefail
 trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"' ERR

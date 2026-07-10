@@ -1,20 +1,118 @@
 [settings]
-dotfiles.root = "symlink/~"
 dotfiles.default_mode = "symlink"
 
 [dotfiles]
-# Home directories: symlink each file individually so ~/.config etc. can still hold unmanaged files
-"~/.config"  = { mode = "symlink-each" }
-"~/.gnupg"   = { mode = "symlink-each" }
-"~/.local"   = { mode = "symlink-each" }
-"~/Pictures" = { mode = "symlink-each" }
-
-# Home top-level files
-"~/.aliases"         = {}
-"~/.fzf"             = {}
-"~/.gitconfig"       = {}
-"~/.gtkrc-2.0"       = {}
-"~/.profile"         = {}
-"~/.zsh_plugins.txt" = {}
-"~/.zshrc"           = {}
-"~/iommu-viewer.sh"  = {}
+"~/.aliases" = "apps/aliases/config/.aliases"
+"~/.config/Code" = { source = "apps/code/config/.config/Code", mode = "symlink-each" }
+"~/.config/DankMaterialShell" = { source = "apps/dank-material-shell/config/.config/DankMaterialShell", mode = "symlink-each" }
+"~/.config/MangoHud" = { source = "apps/mangohud/config/.config/MangoHud", mode = "symlink-each" }
+"~/.config/OpenRGB" = { source = "apps/openrgb/config/.config/OpenRGB", mode = "symlink-each" }
+"~/.config/Trolltech.conf" = "apps/kde-desktop/config/.config/Trolltech.conf"
+"~/.config/atuin" = { source = "apps/atuin/config/.config/atuin", mode = "symlink-each" }
+"~/.config/autostart/OpenRGB.desktop" = "apps/openrgb/config/.config/autostart/OpenRGB.desktop"
+"~/.config/autostart/easyeffects-service.desktop" = "apps/easyeffects/config/.config/autostart/easyeffects-service.desktop"
+"~/.config/autostart/kopia-ui.desktop" = "apps/kopia/config/.config/autostart/kopia-ui.desktop"
+"~/.config/autostart/org.keepassxc.KeePassXC.desktop" = "apps/keepassxc/config/.config/autostart/org.keepassxc.KeePassXC.desktop"
+"~/.config/autostart/syncthingtray-qt6.desktop" = "apps/syncthingtray/config/.config/autostart/syncthingtray-qt6.desktop"
+"~/.config/autostart/thorium-browser.desktop" = "apps/thorium/config/.config/autostart/thorium-browser.desktop"
+"~/.config/autostart/thorium-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop" = "apps/thorium/config/.config/autostart/thorium-hnpfjngllnobngcgfapefoaidbinmjnm-Default.desktop"
+"~/.config/baloofilerc" = "apps/baloo/config/.config/baloofilerc"
+"~/.config/bat" = { source = "apps/bat/config/.config/bat", mode = "symlink-each" }
+"~/.config/bookokrat" = { source = "apps/bookokrat/config/.config/bookokrat", mode = "symlink-each" }
+"~/.config/breezerc" = "apps/kde-desktop/config/.config/breezerc"
+"~/.config/btop" = { source = "apps/btop/config/.config/btop", mode = "symlink-each" }
+"~/.config/code-flags.conf" = "apps/code/config/.config/code-flags.conf"
+"~/.config/dolphinrc" = "apps/dolphin/config/.config/dolphinrc"
+"~/.config/easyeffects" = { source = "apps/easyeffects/config/.config/easyeffects", mode = "symlink-each" }
+"~/.config/electron-flags.conf" = "apps/desktop/config/.config/electron-flags.conf"
+"~/.config/environment.d/default-gpu.conf" = "apps/environment.d/config/.config/environment.d/default-gpu.conf"
+"~/.config/environment.d/fsr4.conf.disabled" = "apps/environment.d/config/.config/environment.d/fsr4.conf.disabled"
+"~/.config/environment.d/hdr.conf" = "apps/environment.d/config/.config/environment.d/hdr.conf"
+"~/.config/environment.d/proton-cachyos.conf" = "apps/environment.d/config/.config/environment.d/proton-cachyos.conf"
+"~/.config/environment.d/puppeteer.conf" = "apps/environment.d/config/.config/environment.d/puppeteer.conf"
+"~/.config/environment.d/qt.conf" = "apps/environment.d/config/.config/environment.d/qt.conf"
+"~/.config/environment.d/radeon.conf.disabled" = "apps/environment.d/config/.config/environment.d/radeon.conf.disabled"
+"~/.config/environment.d/steam-hidpi.conf" = "apps/environment.d/config/.config/environment.d/steam-hidpi.conf"
+"~/.config/environment.d/thorium-flags.conf" = "apps/thorium/config/.config/environment.d/thorium-flags.conf"
+"~/.config/environment.d/webkit.conf" = "apps/environment.d/config/.config/environment.d/webkit.conf"
+"~/.config/environment.d/xcursor.conf" = "apps/environment.d/config/.config/environment.d/xcursor.conf"
+"~/.config/fastfetch" = { source = "apps/fastfetch/config/.config/fastfetch", mode = "symlink-each" }
+"~/.config/filetypesrc" = "apps/kde-desktop/config/.config/filetypesrc"
+"~/.config/ghostty" = { source = "apps/ghostty/config/.config/ghostty", mode = "symlink-each" }
+"~/.config/glow" = { source = "apps/glow/config/.config/glow", mode = "symlink-each" }
+"~/.config/grsync" = { source = "apps/grsync/config/.config/grsync", mode = "symlink-each" }
+"~/.config/htop" = { source = "apps/htop/config/.config/htop", mode = "symlink-each" }
+"~/.config/kcminputrc" = "apps/kde-desktop/config/.config/kcminputrc"
+"~/.config/kdeglobals" = "apps/kde-desktop/config/.config/kdeglobals"
+"~/.config/keepassxc" = { source = "apps/keepassxc/config/.config/keepassxc", mode = "symlink-each" }
+"~/.config/kew" = { source = "apps/kew/config/.config/kew", mode = "symlink-each" }
+"~/.config/kglobalshortcutsrc" = "apps/kde-desktop/config/.config/kglobalshortcutsrc"
+"~/.config/kiorc" = "apps/kde-desktop/config/.config/kiorc"
+"~/.config/kitty" = { source = "apps/kitty/config/.config/kitty", mode = "symlink-each" }
+"~/.config/kmenueditrc" = "apps/kde-desktop/config/.config/kmenueditrc"
+"~/.config/kopia" = { source = "apps/kopia/config/.config/kopia", mode = "symlink-each" }
+"~/.config/krunnerrc" = "apps/kde-desktop/config/.config/krunnerrc"
+"~/.config/kscreenlockerrc" = "apps/kde-desktop/config/.config/kscreenlockerrc"
+"~/.config/kservicemenurc" = "apps/kde-desktop/config/.config/kservicemenurc"
+"~/.config/ksplashrc" = "apps/kde-desktop/config/.config/ksplashrc"
+"~/.config/ktimezonedrc" = "apps/kde-desktop/config/.config/ktimezonedrc"
+"~/.config/ktrashrc" = "apps/kde-desktop/config/.config/ktrashrc"
+"~/.config/kwalletrc" = "apps/kde-desktop/config/.config/kwalletrc"
+"~/.config/kwinrc" = "apps/kde-desktop/config/.config/kwinrc"
+"~/.config/kwinrulesrc" = "apps/kde-desktop/config/.config/kwinrulesrc"
+"~/.config/kxkbrc" = "apps/kde-desktop/config/.config/kxkbrc"
+"~/.config/lazygit" = { source = "apps/lazygit/config/.config/lazygit", mode = "symlink-each" }
+"~/.config/mc" = { source = "apps/mc/config/.config/mc", mode = "symlink-each" }
+"~/.config/menus" = { source = "apps/menus/config/.config/menus", mode = "symlink-each" }
+"~/.config/micro" = { source = "apps/micro/config/.config/micro", mode = "symlink-each" }
+"~/.config/mimeapps.list" = "apps/kde-desktop/config/.config/mimeapps.list"
+"~/.config/mise" = { source = "apps/mise/config/.config/mise", mode = "symlink-each" }
+"~/.config/mpv" = { source = "apps/mpv/config/.config/mpv", mode = "symlink-each" }
+"~/.config/niri" = { source = "apps/niri/config/.config/niri", mode = "symlink-each" }
+"~/.config/nvtop" = { source = "apps/nvtop/config/.config/nvtop", mode = "symlink-each" }
+"~/.config/nwg-look" = { source = "apps/nwg-look/config/.config/nwg-look", mode = "symlink-each" }
+"~/.config/oh-my-posh" = { source = "apps/oh-my-posh/config/.config/oh-my-posh", mode = "symlink-each" }
+"~/.config/okularpartrc" = "apps/okular/config/.config/okularpartrc"
+"~/.config/opencode" = { source = "apps/opencode/config/.config/opencode", mode = "symlink-each" }
+"~/.config/pacseek" = { source = "apps/pacseek/config/.config/pacseek", mode = "symlink-each" }
+"~/.config/panel-colorizer" = { source = "apps/panel-colorizer/config/.config/panel-colorizer", mode = "symlink-each" }
+"~/.config/plasma-localerc" = "apps/kde-desktop/config/.config/plasma-localerc"
+"~/.config/plasma-org.kde.plasma.desktop-appletsrc" = "apps/kde-desktop/config/.config/plasma-org.kde.plasma.desktop-appletsrc"
+"~/.config/plasmanotifyrc" = "apps/kde-desktop/config/.config/plasmanotifyrc"
+"~/.config/plasmarc" = "apps/kde-desktop/config/.config/plasmarc"
+"~/.config/plasmashellrc" = "apps/kde-desktop/config/.config/plasmashellrc"
+"~/.config/powerdevilrc" = "apps/kde-desktop/config/.config/powerdevilrc"
+"~/.config/powermanagementprofilesrc" = "apps/kde-desktop/config/.config/powermanagementprofilesrc"
+"~/.config/rsyncd.conf" = "apps/rsync/config/.config/rsyncd.conf"
+"~/.config/rsyncd.sh" = "apps/rsync/config/.config/rsyncd.sh"
+"~/.config/rustdesk" = { source = "apps/rustdesk/config/.config/rustdesk", mode = "symlink-each" }
+"~/.config/sesh" = { source = "apps/sesh/config/.config/sesh", mode = "symlink-each" }
+"~/.config/signal-desktop-flags.conf" = "apps/signal/config/.config/signal-desktop-flags.conf"
+"~/.config/spectaclerc" = "apps/spectacle/config/.config/spectaclerc"
+"~/.config/spotify-flags.conf" = "apps/desktop/config/.config/spotify-flags.conf"
+"~/.config/strawberry" = { source = "apps/strawberry/config/.config/strawberry", mode = "symlink-each" }
+"~/.config/swaylock" = { source = "apps/swaylock/config/.config/swaylock", mode = "symlink-each" }
+"~/.config/systemd" = { source = "apps/systemd/config/.config/systemd", mode = "symlink-each" }
+"~/.config/systemmonitorrc" = "apps/kde-desktop/config/.config/systemmonitorrc"
+"~/.config/television" = { source = "apps/television/config/.config/television", mode = "symlink-each" }
+"~/.config/tmux" = { source = "apps/tmux/config/.config/tmux", mode = "symlink-each" }
+"~/.config/viddy.toml" = "apps/viddy/config/.config/viddy.toml"
+"~/.config/vlc" = { source = "apps/vlc/config/.config/vlc", mode = "symlink-each" }
+"~/.config/xdg-desktop-portal" = { source = "apps/xdg-desktop-portal/config/.config/xdg-desktop-portal", mode = "symlink-each" }
+"~/.config/xsettingsd" = { source = "apps/xsettingsd/config/.config/xsettingsd", mode = "symlink-each" }
+"~/.config/yazi" = { source = "apps/yazi/config/.config/yazi", mode = "symlink-each" }
+"~/.config/zed" = { source = "apps/zed/config/.config/zed", mode = "symlink-each" }
+"~/.config/zellij" = { source = "apps/zellij/config/.config/zellij", mode = "symlink-each" }
+"~/.fzf" = "apps/fzf/config/.fzf"
+"~/.gitconfig" = "apps/git/config/.gitconfig"
+"~/.gnupg" = { source = "apps/gnupg/config/.gnupg", mode = "symlink-each" }
+"~/.gtkrc-2.0" = "apps/gtk/config/.gtkrc-2.0"
+"~/.local/share/icons" = { source = "apps/icons/config/.local/share/icons", mode = "symlink-each" }
+"~/.local/share/kxmlgui5/dolphin" = { source = "apps/dolphin/config/.local/share/kxmlgui5/dolphin", mode = "symlink-each" }
+"~/.local/share/kxmlgui5/okular" = { source = "apps/okular/config/.local/share/kxmlgui5/okular", mode = "symlink-each" }
+"~/.local/share/plasma-systemmonitor" = { source = "apps/plasma-systemmonitor/config/.local/share/plasma-systemmonitor", mode = "symlink-each" }
+"~/.profile" = "apps/zsh/config/.profile"
+"~/.zsh_plugins.txt" = "apps/zsh/config/.zsh_plugins.txt"
+"~/.zshrc" = "apps/zsh/config/.zshrc"
+"~/Pictures" = { source = "apps/wallpaper/config/Pictures", mode = "symlink-each" }
+"~/iommu-viewer.sh" = "apps/iommu-viewer/config/iommu-viewer.sh"

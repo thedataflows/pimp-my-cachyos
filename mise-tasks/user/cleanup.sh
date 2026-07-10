@@ -1,5 +1,6 @@
 #!/bin/env bash
 #MISE description="Cleanup user files"
+#MISE interactive=true
 
 set -Eeuo pipefail
 trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"' ERR

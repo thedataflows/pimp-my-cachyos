@@ -1,0 +1,3 @@
+- name: plasma-systemmonitor
+  desc: An interface for monitoring system sensors, process information and other
+    system resources

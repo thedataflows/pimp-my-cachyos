@@ -1,0 +1,34 @@
+- name: sddm-kcm
+  desc: KDE Config Module for SDDM
+- name: plasma-login-manager
+  desc: Plasma Login Manager
+- name: plasma-desktop
+  desc: KDE Plasma Desktop
+- name: kwayland-integration
+  desc: Provides integration plugins for various KDE frameworks for the wayland windowing
+    system
+- name: kde-gtk-config
+  desc: Syncs KDE settings to GTK applications
+- name: kdeplasma-addons
+  desc: All kind of addons to improve your Plasma
+- name: aur/plasma6-applets-panel-colorizer
+  desc: Latte-Dock and WM status bar customization features for the default Plasma
+    panels
+- name: gnome-settings-daemon
+  desc: GNOME Settings Daemon
+- name: gsettings-qt
+  desc: Qml bindings for GSettings
+- name: krfb
+  desc: Desktop Sharing
+- name: qogir-icon-theme
+  desc: A colorful design icon theme for linux desktops
+- name: kaccounts-providers
+  desc: Online account providers for the KAccounts system
+- name: plasma5-integration
+  desc: Qt5 Platform Theme integration plugins for the Plasma workspaces
+- name: plasma-wayland-protocols
+  desc: Plasma Specific Protocols for Wayland
+- name: krdc
+  desc: Remote Desktop Client
+- name: aur/catppuccin-plasma-colorscheme-mocha
+  desc: Soothing pastel theme for KDE Plasma

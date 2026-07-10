@@ -1,5 +1,6 @@
 #!/bin/env bash
 #MISE description="Backup a file in-place with its checksum as suffix"
+#MISE interactive=true
 
 ## If the input is a directory, it will be copied recursively and current date-time will be appended to the directory name
 

@@ -1,0 +1,8 @@
+- name: calibre
+  desc: Ebook management application
+- name: aur/onlyoffice-bin
+  desc: An office suite that combines text, spreadsheet and presentation editors
+- name: jrnl
+  desc: Collect your thoughts and notes without leaving the command line
+- name: kate
+  desc: Advanced Text Editor

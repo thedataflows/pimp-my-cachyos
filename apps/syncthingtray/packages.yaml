@@ -1,0 +1,2 @@
+- name: aur/syncthingtray-qt6
+  desc: Tray application for Syncthing (using Qt 6)

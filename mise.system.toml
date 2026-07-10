@@ -1,8 +1,25 @@
 [settings]
-dotfiles.root = "copy"
 dotfiles.default_mode = "copy"
 
 [dotfiles]
-# System files
-"/etc"       = { source = "copy/etc", mode = "copy" }
-"/usr/local" = { source = "copy/usr/local", mode = "copy" }
+"/etc/htoprc" = { source = "apps/system-htop/system-config/etc/htoprc", mode = "copy" }
+"/etc/keyd/default.conf" = { source = "apps/system-keyd/system-config/etc/keyd/default.conf", mode = "copy" }
+"/etc/libvirt/hooks/qemu" = { source = "apps/system-libvirt/system-config/etc/libvirt/hooks/qemu", mode = "copy" }
+"/etc/modprobe.d/blacklist-nintendo.conf" = { source = "apps/system-modprobe/system-config/etc/modprobe.d/blacklist-nintendo.conf", mode = "copy" }
+"/etc/modprobe.d/hid_apple.conf" = { source = "apps/system-modprobe/system-config/etc/modprobe.d/hid_apple.conf", mode = "copy" }
+"/etc/modprobe.d/kvm.conf" = { source = "apps/system-modprobe/system-config/etc/modprobe.d/kvm.conf", mode = "copy" }
+"/etc/modprobe.d/kvmfr.conf" = { source = "apps/system-modprobe/system-config/etc/modprobe.d/kvmfr.conf", mode = "copy" }
+"/etc/modules-load.d/00-kvmfr.conf" = { source = "apps/system-modules/system-config/etc/modules-load.d/00-kvmfr.conf", mode = "copy" }
+"/etc/modules-load.d/10-hwmon.conf" = { source = "apps/system-modules/system-config/etc/modules-load.d/10-hwmon.conf", mode = "copy" }
+"/etc/nsswitch.conf" = { source = "apps/system-nsswitch/system-config/etc/nsswitch.conf", mode = "copy" }
+"/etc/nvidia/nvidia-application-profiles-rc.d/50-limit-free-buffer-pool-in-wayland-compositors.json" = { source = "apps/system-nvidia/system-config/etc/nvidia/nvidia-application-profiles-rc.d/50-limit-free-buffer-pool-in-wayland-compositors.json", mode = "copy" }
+"/etc/pipewire/pipewire.conf.d/rates.conf" = { source = "apps/system-pipewire/system-config/etc/pipewire/pipewire.conf.d/rates.conf", mode = "copy" }
+"/etc/plasmalogin.conf" = { source = "apps/system-plasma/system-config/etc/plasmalogin.conf", mode = "copy" }
+"/etc/samba/smb.conf" = { source = "apps/system-samba/system-config/etc/samba/smb.conf", mode = "copy" }
+"/etc/snapper/configs/home" = { source = "apps/system-snapper/system-config/etc/snapper/configs/home", mode = "copy" }
+"/etc/snapper/configs/root" = { source = "apps/system-snapper/system-config/etc/snapper/configs/root", mode = "copy" }
+"/etc/sysctl.d/99-kernel.conf" = { source = "apps/system-sysctl/system-config/etc/sysctl.d/99-kernel.conf", mode = "copy" }
+"/etc/tmux.conf" = { source = "apps/system-tmux/system-config/etc/tmux.conf", mode = "copy" }
+"/etc/udev/rules.d/99-kvmfr.rules" = { source = "apps/system-udev/system-config/etc/udev/rules.d/99-kvmfr.rules", mode = "copy" }
+"/root/.gtkrc-2.0" = { source = "apps/gtk/config/.gtkrc-2.0", mode = "copy" }
+"/usr/local/share/dbus-1/services/org.freedesktop.secrets.service" = { source = "apps/system-dbus/system-config/usr/local/share/dbus-1/services/org.freedesktop.secrets.service", mode = "copy" }

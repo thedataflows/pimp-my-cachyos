@@ -1,0 +1,4 @@
+- name: git
+  desc: the fast distributed version control system
+- name: git-delta
+  desc: Syntax-highlighting pager for git and diff output

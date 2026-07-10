@@ -1,0 +1,2 @@
+- name: bat
+  desc: Cat clone with syntax highlighting and git integration

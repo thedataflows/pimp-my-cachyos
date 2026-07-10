@@ -1,0 +1,2 @@
+- name: keyd
+  desc: A key remapping daemon for linux

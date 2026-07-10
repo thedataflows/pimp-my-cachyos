@@ -1,0 +1,5 @@
+- name: looking-glass
+  desc: A client application for accessing the LookingGlass IVSHMEM device of a VM
+- name: looking-glass-module-dkms
+  desc: A kernel module that implements a basic interface to the IVSHMEM device for
+    when using LookingGlass in VM->VM mode

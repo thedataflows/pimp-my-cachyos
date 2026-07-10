@@ -1,0 +1,5 @@
+- name: aur/lmstudio-bin
+  desc: Discover, download, and run local LLMs
+- name: aur/paseo-bin
+  desc: One interface for all your Claude Code, Codex and OpenCode agents (Electron
+    desktop app)

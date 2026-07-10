@@ -1,0 +1,40 @@
+[Desktop Entry]
+Actions=new-window;new-private-window;temp-profile;content-shell;safe-mode;dark-mode;
+Categories=Network;WebBrowser;
+Comment=Access the Internet
+Exec=/usr/bin/thorium-browser %U
+GenericName=Web Browser
+Icon=thorium-browser
+Keywords=browser
+MimeType=application/pdf;application/rdf+xml;application/rss+xml;application/xhtml+xml;application/xhtml_xml;application/xml;image/gif;image/jpeg;image/png;image/webp;text/html;text/xml;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
+Name=Thorium Browser
+StartupNotify=true
+StartupWMClass=thorium
+Terminal=false
+Type=Application
+Version=1.0
+X-MultipleArgs=True
+
+[Desktop Action content-shell]
+Exec=/usr/bin/thorium-shell %U
+Name=Open Thorium Shell
+
+[Desktop Action dark-mode]
+Exec=/usr/bin/thorium-browser --force-dark-mode %U
+Name=Open in Dark Mode
+
+[Desktop Action new-private-window]
+Exec=/usr/bin/thorium-browser --incognito %U
+Name=New Incognito Window
+
+[Desktop Action new-window]
+Exec=/usr/bin/thorium-browser --new-window %U
+Name=New Window
+
+[Desktop Action safe-mode]
+Exec=/usr/bin/thorium-browser --no-experiments %U
+Name=Open in Safe Mode
+
+[Desktop Action temp-profile]
+Exec=/usr/bin/thorium-browser --temp-profile %U
+Name=Open New Window with a temporary profile

@@ -13,8 +13,7 @@ echo ""
 
 ## Run package management via mise (boot.yaml drives both removal and installation)
 set -x
-mise run packages:remove "${MISE_PROJECT_ROOT:-.}/packages/boot.yaml"
-mise run packages:add "${MISE_PROJECT_ROOT:-.}/packages/boot.yaml"
+mise run packages "${MISE_PROJECT_ROOT:-.}/apps/boot/packages.yaml"
 { set +x; } 2>/dev/null
 
 ## Configure Limine bootloader

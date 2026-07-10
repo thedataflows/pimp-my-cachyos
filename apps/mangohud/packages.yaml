@@ -1,0 +1,3 @@
+- name: mangohud
+  desc: A Vulkan overlay layer for monitoring FPS, temperatures, CPU/GPU load and
+    more

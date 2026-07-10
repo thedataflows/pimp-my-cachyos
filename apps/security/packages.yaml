@@ -1,0 +1,13 @@
+- name: x11-ssh-askpass
+  desc: Lightweight passphrase dialog for SSH
+- name: gcr
+  desc: A library for bits of crypto UI and parsing
+- name: pinentry
+  desc: Collection of simple PIN or passphrase entry dialogs which utilize the Assuan
+    protocol
+- name: kleopatra
+  desc: Certificate Manager and Unified Crypto GUI
+- name: ksshaskpass
+  desc: ssh-add helper that uses kwallet and kpassworddialog
+- name: kwalletmanager
+  desc: Wallet management tool

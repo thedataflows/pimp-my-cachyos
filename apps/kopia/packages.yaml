@@ -1,0 +1,6 @@
+- name: aur/kopia-bin
+  desc: A cross-platform backup-tool with encryption, deduplication, compression and
+    cloud support.
+- name: aur/kopia-ui-bin
+  desc: A cross-platform backup-tool with encryption, deduplication, compression and
+    cloud support.

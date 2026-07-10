@@ -1,0 +1,9 @@
+- name: remmina
+  desc: remote desktop client written in GTK+
+- name: freerdp
+  desc: Free implementation of the Remote Desktop Protocol (RDP)
+- name: aur/rustdesk-bin
+  desc: Yet another remote desktop software, written in Rust. Works out of the box,
+    no configuration required.
+- name: sunshine
+  desc: A self-hosted game stream host for Moonlight
