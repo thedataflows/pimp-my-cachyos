@@ -18,3 +18,5 @@ fi
 if [[ -d "$_APP_DIR/system-config" ]]; then
   sudo mise -E system dotfiles apply
 fi
+
+sudo systemctl enable --now docker
