@@ -21,5 +21,6 @@ dotfiles.default_mode = "copy"
 "/etc/sysctl.d/99-kernel.conf" = { source = "apps/system-sysctl/system-config/etc/sysctl.d/99-kernel.conf", mode = "copy" }
 "/etc/tmux.conf" = { source = "apps/system-tmux/system-config/etc/tmux.conf", mode = "copy" }
 "/etc/udev/rules.d/99-kvmfr.rules" = { source = "apps/system-udev/system-config/etc/udev/rules.d/99-kvmfr.rules", mode = "copy" }
+"/etc/udev/rules.d/99-moonlight-uinput.rules" = { source = "apps/moonlight/system-config/etc/udev/rules.d/99-moonlight-uinput.rules", mode = "copy" }
 "/root/.gtkrc-2.0" = { source = "apps/gtk/config/.gtkrc-2.0", mode = "copy" }
 "/usr/local/share/dbus-1/services/org.freedesktop.secrets.service" = { source = "apps/system-dbus/system-config/usr/local/share/dbus-1/services/org.freedesktop.secrets.service", mode = "copy" }

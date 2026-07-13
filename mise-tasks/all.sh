@@ -57,6 +57,7 @@ mise run mc
 mise run menus
 mise run micro
 mise run mise
+mise run moonlight
 mise run mpv
 mise run multimedia
 mise run network

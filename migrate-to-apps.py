@@ -17,6 +17,7 @@ CONFIG_APPS = {
     "spectacle": {"packages": ["spectacle"], "config_dirs": [".config/spectaclerc"]},
     "viddy": {"packages": [], "config_dirs": [".config/viddy.toml"]},
     "thorium": {"packages": ["aur/thorium-browser-updated-bin"], "config_dirs": []},
+    "moonlight": {"packages": ["moonlight-qt"], "config_dirs": []},
 
     "atuin": {"packages": ["atuin"], "config_dirs": [".config/atuin"]},
     "bat": {"packages": ["bat"], "config_dirs": [".config/bat"]},
