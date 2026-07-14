@@ -414,8 +414,35 @@ def main():
 
         # Write task file
         task_file = task_dir / f"{app}.sh"
-        task_content = f"""#!/bin/env bash
-#MISE description="Install and configure {app}"
+
+        def generic_task_content(app_name):
+            return f"""#!/bin/env bash
+#MISE description="Install and configure {app_name}"
+#MISE interactive=true
+
+set -Eeuo pipefail
+trap 'echo "[ERROR] on line $LINENO: \"${{BASH_COMMAND}}\" exited with status $?"' ERR
+
+_APP_DIR="${{MISE_TASK_DIR}}/.."
+
+if [[ -s "$_APP_DIR/packages.yaml" && "${{PIMP_ALL_PACKAGES_DONE:-0}}" != "1" ]]; then
+  mise run packages "$_APP_DIR/packages.yaml"
+fi
+
+if [[ -d "$_APP_DIR/config" ]]; then
+  mise -E user dotfiles apply
+fi
+
+if [[ -d "$_APP_DIR/system-config" ]]; then
+  sudo mise -E system dotfiles apply
+fi
+"""
+
+        # Historical generic templates so stale generated tasks get refreshed,
+        # while genuinely custom task files are preserved.
+        def old_generic_task_content(app_name):
+            return f"""#!/bin/env bash
+#MISE description="Install and configure {app_name}"
 #MISE interactive=true
 
 set -Eeuo pipefail
@@ -436,9 +463,13 @@ if [[ -d "$_APP_DIR/system-config" ]]; then
 fi
 """
 
-        # Preserve custom task files that were moved from mise-tasks/ (e.g. baloo.sh).
+        task_content = generic_task_content(app)
         if not task_file.exists():
             task_file.write_text(task_content)
+        else:
+            current = task_file.read_text()
+            if current == task_content or current == old_generic_task_content(app):
+                task_file.write_text(task_content)
         task_file.chmod(0o755)
 
     # Remove deprecated Brave autostart entries that may still be in the source tree.
@@ -719,6 +750,11 @@ includes = [
 set -Eeuo pipefail
 trap 'echo "[ERROR] on line $LINENO: \\"${BASH_COMMAND}\\" exited with status $?"' ERR
 
+if [[ "${PIMP_ALL_PACKAGES_DONE:-0}" == "1" ]]; then
+  echo ">> packages already installed in this all-run; skipping"
+  exit 0
+fi
+
 type paru &> /dev/null || sudo pacman -Sy --noconfirm paru
 type yq &> /dev/null || $PARU go-yq
 type fd &> /dev/null || $PARU fd
@@ -803,6 +839,22 @@ done
 
     # Generate mise-tasks/all.sh
     all_sh = repo / "mise-tasks" / "all.sh"
+    task_sections = [
+        ("## Software installation", ["packages"]),
+        ("## Configure: apps", sorted(apps)),
+        ("## Configure: network", ["network:firewall", "network:sshd"]),
+        ("## Configure: system", [
+            "system:limine", "system:snapper", "system:services",
+            "system:video-drivers", "system:faillock", "system:locale",
+            "system:mountpoints", "system:smb", "system:edk2-ovmf-downgrade",
+            "system:virtualization",
+        ]),
+        ("## Configure: user", ["user:shell"]),
+        ("## Configure: desktop", ["kde-icon-theme", "root-gtk"]),
+        ("## Configure: Alternative Desktop Environments (optional)", ["dms-niri"]),
+        ("## Cleanup", ["user:cleanup"]),
+    ]
+
     all_lines = [
         "#!/bin/env bash",
         "#MISE description=\"Run all tasks in the proper order\"",
@@ -811,44 +863,64 @@ done
         "set -Eeuo pipefail",
         'trap \'echo "[ERROR] on line $LINENO: \\"${BASH_COMMAND}\\" exited with status $?"\' ERR',
         "",
-        "## Software installation",
-        "mise run packages",
+        "_RUN_STATE_DIR=\"${XDG_STATE_HOME:-$HOME/.local/state}/pimp-my-cachyos\"",
+        "_RUN_STATE_FILE=\"$_RUN_STATE_DIR/all-run.state\"",
         "",
-        "## Configure: apps",
+        "_run_state_get() {",
+        "  [[ -f \"$_RUN_STATE_FILE\" ]] || return 0",
+        "  local key=$1",
+        "  grep -E \"^${key}=\" \"$_RUN_STATE_FILE\" | tail -n1 | cut -d= -f2-",
+        "}",
+        "",
+        "_run_state_set() {",
+        "  mkdir -p \"$_RUN_STATE_DIR\"",
+        "  local key=$1 value=$2",
+        "  if [[ -f \"$_RUN_STATE_FILE\" ]]; then",
+        "    grep -vE \"^${key}=\" \"$_RUN_STATE_FILE\" > \"${_RUN_STATE_FILE}.tmp\" || true",
+        "  fi",
+        "  printf '%s=%s\\n' \"$key\" \"$value\" >> \"${_RUN_STATE_FILE}.tmp\"",
+        "  mv \"${_RUN_STATE_FILE}.tmp\" \"$_RUN_STATE_FILE\"",
+        "}",
+        "",
+        "_run_state_clear() {",
+        "  rm -f \"$_RUN_STATE_FILE\"",
+        "}",
+        "",
+        "_run_or_resume() {",
+        "  local task=$1",
+        "  if [[ \"${_SKIP_DONE:-1}\" == \"1\" ]]; then",
+        "    if [[ \"$task\" == \"$(_run_state_get LAST_SUCCESSFUL_TASK)\" ]]; then",
+        '      echo ">> Resuming after $task"',
+        "      _SKIP_DONE=0",
+        "    else",
+        '      echo ">> Skipping already completed: $task"',
+        "    fi",
+        "    return 0",
+        "  fi",
+        '  echo ">> Running $task"',
+        "  mise run \"$task\"",
+        "  _run_state_set LAST_SUCCESSFUL_TASK \"$task\"",
+        "}",
+        "",
+        "if [[ \"${PIMP_ALL_FRESH:-0}\" == \"1\" ]]; then",
+        "  _run_state_clear",
+        "fi",
+        "",
+        "_SKIP_DONE=1",
+        'if [[ -z "$(_run_state_get LAST_SUCCESSFUL_TASK)" ]]; then',
+        "  _SKIP_DONE=0",
+        "fi",
+        "",
     ]
-    for app in sorted(apps):
-        all_lines.append(f"mise run {app}")
+    for heading, tasks in task_sections:
+        all_lines.append(heading)
+        for task in tasks:
+            all_lines.append(f"_run_or_resume {task}")
+        all_lines.append("")
+
     all_lines.extend([
-        "",
-        "## Configure: network",
-        "mise run network:firewall",
-        "mise run network:sshd",
-        "",
-        "## Configure: system",
-        "mise run system:limine",
-        "mise run system:snapper",
-        "mise run system:services",
-        "mise run system:video-drivers",
-        "mise run system:faillock",
-        "mise run system:locale",
-        "mise run system:mountpoints",
-        "mise run system:smb",
-        "mise run system:edk2-ovmf-downgrade",
-        "mise run system:virtualization",
-        "",
-        "## Configure: user",
-        "mise run user:shell",
-        "# mise run user:containerd",
-        "",
-        "## Configure: desktop",
-        "mise run kde-icon-theme",
-        "mise run root-gtk",
-        "",
-        "## Configure: Alternative Desktop Environments (optional)",
-        "mise run dms-niri",
-        "",
-        "## Cleanup",
-        "mise run user:cleanup",
+        "# Clear run state on successful completion",
+        "_run_state_clear",
         "",
     ])
     all_sh.write_text("\n".join(all_lines) + "\n")

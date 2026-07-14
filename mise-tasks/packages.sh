@@ -5,6 +5,11 @@
 set -Eeuo pipefail
 trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"' ERR
 
+if [[ "${PIMP_ALL_PACKAGES_DONE:-0}" == "1" ]]; then
+  echo ">> packages already installed in this all-run; skipping"
+  exit 0
+fi
+
 type paru &> /dev/null || sudo pacman -Sy --noconfirm paru
 type yq &> /dev/null || $PARU go-yq
 type fd &> /dev/null || $PARU fd

@@ -7,7 +7,7 @@ trap 'echo "[ERROR] on line $LINENO: \"${BASH_COMMAND}\" exited with status $?"'
 
 _APP_DIR="${MISE_TASK_DIR}/.."
 
-if [[ -s "$_APP_DIR/packages.yaml" ]]; then
+if [[ -s "$_APP_DIR/packages.yaml" && "${PIMP_ALL_PACKAGES_DONE:-0}" != "1" ]]; then
   mise run packages "$_APP_DIR/packages.yaml"
 fi
 
