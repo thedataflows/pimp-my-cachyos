@@ -30,9 +30,15 @@
     },
   },
   "agent_servers": {
+    "opencode": {
+      "default_config_options": {
+        "model": "kimi-for-coding/k3"
+      },
+      "type": "registry"
+    },
     "omp-acp": {
       "default_config_options": {
-        "model": "moonshot/kimi-k2.7-code-highspeed",
+        "model": "moonshot/kimi-k3",
         "thinking": "medium",
         "mode": "default",
       },
