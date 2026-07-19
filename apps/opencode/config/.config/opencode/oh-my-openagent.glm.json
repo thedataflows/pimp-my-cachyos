@@ -1,0 +1,167 @@
+{
+  "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
+  "model_fallback": true,
+  "runtime_fallback": true,
+  "team_mode": {
+    "enabled": true,
+    "max_parallel_members": 4,
+    "max_members": 8,
+    "tmux_visualization": false
+  },
+  "agents": {
+    "sisyphus": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "hephaestus": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "oracle": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "librarian": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "explore": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "multimodal-looker": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "prometheus": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "metis": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "momus": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "atlas": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "sisyphus-junior": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    }
+  },
+  "categories": {
+    "visual-engineering": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "ultrabrain": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "deep": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "artistry": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "quick": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "unspecified-low": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "unspecified-high": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    },
+    "writing": {
+      "model": "zai-coding-plan/glm-5.2",
+      "fallback_models": [
+        {
+          "model": "kimi-for-coding/k3"
+        }
+      ]
+    }
+  }
+}

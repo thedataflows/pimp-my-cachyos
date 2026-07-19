@@ -41,3 +41,6 @@ usage = "latest"
 
 ## https://github.com/can1357/oh-my-pi/releases
 "github:can1357/oh-my-pi" = "latest"
+
+## https://github.com/danielmiessler/Fabric/releases
+"github:danielmiessler/Fabric" = "latest"

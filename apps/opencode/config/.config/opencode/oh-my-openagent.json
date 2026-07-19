@@ -10,156 +10,90 @@
   },
   "agents": {
     "sisyphus": {
-      "model": "zai-coding-plan/glm-5.2",
+      "model": "kimi-for-coding/k3",
       "fallback_models": [
         {
-          "model": "kimi-for-coding/k2p7"
+          "model": "zai-coding-plan/glm-5.2"
         }
       ]
     },
     "hephaestus": {
-      "model": "zai-coding-plan/glm-5.2",
+      "model": "kimi-for-coding/k3",
       "fallback_models": [
         {
-          "model": "kimi-for-coding/k2p7"
+          "model": "zai-coding-plan/glm-5.2"
         }
       ]
     },
     "oracle": {
-      "model": "zai-coding-plan/glm-5.2",
+      "model": "kimi-for-coding/k3",
       "fallback_models": [
         {
-          "model": "kimi-for-coding/k2p7"
+          "model": "zai-coding-plan/glm-5.2"
         }
       ]
     },
     "librarian": {
-      "model": "zai-coding-plan/glm-5.2",
+      "model": "kimi-for-coding/k3",
       "fallback_models": [
         {
-          "model": "kimi-for-coding/k2p7"
+          "model": "zai-coding-plan/glm-5.2"
         }
       ]
     },
     "explore": {
-      "model": "zai-coding-plan/glm-5.2",
+      "model": "kimi-for-coding/k3",
       "fallback_models": [
         {
-          "model": "kimi-for-coding/k2p7"
+          "model": "zai-coding-plan/glm-5.2"
         }
       ]
     },
     "multimodal-looker": {
-      "model": "zai-coding-plan/glm-5.2",
+      "model": "kimi-for-coding/k3",
       "fallback_models": [
         {
-          "model": "kimi-for-coding/k2p7"
+          "model": "zai-coding-plan/glm-5.2"
         }
       ]
     },
     "prometheus": {
-      "model": "zai-coding-plan/glm-5.2",
+      "model": "kimi-for-coding/k3",
       "fallback_models": [
         {
-          "model": "kimi-for-coding/k2p7"
+          "model": "zai-coding-plan/glm-5.2"
         }
       ]
     },
     "metis": {
-      "model": "zai-coding-plan/glm-5.2",
+      "model": "kimi-for-coding/k3",
       "fallback_models": [
         {
-          "model": "kimi-for-coding/k2p7"
+          "model": "zai-coding-plan/glm-5.2"
         }
       ]
     },
     "momus": {
-      "model": "zai-coding-plan/glm-5.2",
+      "model": "kimi-for-coding/k3",
       "fallback_models": [
         {
-          "model": "kimi-for-coding/k2p7"
+          "model": "zai-coding-plan/glm-5.2"
         }
       ]
     },
     "atlas": {
-      "model": "zai-coding-plan/glm-5.2",
+      "model": "kimi-for-coding/k3",
       "fallback_models": [
         {
-          "model": "kimi-for-coding/k2p7"
+          "model": "zai-coding-plan/glm-5.2"
         }
       ]
     },
     "sisyphus-junior": {
-      "model": "zai-coding-plan/glm-5.2",
+      "model": "kimi-for-coding/k3",
       "fallback_models": [
         {
-          "model": "kimi-for-coding/k2p7"
-        }
-      ]
-    }
-  },
-  "categories": {
-    "visual-engineering": {
-      "model": "zai-coding-plan/glm-5.2",
-      "fallback_models": [
-        {
-          "model": "kimi-for-coding/k2p7"
-        }
-      ]
-    },
-    "ultrabrain": {
-      "model": "zai-coding-plan/glm-5.2",
-      "fallback_models": [
-        {
-          "model": "kimi-for-coding/k2p7"
-        }
-      ]
-    },
-    "deep": {
-      "model": "zai-coding-plan/glm-5.2",
-      "fallback_models": [
-        {
-          "model": "kimi-for-coding/k2p7"
-        }
-      ]
-    },
-    "artistry": {
-      "model": "zai-coding-plan/glm-5.2",
-      "fallback_models": [
-        {
-          "model": "kimi-for-coding/k2p7"
-        }
-      ]
-    },
-    "quick": {
-      "model": "zai-coding-plan/glm-5.2",
-      "fallback_models": [
-        {
-          "model": "kimi-for-coding/k2p7"
-        }
-      ]
-    },
-    "unspecified-low": {
-      "model": "zai-coding-plan/glm-5.2",
-      "fallback_models": [
-        {
-          "model": "kimi-for-coding/k2p7"
-        }
-      ]
-    },
-    "unspecified-high": {
-      "model": "zai-coding-plan/glm-5.2",
-      "fallback_models": [
-        {
-          "model": "kimi-for-coding/k2p7"
-        }
-      ]
-    },
-    "writing": {
-      "model": "zai-coding-plan/glm-5.2",
-      "fallback_models": [
-        {
-          "model": "kimi-for-coding/k2p7"
+          "model": "zai-coding-plan/glm-5.2"
         }
       ]
     }
