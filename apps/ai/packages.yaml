@@ -3,3 +3,5 @@
 - name: aur/paseo-bin
   desc: One interface for all your Claude Code, Codex and OpenCode agents (Electron
     desktop app)
+- name: aur/ast-grep-bin
+  desc: A fast and easy tool for code searching, linting, rewriting at large scale
